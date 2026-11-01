@@ -2222,7 +2222,7 @@ function markBlocked() {
   $("#done").classList.toggle("cond-ok", !!(dragging || selected || hovering));
 }
 
-// the mouse over a card that can be moved: the semesters show where it can go. Only a real mouse (a tap on a phone
+// the mouse over a card in the tree that can be moved: the semesters show where it can go. Only a real mouse (a tap on a phone
 // also sends a mouseover), and the colors go a moment after the mouse leaves, so moving from card to card does not flicker
 // After a drop the mouse is often still on the course it dropped: no colors for it until the mouse leaves the place of
 // that card and comes back (guy, 2026-11-01: the colors went off with the drag and flashed on again). The place is
@@ -2237,7 +2237,9 @@ function setupHoverMarks() {
   const hover = (e) => {
     if (e.pointerType !== "mouse" || dragging) return;
     if (hoverSkip) { if (onDropped(e)) return; hoverSkip = null; }
-    const chip = e.target.closest && e.target.closest(".chip[draggable]");
+    // only the courses in the tree column (the tree, the search results, "קורסים נוספים", the lists): a course already
+    // placed shows its colors only when clicked or dragged (guy, 2026-11-01)
+    const chip = e.target.closest && e.target.closest("aside.tree .chip[draggable]");
     if (chip) set(chip.dataset.n);
     else if (hovering) { clearTimeout(leave); leave = setTimeout(() => set(null), 120); }
   };
@@ -2612,7 +2614,7 @@ const HELP_STEPS = [
   { shot: "controls", title: T("2. מתחילים מהר"),
     text: T("\"מילוי לפי התכנית המומלצת\" ממלא את הסמסטרים לפי התכנית של המחלקה (3 או 4 שנים). \"השלמה אוטומטית\" משבצת רק את קורסי החובה שעוד חסרים, סביב מה שכבר שיבצת. את קורסי הבחירה בוחרים לבד. כל פעולה אפשר לבטל ב-↶ שבראש העמוד או ב-Ctrl+Z.") },
   { shot: "drag", title: T("3. משבצים קורסים"),
-    text: T("עץ הקורסים מראה את מה שהתואר דורש. גוררים קורס לסמסטר, או ל\"קורסים שכבר עשיתי\" אם כבר למדת אותו. אפשר גם ללחוץ על קורס ואז על \"+ שיבוץ כאן\" (כך בטלפון). כשהעכבר על קורס, ובזמן הגרירה, הסמסטרים נצבעים: כחול אפשר, אדום או כתום יחסר תנאי, ובסמסטר מפוספס הקורס לא מוצע. מה שכבר שיבצת מתכווץ בעץ, כך שרואים בעיקר את מה שנשאר.") },
+    text: T("עץ הקורסים מראה את מה שהתואר דורש. גוררים קורס לסמסטר, או ל\"קורסים שכבר עשיתי\" אם כבר למדת אותו. אפשר גם ללחוץ על קורס ואז על \"+ שיבוץ כאן\" (כך בטלפון). כשהעכבר על קורס בעץ, ובזמן הגרירה, הסמסטרים נצבעים: כחול אפשר, אדום או כתום יחסר תנאי, ובסמסטר מפוספס הקורס לא מוצע. מה שכבר שיבצת מתכווץ בעץ, כך שרואים בעיקר את מה שנשאר.") },
   { shot: null, title: T("4. מסדרים ונועלים"),
     text: T("בתוך סמסטר גוררים קורס למעלה או למטה, וקו מראה איפה הוא ינחת. במקלדת: Alt וחץ. בטלפון: \"למעלה\" ו\"למטה\" בחלון הקורס (ⓘ). המנעול שעל הכרטיס משאיר קורס במקומו, גם בניקוי וגם במילוי לפי התכנית המומלצת.") },
   { shot: "warn", title: T("5. תנאים ואזהרות"),
