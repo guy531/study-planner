@@ -12,6 +12,7 @@ let program = null;
 let state = null;
 let selected = null; // course number picked by tap (phones), waiting for a destination
 let dragging = null; // course number being dragged, so semesters that refuse it can show it
+let hovering = null; // course number under the mouse: the semesters take its colors too (guy, 2026-11-01)
 let toastTimer = null;
 let reopenWindow = null; // redraws the open course window after a change made from inside it
 let problems = []; // unmet admission / required-knowledge conditions of placed courses, rebuilt on every render
@@ -2199,8 +2200,10 @@ function dropIssues(n, i) {
 // while a course is dragged or picked, each semester takes the colors of the cards (guy, 2026-10-29): striped where it
 // is not offered (a block), red where an admission condition would be missing, orange where only required knowledge
 // would, and blue otherwise. No text in the semester: it changed the semesters' size and the page jumped (guy)
+// Also while the mouse is over a course card (guy, 2026-11-01: a glance at where a course can go, without clicking);
+// a drag or a picked course comes first
 function markZone(zone, i) {
-  const pending = dragging || selected;
+  const pending = dragging || selected || hovering;
   const blocked = !!pending && !!blockedReason(pending, i);
   const issues = pending && !blocked ? dropIssues(pending, i) : { admission: false, required: false };
   zone.classList.toggle("no-drop", blocked);
@@ -2215,7 +2218,21 @@ function markZone(zone, i) {
 function markBlocked() {
   document.querySelectorAll("[data-zone^='s']").forEach((z) => markZone(z, Number(z.dataset.zone.slice(1))));
   // "done" takes any course: blue like a semester with nothing missing, while dragging or picked (guy, 2026-10-31)
-  $("#done").classList.toggle("cond-ok", !!(dragging || selected));
+  $("#done").classList.toggle("cond-ok", !!(dragging || selected || hovering));
+}
+
+// the mouse over a card that can be moved: the semesters show where it can go. Only a real mouse (a tap on a phone
+// also sends a mouseover), and the colors go a moment after the mouse leaves, so moving from card to card does not flicker
+function setupHoverMarks() {
+  let leave = null;
+  const set = (n) => { clearTimeout(leave); if (n !== hovering) { hovering = n; markBlocked(); } };
+  document.addEventListener("pointerover", (e) => {
+    if (e.pointerType !== "mouse" || dragging) return;
+    const chip = e.target.closest && e.target.closest(".chip[draggable]");
+    if (chip) set(chip.dataset.n);
+    else if (hovering) { clearTimeout(leave); leave = setTimeout(() => set(null), 120); }
+  });
+  document.documentElement.addEventListener("pointerleave", () => set(null)); // the mouse left the window
 }
 
 // the course a drop lands in front of: the first card in the semester whose middle is below the pointer, or null
@@ -2584,7 +2601,7 @@ const HELP_STEPS = [
   { shot: "controls", title: T("2. מתחילים מהר"),
     text: T("\"מילוי לפי התכנית המומלצת\" ממלא את הסמסטרים לפי התכנית של המחלקה (3 או 4 שנים). \"השלמה אוטומטית\" משבצת רק את קורסי החובה שעוד חסרים, סביב מה שכבר שיבצת. את קורסי הבחירה בוחרים לבד. כל פעולה אפשר לבטל ב-↶ שבראש העמוד או ב-Ctrl+Z.") },
   { shot: "drag", title: T("3. משבצים קורסים"),
-    text: T("עץ הקורסים מראה את מה שהתואר דורש. גוררים קורס לסמסטר, או ל\"קורסים שכבר עשיתי\" אם כבר למדת אותו. אפשר גם ללחוץ על קורס ואז על \"+ שיבוץ כאן\" (כך בטלפון). בזמן הגרירה הסמסטרים נצבעים: כחול אפשר, אדום או כתום יחסר תנאי, ובסמסטר מפוספס הקורס לא מוצע. מה שכבר שיבצת מתכווץ בעץ, כך שרואים בעיקר את מה שנשאר.") },
+    text: T("עץ הקורסים מראה את מה שהתואר דורש. גוררים קורס לסמסטר, או ל\"קורסים שכבר עשיתי\" אם כבר למדת אותו. אפשר גם ללחוץ על קורס ואז על \"+ שיבוץ כאן\" (כך בטלפון). כשהעכבר על קורס, ובזמן הגרירה, הסמסטרים נצבעים: כחול אפשר, אדום או כתום יחסר תנאי, ובסמסטר מפוספס הקורס לא מוצע. מה שכבר שיבצת מתכווץ בעץ, כך שרואים בעיקר את מה שנשאר.") },
   { shot: null, title: T("4. מסדרים ונועלים"),
     text: T("בתוך סמסטר גוררים קורס למעלה או למטה, וקו מראה איפה הוא ינחת. במקלדת: Alt וחץ. בטלפון: \"למעלה\" ו\"למטה\" בחלון הקורס (ⓘ). המנעול שעל הכרטיס משאיר קורס במקומו, גם בניקוי וגם במילוי לפי התכנית המומלצת.") },
   { shot: "warn", title: T("5. תנאים ואזהרות"),
@@ -2960,6 +2977,7 @@ async function main() {
   const code = codes.includes(last) ? last : codes[0];
   $("#program").value = code;
   setupDragAndDrop();
+  setupHoverMarks();
   setupFind();
   setupMini();
   setupClicks();
