@@ -138,6 +138,8 @@ select, input[type="search"] {
 .tree {
   background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
   padding: 14px; position: sticky; top: 12px; max-height: calc(100vh - 24px); overflow: auto;
+  /* scrolling the tree to its top or bottom does not go on to scroll the page (guy, 2026-11-01) */
+  overscroll-behavior: contain;
 }
 .tree.drop-target { outline: 2px dashed var(--accent); }
 .tree-head .hint { color: var(--muted); font-size: 0.85rem; margin: 4px 0 10px; }
