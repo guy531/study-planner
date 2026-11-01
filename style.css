@@ -234,6 +234,39 @@ button.num-link { border: none; background: none; padding: 0; color: inherit; cu
   text-decoration: underline dotted; text-underline-offset: 3px; }
 button.num-link:hover { color: var(--accent); text-decoration-style: solid; }
 
+/* the floating summary at the bottom of the plan column, while the counters are out of sight (guy, 2026-11-01) */
+.mini-status {
+  position: sticky; bottom: 12px; z-index: 15; width: 100%; margin-top: 14px; display: flex; align-items: stretch; gap: 14px;
+  padding: 8px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 12%); font: inherit; text-align: start; cursor: pointer;
+}
+.mini-status[hidden] { display: none; }
+.mini-status:hover { border-color: var(--accent); }
+.mini-status.done { background: var(--done-soft); border-color: var(--done); }
+.mini-status .l { display: block; font-size: 0.72rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mini-head { flex: none; display: flex; flex-direction: column; justify-content: center; padding-inline-end: 14px; border-inline-end: 1px solid var(--line); }
+.mini-status.done .mini-head { border: none; color: var(--done); }
+.mini-meter { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+.mini-meter .v { font-size: 0.8rem; color: var(--muted); }
+.mini-meter .v strong { font-size: 0.95rem; color: var(--ink); }
+.mini-meter .bar { display: block; height: 3px; margin-top: 3px; border-radius: 2px; background: var(--surface-2); overflow: hidden; }
+.mini-meter .bar span { display: block; height: 100%; background: var(--accent); }
+.mini-meter.full .bar span { background: var(--done); }
+.mini-meter.full .v strong { color: var(--done); }
+.mini-short { display: none; }
+/* while dragging, drops go through it to the semester under it */
+body.dragging .mini-status { pointer-events: none; opacity: 0.6; }
+/* the other bars at the bottom go above it */
+body.mini-on .toast, body.mini-on .pick-bar, body.mini-on .find-bar { bottom: 84px; }
+@media (max-width: 900px) {
+  /* a phone: one short line, beside the tree's button */
+  .mini-status { width: auto; max-width: calc(100% - 150px); bottom: 16px; padding: 9px 14px; }
+  .mini-head, .mini-meter { display: none; }
+  .mini-short { display: block; font-size: 0.88rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mini-status.done .mini-short { color: var(--done); }
+  body.mini-on .toast, body.mini-on .pick-bar, body.mini-on .find-bar { bottom: 66px; }
+}
+
 /* Ctrl+F: the find bar, at the bottom like the browser's own (guy, 2026-11-01) */
 .find-bar {
   position: fixed; inset-inline: 16px; bottom: 16px; margin: 0 auto; width: fit-content; max-width: calc(100vw - 32px); z-index: 26;

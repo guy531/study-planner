@@ -906,6 +906,7 @@ function render(withStatic = false) {
   markFound();
   holdPage();
   holdTree();
+  placeMini();
   if (moveFocus) { const next = moveFocus; moveFocus = null; if (typeof next === "function") next(); else focusMoved(next); } else refocus(focus);
 }
 
@@ -917,6 +918,7 @@ function renderAll() {
   renderSkills();
   renderStatus();
   renderMeters();
+  renderMini();
   // a finished plan: the green status line and the counters become one green card (guy, 2026-10-31). Not while a
   // bar (problems, English/library) sits between them: then the plan is not really finished for the student
   $("#plan-start").classList.toggle("complete", $("#status").classList.contains("done") && $("#problems").hidden
@@ -1238,10 +1240,48 @@ function renderMeters() {
       const pct = target ? Math.min(100, (value / target) * 100) : 0;
       return el("div", { class: `meter${target && value >= target ? " full" : ""}` },
         el("div", { class: "label", text: label }),
-        el("div", { class: "value" }, String(value), target ? el("small", { text: ` / ${target}` }) : null),
+        // the numbers left to right in every language: "120 / 132", not "132 / 120" (guy, 2026-11-01)
+        el("div", { class: "value" }, el("span", { dir: "ltr" }, String(value), target ? el("small", { text: ` / ${target}` }) : null)),
         el("div", { class: "bar" }, el("span", { style: `width:${pct}%` })));
     }),
     el("p", { class: "meters-note", text: meterNote() }));
+}
+
+// the floating summary at the bottom of the plan column (guy, 2026-11-01): it shows while the status line and the
+// counters at the top are scrolled out of sight, so the student sees what changes while placing courses far below.
+// A click goes back up to them. Wide: what is missing, and every counter with a thin bar; narrow (a phone, with the
+// tree's button beside it): one short line
+function renderMini() {
+  const gaps = degreeGaps();
+  const items = gaps.filter((g) => g.kind === "item").length;
+  const itemsText = items === 1 ? T("פריט חובה 1") : T`${items} פריטי חובה`;
+  const total = gaps.find((g) => g.kind === "total" && (!g.counter.field || g.counter.field === "כל הקורסים") && g.counter.kind === "credits");
+  const done = !gaps.length;
+  const box = $("#mini-status");
+  box.classList.toggle("done", done);
+  box.replaceChildren(
+    el("span", { class: "mini-head" }, done ? el("strong", { text: T("✓ כל דרישות התואר בתכנית") })
+      : [el("span", { class: "l", text: T("עוד חסר לתואר") }), el("strong", { text: items ? itemsText : T("נ\"ז בלבד") })]),
+    ...creditTotals().map(([label, value, target]) => el("span", { class: `mini-meter${target && value >= target ? " full" : ""}` },
+      el("span", { class: "l", text: capital(label) }),
+      el("span", { class: "v" }, el("span", { dir: "ltr" }, el("strong", { text: String(value) }), target ? ` / ${target}` : "")),
+      el("span", { class: "bar" }, el("span", { style: `width:${target ? Math.min(100, (value / target) * 100) : 0}%` })))),
+    el("span", { class: "mini-short", text: done ? T("✓ כל דרישות התואר בתכנית")
+      : [total ? T`חסר: ${total.credits} נ"ז` : T("עוד חסר לתואר"), items ? itemsText : null].filter(Boolean).join(" · ") }));
+}
+// shown once the counters are above the screen (not while they are in sight); checked on scroll, on resize and after
+// every render
+function placeMini() {
+  const above = $("#meters").getBoundingClientRect().bottom < 0;
+  if ($("#mini-status").hidden === !above) return;
+  $("#mini-status").hidden = !above;
+  document.body.classList.toggle("mini-on", above);
+}
+function setupMini() {
+  // capture: also a scroll of any box inside the page, not only of the page itself
+  document.addEventListener("scroll", placeMini, { passive: true, capture: true });
+  addEventListener("resize", placeMini);
+  $("#mini-status").addEventListener("click", () => $("#status").scrollIntoView({ behavior: SMOOTH(), block: "start" }));
 }
 
 // under the counters: what they include, and the overlap cuts, if any (guy, 2026-10-31: the old note said the
@@ -2224,12 +2264,13 @@ function setupDragAndDrop() {
     const r = c.getBoundingClientRect();
     e.dataTransfer.setDragImage(c, e.clientX - r.left, e.clientY - r.top);
     dragging = c.dataset.n;
+    document.body.classList.add("dragging"); // the floating summary lets drops through to the semester under it
     selected = null; // a drag replaces any course picked by tap
     document.querySelectorAll(".chip.selected").forEach((x) => x.classList.remove("selected"));
     setTimeout(markBlocked, 0);
   });
   // a drag that ends anywhere, including a cancelled one, unlocks every semester
-  const endDrag = () => { clearDropLine(); if (dragging) { dragging = null; markBlocked(); } };
+  const endDrag = () => { clearDropLine(); document.body.classList.remove("dragging"); if (dragging) { dragging = null; markBlocked(); } };
   document.addEventListener("dragend", endDrag);
   // safety net: some browsers skip dragend when the drop is cancelled; the next plain mouse move ends the drag
   document.addEventListener("mousemove", (e) => { if (dragging && e.buttons === 0) endDrag(); });
@@ -2918,6 +2959,7 @@ async function main() {
   $("#program").value = code;
   setupDragAndDrop();
   setupFind();
+  setupMini();
   setupClicks();
   setupControls();
   setupSearch();

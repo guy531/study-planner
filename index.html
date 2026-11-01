@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="i18n.js"></script>
-<script src="lang-ar.js"></script>
-<script src="lang-en.js"></script>
+<link rel="stylesheet" href="style.css?v=44d6dc9a">
+<script src="i18n.js?v=e2f3071e"></script>
+<script src="lang-ar.js?v=574c21e8"></script>
+<script src="lang-en.js?v=f2861e75"></script>
 <script>
   // light by default; dark only when the user chose it with the button (set before paint, so no flash)
   try { if (localStorage.getItem("physics-planner-v1:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) { /* no storage */ }
@@ -94,6 +94,8 @@
       </div>
     </div>
     <div class="semesters" id="semesters"></div>
+    <!-- what the degree still needs, floating at the bottom while the counters at the top are out of sight (guy, 2026-11-01) -->
+    <button type="button" class="mini-status" id="mini-status" hidden title="למעלה, לפירוט של מה שחסר" data-t-title></button>
 
     <details class="general">
       <summary data-t>דרישות כלליות לתואר</summary>
@@ -168,7 +170,7 @@
 </div>
 <div class="print-holder" aria-hidden="true"><section id="print-sheet" class="print-sheet"></section></div>
 
-<script src="data/data.js"></script>
-<script src="app.js"></script>
+<script src="data/data.js?v=640df35c"></script>
+<script src="app.js?v=6de921a4"></script>
 </body>
 </html>
