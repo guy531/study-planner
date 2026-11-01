@@ -27,7 +27,7 @@ I18N.en = {
  "עמדתי בדרישות ההדרכה הביבליוגרפית": "I've met the bibliographic instruction requirements",
  "הדרכה ביבליוגרפית": "bibliographic instruction",
  " ו": " and ",
- "דורש {0}": "Requires {0}",
+ "דרוש {0}": "Requires {0}",
  "{0} ועוד {1}": "{0} and {1} more",
  "ידע קודם במקביל": "Prior knowledge in parallel",
  "ב\"קורסים שכבר עשיתי\"": "in \"Courses I've completed\"",

@@ -627,7 +627,8 @@ function missingSkills(n) {
   return c ? SKILLS.filter((s) => c[s.key] && !hasSkill(s.id)) : [];
 }
 
-const skillsTag = (list) => T`דורש ${list.map((s) => s.short).join(T(" ו"))}`;
+// "דרוש", not "דורש" (guy, 2026-11-01)
+const skillsTag = (list) => T`דרוש ${list.map((s) => s.short).join(T(" ו"))}`;
 
 // for each requirement not ticked yet: the planned courses that ask for it, in plan order (the first one sets the deadline)
 function skillNeeds() {
