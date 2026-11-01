@@ -635,7 +635,8 @@ button.link { border: none; background: none; padding: 0; color: var(--accent); 
 #background-card h2 { margin-bottom: 6px; }
 #background-card .bg-note { margin: 2px 26px 0 0; font-size: 0.85rem; color: var(--muted); }
 #background-card .bg-note.ok { color: var(--done); }
-label.check { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; cursor: pointer; }
+/* no wrapping: a long text (the bagrut, on a phone) breaks into lines beside the checkbox, not under it */
+label.check { display: flex; align-items: center; gap: 8px; cursor: pointer; }
 /* the checkbox centered on the text line (on the baseline it sat too low), without the browser's own margin */
 label.check input[type="checkbox"] { margin: 0; flex: none; }
 label.check .muted { color: var(--muted); font-size: 0.85rem; }

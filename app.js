@@ -1337,8 +1337,8 @@ function renderSkills() {
     return el("div", { class: "skill" },
       el("label", { class: "check" },
         el("input", { type: "checkbox", "data-skill": s.id, checked: hasSkill(s.id) }),
-        el("span", { text: s.checkbox }),
-        el("a", { href: s.link, target: "_blank", rel: "noopener", class: "muted", text: T("מה זה? ↗") })),
+        // the link inside the text, so a long text wraps beside the checkbox and not under it (guy, 2026-11-01: phone)
+        el("span", {}, s.checkbox, " ", el("a", { href: s.link, target: "_blank", rel: "noopener", class: "muted", text: T("מה זה? ↗") }))),
       need ? el("p", { class: "need-line", text: T`נדרש לפני ${semesterLabel(ids[need.courses[0].i])}, בשביל ${fewCourses(need.courses.map((x) => x.n))}.` }) : null);
   }));
   renderPrereq();
@@ -1723,8 +1723,7 @@ function renderBackground() {
     return el("div", { class: "bg-item" },
       el("label", { class: "check" },
         el("input", { type: "checkbox", "data-background": b.id, checked: ticked }),
-        el("span", {}, b.checkbox),
-        el("button", { type: "button", class: "link", "data-background-info": b.id, text: T("הסבר") })),
+        el("span", {}, b.checkbox, " ", el("button", { type: "button", class: "link", "data-background-info": b.id, text: T("הסבר") }))),
       // ticked: nothing to explain; otherwise either the courses are already in the plan, or where to find them
       ticked ? null : el("p", { class: `bg-note${viaCourses ? " ok" : ""}` }, viaCourses
         ? T`✓ ${plainCourses((b.courses.or || [b.courses]).find((p) => satisfied(p, planned)))} כבר בתכנית שלך, ולכן אין צורך לסמן.`
@@ -1873,7 +1872,7 @@ function flashInTree(wanted, flash = true) {
 // ---------- Ctrl+F: find a course anywhere on the page (guy, 2026-11-01) ----------
 // A bar at the bottom: the courses whose name or number match (the tree search's rules), in the plan ("done", then the
 // semesters in order) and then in the tree. Typing jumps to the first, Enter to the next, Shift+Enter back; each one
-// flashes where it is now. A second Ctrl+F inside the bar is the browser's own find
+// flashes where it is now. A second Ctrl+F closes the bar (the browser's own find is not needed here)
 let findHits = [];
 let findAt = -1;
 let findReturn = null; // the element that had the focus, back to it when the bar closes
@@ -1943,9 +1942,10 @@ function setupFind() {
   document.addEventListener("keydown", (e) => {
     // e.code: the F key in any keyboard language (in Hebrew it is "כ")
     if (!(e.ctrlKey || e.metaKey) || e.code !== "KeyF" || e.shiftKey || e.altKey) return;
-    if (document.querySelector("dialog[open]") || document.activeElement === $("#find-input")) return;
+    if (document.querySelector("dialog[open]")) return;
     e.preventDefault();
-    openFind();
+    // a second Ctrl+F closes the bar, instead of opening the browser's own search (guy, 2026-11-01)
+    if ($("#find-bar").hidden) openFind(); else closeFind();
   });
   $("#find-input").addEventListener("input", findUpdate);
   $("#find-input").addEventListener("keydown", (e) => {
@@ -2487,7 +2487,8 @@ function setupControls() {
   $("#auto-fill").addEventListener("click", autoFill);
   $("#share").addEventListener("click", sharePlan);
   $("#help").addEventListener("click", showHelp);
-  $("#tree-fab").addEventListener("click", () => { setTreeOpen(true); $("#tree-search").focus({ preventScroll: true }); });
+  // focus goes into the layer, but not to the search: on a phone that opens the keyboard (guy, 2026-11-01)
+  $("#tree-fab").addEventListener("click", () => { setTreeOpen(true); $("#tree-close").focus({ preventScroll: true }); });
   $("#skip-tree").addEventListener("click", (e) => { e.preventDefault(); if (treeIsLayer()) setTreeOpen(true); $("#tree-search").focus(); });
   $("#skip-plan").addEventListener("click", (e) => { e.preventDefault(); $("#plan-start").focus(); });
   $("#a11y-open").addEventListener("click", showAccessibility);
@@ -2593,7 +2594,7 @@ const HELP_STEPS = [
   { shot: "background", title: T("7. רקע ודרישות"),
     text: T("בכרטיס \"רקע ודרישות\" מסמנים אם יש לך בגרות שבאה במקום קורסי היסוד, ואם עמדת בדרישות האנגלית וההדרכה הביבליוגרפית. מה שלא סומן מופיע כתגית על הקורסים שדורשים אותו. כשהכול מסומן, הכרטיס מתקפל לשורה אחת.") },
   { shot: "search", title: T("8. חיפוש"),
-    text: T("החיפוש בראש העץ מוצא קורס לפי שם או מספר, ומתחת לעץ מציג גם קורסים מתאימים שאינם חלק מהתואר; אפשר לגרור אותם ישר לסמסטר. Ctrl+F פותח חיפוש בכל העמוד, בעץ ובתכנית: Enter עובר להתאמה הבאה, והקורסים שנמצאו מסומנים בצהוב.") },
+    text: T("החיפוש בראש העץ מוצא קורס לפי שם או מספר, ומתחת לעץ מציג גם קורסים מתאימים שאינם חלק מהתואר; אפשר לגרור אותם ישר לסמסטר. Ctrl+F פותח חיפוש בכל העמוד, בעץ ובתכנית: Enter עובר להתאמה הבאה, והקורסים שנמצאו מסומנים בצהוב. Ctrl+F שוב סוגר אותו.") },
   { shot: "share", title: T("9. הדפסה ושיתוף"),
     text: T("\"הדפסה / PDF\" מכין טבלה של התכנית לפי סמסטרים, להדפסה או לשמירה כ-PDF, עם מה שעוד חסר. \"שיתוף\" יוצר קישור שפותח את התכנית אצל מי שמקבל אותו, למשל יועץ אקדמי.") },
 ];
