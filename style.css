@@ -409,8 +409,10 @@ button.history:disabled:hover { border-color: var(--line); }
 .chip .why.warn { color: var(--warn); }
 .chip.prob-bad { border-color: var(--bad); border-inline-start: 4px solid var(--bad); }
 .chip.prob-warn { border-color: var(--warn); border-inline-start: 4px solid var(--warn); }
-.chip.needed-bad { border: 1.5px dashed var(--bad); }
-.chip.needed-warn { border: 1.5px dashed var(--warn); }
+/* a course a placed course needs: filled like an option for a condition, not a dashed frame (guy, 2026-11-01:
+   one look for both); the line under the name says what it is for */
+.chip.needed-bad, .alt .chip.needed-bad { background: var(--bad-soft); }
+.chip.needed-warn, .alt .chip.needed-warn { background: var(--warn-soft); }
 .chip .dot { font-size: 0.7rem; line-height: 1; }
 .dot.bad { color: var(--bad); }
 .dot.warn { color: var(--warn); }
