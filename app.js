@@ -13,6 +13,7 @@ let state = null;
 let selected = null; // course number picked by tap (phones), waiting for a destination
 let dragging = null; // course number being dragged, so semesters that refuse it can show it
 let hovering = null; // course number under the mouse: the semesters take its colors too (guy, 2026-11-01)
+let hoverSkip = null; // the course just dropped: no hover colors for it until the mouse leaves it
 let toastTimer = null;
 let reopenWindow = null; // redraws the open course window after a change made from inside it
 let problems = []; // unmet admission / required-knowledge conditions of placed courses, rebuilt on every render
@@ -2229,6 +2230,10 @@ function setupHoverMarks() {
   document.addEventListener("pointerover", (e) => {
     if (e.pointerType !== "mouse" || dragging) return;
     const chip = e.target.closest && e.target.closest(".chip[draggable]");
+    // right after a drop the mouse is still on the course: its colors went off with the drag and should not come
+    // back from the hover, or the semesters flash once more (guy, 2026-11-01)
+    if (chip && chip.dataset.n === hoverSkip) return;
+    hoverSkip = null;
     if (chip) set(chip.dataset.n);
     else if (hovering) { clearTimeout(leave); leave = setTimeout(() => set(null), 120); }
   });
@@ -2288,7 +2293,7 @@ function setupDragAndDrop() {
     setTimeout(markBlocked, 0);
   });
   // a drag that ends anywhere, including a cancelled one, unlocks every semester
-  const endDrag = () => { clearDropLine(); document.body.classList.remove("dragging"); if (dragging) { dragging = null; markBlocked(); } };
+  const endDrag = () => { clearDropLine(); document.body.classList.remove("dragging"); if (dragging) { hoverSkip = dragging; hovering = null; dragging = null; markBlocked(); } };
   document.addEventListener("dragend", endDrag);
   // safety net: some browsers skip dragend when the drop is cancelled; the next plain mouse move ends the drag
   document.addEventListener("mousemove", (e) => { if (dragging && e.buttons === 0) endDrag(); });
