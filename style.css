@@ -617,7 +617,9 @@ dialog {
 }
 /* the content scrolls inside the window, so × stays in its corner (guy, 2026-10-31) */
 dialog[open] { display: flex; flex-direction: column; overflow: hidden; max-height: 88vh; }
-#info-body, #help-body, #move-body, #a11y-body { overflow: auto; min-height: 0; padding-inline-end: 4px; }
+/* room on every side for a focus ring (2px + 2px offset): the scrolling box cut it at the edge (guy, 2026-11-01, "לאן
+   להעביר"); the negative start margin keeps the text where it was */
+#info-body, #help-body, #move-body, #a11y-body { overflow: auto; min-height: 0; padding: 4px; margin-inline-start: -4px; }
 dialog::backdrop { background: rgb(0 0 0 / 35%); }
 dialog .close { position: absolute; inset-inline-end: 10px; top: 8px; border: none; font-size: 1.4rem; background: none; }
 dialog h3 { font-size: 1.15rem; margin-bottom: 8px; padding-inline-end: 24px; }
