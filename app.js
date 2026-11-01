@@ -2228,8 +2228,19 @@ function markBlocked() {
 // After a drop the mouse is often still on the course it dropped: no colors for it until the mouse leaves the place of
 // that card and comes back (guy, 2026-11-01: the colors went off with the drag and flashed on again). The place is
 // checked by position on every move, since the card is rebuilt under the mouse and may get no pointerover
+// The keyboard too: Tab onto a course in the tree, or onto a button in its card (ⓘ), shows its colors the same way
+// (guy, 2026-11-01). The mouse and the focus are kept apart, so one leaving does not wipe the other; the mouse wins
 function setupHoverMarks() {
-  const set = (n) => { if (n !== hovering) { hovering = n; markBlocked(); } };
+  let mouseN = null, focusN = null;
+  const update = () => { const n = mouseN || focusN; if (n !== hovering) { hovering = n; markBlocked(); } };
+  const set = (n) => { mouseN = n; update(); };
+  const treeChip = (t) => t && t.closest ? t.closest("aside.tree .chip[draggable]") : null;
+  // keyboard focus only (:focus-visible): a click also focuses the card, and its colors would stay after the mouse left
+  document.addEventListener("focusin", (e) => {
+    const chip = e.target.matches(":focus-visible") ? treeChip(e.target) : null;
+    focusN = chip ? chip.dataset.n : null; update();
+  });
+  document.addEventListener("focusout", (e) => { if (!treeChip(e.relatedTarget)) { focusN = null; update(); } });
   const onDropped = (e) => [...document.querySelectorAll(`.chip[data-n='${hoverSkip}']`)].some((c) => {
     const r = c.getBoundingClientRect();
     return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
@@ -2239,13 +2250,13 @@ function setupHoverMarks() {
     if (hoverSkip) { if (onDropped(e)) return; hoverSkip = null; }
     // only the courses in the tree column (the tree, the search results, "קורסים נוספים", the lists): a course already
     // placed shows its colors only when clicked or dragged (guy, 2026-11-01)
-    const chip = e.target.closest && e.target.closest("aside.tree .chip[draggable]");
+    const chip = treeChip(e.target);
     set(chip ? chip.dataset.n : null);
   };
   document.addEventListener("pointerover", hover);
   // leaving a card for anything that is not a card (also where no pointerover follows, like out of the window)
   document.addEventListener("pointerout", (e) => {
-    if (e.pointerType === "mouse" && !dragging && hovering && !(e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest("aside.tree .chip[draggable]"))) set(null);
+    if (e.pointerType === "mouse" && !dragging && mouseN && !treeChip(e.relatedTarget)) set(null);
   });
   document.addEventListener("pointermove", (e) => { if (hoverSkip) hover(e); });
   document.documentElement.addEventListener("pointerleave", () => set(null)); // the mouse left the window
