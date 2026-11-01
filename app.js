@@ -2223,13 +2223,13 @@ function markBlocked() {
 }
 
 // the mouse over a card in the tree that can be moved: the semesters show where it can go. Only a real mouse (a tap on a phone
-// also sends a mouseover), and the colors go a moment after the mouse leaves, so moving from card to card does not flicker
+// also sends a mouseover). The colors go the moment the mouse leaves the card (guy, 2026-11-01: a delay of 120ms
+// against flicker between cards felt slow)
 // After a drop the mouse is often still on the course it dropped: no colors for it until the mouse leaves the place of
 // that card and comes back (guy, 2026-11-01: the colors went off with the drag and flashed on again). The place is
 // checked by position on every move, since the card is rebuilt under the mouse and may get no pointerover
 function setupHoverMarks() {
-  let leave = null;
-  const set = (n) => { clearTimeout(leave); if (n !== hovering) { hovering = n; markBlocked(); } };
+  const set = (n) => { if (n !== hovering) { hovering = n; markBlocked(); } };
   const onDropped = (e) => [...document.querySelectorAll(`.chip[data-n='${hoverSkip}']`)].some((c) => {
     const r = c.getBoundingClientRect();
     return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
@@ -2240,10 +2240,13 @@ function setupHoverMarks() {
     // only the courses in the tree column (the tree, the search results, "קורסים נוספים", the lists): a course already
     // placed shows its colors only when clicked or dragged (guy, 2026-11-01)
     const chip = e.target.closest && e.target.closest("aside.tree .chip[draggable]");
-    if (chip) set(chip.dataset.n);
-    else if (hovering) { clearTimeout(leave); leave = setTimeout(() => set(null), 120); }
+    set(chip ? chip.dataset.n : null);
   };
   document.addEventListener("pointerover", hover);
+  // leaving a card for anything that is not a card (also where no pointerover follows, like out of the window)
+  document.addEventListener("pointerout", (e) => {
+    if (e.pointerType === "mouse" && !dragging && hovering && !(e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest("aside.tree .chip[draggable]"))) set(null);
+  });
   document.addEventListener("pointermove", (e) => { if (hoverSkip) hover(e); });
   document.documentElement.addEventListener("pointerleave", () => set(null)); // the mouse left the window
 }
