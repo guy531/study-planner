@@ -2224,19 +2224,25 @@ function markBlocked() {
 
 // the mouse over a card that can be moved: the semesters show where it can go. Only a real mouse (a tap on a phone
 // also sends a mouseover), and the colors go a moment after the mouse leaves, so moving from card to card does not flicker
+// After a drop the mouse is often still on the course it dropped: no colors for it until the mouse leaves the place of
+// that card and comes back (guy, 2026-11-01: the colors went off with the drag and flashed on again). The place is
+// checked by position on every move, since the card is rebuilt under the mouse and may get no pointerover
 function setupHoverMarks() {
   let leave = null;
   const set = (n) => { clearTimeout(leave); if (n !== hovering) { hovering = n; markBlocked(); } };
-  document.addEventListener("pointerover", (e) => {
+  const onDropped = (e) => [...document.querySelectorAll(`.chip[data-n='${hoverSkip}']`)].some((c) => {
+    const r = c.getBoundingClientRect();
+    return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+  });
+  const hover = (e) => {
     if (e.pointerType !== "mouse" || dragging) return;
+    if (hoverSkip) { if (onDropped(e)) return; hoverSkip = null; }
     const chip = e.target.closest && e.target.closest(".chip[draggable]");
-    // right after a drop the mouse is still on the course: its colors went off with the drag and should not come
-    // back from the hover, or the semesters flash once more (guy, 2026-11-01)
-    if (chip && chip.dataset.n === hoverSkip) return;
-    hoverSkip = null;
     if (chip) set(chip.dataset.n);
     else if (hovering) { clearTimeout(leave); leave = setTimeout(() => set(null), 120); }
-  });
+  };
+  document.addEventListener("pointerover", hover);
+  document.addEventListener("pointermove", (e) => { if (hoverSkip) hover(e); });
   document.documentElement.addEventListener("pointerleave", () => set(null)); // the mouse left the window
 }
 
