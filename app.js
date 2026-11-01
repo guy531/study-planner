@@ -1985,9 +1985,14 @@ function showConditions(n, i) {
       const ok = satisfied(part, have);
       if (!ok && cond.key !== "admission" && satisfied(part, withSame)) {
         const options = typeof part === "string" ? [part] : part.or || part.of || [part];
+        const shown = options.filter((o) => satisfied(o, withSame));
+        // only the alternatives taken in the same semester are listed: one of "one of these" is just that course, with
+        // no "אחד מאלה:" over it (guy, 2026-11-01)
+        const head = typeof part === "string" || (part.or && shown.length === 1) ? null
+          : part.or ? T("אחד מאלה:") : part.of ? T`לפחות ${part.atleast} מאלה:` : T("כל אלה יחד:");
         return el("li", { class: "par" }, parallelMark.cloneNode(true),
-          el("div", {}, typeof part === "string" ? null : el("div", { class: "head", text: part.or ? T("אחד מאלה:") : part.of ? T`לפחות ${part.atleast} מאלה:` : T("כל אלה יחד:") }),
-            options.filter((o) => satisfied(o, withSame)).map((o) => el("div", {}, optionLine(o, have, i))),
+          el("div", {}, head ? el("div", { class: "head", text: head }) : null,
+            shown.map((o) => el("div", {}, optionLine(o, have, i))),
             cond.key === "required" ? parallelNote.cloneNode(true) : el("div", { class: "par-note", text: T("נלמד באותו סמסטר.") })));
       }
       if (typeof part === "string") {
