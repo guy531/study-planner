@@ -1240,8 +1240,9 @@ function renderMeters() {
       const pct = target ? Math.min(100, (value / target) * 100) : 0;
       return el("div", { class: `meter${target && value >= target ? " full" : ""}` },
         el("div", { class: "label", text: label }),
-        // the numbers left to right in every language: "120 / 132", not "132 / 120" (guy, 2026-11-01)
-        el("div", { class: "value" }, el("span", { dir: "ltr" }, String(value), target ? el("small", { text: ` / ${target}` }) : null)),
+        // left to right in every language, "120 / 132": the goal on the right in large, the student's credits on the
+        // left in small, also once the goal is reached (then only the color turns green; guy, 2026-11-01)
+        el("div", { class: "value" }, target ? el("span", { dir: "ltr" }, el("small", { text: `${value} / ` }), String(target)) : String(value)),
         el("div", { class: "bar" }, el("span", { style: `width:${pct}%` })));
     }),
     el("p", { class: "meters-note", text: meterNote() }));
@@ -1264,7 +1265,7 @@ function renderMini() {
       : [el("span", { class: "l", text: T("עוד חסר לתואר") }), el("strong", { text: items ? itemsText : T("נ\"ז בלבד") })]),
     ...creditTotals().map(([label, value, target]) => el("span", { class: `mini-meter${target && value >= target ? " full" : ""}` },
       el("span", { class: "l", text: capital(label) }),
-      el("span", { class: "v" }, el("span", { dir: "ltr" }, el("strong", { text: String(value) }), target ? ` / ${target}` : "")),
+      el("span", { class: "v" }, target ? el("span", { dir: "ltr" }, `${value} / `, el("strong", { text: String(target) })) : el("strong", { text: String(value) })),
       el("span", { class: "bar" }, el("span", { style: `width:${target ? Math.min(100, (value / target) * 100) : 0}%` })))),
     el("span", { class: "mini-short", text: done ? T("✓ כל דרישות התואר בתכנית")
       : [total ? T`חסר: ${total.credits} נ"ז` : T("עוד חסר לתואר"), items ? itemsText : null].filter(Boolean).join(" · ") }));

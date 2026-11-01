@@ -168,7 +168,7 @@ select, input[type="search"] {
 /* a met counter turns all green (guy, 2026-10-29; 2026-10-31 we tried white with a green bar, and guy preferred the
    green: a finished plan should stand out to the student) */
 .meter.full { background: var(--done-soft); border-color: var(--done); }
-.meter.full .label, .meter.full .value small { color: var(--done); }
+.meter.full .label, .meter.full .value, .meter.full .value small { color: var(--done); }
 .meter.full::after { content: "✓"; position: absolute; top: 8px; inset-inline-end: 12px; color: var(--done); font-size: 1.2rem; font-weight: 700; line-height: 1; }
 .meters-note { grid-column: 1 / -1; color: var(--muted); font-size: 0.8rem; margin-top: -4px; }
 
