@@ -1,0 +1,751 @@
+:root {
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --surface-2: #efede7;
+  --ink: #1d2422;
+  --muted: #5d6763;
+  --line: #d9d6cd;
+  --accent: #1f6b74;
+  --on-accent: #fff; /* text on the accent color: white here, dark in the dark theme (contrast, 2026-10-31) */
+  --accent-soft: #dcebec;
+  --done: #3c7a4a;
+  --done-soft: #e1efe3;
+  --warn: #9a5b12;
+  --warn-soft: #f6ead7;
+  --bad: #b3261e;
+  --ou-blue: #253677; /* the university's logo color */
+  --bad-soft: #fbe4e1;
+  --gone: #8a8f8c;
+  --chip: #f9f8f5;
+  --find: #d9a400; --find-soft: #fff3c4; /* Ctrl+F: what was found, yellow like a browser's find */
+  --shadow: 0 1px 2px rgb(0 0 0 / 6%), 0 2px 8px rgb(0 0 0 / 4%);
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #151918; --surface: #1d2321; --surface-2: #252c2a; --ink: #e6ebe8; --muted: #9aa5a0;
+  --line: #353e3b; --accent: #6fb3bb; --on-accent: #151918; --accent-soft: #1f3638; --done: #7cc28a; --done-soft: #1f3324;
+  --warn: #e0a85c; --warn-soft: #3a2d1b; --bad: #f08a80; --bad-soft: #3d1f1c; --ou-blue: #e6ebe8; --gone: #7b827f; --chip: #222927;
+  --find: #e6c34a; --find-soft: #3b3417;
+  --shadow: 0 1px 2px rgb(0 0 0 / 30%);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.5 "Assistant", "Segoe UI", Arial, sans-serif;
+}
+h1, h2, h3 { margin: 0; line-height: 1.2; }
+h2 { font-size: 1.05rem; }
+h3 { font-size: 0.95rem; }
+a { color: var(--accent); }
+button, select, input { font: inherit; color: inherit; }
+button {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 6px;
+  padding: 4px 10px; cursor: pointer;
+}
+button:hover { border-color: var(--accent); }
+button.with-icon { display: inline-flex; align-items: center; gap: 5px; }
+button.with-icon .ico { flex: none; }
+/* the recommended plan is the main way to start: a gold star draws the eye to it */
+.ico.star { color: #e0a100; width: 18px; height: 18px; filter: drop-shadow(0 0 1px rgba(224, 161, 0, 0.5)); }
+/* and its text is bold, nothing more (guy, 2026-10-31: a filled button, and then a tinted one with a thick frame,
+   were both too much) */
+#fill-recommended { font-weight: 700; }
+/* reset deletes the whole plan: red, so it is not pressed by mistake */
+button.danger { color: var(--bad); border-color: var(--bad); background: var(--bad-soft); }
+button.danger:hover { border-color: var(--bad); filter: brightness(0.97); }
+/* the share window: the link in a box, ready to copy */
+.share-link { width: 100%; direction: ltr; font-family: "JetBrains Mono", monospace; font-size: 0.8rem; padding: 6px; }
+select, input[type="search"] {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 4px 8px;
+}
+.num { font-family: "JetBrains Mono", Consolas, monospace; font-size: 0.82em; direction: ltr; unicode-bidi: isolate; }
+
+/* header */
+.top {
+  /* the controls always on their own row under the title, in every language (guy, 2026-10-29: in Hebrew they
+     fitted beside the title, so the header was lower than in Arabic and English) */
+  display: flex; flex-direction: column; align-items: flex-start; gap: 14px;
+  /* a bar of its own, so it is clear where the header ends and the plan begins (guy, 2026-10-31) */
+  padding: 16px 24px 12px; margin-bottom: 16px; background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.top h1 { font-size: 1.6rem; }
+/* the logo sits to the right of the title, small, separated by a thin line */
+.brand { display: flex; align-items: center; gap: 14px; }
+.ou-logo { display: block; color: var(--ou-blue); padding-inline-end: 14px; border-inline-end: 1px solid var(--line); }
+.ou-logo svg { display: block; height: 42px; width: auto; } /* 40px + 5% (guy, 2026-11-01) */
+@media (max-width: 520px) { .ou-logo svg { height: 31.5px; } .brand { gap: 10px; } .ou-logo { padding-inline-end: 10px; } }
+.sub { margin: 4px 0 0; color: var(--muted); }
+.program-pick { display: flex; gap: 8px; align-items: center; font-weight: 600; max-width: 100%; min-width: 0; }
+.program-pick select { min-width: 0; max-width: 100%; } /* a long degree name does not run off a phone screen */
+.top-controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; align-self: stretch; }
+/* the title row: the logo and title at one end, help, language and light/dark at the other (guy, 2026-10-31);
+   on a narrow screen the tools wrap under the title */
+/* both rows run edge to edge, so the header reads as one block: the site's tools above the plan's undo/redo/reset */
+.top-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px 16px; flex-wrap: wrap; align-self: stretch; }
+.site-tools { display: flex; gap: 12px; align-items: center; margin-inline-start: auto; padding-top: 4px; } /* level with the title, not the middle of the block */
+/* the undo group is ltr inside (same button order in every language), so its margin is set by the page's direction */
+.top-controls .history-bar { margin-left: auto; }
+[dir="rtl"] .top-controls .history-bar { margin-left: 0; margin-right: auto; }
+.program-link { font-size: 0.88rem; }
+/* light/dark slider: the knob sits on the sun in light mode and slides to the moon in dark mode */
+/* the "?" button: help on how to use the site */
+.help-btn { width: 28px; height: 28px; padding: 0; border-radius: 50%; font-weight: 700; color: var(--accent); border-color: var(--accent); }
+.help-dialog { width: min(860px, 94vw); max-height: 88vh; }
+/* help and the accessibility statement: a head row with the title and × (and a line under it), and the text scrolls
+   below it, so × belongs to the title and not to the scrollbar (guy, 2026-10-31: over the scrollbar it looked odd) */
+.dlg-head { flex: none; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding-bottom: 8px; margin-bottom: 8px; border-bottom: 1px solid var(--line); }
+.dlg-head h3 { margin: 0; padding: 0; }
+.dlg-head .dlg-title { flex: 1; min-width: 0; }
+.dlg-head .dlg-title:empty { visibility: hidden; }
+.dlg-head .close { position: static; padding: 0 4px; }
+.help-dialog #help-body, .help-dialog #a11y-body { padding-inline-end: 10px; }
+.help-dialog .help-intro { color: var(--muted); }
+.help-dialog .help-step { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); }
+.help-dialog .help-step h4 { margin: 0 0 4px; font-size: 1rem; }
+.help-dialog .help-step p { margin: 0 0 8px; }
+.help-dialog img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); }
+.theme-toggle {
+  position: relative; display: inline-flex; align-items: center; justify-content: space-between;
+  width: 52px; height: 26px; padding: 0 7px; border-radius: 13px; direction: ltr;
+  background: var(--surface-2); border: 1px solid var(--line); font-size: 0.8rem; line-height: 1; color: var(--muted);
+}
+.theme-toggle::after {
+  content: ""; position: absolute; top: 2px; left: 2px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--surface); box-shadow: 0 1px 3px rgb(0 0 0 / 25%); transition: transform 0.2s ease;
+}
+.theme-toggle[aria-checked="true"]::after { transform: translateX(26px); }
+@media (prefers-reduced-motion: reduce) { .theme-toggle::after { transition: none; } }
+/* the notice on top: closed with ×, back on every load (nothing is remembered) */
+.audience-box {
+  display: flex; align-items: flex-start; gap: 8px; margin: 0 0 12px; padding: 8px 12px; padding-inline-end: 6px; border-radius: 8px;
+  background: var(--accent-soft); color: var(--ink); font-size: 0.92rem;
+}
+.audience-box[hidden] { display: none; }
+.audience { flex: 1; margin: 0; }
+.audience-box .close { flex: none; border: none; background: none; font-size: 1.3rem; line-height: 1; padding: 0 4px; color: var(--muted); }
+.audience-box .close:hover { color: var(--ink); }
+
+/* layout: the plan on the right, the tree on the left */
+.layout {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 400px);
+  gap: 20px; padding: 0 24px 24px; align-items: start;
+}
+.tree {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 14px; position: sticky; top: 12px; max-height: calc(100vh - 24px); overflow: auto;
+}
+.tree.drop-target { outline: 2px dashed var(--accent); }
+.tree-head .hint { color: var(--muted); font-size: 0.85rem; margin: 4px 0 10px; }
+.tree-search { width: 100%; margin-bottom: 6px; padding-inline-end: 30px; }
+/* the × that empties the search (guy); the browser's own one is hidden, so there is only one */
+.search-box { position: relative; }
+.tree-search::-webkit-search-cancel-button { display: none; }
+.search-clear { position: absolute; inset-inline-end: 4px; top: 50%; transform: translateY(calc(-50% - 3px));
+  border: none; background: none; color: var(--muted); font-size: 1.2rem; line-height: 1; padding: 2px 6px; cursor: pointer; }
+.search-clear:hover { color: var(--ink); }
+#tree .f-hide { display: none !important; }
+/* while searching, the "one of" labels and "או" separators would only separate matches that are not alternatives */
+#tree.filtering .alt-label, #tree.filtering .alt-or, #tree.filtering .alt-and, #tree.filtering .need-note { display: none; }
+
+/* credit meters */
+/* as many columns as counters (a program may have 3 or 4; app.js sets --count), all the same width */
+.meters { display: grid; grid-template-columns: repeat(var(--count, 4), minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
+.meter { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px;
+  /* the number and the bar at the bottom, so cards line up when a longer label (נ"ז מתקדמות במדעים) wraps */
+  display: flex; flex-direction: column; }
+.meter .label { flex: 1; color: var(--muted); font-size: 0.85rem; }
+.meter .value { font-size: 1.35rem; font-weight: 700; }
+.meter .value small { font-size: 0.85rem; color: var(--muted); font-weight: 400; }
+.meter .bar { height: 6px; background: var(--surface-2); border-radius: 3px; margin-top: 6px; overflow: hidden; }
+.meter .bar span { display: block; height: 100%; background: var(--accent); }
+.meter.full .bar span { background: var(--done); }
+/* a requirement met: the whole counter turns green, with a ✓ in its far top corner (left in Hebrew and Arabic) */
+/* a met counter turns all green (guy, 2026-10-29; 2026-10-31 we tried white with a green bar, and guy preferred the
+   green: a finished plan should stand out to the student) */
+.meter.full { background: var(--done-soft); border-color: var(--done); }
+.meter.full .label, .meter.full .value small { color: var(--done); }
+.meter.full::after { content: "✓"; position: absolute; top: 8px; inset-inline-end: 12px; color: var(--done); font-size: 1.2rem; font-weight: 700; line-height: 1; }
+.meters-note { grid-column: 1 / -1; color: var(--muted); font-size: 0.8rem; margin-top: -4px; }
+
+/* zones */
+.zone-card, .semester {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow);
+}
+.zone-card { padding: 10px 12px; margin-bottom: 16px; }
+.zone-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.zone-sum { color: var(--muted); font-size: 0.85rem; }
+.zone-tools { display: inline-flex; align-items: center; gap: 10px; }
+/* a choice from a long list (the broadening course), folded */
+.long-list .alt-label { margin: 0 0 6px; }
+.long-list summary { cursor: pointer; color: var(--accent); font-size: 0.9rem; margin-bottom: 6px; }
+.zone-tools h2 { margin: 0; }
+/* a regular (white) button, like the others on the page, in grey; red on hover since it removes courses */
+/* the same text color and size as the other buttons (guy, 2026-10-30: the gray was harder to read); red on hover */
+button.clear-zone { display: inline-flex; align-items: center; gap: 4px; }
+button.clear-zone:hover { color: var(--bad); border-color: var(--bad); }
+.zone {
+  list-style: none; margin: 0; padding: 6px; min-height: 44px; border-radius: 8px;
+  border: 1px dashed transparent; display: flex; flex-wrap: wrap; gap: 6px; align-content: flex-start;
+}
+.zone:empty::before { content: attr(data-empty); color: var(--muted); font-size: 0.85rem; padding: 6px; }
+.zone.drop-target, .zone.tap-target { border-color: var(--accent); background: var(--accent-soft); }
+/* while dragging, a semester with no problem for the course is blue, like the red and orange ones (guy, 2026-10-30) */
+.zone.cond-ok { border-color: var(--accent); background: var(--accent-soft); }
+.zone.no-drop { position: relative; cursor: not-allowed; border-color: transparent; background: repeating-linear-gradient(-45deg, transparent 0 6px, var(--surface-2) 6px 12px); }
+.zone.no-drop > *, .zone.no-drop:empty::before { opacity: 0.45; }
+/* why the course cannot go there, over the middle of the semester: on top, so no semester changes size
+   (guy, 2026-11-01; a line inside the semester once made the screen jump while dragging) */
+.zone.no-drop[data-why]:empty::before { content: none; }
+.zone.no-drop[data-why]::after {
+  content: attr(data-why); position: absolute; top: 50%; left: 8px; right: 8px; margin: 0 auto; width: fit-content; transform: translateY(-50%);
+  padding: 4px 10px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); color: var(--muted);
+  font-size: 0.85rem; text-align: center; pointer-events: none;
+}
+/* a course picked by tap or click: the places it can go take a "+" pointer; over a card the pointer stays as it is,
+   since a click there picks that card (guy, 2026-10-31) */
+body.picking .zone.tap-target:not(.no-drop) { cursor: copy; }
+/* the button that puts the picked course in a semester or in "done": laid on the middle of the box's bottom edge, so
+   no box changes size (the page does not jump) and it covers no text, even in narrow columns */
+.semester, .zone-card { position: relative; }
+.put-here {
+  position: absolute; bottom: -9px; left: 50%; transform: translateX(-50%); z-index: 2;
+  font-size: 0.78rem; line-height: 1.25; padding: 0 10px; border-radius: 999px; border: 1px solid var(--accent);
+  background: var(--accent); color: var(--on-accent); font-weight: 600; cursor: copy; white-space: nowrap; box-shadow: var(--shadow);
+}
+.put-here:hover { filter: brightness(1.1); }
+/* the bar that says which course is picked, with "ביטול" */
+.pick-bar {
+  position: fixed; inset-inline: 16px; bottom: 16px; margin: 0 auto; width: fit-content; max-width: min(480px, calc(100vw - 32px)); z-index: 25;
+  display: flex; align-items: center; gap: 10px; padding: 4px 6px; padding-inline-start: 12px; border-radius: 10px;
+  background: var(--accent); color: var(--on-accent); box-shadow: var(--shadow); font-size: 0.88rem;
+}
+.pick-bar[hidden] { display: none; }
+/* one line: a long course name ends in "..." */
+.pick-bar #pick-text { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pick-bar button { flex: none; padding: 2px 10px; background: none; border: 1px solid currentColor; color: inherit; font-weight: 600; }
+
+/* a course number that jumps to the course: dotted underline, like a quiet link (guy, 2026-11-01) */
+button.num-link { border: none; background: none; padding: 0; color: inherit; cursor: pointer;
+  text-decoration: underline dotted; text-underline-offset: 3px; }
+button.num-link:hover { color: var(--accent); text-decoration-style: solid; }
+
+/* Ctrl+F: the find bar, at the bottom like the browser's own (guy, 2026-11-01) */
+.find-bar {
+  position: fixed; inset-inline: 16px; bottom: 16px; margin: 0 auto; width: fit-content; max-width: calc(100vw - 32px); z-index: 26;
+  display: flex; align-items: center; gap: 6px; padding: 6px 8px; border-radius: 10px;
+  background: var(--surface); border: 1px solid var(--accent); box-shadow: var(--shadow);
+}
+.find-bar[hidden] { display: none; }
+.find-bar input { width: 260px; max-width: 50vw; padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); font: inherit; }
+.find-bar input.none { border-color: var(--bad); }
+.find-bar #find-count { min-width: 5.5em; color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+.find-bar button { padding: 2px 9px; }
+.find-bar button:disabled { opacity: 0.45; cursor: default; }
+/* a message while the bar is open goes above it */
+body:has(#find-bar:not([hidden])) .toast { bottom: 72px; }
+.find-bar .find-close { border: none; background: none; color: var(--muted); font-size: 1.1rem; }
+
+.toast {
+  position: fixed; inset-inline: 16px; bottom: 16px; margin: 0 auto; max-width: 520px; z-index: 20;
+  padding: 10px 14px; border-radius: 8px; background: var(--ink); color: var(--bg); box-shadow: var(--shadow);
+  opacity: 0; transform: translateY(8px); pointer-events: none; transition: opacity 0.2s, transform 0.2s;
+}
+.toast.show { opacity: 1; transform: none; }
+.toast { display: flex; align-items: center; gap: 12px; }
+/* only while it shows: a hidden toast with a button still caught the clicks at the bottom of the screen (guy, 2026-10-31) */
+.toast.show { pointer-events: auto; }
+.toast .toast-action { flex: none; margin-inline-start: auto; background: none; border: 1px solid currentColor; color: inherit; font-weight: 600; }
+.toast .toast-close { flex: none; align-self: flex-start; margin-inline-start: auto; padding: 0 2px; border: none; background: none;
+  color: inherit; font-size: 1.3rem; line-height: 1; opacity: 0.75; }
+.toast .toast-action + .toast-close { margin-inline-start: 0; }
+.toast .toast-close:hover { opacity: 1; }
+/* undo/redo in the header, next to "איפוס" (guy, 2026-10-29): undo on the left, redo on the right, in every language */
+.history-bar { display: inline-flex; gap: 4px; direction: ltr; }
+button.history { font-size: 1.05rem; line-height: 1; padding: 3px 9px; }
+button.history:disabled { opacity: 0.35; cursor: default; }
+button.history:disabled:hover { border-color: var(--line); }
+/* "איפוס" of an untouched plan: nothing to reset */
+.reset-all:disabled { opacity: 0.4; cursor: default; pointer-events: none; }
+#done { background: var(--surface-2); }
+#done.cond-ok { background: var(--accent-soft); } /* blue while a course is dragged or picked, like the semesters */
+
+.semesters-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.semester-controls { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; justify-content: flex-end; font-size: 0.9rem; }
+.semesters-head h2 { margin: 0; }
+/* "ניקוי" at the far end of the controls, on the left like the one of "קורסים שכבר עשיתי", a little apart from the rest (guy) */
+.semester-controls .clear-semesters { margin-inline-start: 14px; }
+.semesters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.semester { padding: 8px 10px; display: flex; flex-direction: column; }
+.semester .zone { flex: 1; min-height: 90px; flex-direction: column; flex-wrap: nowrap; }
+.semester .zone-head .remove-semester, .semester .zone-head .block-semester { border: none; background: none; color: var(--muted); line-height: 0; padding: 2px; cursor: pointer; align-self: center; }
+.semester .zone-head .remove-semester:hover { color: var(--bad); }
+.semester .zone-head .block-semester:hover, .semester .zone-head .block-semester.on { color: var(--ink); }
+.semester .zone-head h3 { white-space: nowrap; }
+/* the title at one end; the credits, block and trash together at the other (spread out, the block icon stood mid-way) */
+.semester .zone-head { justify-content: flex-start; gap: 6px; }
+.semester .zone-head .zone-sum { margin-inline-start: auto; }
+/* like the open lock on the cards: shown on hover or keyboard focus, always on a touch screen or when blocked
+   (transparent, not hidden, so the keyboard still reaches it) */
+@media (hover: hover) {
+  .semester .block-semester:not(.on) { opacity: 0; }
+  .semester:hover .block-semester, .semester .block-semester:focus-visible { opacity: 1; }
+}
+/* a blocked semester: the stripes of a semester a dragged course cannot go to, and a note instead of "גוררים לכאן" */
+.semester.blocked { background: repeating-linear-gradient(-45deg, var(--surface) 0 8px, var(--surface-2) 8px 16px); }
+.semester.blocked h3 { color: var(--muted); }
+.semester.blocked .zone { background: none; border-color: transparent; min-height: 40px; }
+/* "add a year": one long button under the grid, across all three columns (guy, 2026-10-31) */
+.add-year { grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px;
+  border: 2px dashed var(--line); border-radius: 10px; background: transparent; color: var(--muted); font-size: 0.95rem; cursor: pointer; }
+.add-year:hover { border-color: var(--accent); color: var(--accent); }
+.add-year .plus { font-size: 1.5rem; line-height: 1; font-weight: 300; }
+
+/* course chips */
+.chip {
+  display: flex; flex-direction: column; gap: 4px; background: var(--chip); border: 1px solid var(--line);
+  border-radius: 7px; padding: 4px 8px; cursor: grab; user-select: none; max-width: 100%;
+}
+.chip:hover { border-color: var(--accent); }
+/* while dragging in a semester: a line where the course will land, above a card or under the last one (guy, 2026-11-01) */
+.chip.drop-before { box-shadow: 0 -5px 0 -2px var(--accent); }
+.zone.drop-end > .chip:last-child { box-shadow: 0 5px 0 -2px var(--accent); }
+/* row 1: number and name, then the buttons at the far end */
+/* the number and the buttons stay on the first line of the name, also when it takes two lines (guy, 2026-11-01) */
+.chip-head { display: flex; align-items: baseline; gap: 6px; min-width: 0; }
+.chip .name {
+  flex: 1 1 auto; min-width: 0; overflow: hidden;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2;
+}
+.chip .cr { color: var(--muted); font-size: 0.8rem; white-space: nowrap; }
+.chip .adv { color: var(--accent); font-weight: 600; }
+.chip .actions { display: flex; align-items: center; align-self: flex-start; height: 1.5em; gap: 2px; margin-inline-start: auto; flex: none; }
+.chip .x, .chip .i {
+  border: none; background: none; padding: 0 2px; color: var(--muted); cursor: pointer; line-height: 1;
+}
+.chip .x:hover, .chip .i:hover { color: var(--ink); }
+/* the lock: faint while open, in the accent color when locked; a locked card gets a frame in that color */
+.chip .lock { border: none; background: none; padding: 0 2px; color: var(--muted); cursor: pointer; line-height: 1; opacity: 0.55; display: inline-flex; align-items: center; }
+.chip .lock:hover { opacity: 1; color: var(--ink); }
+.chip .lock.on { opacity: 1; color: var(--accent); }
+.chip.locked { box-shadow: inset 0 0 0 1.5px var(--accent); cursor: default; }
+/* an open lock shows only while the pointer is on the card; on a touch screen (no hover) it is not on the card
+   at all, and the course window (ⓘ) has the button instead. A closed lock always shows */
+@media (hover: hover) {
+  /* transparent, not hidden: a hidden button cannot take the keyboard focus (the focus was lost on unlocking) */
+  .chip .lock:not(.on) { opacity: 0; }
+  .chip:hover .lock:not(.on), .chip:focus-within .lock:not(.on) { opacity: 0.55; }
+}
+@media (hover: none) { .chip .lock:not(.on) { display: none; } }
+.lock-row { margin: 10px 0 0; }
+.lock-row .mini.on { border-color: var(--accent); color: var(--accent); }
+/* row 2: credits and tags, always under the name */
+.chip-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; }
+.chip.placed { opacity: 0.55; cursor: default; }
+/* where a placed course is, as a small button with an eye: a click shows the card in its semester (guy, 2026-10-31) */
+.chip.placed .where, .placed-list .where { display: inline-flex; align-items: center; gap: 4px; font-size: 0.75rem; color: var(--done); white-space: nowrap;
+  padding: 1px 6px; border: 1px solid transparent; border-radius: 999px; background: none; cursor: pointer; vertical-align: middle; }
+.chip.placed .where:hover, .placed-list .where:hover { border-color: var(--done); }
+.where .eye { display: inline-flex; }
+.tag-button .eye, .mini .eye, .link .eye { display: inline-flex; vertical-align: -2px; margin-inline-end: 3px; }
+.chip.gone .name { text-decoration: line-through; text-decoration-color: var(--gone); }
+.chip.selected { outline: 2px solid var(--accent); }
+.tag { font-size: 0.72rem; padding: 0 5px; border-radius: 4px; white-space: nowrap; }
+.tag.warn { background: var(--warn-soft); color: var(--warn); }
+.tag.gone { background: var(--surface-2); color: var(--muted); } /* --gone was too faint to read (contrast 2.8:1) */
+
+/* unmet conditions: red for admission, orange for required knowledge */
+.tag.bad { background: var(--bad-soft); color: var(--bad); }
+.tag.soft { background: var(--surface-2); color: var(--muted); }
+.chip .why.soft { color: var(--muted); }
+/* row 3: the notes */
+.chip .why { font-size: 0.78rem; line-height: 1.35; }
+.chip .why.bad { color: var(--bad); }
+.chip .why.warn { color: var(--warn); }
+.chip.prob-bad { border-color: var(--bad); border-inline-start: 4px solid var(--bad); }
+.chip.prob-warn { border-color: var(--warn); border-inline-start: 4px solid var(--warn); }
+.chip.needed-bad { border: 1.5px dashed var(--bad); }
+.chip.needed-warn { border: 1.5px dashed var(--warn); }
+.chip .dot { font-size: 0.7rem; line-height: 1; }
+.dot.bad { color: var(--bad); }
+.dot.warn { color: var(--warn); }
+.chip.option-bad { background: var(--bad-soft); }
+.chip.option-warn { background: var(--warn-soft); }
+.alt .chip.option-bad { background: var(--bad-soft); }
+.alt .chip.option-warn { background: var(--warn-soft); }
+.row-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; font-size: 0.85rem; }
+.options .add { margin-inline-start: 8px; font-size: 0.82rem; }
+.need-note { font-size: 0.78rem; margin: -2px 0 6px; }
+.need-note.bad { color: var(--bad); }
+.need-note.warn { color: var(--warn); }
+/* "show this course": a thick ring in the accent color, four times (guy, 2026-11-01: the soft red ring was too faint,
+   and red here means a missing condition) */
+.chip.flash { animation: flash 0.6s ease 4; }
+@keyframes flash { 50% { box-shadow: 0 0 0 4px var(--accent); background: var(--accent-soft); } }
+/* Ctrl+F: every course found, and the current one with a ring, while the bar is open */
+.chip.found { background: var(--find-soft); }
+.chip.found-now { box-shadow: 0 0 0 3px var(--find); }
+.zone.cond-warn { border-color: var(--warn); background: var(--warn-soft); }
+.zone.cond-bad { border-color: var(--bad); background: var(--bad-soft); }
+.problems {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 12px; padding: 8px 12px; border-radius: 10px; font-size: 0.92rem; /* as the status line and the counters */
+}
+.problems.bad { background: var(--bad-soft); color: var(--bad); }
+.problems.warn { background: var(--warn-soft); color: var(--warn); }
+.problems .link { margin-inline-start: auto; border: none; background: none; color: inherit; text-decoration: underline; padding: 0; }
+.problems[hidden] { display: none; }
+.problems.need { background: var(--accent-soft); color: var(--accent); }
+
+/* English and the library course: checkboxes, and the tag on courses that ask for them */
+.tag.need { background: var(--accent-soft); color: var(--accent); font-weight: 600; white-space: normal; }
+#skills-card .skill { margin-bottom: 4px; }
+#skills-card .need-line { margin: 0 26px 4px 0; font-size: 0.85rem; color: var(--accent); }
+/* "רקע ודרישות": the background and English/library in one compact card; folded, one line of ✓ / ○ */
+.prereq[hidden] { display: none; }
+.prereq.flash { animation: flash-item 0.5s ease 3; }
+.prereq > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; cursor: pointer; list-style: none; }
+.prereq > summary::-webkit-details-marker { display: none; }
+.prereq > summary h2 { margin: 0; white-space: nowrap; }
+.prereq > summary::after { content: "▾"; margin-inline-start: auto; color: var(--muted); }
+.prereq:not([open]) > summary::after { content: "▸"; }
+[dir="rtl"] .prereq:not([open]) > summary::after { content: "◂"; }
+.prereq-sum { font-size: 0.85rem; color: var(--muted); }
+.prereq[open] .prereq-sum { display: none; }
+.prereq[open] > summary { margin-bottom: 6px; }
+.prereq #background-card + #skills-card { margin-top: 4px; }
+
+/* the plan as a printable sheet: built off screen, turned into a PDF, or printed with Ctrl+P */
+.print-holder { display: none; }
+.print-sheet { width: 720px; background: #fff; color: #000; font-size: 12px; line-height: 1.35; }
+/* the degree is the big title; "תכנית הלימודים שלי" a small line above it */
+.print-sheet h1 { font-size: 26px; font-weight: 800; line-height: 1.15; margin: 0 0 4px; color: #000; }
+.print-sheet .kicker { margin: 0 0 2px; font-size: 13px; font-weight: 600; color: #444; }
+.print-sheet .sheet-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.print-sheet .sheet-top svg { height: 8.66mm; width: auto; flex: none; color: #000; } /* as in the recommended-plan PDF (guy, 2026-11-01) */
+.print-sheet .sub, .print-sheet .foot { color: #444; margin: 0 0 6px; }
+/* the summary box: credits on the right, what is missing and the general requirements on the left */
+.print-sheet .summary { display: grid; grid-template-columns: 1fr 1.3fr; gap: 18px; margin: 10px 0 4px; padding: 8px 12px;
+  border: 1px solid #999; break-inside: avoid; }
+.print-sheet .summary h3 { font-size: 13px; margin: 0 0 4px; }
+.print-sheet .summary h3 + table, .print-sheet .summary h3 + ul, .print-sheet .summary h3 + p { margin-top: 0; }
+.print-sheet .summary ul + h3 { margin-top: 8px; }
+.print-sheet .summary ul { list-style: none; margin: 0; padding: 0; }
+.print-sheet .summary li { margin: 2px 0; }
+.print-sheet .summary p { margin: 0; }
+.print-sheet .summary .where { color: #555; }
+.print-sheet .sub a { color: #000; text-decoration: underline; }
+.print-sheet table.credits { margin: 0; }
+.print-sheet table.credits th, .print-sheet table.credits td { padding: 2px 6px; }
+.print-sheet table.credits tbody th { background: none; font-weight: 400; text-align: start; }
+.print-sheet .mk { font-weight: 700; }
+.print-sheet .mk.ok { color: #1a7a3a; }
+.print-sheet .mk.no, .print-sheet .miss { color: #b00020; }
+.print-sheet table { width: 100%; border-collapse: collapse; margin: 12px 0 4px; }
+.print-sheet caption { text-align: start; font-weight: 700; font-size: 14px; padding-bottom: 3px; }
+.print-sheet caption small { font-weight: 400; color: #444; }
+.print-sheet tr { page-break-inside: avoid; break-inside: avoid; }
+.print-sheet table.plan-table { table-layout: fixed; }
+/* a semester's heading row: across the table, with space above it, and never alone at the bottom of a page */
+.print-sheet tr.sem-row th { background: #fff; border-left-color: #fff; border-right-color: #fff; border-top-color: #fff;
+  border-bottom: 1.5px solid #333; padding: 14px 2px 3px; font-size: 14px; text-align: start; }
+.print-sheet tr.sem-row th small { font-weight: 400; color: #444; font-size: 12px; }
+.print-sheet table.keep { break-inside: avoid; page-break-inside: avoid; }
+.print-sheet tr.sem-row, .print-sheet tr.col-head { break-after: avoid; page-break-after: avoid; }
+.print-sheet th, .print-sheet td { border: 1px solid #999; padding: 3px 5px; text-align: start; vertical-align: top; color: #000; }
+.print-sheet th { background: #eee; }
+.print-sheet .num { font-family: "JetBrains Mono", monospace; white-space: nowrap; }
+.print-sheet .n { text-align: center; }
+.print-sheet .conds { font-size: 10.5px; width: 38%; }
+.print-sheet .rem { font-size: 10.5px; width: 16%; }
+.print-sheet .foot { margin-top: 12px; font-size: 10.5px; border: none; padding: 0; }
+.print-sheet .foot strong { color: #000; }
+.print-sheet .who { font-size: 10px; color: #555; margin-top: 1px; }
+@media print {
+  @page { size: A4; margin: 0; }
+  html, body { background: #fff !important; color: #000 !important; }
+  body > *:not(.print-holder) { display: none !important; }
+  .print-holder { display: block; }
+  .print-sheet .foot { position: fixed; bottom: 4mm; left: 12mm; right: 12mm; margin: 0; padding-top: 2px;
+    border-top: 1px solid #ccc; font-size: 9px; color: #555; background: #fff; }
+  .print-sheet { width: auto; padding: 12mm 12mm; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+}
+
+/* degree status: what is still missing, or that everything is in */
+.status { margin-bottom: 12px; border-radius: 10px; font-size: 0.92rem; } /* the same corners as the counters below */
+.status.todo { background: var(--surface-2); padding: 8px 12px; }
+.status.todo summary { cursor: pointer; }
+.status.todo ul { margin: 6px 0 2px; padding-inline-start: 18px; }
+.status.todo li { margin: 2px 0; }
+.status.todo .where, .status.todo .hint { color: var(--muted); font-size: 0.85rem; }
+.status.todo .hint { list-style: none; margin-top: 6px; margin-inline-start: -18px; }
+.status.done { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--done-soft); color: var(--done); border: 1px solid var(--done); }
+.status.done .big { font-size: 1.4rem; font-weight: 700; line-height: 1; }
+.status.done span { color: var(--ink); }
+.status.done strong { color: var(--done); }
+/* a finished plan: the status line on top and the counters under it, one green card; thin lines between the
+   counters are the grid's gaps showing its background (so they work in 2 columns on a phone too) */
+.plan.complete { --done-line: color-mix(in srgb, var(--done) 35%, var(--done-soft)); }
+.plan.complete .status.done { margin-bottom: 0; border-bottom: none; border-radius: 10px 10px 0 0; }
+.plan.complete .meters { gap: 1px; background: var(--done-line); border: 1px solid var(--done); border-top: 1px solid var(--done-line);
+  border-radius: 0 0 10px 10px; overflow: hidden; }
+.plan.complete .meter, .plan.complete .meters-note { background: var(--done-soft); border: none; border-radius: 0; margin: 0; }
+.plan.complete .meters-note { padding: 4px 14px 6px; }
+.item.flash, .group.flash { animation: flash-item 0.5s ease 3; }
+@keyframes flash-item { 50% { box-shadow: 0 0 0 3px var(--accent); } }
+
+/* tree */
+.section { margin-top: 12px; }
+/* the fundamentals for students without the matriculation: set apart, so they do not look like part of the degree */
+.section.basics { padding: 6px 8px 8px; border: 1px dashed var(--line); border-radius: 8px; }
+.section.basics > h3 { border-bottom: none; margin-bottom: 2px; }
+.section.basics .desc { margin-bottom: 6px; }
+.section > h3 { padding-bottom: 4px; border-bottom: 1px solid var(--line); margin-bottom: 6px; }
+.section .desc, .group .rule { color: var(--muted); font-size: 0.82rem; }
+.group { margin: 8px 0 12px; }
+.group > .gh { display: flex; justify-content: space-between; gap: 8px; font-weight: 600; font-size: 0.92rem; }
+.item { margin: 6px 0; padding: 6px 8px; border-radius: 8px; background: var(--surface-2); }
+.item.ok { background: var(--done-soft); }
+/* an item that is just one course: the card alone, no box and no heading repeating its name */
+.item.single { padding: 0; background: none; }
+.item.single.ok { padding: 4px; background: var(--done-soft); }
+/* an item already met, shrunk to one line: its courses and where they are */
+.item.compact { padding: 4px 8px; }
+.item.compact .ih { margin-bottom: 1px; }
+.item.compact .placed-list { font-size: 0.8rem; color: var(--muted); }
+/* a finished group, shrunk to its heading; a click opens it */
+details.group > summary { list-style: none; cursor: pointer; }
+details.group > summary::-webkit-details-marker { display: none; }
+details.group > summary::before { content: "◂"; color: var(--muted); font-size: 0.8rem; margin-inline-end: 4px; }
+details.group[open] > summary::before { content: "▾"; }
+details.group > summary > span:first-child { flex: 1; }
+details.group .done-mark { color: var(--done); font-weight: 600; }
+details.group:not([open]) { margin: 4px 0 6px; padding: 4px 8px; border-radius: 8px; background: var(--done-soft); }
+.tree-head .show-placed { font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+.item .ih { display: flex; justify-content: space-between; gap: 6px; font-size: 0.88rem; margin-bottom: 4px; }
+.item .ih .mark { color: var(--done); font-weight: 700; }
+.expr { display: flex; flex-direction: column; gap: 4px; }
+.alt-label { font-size: 0.78rem; color: var(--muted); }
+.alt {
+  display: flex; flex-direction: column; gap: 4px; padding: 6px; border-radius: 8px;
+  background: transparent; border: 1px solid var(--line);
+}
+/* a colored stripe on the start side makes each alternative read as one block (guy, 2026-10-29); green once met */
+.alt { border-inline-start: 4px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+.alt.ok { border-color: var(--done); box-shadow: inset 0 0 0 1px var(--done); border-inline-start-color: var(--done); }
+/* the cards inside keep the color of every other card (guy, 2026-10-29): the box takes the gray around it instead */
+.alt-or { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 0.78rem; font-weight: 600; }
+.alt-or::before, .alt-or::after { content: ""; flex: 1; border-top: 1px dashed var(--line); }
+.together { display: flex; flex-direction: column; gap: 4px; }
+/* courses taken together: "+ וגם" between them; a choice among them gets a dashed box with no stripe, so it does
+   not look like one more alternative (guy, 2026-10-29) */
+.alt-and { color: var(--muted); font-size: 0.78rem; font-weight: 600; padding-inline-start: 6px; }
+.choice { display: flex; flex-direction: column; gap: 4px; padding: 6px; border: 1px dashed var(--muted); border-radius: 8px; }
+.choice.ok { border-color: var(--done); }
+.alt-or.small { font-size: 0.72rem; font-weight: 500; }
+
+.extra { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 10px; }
+/* courses outside the degree that match the tree search: a separate block, so they are not taken for part of it */
+.outside { margin: 10px 0; padding: 8px; border: 1px dashed var(--line); border-radius: 8px; }
+.outside h3 { font-size: 0.92rem; margin: 0; }
+.outside .hint { color: var(--muted); font-size: 0.8rem; margin: 2px 0 6px; }
+/* the search results outside the degree: cards dragged straight to a semester, "done" or the tree (guy) */
+.outside-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.outside-list li.empty { color: var(--muted); font-size: 0.8rem; }
+.results {
+  position: absolute; inset-inline: 0; top: 100%; z-index: 5; list-style: none; margin: 2px 0 0; padding: 4px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow);
+  max-height: 260px; overflow: auto;
+}
+.results li { padding: 4px 6px; border-radius: 5px; cursor: pointer; display: flex; gap: 8px; }
+.results li:hover, .results li.active { background: var(--accent-soft); }
+.chips { flex-direction: column; flex-wrap: nowrap; }
+
+.general { margin-top: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+.general summary { font-weight: 600; cursor: pointer; }
+.general li { margin: 6px 0; }
+
+/* course details dialog */
+dialog {
+  border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink);
+  width: min(560px, calc(100vw - 32px)); padding: 18px 20px;
+}
+/* the content scrolls inside the window, so × stays in its corner (guy, 2026-10-31) */
+dialog[open] { display: flex; flex-direction: column; overflow: hidden; max-height: 88vh; }
+#info-body, #help-body, #move-body, #a11y-body { overflow: auto; min-height: 0; padding-inline-end: 4px; }
+dialog::backdrop { background: rgb(0 0 0 / 35%); }
+dialog .close { position: absolute; inset-inline-end: 10px; top: 8px; border: none; font-size: 1.4rem; background: none; }
+dialog h3 { font-size: 1.15rem; margin-bottom: 8px; padding-inline-end: 24px; }
+dialog dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; margin: 0; }
+dialog dt { color: var(--muted); }
+dialog dd { margin: 0; }
+dialog .missing { color: var(--muted); font-style: italic; }
+dialog .email { direction: ltr; unicode-bidi: isolate; }
+.formula { display: inline; }
+.formula .op { color: var(--muted); padding: 0 3px; }
+button.link { border: none; background: none; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; font-size: inherit; }
+.chip .why button.link { color: inherit; font-weight: 600; }
+
+.chip .why:not(.bad):not(.warn) { color: var(--muted); }
+/* the fill button and its length choice read as one control: one frame, a thin line between them */
+.fill-group { display: inline-flex; align-items: stretch; border: 1px solid var(--accent); border-radius: 6px; overflow: hidden; }
+.fill-group[hidden] { display: none; }
+.fill-group button, .fill-group select { border: none; border-radius: 0; background: var(--surface); color: var(--accent); }
+.fill-group select { border-inline-start: 1px solid var(--accent); padding-inline: 6px; cursor: pointer; }
+.fill-group button:hover, .fill-group select:hover { background: var(--accent-soft); }
+
+/* background requirements (checkboxes) */
+#background-card h2 { margin-bottom: 6px; }
+#background-card .bg-note { margin: 2px 26px 0 0; font-size: 0.85rem; color: var(--muted); }
+#background-card .bg-note.ok { color: var(--done); }
+label.check { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; cursor: pointer; }
+/* the checkbox centered on the text line (on the baseline it sat too low), without the browser's own margin */
+label.check input[type="checkbox"] { margin: 0; flex: none; }
+label.check .muted { color: var(--muted); font-size: 0.85rem; }
+#info-body h4 { margin: 12px 0 2px; font-size: 0.95rem; }
+.bg-alt { color: var(--ink); margin-top: 2px; }
+.bg-alt.ok { color: var(--done); }
+.bg-alt .muted { color: var(--muted); }
+.bg-alt .mini { margin-inline-start: 4px; }
+.tag.ok { background: var(--done-soft); color: var(--done); }
+.tag-button { border: none; cursor: pointer; font: inherit; font-size: 0.72rem; text-decoration: underline dotted; }
+
+/* conditions in the course window */
+.condlist, .condlist ul { list-style: none; margin: 0; padding: 0; }
+.condlist > li { padding: 3px 0; border-bottom: 1px solid var(--line); }
+.condlist > li:last-child { border-bottom: none; }
+.condlist .head { font-size: 0.85rem; color: var(--muted); }
+.condlist ul { padding-inline-start: 12px; border-inline-start: 2px solid var(--line); margin: 2px 0; }
+.condlist.checked > li { display: flex; gap: 8px; align-items: flex-start; }
+.condlist .mark { font-weight: 700; width: 1.1em; flex: none; text-align: center; }
+.condlist .mark.yes { color: var(--done); }
+.condlist .mark.bad { color: var(--bad); }
+.condlist .mark.warn { color: var(--warn); }
+.condlist .mark.par, .condlist .mark.rec { color: var(--muted); }
+.condlist .actions-inline { display: inline-flex; flex-wrap: wrap; gap: 4px; margin-inline-start: 8px; vertical-align: middle; }
+button.mini {
+  font-size: 0.75rem; line-height: 1.2; padding: 1px 7px; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--surface-2); color: var(--accent);
+}
+button.mini:hover { border-color: var(--accent); }
+
+/* overlaps in the course window */
+.overlaps h4 { margin: 14px 0 4px; font-size: 0.95rem; }
+.overlaps ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.overlaps li { display: flex; align-items: center; gap: 8px; padding: 5px 2px; border-bottom: 1px solid var(--line); }
+.overlaps li.mine { background: var(--warn-soft); }
+.overlaps .who { flex: 1; min-width: 0; }
+.overlaps .pts { flex: none; font-size: 0.85rem; color: var(--muted); white-space: nowrap; }
+.overlaps .pts.bad { color: var(--bad); font-weight: 600; }
+
+/* conditions checklist window */
+.cond-note { color: var(--muted); font-size: 0.85rem; margin: 0 0 10px; }
+/* a course with minimal details only ("פרטים מלאים" = לא): its conditions are not in the tool yet */
+.partial-note { background: var(--warn-soft); border-inline-start: 4px solid var(--warn); border-radius: 6px;
+  padding: 6px 10px; margin: 0 0 10px; font-size: 0.9rem; }
+.cond h4 { margin: 12px 0 6px; font-size: 0.95rem; }
+.cond.bad h4 { color: var(--bad); }
+.cond.warn h4 { color: var(--warn); }
+.checklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.checklist > li { display: flex; gap: 8px; align-items: flex-start; padding: 6px 8px; border-radius: 6px; background: var(--surface-2); }
+.checklist > li.ok { background: transparent; color: var(--muted); }
+.checklist .mark { font-weight: 700; width: 1.1em; flex: none; text-align: center; }
+.checklist .mark.no { color: var(--bad); }
+.checklist .mark.yes { color: var(--done); }
+.checklist .head { font-size: 0.85rem; color: var(--muted); }
+.checklist .options { list-style: none; margin: 2px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.checklist .options li.ok { color: var(--done); }
+.checklist .late { color: var(--bad); font-size: 0.85rem; }
+.checklist .same { color: var(--muted); font-size: 0.85rem; }
+.checklist .mark.par { color: var(--muted); }
+.checklist > li.par { background: transparent; border: 1px dashed var(--line); }
+.checklist .par-note { color: var(--muted); font-size: 0.82rem; margin-top: 2px; }
+.cond.rec h4 { color: var(--muted); }
+.cond.rec .checklist > li { background: transparent; }
+.checklist .mark.rec { color: var(--muted); }
+.chip .cond-link { font-size: 0.75rem; color: var(--muted); margin-inline-start: auto; }
+
+.foot { padding: 16px 24px 28px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); }
+.foot p { margin: 4px 0; }
+.audience .disclaimer-line { display: block; margin-top: 4px; }
+.foot .small { font-size: 0.8rem; }
+/* the logo and icon credits: as small as possible (guy) */
+.foot .credits { font-size: 0.72rem; color: var(--muted); margin-top: 8px; } /* small, but readable: no opacity (contrast) */
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); padding: 0 16px 16px; }
+  .tree { position: static; max-height: none; }
+  .top { padding: 16px 16px 8px; }
+  .meters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* an odd last counter takes the whole row: in the joined green card an empty cell showed as a dark block */
+  .plan.complete .meter:nth-last-child(2):nth-child(odd) { grid-column: 1 / -1; }
+  .semesters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .foot { padding: 16px; }
+}
+@media (max-width: 520px) {
+  .semesters { grid-template-columns: minmax(0, 1fr); }
+}
+/* phones and narrow windows: the tree opens over the page from a floating button, and closes by itself once a course
+   in it is picked, so the student can tap the semester right away (guy, 2026-10-31) */
+.tree-fab, .tree-close { display: none; }
+@media (max-width: 900px) {
+  .tree { position: fixed; inset: 0; z-index: 30; max-height: none; border-radius: 0; border: none; overflow: auto; display: none; }
+  body.tree-open .tree { display: block; }
+  body.tree-open { overflow: hidden; }
+  /* fixed to the top corner (left in Hebrew), so it stays however far the tree is scrolled (guy, 2026-10-31) */
+  .tree-close { display: block; position: fixed; top: 8px; inset-inline-end: 12px; z-index: 31; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); box-shadow: var(--shadow); font-size: 1.4rem; line-height: 1; width: 36px; height: 36px; padding: 0; }
+  .tree-head h2 { padding-inline-end: 44px; }
+  .tree-fab {
+    display: inline-flex; align-items: center; gap: 6px; position: fixed; inset-inline-end: 16px; bottom: 16px; z-index: 24;
+    padding: 10px 16px; border-radius: 999px; border: none; background: var(--accent); color: var(--on-accent); font-weight: 600; box-shadow: var(--shadow);
+  }
+  body.picking .tree-fab, body.tree-open .tree-fab { display: none; }
+  .foot { padding-bottom: 72px; } /* room for the button over the end of the page */
+}
+/* lists from other programs (the broadening courses), folded under the tree in every program (guy, 2026-10-31) */
+.lists-block { margin: 10px 0; padding: 8px; border: 1px dashed var(--line); border-radius: 8px; }
+.lists-block summary { font-weight: 600; font-size: 0.92rem; cursor: pointer; }
+.lists-block .hint { color: var(--muted); font-size: 0.8rem; margin: 4px 0 6px; }
+
+
+/* links in the footer of the print sheet stay on one line */
+.print-sheet .foot .nowrap { white-space: nowrap; color: inherit; }
+
+
+/* ---------- keyboard and screen readers (2026-10-31) ---------- */
+/* a clear ring on whatever has the keyboard focus (not on mouse clicks) */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.chip:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+/* skip links: off screen until the Tab key reaches them */
+.skip { position: absolute; inset-inline-start: 8px; top: -60px; z-index: 50; padding: 8px 14px; border-radius: 8px;
+  background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none; }
+.skip:focus { top: 8px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* the "where to?" window of a course: one button per place, with its state */
+.move-dialog { width: min(440px, calc(100vw - 32px)); }
+.move-dialog h3 { padding-inline-end: 24px; }
+.move-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.move-list button { width: 100%; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; text-align: start; padding: 7px 10px; border-radius: 8px; }
+.move-list button .state { font-size: 0.82rem; color: var(--muted); }
+.move-list button.ok .state { color: var(--done); }
+.move-list button.warn { border-color: var(--warn); } .move-list button.warn .state { color: var(--warn); }
+.move-list button.bad { border-color: var(--bad); } .move-list button.bad .state { color: var(--bad); }
+/* the same stripes as a semester the dragged course cannot go to */
+.move-list button[aria-disabled="true"] { opacity: 0.6; cursor: not-allowed;
+  background: repeating-linear-gradient(-45deg, transparent 0 6px, var(--surface-2) 6px 12px); }
+.move-list button.here { border-style: dashed; }
+.move-hint { font-size: 0.82rem; color: var(--muted); margin: 6px 0 0; }
+.a11y-body h4 { margin: 14px 0 4px; }
+/* the system setting "reduce motion": no flashing, no smooth scrolling (see SMOOTH in app.js) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* lists from other programs, at the bottom of the tree under their own heading (guy, 2026-10-31) */
+.other-lists { margin-top: 18px; padding-top: 10px; border-top: 2px solid var(--line); }
+.other-lists > h3 { font-size: 0.95rem; margin: 0 0 6px; color: var(--muted); }
+.other-lists[hidden] { display: none; }
