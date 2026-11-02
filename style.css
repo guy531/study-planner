@@ -751,6 +751,8 @@ button.mini:hover { border-color: var(--accent); }
   }
   body.picking .tree-fab, body.tree-open .tree-fab { display: none; }
   .foot { padding-bottom: 72px; } /* room for the button over the end of the page */
+  /* a message goes above the button, not over it: it hid the message's own "ביטול" (guy, 2026-11-02) */
+  .toast, body.mini-on .toast { bottom: 72px; }
 }
 /* lists from other programs (the broadening courses), folded under the tree in every program (guy, 2026-10-31) */
 .lists-block { margin: 10px 0; padding: 8px; border: 1px dashed var(--line); border-radius: 8px; }
