@@ -363,7 +363,7 @@ I18N.en = {
  "{0} מתוך {1} קורסים": "{0} of {1} courses",
  "קורס אחד מתוך {0}": "one course of {0}",
  "לפי הרשימה": "from the list",
- "חובת בחירה: {0}. הבחירה שלך: ההשלמה האוטומטית והתכנית המומלצת לא בוחרות בשבילך.": "Required choice: {0}. Your choice: the automatic completion and the recommended plan do not choose for you.",
+ "חובת בחירה: {0}": "Required choice: {0}",
  "נבחר: {0} {1}": "Picked: {0} {1}",
  ". לוחצים על \"שיבוץ כאן\" בסמסטר, או על קורס אחר כדי לבחור אותו.": ". Click \"Place here\" in a semester, or another course to pick it instead.",
  "סגירת ההודעה": "Close the notice",

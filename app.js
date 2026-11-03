@@ -1597,7 +1597,7 @@ function renderTree() {
       }
       // a required group of a single choice ("one of the 27 seminars") is not "all the items" (guy, 2026-10-31)
       const oneChoice = group.items.length === 1 && group.items[0].courses && (group.items[0].courses.or || group.items[0].courses.of);
-      const rule = group.rule === "חובת בחירה" ? T`חובת בחירה: ${choiceText(group) || T("לפי הרשימה")}. הבחירה שלך: ההשלמה האוטומטית והתכנית המומלצת לא בוחרות בשבילך.`
+      const rule = group.rule === "חובת בחירה" ? T`חובת בחירה: ${choiceText(group) || T("לפי הרשימה")}`
         : group.rule === "כל הפריטים" ? (oneChoice ? T("חובה: אחד מהקורסים") : T("חובה: כל הפריטים"))
         : T`בחירה: לפחות ${group.minCredits} נ"ז מהרשימה` + (group.mustLabel ? T`, ובהן ${group.mustLabel}` : "");
       if (finished && !isRequired(group) && stillUseful(group)) {
