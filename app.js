@@ -346,12 +346,13 @@ function autoFill() {
   //    the one that adds the fewest courses (then the one the recommended plan uses, then the fewest credits)
   const toPlace = new Set();
   const known = () => new Set([...planned, ...toPlace, ...assumed]);
-  const choose = (expr) => {
+  // n: the course whose condition this is, so the background counts only where it accepts it
+  const choose = (expr, n = null) => {
     if (!expr) return [];
-    const have = known();
+    const have = n ? forCourse(n, known(), new Set([...planned, ...toPlace])) : known();
     if (satisfied(expr, have)) return [];
     if (typeof expr === "string") return usable(expr) ? [expr] : [];
-    if (expr.and) return expr.and.flatMap(choose);
+    if (expr.and) return expr.and.flatMap((e) => choose(e, n));
     const options = expr.or || expr.of;
     const k = expr.of ? expr.atleast : 1;
     const cost = (o) => {
@@ -362,13 +363,13 @@ function autoFill() {
     const before = (a, b) => { for (let j = 0; j < 3; j++) if (a[j] !== b[j]) return a[j] - b[j]; return 0; };
     const open = options.filter((o) => !satisfied(o, have)).map((o) => ({ o, c: cost(o) })).sort((a, b) => before(a.c, b.c));
     const missing = k - (options.length - open.length);
-    return open.slice(0, Math.max(0, missing)).filter((x) => x.c[0] !== Infinity).flatMap((x) => choose(x.o));
+    return open.slice(0, Math.max(0, missing)).filter((x) => x.c[0] !== Infinity).flatMap((x) => choose(x.o, n));
   };
   const add = (list) => list.forEach((n) => {
     if (toPlace.has(n) || planned.has(n) || assumed.has(n) || !usable(n)) return;
     toPlace.add(n);
-    add(choose(DATA.courses[n].admission));
-    add(choose(DATA.courses[n].required));
+    add(choose(DATA.courses[n].admission, n));
+    add(choose(DATA.courses[n].required, n));
   });
   program.sections.forEach((s) => s.groups.forEach((g) => {
     if (g.rule === "כל הפריטים") g.items.forEach((it) => it.courses && !isLongList(it.courses) && add(choose(it.courses)));
@@ -412,8 +413,9 @@ function autoFill() {
       if (isBlockedSemester(i)) return false; // a semester the student blocked
       const c = DATA.courses[n];
       if (!c) return true;
-      const have = new Set(base);
-      plan.slice(0, i).forEach((x) => x.forEach((y) => have.add(y)));
+      const real = new Set(state.done);
+      plan.slice(0, i).forEach((x) => x.forEach((y) => real.add(y)));
+      const have = forCourse(n, new Set([...base, ...real]), real);
       if (c.semesters.length && !c.semesters.includes(idsFor(i + 1)[i].slice(4))) return false;
       if (afterLastOffer(c, idsFor(i + 1)[i])) return false;
       if (c.admission && !satisfied(c.admission, have)) return false;
@@ -421,7 +423,7 @@ function autoFill() {
       if (c.priorCredits) {
         const order = new Map([...base].map((x) => [x, -1]));
         plan.slice(0, i).forEach((list, k) => list.forEach((y) => order.set(y, k)));
-        if (priorCreditsIn([...have], c.priorField, order) < c.priorCredits) return false;
+        if (priorCreditsIn([...real], c.priorField, order) < c.priorCredits) return false; // background courses give no credits
       }
       return true;
     };
@@ -571,11 +573,30 @@ function backgroundCourses() {
   return set;
 }
 
-function takenBefore(i, skip) {
-  const have = new Set([...state.done, ...backgroundCourses()]);
-  state.semesters.slice(0, i).forEach((s) => s.forEach((n) => have.add(n)));
+// A background box stands for its courses only in the conditions of a course whose own catalog page says so
+// (column "דרישת רקע מתקבלת"; guy, 2026-11-03: 20418 had the matriculation counted for its admission, and its page
+// does not say so). The background requirements course n accepts:
+function backgroundsFor(n) {
+  const accepts = (DATA.courses[n] || {}).acceptsBackground || [];
+  return (program.background || []).filter((b) => accepts.includes(b.id));
+}
+// "have" for the conditions of course n: the courses of a background n does not accept go, unless really taken
+function forCourse(n, have, real) {
+  const accepted = new Set(backgroundsFor(n).map((b) => b.id));
+  const out = new Set(have);
+  (program.background || []).filter((b) => !accepted.has(b.id))
+    .forEach((b) => coursesIn(b.courses).forEach((x) => { if (!real.has(x)) out.delete(x); }));
+  return out;
+}
+
+// what is taken before semester i, for the conditions of course n (by default the course skipped)
+function takenBefore(i, skip, n = skip) {
+  const real = new Set(state.done);
+  state.semesters.slice(0, i).forEach((s) => s.forEach((x) => real.add(x)));
+  if (skip) real.delete(skip);
+  const have = new Set([...real, ...backgroundCourses()]);
   if (skip) have.delete(skip);
-  return have;
+  return n ? forCourse(n, have, real) : have;
 }
 
 // split the unmet parts of a condition: single courses that must be taken ("must"), and choices
@@ -658,10 +679,10 @@ function findProblems() {
   const ids = semesterIds();
   const found = [];
   state.semesters.forEach((list, i) => {
-    const have = takenBefore(i);
     list.forEach((n) => {
       const c = DATA.courses[n];
       if (!c) return;
+      const have = takenBefore(i, null, n);
       CONDITIONS.forEach((cond) => {
         const expr = c[cond.key];
         if (!expr || satisfied(expr, have)) return;
@@ -1680,7 +1701,6 @@ function otherLists() {
 }
 function renderLists() {
   const shown = otherLists();
-  $("#other-lists").hidden = !shown.length;
   $("#lists").replaceChildren(...shown.map(([key, l]) =>
     el("details", { class: "lists-block", "data-list": key, ...(listsOpen.has(key) ? { open: "" } : {}) },
       el("summary", { text: T`קורסים מרחיבי-דעת (${l.courses.length})` }),
@@ -1844,7 +1864,7 @@ function optionLine(e, have, sameSemester) {
 function showInTree(n, i, key, index) {
   const expr = DATA.courses[n][key];
   const part = (expr.and || [expr])[Number(index)];
-  const have = takenBefore(Number(i));
+  const have = takenBefore(Number(i), null, n);
   flashInTree([...coursesIn(part)].filter((x) => !have.has(x)));
 }
 
@@ -1965,7 +1985,7 @@ function showConditions(n, i) {
   reopenWindow = () => showConditions(n, i);
   const c = DATA.courses[n];
   const id = semesterIds()[i];
-  const have = takenBefore(i);
+  const have = takenBefore(i, null, n);
   const withSame = new Set([...have, ...state.semesters[i].filter((x) => x !== n)]);
   const real = withoutBackground(have);
   const mark = (ok) => el("span", { class: `mark ${ok ? "yes" : "no"}`, "aria-label": ok ? T("מתקיים") : T("חסר"), text: ok ? "✓" : "✗" });
@@ -2005,7 +2025,7 @@ function showConditions(n, i) {
       return el("li", { class: ok ? "ok" : "" }, markFor(ok),
         el("div", {}, el("div", { class: "head", text: head }),
           el("ul", { class: "options" }, options.map((o) => el("li", { class: satisfied(o, real) ? "ok" : "" },
-            satisfied(o, real) ? "✓ " : "", optionLine(o, real), ok ? null : addButtons(o))), backgroundOption(part, have))));
+            satisfied(o, real) ? "✓ " : "", optionLine(o, real), ok ? null : addButtons(o))), backgroundOption(part, have, n))));
     });
     return el("section", { class: `cond ${cond.level}` },
       el("h4", { text: cond.label }),
@@ -2032,10 +2052,13 @@ function showConditions(n, i) {
 // courses already in the plan get a small tag, as in the overlap list
 // the small control next to a course in the course window, by where the course is now:
 // in the plan → where; in the tree → show it there; elsewhere → add it to "קורסים נוספים"
-function courseAction(x, named) {
+// forN: the course whose condition this is; a ticked background shows on x only where forN accepts it (guy,
+// 2026-11-03: 20418's window said "✓ רקע בפיסיקה ובמתמטיקה", and its page says nothing about a matriculation)
+function courseAction(x, named, forN) {
   const where = locationOf(x);
   const label = named ? `${x} ` : "";
-  const covered = checkedBackground().find((b) => coursesIn(b.courses).has(x));
+  const accepted = forN === undefined ? checkedBackground() : checkedBackground().filter((b) => backgroundsFor(forN).includes(b));
+  const covered = accepted.find((b) => coursesIn(b.courses).has(x));
   if (covered) return el("span", { class: "tag ok", title: covered.checkbox, text: `${label}✓ ${covered.name}` });
   // where it is, as plain words: the course number is the link that jumps there (guy, 2026-11-01: an eye button
   // next to a clickable number was two buttons doing the same thing)
@@ -2062,10 +2085,11 @@ function withoutBackground(have) {
 
 // a background requirement (for example a 5-unit matriculation) that meets or would meet this part of a condition.
 // Ticked: it says that this is how the part is met. Not ticked: one more alternative, with a button that ticks it
-function backgroundOption(part, have) {
+// Only a background course n accepts (backgroundsFor)
+function backgroundOption(part, have, n) {
   const inPart = coursesIn(part);
   const real = withoutBackground(have);
-  for (const b of program.background || []) {
+  for (const b of backgroundsFor(n)) {
     if (![...coursesIn(b.courses)].some((n) => inPart.has(n))) continue;
     const ticked = (state.background || []).includes(b.id);
     if (ticked && !satisfied(part, real)) {
@@ -2084,10 +2108,10 @@ function backgroundOption(part, have) {
 
 // check (only for a course placed in a semester): { have, withSame, kind } - each requirement then gets a mark:
 // ✓ met before the semester, ◐ in the same semester (not for admission), ✗ missing (○ for recommended knowledge)
-function conditionList(expr, planned, check) {
+function conditionList(expr, planned, check, n) {
   const actions = (e) => {
     const list = [...coursesIn(e)];
-    return el("span", { class: "actions-inline" }, list.map((x) => courseAction(x, list.length > 1)));
+    return el("span", { class: "actions-inline" }, list.map((x) => courseAction(x, list.length > 1, n)));
   };
   const markOf = (part) => {
     if (!check) return null;
@@ -2103,7 +2127,7 @@ function conditionList(expr, planned, check) {
     const options = part.or || part.of || [part];
     const head = part.or ? T("אחד מאלה:") : part.of ? T`לפחות ${part.atleast} מאלה:` : T("כל אלה יחד:");
     return el("li", {}, markOf(part), el("div", {}, el("div", { class: "head", text: head }),
-      el("ul", {}, options.map((o) => el("li", {}, optionLine(o, planned), actions(o))), backgroundOption(part, have))));
+      el("ul", {}, options.map((o) => el("li", {}, optionLine(o, planned), actions(o))), backgroundOption(part, have, n))));
   }));
 }
 
@@ -2129,17 +2153,17 @@ function showInfo(n) {
   // a course in a semester gets marks against what comes before it; in the tree or in "done" there is nothing to check
   const where = locationOf(n);
   const check = (kind) => (typeof where === "number"
-    ? { have: takenBefore(where), withSame: new Set([...takenBefore(where), ...state.semesters[where].filter((x) => x !== n)]), kind } : null);
-  add(T("תנאי קבלה"), c.admission && conditionList(c.admission, planned, check("admission")));
+    ? { have: takenBefore(where, null, n), withSame: new Set([...takenBefore(where, null, n), ...state.semesters[where].filter((x) => x !== n)]), kind } : null);
+  add(T("תנאי קבלה"), c.admission && conditionList(c.admission, planned, check("admission"), n));
   add(T("נ\"ז קודמים"), c.priorCredits ? T`לפחות ${c.priorCredits} נ"ז (${T(c.priorField)})` : null);
   const extras = SKILLS.filter((s) => c[s.key]);
   add(T("דרישות נוספות"), extras.length ? el("span", {}, extras.map((s, k) => el("span", {}, k ? " · " : "", s.short, " ",
     hasSkill(s.id) ? el("span", { class: "mark yes", text: "✓" }) : el("span", { class: "tag need", text: T("עוד לא סימנת") })))) : null);
-  add(T("ידע קודם דרוש"), c.required && conditionList(c.required, planned, check("required")));
-  add(T("ידע קודם מומלץ"), c.recommended && conditionList(c.recommended, planned, check("recommended")));
-  // a program background requirement that applies to this course's field (but not to the courses it replaces)
-  (program.background || []).forEach((b) => {
-    if (!b.field || coursesIn(b.courses).has(n) || !c.affiliation.some((a) => a.includes(b.field))) return;
+  add(T("ידע קודם דרוש"), c.required && conditionList(c.required, planned, check("required"), n));
+  add(T("ידע קודם מומלץ"), c.recommended && conditionList(c.recommended, planned, check("recommended"), n));
+  // a program background requirement that this course accepts (guy, 2026-11-03: not every course in its field)
+  backgroundsFor(n).forEach((b) => {
+    if (coursesIn(b.courses).has(n)) return;
     const ticked = (state.background || []).includes(b.id);
     add(b.name, el("span", {}, b.explanation, " ", ticked ? el("span", { class: "tag ok", text: T("✓ סימנת שיש לך") }) : null));
   });
@@ -2755,19 +2779,22 @@ function openSharedPlan() {
 
 // a condition with course numbers only, read right to left: 20406 וגם (20423 או 20224).
 // Where the plan already meets one of the alternatives, only that one is printed, so the page stays short
-function printFormula(expr, top = true, full = false) {
+// n: the course whose condition this is; "רקע מהתיכון" only for a background it accepts
+function printFormula(expr, top = true, full = false, n = null) {
   if (typeof expr === "string") return el("bdi", { text: expr });
   if (expr.or && !full) {
     const planned = new Set(plannedCourses());
     const met = expr.or.find((p) => satisfied(p, planned));
-    if (met) return printFormula(met, top);
-    if (expr.or.some((p) => satisfied(p, backgroundCourses()))) return el("span", { text: T("רקע מהתיכון") });
+    if (met) return printFormula(met, top, false, n);
+    const bg = new Set();
+    backgroundsFor(n).filter((b) => (state.background || []).includes(b.id)).forEach((b) => coursesIn(b.courses, bg));
+    if (expr.or.some((p) => satisfied(p, bg))) return el("span", { text: T("רקע מהתיכון") });
   }
   const parts = expr.and || expr.or || expr.of;
   const inner = [];
   parts.forEach((p, i) => {
     if (i) inner.push(expr.of ? ", " : expr.and ? T(" וגם ") : T(" או "));
-    inner.push(printFormula(p, false, full));
+    inner.push(printFormula(p, false, full, n));
   });
   if (expr.of) return el("span", {}, T`${expr.atleast} מתוך (`, inner, ")");
   return el("span", {}, top ? "" : "(", inner, top ? "" : ")");
@@ -2780,7 +2807,7 @@ function buildPrint() {
   // the column names, repeated under every semester heading (guy: once at the top alone looked odd)
   const head = () => el("tr", { class: "col-head" }, [T("מספר"), T("קורס"), T("נ\"ז"), T("מתקדמות"), T("תנאים"), T("הערות")].map((t) => el("th", { scope: "col", text: capital(t) })));
   // a condition part that an unticked background requirement would also meet says so
-  const orBackground = (e) => (program.background || [])
+  const orBackground = (e, n) => backgroundsFor(n)
     .filter((b) => !(state.background || []).includes(b.id) && satisfied(e, coursesIn(b.courses)))
     .map((b) => T`, או ${b.name} מהתיכון`).join("");
   // what is missing, not only that something is: "חסר ידע קודם: 20125 או (20113 וגם 20114), או ..."
@@ -2794,9 +2821,9 @@ function buildPrint() {
     const together = open.filter(parallel);
     return el("div", {},
       missing.length || p.level === "soft" ? el("div", {}, el("b", { text: p.level === "soft" ? `${p.tag}: ` : T`חסר ${p.label}: ` }),
-        (p.level === "soft" ? open : missing).map((e, k) => el("span", {}, k ? "; " : "", printFormula(e), orBackground(e)))) : null,
+        (p.level === "soft" ? open : missing).map((e, k) => el("span", {}, k ? "; " : "", printFormula(e, true, false, p.n), orBackground(e, p.n)))) : null,
       together.length ? el("div", {}, el("b", { text: T("ידע קודם במקביל: ") }),
-        together.map((e, k) => el("span", {}, k ? "; " : "", printFormula(e), T(" (באותו סמסטר)")))) : null);
+        together.map((e, k) => el("span", {}, k ? "; " : "", printFormula(e, true, false, p.n), T(" (באותו סמסטר)")))) : null);
   };
   const coordinator = (c) => el("div", { class: "who" }, T("מרכז/ת ההוראה: "),
     c.coordinator || c.coordinatorEmail
@@ -2816,8 +2843,8 @@ function buildPrint() {
     if (overlapLine(n)) remarks.push(overlapLine(n).text);
     if (backgroundFor(n)) remarks.push(onlyWithoutBackground(backgroundFor(n)));
     const conds = [
-      c.admission && el("div", {}, el("b", { text: T("תנאי קבלה: ") }), printFormula(c.admission)),
-      c.required && el("div", {}, el("b", { text: T("ידע קודם: ") }), printFormula(c.required)),
+      c.admission && el("div", {}, el("b", { text: T("תנאי קבלה: ") }), printFormula(c.admission, true, false, n)),
+      c.required && el("div", {}, el("b", { text: T("ידע קודם: ") }), printFormula(c.required, true, false, n)),
       c.priorCredits && el("div", { text: T`לפחות ${c.priorCredits} נ"ז קודמים (${T(c.priorField)})` }),
     ].filter(Boolean);
     return el("tr", {},
@@ -2845,8 +2872,8 @@ function buildPrint() {
           el("td", { class: "n", text: c.credits === null ? "" : String(c.credits) }),
           el("td", { class: "n", text: c.advanced ? String(c.advanced) : "" }),
           el("td", { class: "conds" }, [
-            c.admission && el("div", {}, el("b", { text: T("תנאי קבלה: ") }), printFormula(c.admission)),
-            c.required && el("div", {}, el("b", { text: T("ידע קודם: ") }), printFormula(c.required)),
+            c.admission && el("div", {}, el("b", { text: T("תנאי קבלה: ") }), printFormula(c.admission, true, false, n)),
+            c.required && el("div", {}, el("b", { text: T("ידע קודם: ") }), printFormula(c.required, true, false, n)),
             c.priorCredits && el("div", { text: T`לפחות ${c.priorCredits} נ"ז קודמים (${T(c.priorField)})` }),
             SKILLS.some((s) => c[s.key]) && el("div", { text: SKILLS.filter((s) => c[s.key]).map((s) => s.short).join(", ") }),
           ].filter(Boolean)),
