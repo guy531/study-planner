@@ -235,6 +235,10 @@ body.picking .zone.tap-target:not(.no-drop) { cursor: copy; }
 button.num-link { border: none; background: none; padding: 0; color: inherit; cursor: pointer;
   text-decoration: underline dotted; text-underline-offset: 3px; }
 button.num-link:hover { color: var(--accent); text-decoration-style: solid; }
+/* the number and the name together (guy, 2026-11-03), the same quiet link */
+button.course-link { border: none; background: none; padding: 0; color: inherit; font: inherit; text-align: start; cursor: pointer;
+  text-decoration: underline dotted; text-underline-offset: 3px; }
+button.course-link:hover { color: var(--accent); text-decoration-style: solid; }
 
 /* the floating summary at the bottom of the plan column, while the counters are out of sight (guy, 2026-11-01) */
 .mini-status {
@@ -248,6 +252,8 @@ button.num-link:hover { color: var(--accent); text-decoration-style: solid; }
 .mini-status .l { display: block; font-size: 0.72rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .mini-head { flex: none; display: flex; flex-direction: column; justify-content: center; padding-inline-end: 14px; border-inline-end: 1px solid var(--line); }
 .mini-status.done .mini-head { border: none; color: var(--done); }
+/* not finished: orange, like "התכנית עוד לא גמורה" above (guy, 2026-11-03) */
+.mini-status:not(.done) .mini-head, .mini-status:not(.done) .mini-head .l, .mini-status:not(.done) .mini-short { color: var(--warn); }
 /* each counter a small box, so a full one can be green with a check, like the counters at the top (guy, 2026-11-01) */
 .mini-meter { position: relative; flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center;
   margin: -3px 0; padding: 3px 8px; border: 1px solid transparent; border-radius: 7px; }
@@ -472,6 +478,8 @@ button.history:disabled:hover { border-color: var(--line); }
 .print-sheet .sheet-top svg { height: 8.66mm; width: auto; flex: none; color: #000; } /* as in the recommended-plan PDF (guy, 2026-11-01) */
 .print-sheet .sub, .print-sheet .foot { color: #444; margin: 0 0 6px; }
 /* the summary box: credits on the right, what is missing and the general requirements on the left */
+/* while the plan is not finished: "טיוטה" over the summary (guy, 2026-11-03) */
+.print-sheet .draft { margin: 10px 0 0; padding: 6px 10px; border: 2px solid #000; font-size: 12px; }
 .print-sheet .summary { display: grid; grid-template-columns: 1fr 1.3fr; gap: 18px; margin: 10px 0 4px; padding: 8px 12px;
   border: 1px solid #999; break-inside: avoid; }
 .print-sheet .summary h3 { font-size: 13px; margin: 0 0 4px; }
@@ -520,12 +528,22 @@ button.history:disabled:hover { border-color: var(--line); }
 
 /* degree status: what is still missing, or that everything is in */
 .status { margin-bottom: 12px; border-radius: 10px; font-size: 0.92rem; } /* the same corners as the counters below */
-.status.todo { background: var(--surface-2); padding: 8px 12px; }
-.status.todo summary { cursor: pointer; }
-.status.todo ul { margin: 6px 0 2px; padding-inline-start: 18px; }
-.status.todo li { margin: 2px 0; }
-.status.todo .where, .status.todo .hint { color: var(--muted); font-size: 0.85rem; }
-.status.todo .hint { list-style: none; margin-top: 6px; margin-inline-start: -18px; }
+/* "התכנית עוד לא גמורה" and the steps left (guy, 2026-11-03): orange, so it reads as a task and not as information */
+.status.todo { background: var(--warn-soft); border: 1px solid var(--warn); padding: 10px 14px; }
+.status.todo .steps-head { font-size: 1rem; }
+.status.todo .steps-head strong { color: var(--warn); font-size: 1.05rem; }
+.status.todo .steps { list-style: none; margin: 6px 0 0; padding: 0; }
+.status.todo .steps > li { display: flex; gap: 8px; align-items: baseline; margin: 3px 0; }
+.status.todo .steps > li > .mark { flex: none; width: 1.1em; text-align: center; font-weight: 700; }
+.status.todo .steps > li.open > .mark { color: var(--warn); }
+.status.todo .steps > li.done { color: var(--muted); }
+.status.todo .steps > li.done > .mark { color: var(--done); }
+.status.todo .steps > li.open .step-text { font-weight: 600; }
+.status.todo .step-sub { font-size: 0.85rem; margin-top: 1px; }
+.status.todo .step-sub summary { cursor: pointer; color: var(--accent); }
+.status.todo .step-sub ul { margin: 4px 0 2px; padding-inline-start: 18px; }
+.status.todo .step-sub li { margin: 2px 0; }
+.status.todo .where, .status.todo .hint { color: var(--muted); }
 .status.done { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--done-soft); color: var(--done); border: 1px solid var(--done); }
 .status.done .big { font-size: 1.4rem; font-weight: 700; line-height: 1; }
 .status.done span { color: var(--ink); }
@@ -799,3 +817,21 @@ button.mini:hover { border-color: var(--accent); }
 .other-lists { margin-top: 18px; padding-top: 10px; border-top: 2px solid var(--line); }
 .other-lists > h3 { font-size: 0.95rem; margin: 0 0 6px; color: var(--muted); }
 .other-lists[hidden] { display: none; }
+
+/* the window after the recommended plan is filled (guy, 2026-11-03) */
+#info-body ul.after-fill { margin: 4px 0 8px; padding-inline-start: 20px; }
+#info-body ul.after-fill li { margin: 3px 0; }
+#info-body .after-fill-ok { margin-top: 10px; }
+#info-body .after-fill-ok button { font-size: 0.95rem; padding: 6px 22px; }
+/* "התכנית עוד לא גמורה" in the print and share windows (guy, 2026-11-03): orange, like the card at the top */
+#info-body .unfinished { margin: 4px 0 10px; padding: 8px 12px; border: 1px solid var(--warn); border-radius: 8px; background: var(--warn-soft); }
+#info-body .unfinished strong { color: var(--warn); }
+#info-body .unfinished ul { margin: 4px 0 0; padding-inline-start: 20px; }
+#info-body .after-fill-ok button + button { margin-inline-start: 6px; }
+/* the preparatory workshop in "במקום בגרות" (guy, 2026-11-03): optional, so a plain item with a short note */
+.section.basics .item.prep { margin-bottom: 6px; }
+.section.basics .item.prep .desc { margin: 4px 0 0; }
+/* "תכנית שבונים כאן אינה מאושרת... שאילתא" (guy, 2026-11-03) */
+#info-body .approval { margin: 4px 0 10px; padding: 8px 12px; border-inline-start: 4px solid var(--accent); background: var(--surface-2, var(--bg)); border-radius: 6px; }
+.status.done .next { display: block; margin-top: 2px; font-size: 0.9rem; }
+.print-sheet .approval { margin: 10px 0 0; padding: 6px 10px; border: 1px solid #000; border-inline-start-width: 4px; font-size: 12px; }

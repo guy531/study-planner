@@ -295,16 +295,48 @@ function fillRecommended() {
   selected = null;
   save();
   render();
-  const notes = [T`הסמסטרים מולאו לפי התכנית המומלצת ל-${years} שנים.`];
-  rows.filter((r) => r.slot).forEach((r) => {
+  // what is left, from the recommended plan itself and not from the page: the fill replaces the semesters, so the list
+  // is the same whatever was there before (guy, 2026-11-03: after a full plan it listed only "לתקן קורס 1")
+  const todo = rows.filter((r) => r.slot).map((r) => {
     // a slot for one course from a list (the broadening course) is named, not counted in credits
     const group = program.sections.flatMap((s) => s.groups).find((g) => g.id === r.slot);
-    if (group && isRequired(group)) notes.push(T`נשאר לבחירתך: ${slotName(r.slot)}${group.rule === "חובת בחירה" && choiceText(group) ? ` (${choiceText(group)})` : ""}, בכל סמסטר שמתאים לך (הרשימה בעץ).`);
-    else notes.push(T`נשארו ${r.credits} נ"ז ${slotName(r.slot)} לבחירתך, בכל סמסטר שמתאים לך (הרשימה בעץ).`);
+    if (group && isRequired(group)) return T`לבחור: ${slotName(r.slot)}${group.rule === "חובת בחירה" && choiceText(group) ? ` (${choiceText(group)})` : ""}`;
+    return T`לבחור ${r.credits} נ"ז ${slotName(r.slot)}`;
   });
+  // the recommended plans leave the foundations out: they take the matriculation for granted
+  (program.background || []).forEach((b) => todo.push(T`לסמן ב"רקע ודרישות" אם יש לך ${backgroundWhat(b)}. התכנית המומלצת מניחה שיש לך; אם לא, צריך להוסיף את ${plainCourses(b.courses)}`));
+  const skills = SKILLS.filter((sk) => plan.some((r) => (DATA.courses[r.course] || {})[sk.key]));
+  if (skills.length) todo.push(T`להשלים ${skills.map((sk) => sk.short).join(T(" ו"))} לפני הקורסים שדורשים אותם, ולסמן את זה ב"רקע ודרישות"`);
+  const notes = [];
   if (skipped.length) notes.push(T`לא שובצו קורסים שכבר עשיתם: ${skipped.join(", ")}.`);
   if (state.locked && state.locked.length) notes.push(T`קורסים נעולים נשארו במקומם: ${state.locked.join(", ")}.`);
-  toast(notes.join(" "), 10000); // no "ביטול" here (guy, 2026-10-31): ↶ and Ctrl+Z undo it, and the × closes the message
+  showAfterFill(years, todo, notes);
+}
+
+// the window after the recommended plan is filled (guy, 2026-11-03: a message that went by itself left colleagues
+// thinking the plan was finished): it says that this is a starting point, and what is left, as in "התכנית עוד לא גמורה"
+function showAfterFill(years, todo, notes) {
+  showStartWindow(T`מולאה התכנית המומלצת ל-${years} שנים`,
+    T("התכנית המומלצת משבצת את קורסי החובה. את קורסי הבחירה בוחרים בעצמכם, וצריך לסמן את הרקע ואת הדרישות שלכם."), todo, notes);
+}
+
+// the window after the recommended fill and after the automatic completion (guy, 2026-11-03: the same for both):
+// "זו נקודת התחלה, לא תכנית גמורה", what is left to do, notes, and "הבנתי"; then, when it closes, onClose
+function showStartWindow(title, intro, todo, notes, onClose) {
+  reopenWindow = null;
+  fillInfo(
+    el("h3", { text: title }),
+    el("p", {}, el("strong", { text: T("זו נקודת התחלה, לא תכנית גמורה.") }), " ", intro),
+    todo.length ? el("h4", { text: T("מה עוד צריך לעשות:") }) : null,
+    todo.length ? el("ul", { class: "after-fill" }, todo.map((t) => el("li", { text: t }))) : null,
+    todo.length ? el("p", { class: "cond-note", text: T("את הקורסים לבחירתך לומדים בכל סמסטר שמתאים לך; הרשימות בעץ.") }) : null,
+    notes.length ? el("p", { class: "cond-note", text: notes.join(" ") }) : null,
+    el("p", { class: "cond-note", text: T("מה שעוד חסר, כולל קורסים שחסרים להם תנאים, מופיע בראש התכנית תחת \"התכנית עוד לא גמורה\", עד שהכול מסומן ✓.") }),
+    el("p", { class: "after-fill-ok" }, el("button", { type: "button", class: "mini", text: T("הבנתי") })));
+  if (!$("#info").open) $("#info").showModal();
+  // "הבנתי" closes the window and then does onClose itself (the flash of the new cards): the dialog's own "close" event
+  // did not come in every browser view; × closes it without the flash
+  $("#info-body .after-fill-ok button").addEventListener("click", () => { $("#info").close(); if (onClose) onClose(); });
 }
 
 // ---------- conditions ----------
@@ -527,23 +559,32 @@ function autoFill() {
   save();
   render();
   const placed = toPlace.size - remaining.size;
-  const notes = [T`שובצו ${placed} קורסי חובה (${[...toPlace].filter((n) => !remaining.has(n)).reduce((s, n) => s + credits(n), 0)} נ"ז), בערך ${Math.round(target)} נ"ז בסמסטר. כל מה שכבר היה בתכנית נשאר במקומו.`];
-  if (remaining.size) notes.push(T`לא נמצא מקום ל-${[...remaining].join(", ")}: כדאי להוסיף סמסטר או לשבץ ידנית.`);
+  // a window like the one after the recommended fill (guy, 2026-11-03), instead of a message that went by itself:
+  // what was placed, and what is still left to do, which here depends on the plan around it
+  const notes = [T`כל מה שכבר היה בתכנית נשאר במקומו. בערך ${Math.round(target)} נ"ז בסמסטר.`];
   if (useLoose) {
     const n = problems.filter((p) => p.level === "soft" && toPlace.has(p.n)).length; // only the courses added now
     notes.push(T`כדי לסיים ב-${semesterLabel(semesterIds()[loose.last])} ולא ב-${semesterLabel(idsFor(strict.last + 1)[strict.last])}, ${n === 1 ? T("קורס 1 נלמד") : T`${n} קורסים נלמדים`} במקביל לידע הקודם שלהם (מסומנים "ידע קודם במקביל").`);
   }
-  degreeGaps().filter((g) => g.kind === "credits").forEach((g) => notes.push(T`נשארו לבחירתך ${g.text}.`));
+  const todo = [];
+  if (remaining.size) todo.push(T`לשבץ ידנית את ${[...remaining].join(", ")}: לא נמצא להם מקום (אפשר גם להוסיף שנה)`);
   program.sections.forEach((s) => s.groups.forEach((g) => isRequired(g) && g.items
     .filter((it) => (isLongList(it.courses) || g.rule === "חובת בחירה") && !satisfied(it.courses, new Set(plannedCourses())))
-    .forEach((it) => notes.push(T`נשאר לבחירתך: ${it.label}.`))));
+    .forEach((it) => todo.push(T`לבחור: ${it.label}${g.rule === "חובת בחירה" && choiceText(g) ? ` (${choiceText(g)})` : ""}`))));
+  degreeGaps().filter((g) => g.kind === "credits").forEach((g) => todo.push(T`לבחור ${g.text}`));
   (program.background || []).filter((b) => !(state.background || []).includes(b.id) && !satisfied(b.courses, new Set(plannedCourses())))
-    .forEach((b) => notes.push(T`הנחתי שיש לך ${b.name} מהתיכון. אם לא, הוסיפו את ${plainCourses(b.courses)} לסמסטר הראשון.`));
-  toast(notes.join(" "), 14000); // no "ביטול" (guy, 2026-10-31): ↶ and Ctrl+Z undo it, and the × closes the message
-  // a hint of what was added: the new cards flash for a moment, like a course shown from its window (guy)
-  const added = [...document.querySelectorAll("#semesters .chip")].filter((c) => toPlace.has(c.dataset.n) && !remaining.has(c.dataset.n));
-  if (added.length) added[0].scrollIntoView({ behavior: SMOOTH(), block: "nearest" });
-  added.forEach((c) => { c.classList.add("flash"); setTimeout(() => c.classList.remove("flash"), 1600); });
+    .forEach((b) => todo.push(T`לסמן ב"רקע ודרישות" אם יש לך ${backgroundWhat(b)}. ההשלמה הניחה שיש לך; אם לא, צריך להוסיף את ${plainCourses(b.courses)}`));
+  const skills = skillNeeds().map((x) => x.skill);
+  if (skills.length) todo.push(T`להשלים ${skills.map((sk) => sk.short).join(T(" ו"))} לפני הקורסים שדורשים אותם, ולסמן את זה ב"רקע ודרישות"`);
+  // a hint of what was added, once the window is closed: the new cards flash for a moment (guy)
+  const flashAdded = () => {
+    const added = [...document.querySelectorAll("#semesters .chip")].filter((c) => toPlace.has(c.dataset.n) && !remaining.has(c.dataset.n));
+    if (added.length) added[0].scrollIntoView({ behavior: SMOOTH(), block: "nearest" });
+    added.forEach((c) => { c.classList.add("flash"); setTimeout(() => c.classList.remove("flash"), 1600); });
+  };
+  showStartWindow(T`שובצו ${placed} קורסי חובה (${[...toPlace].filter((n) => !remaining.has(n)).reduce((s, n) => s + credits(n), 0)} נ"ז)`,
+    T("ההשלמה האוטומטית משבצת רק את קורסי החובה שחסרו. את קורסי הבחירה בוחרים בעצמכם, וצריך לסמן את הרקע ואת הדרישות שלכם."),
+    todo, notes, flashAdded);
 }
 
 function satisfied(expr, have) {
@@ -576,6 +617,31 @@ function onlyWithoutBackground(b) {
   return (state.background || []).includes(b.id)
     ? T`סימנת שיש לך ${backgroundWhat(b)}, ולכן הקורס הזה לא נדרש ממך.`
     : T`רק למי שאין ${backgroundWhat(b)}. יש לך? אין צורך בקורס: סמנו את זה ב"רקע ודרישות".`;
+}
+
+// The preparatory workshop of a background requirement (guy, 2026-11-03: 91463 before the physics foundations):
+// a course without credits, and a test that tells who needs it. A recommendation, not a requirement: no step in
+// "התכנית עוד לא גמורה", no warning, and the fills do not add it
+const prepOf = (n) => (program.background || []).find((b) => b.prep === n);
+
+// "לא בטוחים שאתם מוכנים ...? מבחן התאמה (כשעה) ימליץ אם כדאי ללמוד קודם את 91463 סדנת הכנה בפיסיקה (ללא נ"ז)."
+function prepLine(b, forWhat) {
+  return el("span", { class: "prep-line" }, T`לא בטוחים שאתם מוכנים ${forWhat}? `,
+    b.prepTest ? [el("a", { href: b.prepTest, target: "_blank", rel: "noopener", text: T("מבחן התאמה") }),
+      T(" (כשעה) ימליץ אם כדאי ללמוד קודם את ")] : T("אפשר ללמוד קודם את "),
+    courseLink(b.prep), T(" (ללא נ\"ז)."));
+}
+
+// the workshop in semester i: better before the courses it prepares for, and not needed with the box ticked
+function prepNote(n, i) {
+  const b = prepOf(n);
+  if (!b || typeof i !== "number") return null;
+  if ((state.background || []).includes(b.id)) return T`סימנת שיש לך ${backgroundWhat(b)}, ולכן כנראה אין צורך בסדנה.`;
+  const courses = coursesIn(b.courses);
+  // the first place one of those courses is in: "done", or the first semester with one
+  const first = state.semesters.findIndex((sem) => sem.some((x) => courses.has(x)));
+  const at = state.done.some((x) => courses.has(x)) ? state.done : first !== -1 && first <= i ? state.semesters[first] : null;
+  return at ? T`כדאי ללמוד את הסדנה לפני ${at.filter((x) => courses.has(x)).join(", ")}.` : null;
 }
 
 function checkedBackground() {
@@ -637,7 +703,10 @@ function programCourses() {
 // (in "במקום בגרות" at the top). A course there is shown, not offered for "קורסים נוספים" (guy, 2026-10-31)
 function treeShows() {
   const set = programCourses();
-  (program.background || []).filter((b) => !(state.background || []).includes(b.id)).forEach((b) => coursesIn(b.courses, set));
+  (program.background || []).filter((b) => !(state.background || []).includes(b.id)).forEach((b) => {
+    coursesIn(b.courses, set);
+    if (b.prep) set.add(b.prep);
+  });
   return set;
 }
 
@@ -836,6 +905,8 @@ function chip(n, context) {
     const ticked = (state.background || []).includes(bg.id);
     notes.push(el("div", { class: `why ${ticked ? "warn" : "soft"}`, text: onlyWithoutBackground(bg) }));
   }
+  const prepWhy = prepNote(n, context);
+  if (prepWhy) notes.push(el("div", { class: "why soft", text: prepWhy }));
   const lockable = typeof context === "number" || context === "done";
   let lockButton = null;
   if (lockable) {
@@ -1222,7 +1293,7 @@ function degreeGaps() {
           const c = item.courses;
           const brief = typeof c === "string" || c.of ? null : shortPart(c);
           const text = typeof c === "string" ? `${c} ${item.label}` : brief && /^\d{5}/.test(brief) ? `${item.label} (${brief})` : item.label;
-          gaps.push({ kind: "item", text, where: group.name, target: `item-${group.id}-${i}` });
+          gaps.push({ kind: "item", text, where: group.name, target: `item-${group.id}-${i}`, choice: group.rule === "חובת בחירה" || isLongList(c) });
         }
       });
     } else if (group.minCredits) {
@@ -1232,7 +1303,7 @@ function degreeGaps() {
       }
       // a requirement inside the group (OE: one seminar course among its 15 credits), missing as long as it is not met
       if (group.mustInclude && !satisfied(group.mustInclude, have)) {
-        gaps.push({ kind: "item", text: T`${group.mustLabel} מ${group.name}`, where: group.name, target: `group-${group.id}` });
+        gaps.push({ kind: "item", text: T`${group.mustLabel} מ${group.name}`, where: group.name, target: `group-${group.id}`, choice: true });
       }
     }
   }));
@@ -1242,33 +1313,89 @@ function degreeGaps() {
   return gaps;
 }
 
-// one line above the meters: green when the plan has everything the degree needs, otherwise what is still missing
-function renderStatus() {
+// What is left before the plan is a whole degree, as steps (guy, 2026-11-03: colleagues read the old line "עוד חסר
+// לתואר" as information, and a plan filled from the recommended plan as a finished one). In order: the required courses,
+// the choices the degree leaves to the student, the electives, the credit totals, the courses whose conditions are not
+// met, and "רקע ודרישות". A step that applies to the program is listed also when it is done (✓), so the student sees how
+// far the plan has come. Each: { done, text, subs (gaps, each a link into the tree), problems, target, detail, hint }
+function planSteps() {
   const gaps = degreeGaps();
+  const groups = program.sections.flatMap((x) => x.groups);
+  const steps = [];
+  const items = gaps.filter((g) => g.kind === "item" && !g.choice);
+  steps.push(items.length
+    ? { done: false, text: items.length === 1 ? T("להוסיף קורס חובה 1") : T`להוסיף ${items.length} קורסי חובה`, subs: items }
+    : { done: true, text: T("כל קורסי החובה בתכנית") });
+  const choices = gaps.filter((g) => g.kind === "item" && g.choice);
+  if (groups.some((g) => g.rule === "חובת בחירה" || g.mustInclude || (isRequired(g) && g.items.some((it) => isLongList(it.courses))))) {
+    steps.push(choices.length ? { done: false, text: T("לבחור את הקורסים שהתואר משאיר לבחירתך"), subs: choices }
+      : { done: true, text: T("הקורסים שהתואר משאיר לבחירתך") });
+  }
+  const credits = gaps.filter((g) => g.kind === "credits");
+  if (groups.some((g) => !isRequired(g) && g.minCredits)) {
+    steps.push(credits.length ? { done: false, text: T("לבחור קורסי בחירה"), subs: credits } : { done: true, text: T("קורסי הבחירה") });
+  }
+  const totals = gaps.filter((g) => g.kind === "total");
+  steps.push(totals.length
+    ? { done: false, text: T("להשלים נ\"ז"), subs: totals, hint: T("נ\"ז שחסרים בסך הכול אפשר להשלים גם בקורסי בחירה חופשית מכל תחום.") }
+    : { done: true, text: T("כל הנ\"ז שהתואר דורש") });
+  const open = new Set(problems.filter((x) => x.level !== "soft").map((x) => x.n)).size;
+  // only with courses in the semesters: an empty plan does not "meet every condition" (guy, 2026-11-03)
+  if (open) steps.push({ done: false, text: open === 1 ? T("לתקן קורס 1 שחסרים לו תנאים") : T`לתקן ${open} קורסים שחסרים להם תנאים`, problems: true });
+  else if (state.semesters.some((x) => x.length)) steps.push({ done: true, text: T("כל הקורסים עומדים בתנאים שלהם") });
+  // a background box neither ticked nor replaced by its courses in the plan, and English / library a course needs
+  const planned = new Set(plannedCourses());
+  const bg = (program.background || []).filter((b) => !(state.background || []).includes(b.id) && !satisfied(b.courses, planned));
+  const needs = skillNeeds();
+  if (bg.length || needs.length) {
+    steps.push({ done: false, text: T("לסמן את \"רקע ודרישות\""), target: "prereq-card",
+      detail: [...bg.map((b) => T`${backgroundWhat(b)}, או ${plainCourses(b.courses)} בתכנית`), ...needs.map((x) => x.skill.short)].join(" · ") });
+  } else if ((program.background || []).length || SKILLS.some((sk) => state.semesters.flat().some((n) => (DATA.courses[n] || {})[sk.key]))) {
+    steps.push({ done: true, text: T("\"רקע ודרישות\"") });
+  }
+  return steps;
+}
+
+// a gap as a link into the tree (or plain text), for the steps
+const gapLink = (g) => (g.target ? el("button", { type: "button", class: "link", "data-goto": g.target, text: g.text }) : el("span", { text: g.text }));
+
+// above the meters: green when the plan is a whole degree, otherwise "התכנית עוד לא גמורה" and the steps
+// a plan built here is not an approved plan (guy, 2026-11-03: students must not think it is): the same words on the
+// page, in the print and share windows and on the print page
+// "מערכת השאילתא" links to Sheilta (guy, 2026-11-03), also in a saved PDF of the print page
+const SHEILTA = "https://sheilta.apps.openu.ac.il/pls/dmyopt2/sheilta.main";
+const sheiltaLink = () => el("a", { href: SHEILTA, target: "_blank", rel: "noopener", text: T("מערכת השאילתא") });
+const approvalFinal = () => [T("אישור תכנית לימודים סופית מתקבל רק דרך "), sheiltaLink(), "."];
+const APPROVAL = () => [T("תכנית שבונים כאן אינה מאושרת. "), ...approvalFinal()];
+const approvalNote = () => el("p", { class: "approval" }, el("strong", { text: T("חשוב: ") }), APPROVAL());
+
+function renderStatus() {
+  const steps = planSteps();
+  const open = steps.filter((x) => !x.done);
   const box = $("#status");
-  if (!gaps.length) {
-    const open = new Set(problems.filter((p) => p.level !== "soft").map((p) => p.n)).size;
+  if (!open.length) {
     box.className = "status done";
     box.replaceChildren(el("span", { class: "big", text: "✓" }),
-      el("span", {}, el("strong", { text: T("התכנית כוללת את כל דרישות התואר") }),
-        open ? T`. עדיין יש ${open === 1 ? T("קורס 1") : T`${open} קורסים`} עם תנאים שלא מתקיימים (ראו למעלה).` : T(", ואין בה קורסים בלי תנאי הקבלה או הידע הקודם שלהם."),
-        skillNeeds().length ? T` צריך גם ${skillNeeds().map((x) => x.skill.short).join(T(" ו"))} (ראו למעלה).` : ""));
+      el("span", {}, el("strong", { text: T("התכנית כוללת את כל דרישות התואר") }), T(", וכל הקורסים בה עומדים בתנאים שלהם."),
+        el("span", { class: "next" }, approvalFinal())));
     return;
   }
-  const items = gaps.filter((g) => g.kind === "item");
-  const totals = gaps.filter((g) => g.kind === "total");
-  const summary = [
-    items.length ? (items.length === 1 ? T("פריט חובה 1") : T`${items.length} פריטי חובה`) : null,
-    ...gaps.filter((g) => g.kind === "credits").map((g) => g.text),
-    ...totals.filter((g) => (!g.counter.field || g.counter.field === "כל הקורסים") && g.counter.kind === "credits").map((g) => T`${g.credits} נ"ז בסך הכול`),
-  ].filter(Boolean).join(" · ");
   box.className = "status todo";
-  box.replaceChildren(el("details", {},
-    el("summary", {}, el("strong", { text: T("עוד חסר לתואר: ") }), summary || T("נ\"ז")),
-    el("ul", {}, gaps.map((g) => el("li", {},
-      g.target ? el("button", { type: "button", class: "link", "data-goto": g.target, text: g.text }) : g.text,
-      g.where ? el("span", { class: "where", text: ` (${g.where})` }) : null)),
-      el("li", { class: "hint", text: T("נ\"ז שחסרים בסך הכול אפשר להשלים גם בקורסי בחירה חופשית מכל תחום.") }))));
+  box.replaceChildren(
+    el("div", { class: "steps-head" }, el("strong", { text: T("התכנית עוד לא גמורה") }), " ",
+      el("span", { text: open.length === 1 ? T("נשאר צעד 1") : T`נשארו ${open.length} צעדים` })),
+    el("ol", { class: "steps" }, steps.map((x) => el("li", { class: x.done ? "done" : "open" },
+      el("span", { class: "mark", "aria-label": x.done ? T("בוצע") : T("עוד לא"), text: x.done ? "✓" : "○" }),
+      el("div", {},
+        el("span", { class: "step-text", text: x.text }),
+        x.problems ? el("span", {}, " ", el("button", { type: "button", class: "link show-problem" }, eyeIcon(), T("הצגה"))) : null,
+        x.target ? el("span", {}, " ", el("button", { type: "button", class: "link", "data-goto": x.target, text: T("סימון") })) : null,
+        x.detail ? el("div", { class: "step-sub", text: x.detail }) : null,
+        // a few gaps inline; many (an empty plan has some 20 required courses) folded under "הצגה"
+        x.subs && x.subs.length <= 4 ? el("div", { class: "step-sub" }, x.subs.flatMap((g, k) => [k ? " · " : null, gapLink(g)])) : null,
+        x.subs && x.subs.length > 4 ? el("details", { class: "step-sub" }, el("summary", { text: T`הצגת ${x.subs.length} הפריטים` }),
+          el("ul", {}, x.subs.map((g) => el("li", {}, gapLink(g), g.where ? el("span", { class: "where", text: ` (${g.where})` }) : null)))) : null,
+        x.hint ? el("div", { class: "step-sub hint", text: x.hint }) : null)))));
 }
 
 function renderMeters() {
@@ -1291,23 +1418,25 @@ function renderMeters() {
 // counters at the top are scrolled out of sight, so the student sees what changes while placing courses far below.
 // A click goes back up to them. Wide: what is missing, and every counter with a thin bar; narrow (a phone, with the
 // tree's button beside it): one short line
+// It follows the steps of "התכנית עוד לא גמורה" (guy, 2026-11-03: the bar said "✓ כל דרישות התואר בתכנית" while the
+// card above still had a course with missing conditions): green only when no step is left
 function renderMini() {
   const gaps = degreeGaps();
-  const items = gaps.filter((g) => g.kind === "item").length;
-  const itemsText = items === 1 ? T("פריט חובה 1") : T`${items} פריטי חובה`;
+  const left = planSteps().filter((x) => !x.done).length;
+  const leftText = left === 1 ? T("נשאר צעד 1") : T`נשארו ${left} צעדים`;
   const total = gaps.find((g) => g.kind === "total" && (!g.counter.field || g.counter.field === "כל הקורסים") && g.counter.kind === "credits");
-  const done = !gaps.length;
+  const done = !left;
   const box = $("#mini-status");
   box.classList.toggle("done", done);
   box.replaceChildren(
     el("span", { class: "mini-head" }, done ? el("strong", { text: T("✓ כל דרישות התואר בתכנית") })
-      : [el("span", { class: "l", text: T("עוד חסר לתואר") }), el("strong", { text: items ? itemsText : T("נ\"ז בלבד") })]),
+      : [el("span", { class: "l", text: T("התכנית עוד לא גמורה") }), el("strong", { text: leftText })]),
     ...creditTotals().map(([label, value, target]) => el("span", { class: `mini-meter${target && value >= target ? " full" : ""}` },
       el("span", { class: "l", text: capital(label) }),
       el("span", { class: "v" }, target ? el("span", { dir: "ltr" }, `${value} / `, el("strong", { text: String(target) })) : el("strong", { text: String(value) })),
       el("span", { class: "bar" }, el("span", { style: `width:${target ? Math.min(100, (value / target) * 100) : 0}%` })))),
     el("span", { class: "mini-short", text: done ? T("✓ כל דרישות התואר בתכנית")
-      : [total ? T`חסר: ${total.credits} נ"ז` : T("עוד חסר לתואר"), items ? itemsText : null].filter(Boolean).join(" · ") }));
+      : [T("לא גמורה"), leftText, total ? T`חסר: ${total.credits} נ"ז` : null].filter(Boolean).join(" · ") }));
 }
 // shown once the counters are above the screen (not while they are in sight); checked on scroll, on resize and after
 // every render
@@ -1544,10 +1673,14 @@ function renderTree() {
         el("div", { class: "placed-list" }, [...coursesIn(b.courses)].filter((n) => have.has(n)).map((n, k) => el("span", {}, k ? ", " : "",
           el("span", { class: "num", text: n }), " ", placeButton(n)))))
       : el("div", { class: `item${ok ? " ok" : ""}`, id: `item-${id}` }, renderExpr(b.courses, have));
+    const prep = !ok && b.prep && DATA.courses[b.prep] ? el("div", { class: "item prep" },
+      el("div", { class: "ih" }, el("span", { text: T("הכנה, לא חובה") })),
+      el("ul", { class: "zone chips" }, chip(b.prep, "tree")),
+      el("p", { class: "desc" }, prepLine(b, T("לקורסים האלה")))) : null;
     return el("div", { class: "section basics", id: `group-${id}` },
       el("h3", { text: T("במקום בגרות (רק למי שצריך)") }),
       el("div", { class: "desc", text: T`רק למי שאין ${backgroundWhat(b)}. מי שיש לו לא צריך את הקורסים האלה, ויכול לסמן את זה ב"רקע ודרישות".` }),
-      body);
+      prep, body);
   });
   $("#tree").replaceChildren(...basics, ...program.sections.filter((section) => section.groups.length).map((section) => {
     const groups = section.groups.map((group) => {
@@ -1766,7 +1899,8 @@ function renderBackground() {
       // ticked: nothing to explain; otherwise either the courses are already in the plan, or where to find them
       ticked ? null : el("p", { class: `bg-note${viaCourses ? " ok" : ""}` }, viaCourses
         ? T`✓ ${plainCourses((b.courses.or || [b.courses]).find((p) => satisfied(p, planned)))} כבר בתכנית שלך, ולכן אין צורך לסמן.`
-        : T`בלי בגרות כזו, יש ללמוד את ${plainCourses(b.courses).replace(", או ", ", או את ").replace(" + ", T(" ו-"))} (בראש העץ).`));
+        : T`בלי בגרות כזו, יש ללמוד את ${plainCourses(b.courses).replace(", או ", ", או את ").replace(" + ", T(" ו-"))} (בראש העץ).`),
+      ticked || viaCourses || !b.prep || !DATA.courses[b.prep] ? null : el("p", { class: "bg-note" }, prepLine(b, T("לקורסים האלה"))));
   }));
 }
 
@@ -1802,7 +1936,7 @@ function showBackground(id) {
     el("p", {}, T`צריך ללמוד את ${plainCourses(b.courses)} לפני קורסי ה${b.field ? T(b.field) : T("תכנית")}, בדרך כלל בסמסטר הראשון. אפשר להוסיף לתכנית: `,
       el("span", { class: "actions-inline" }, [...replaced].map((x) => courseAction(x, true)))),
     asking.length ? el("h4", { text: T("קורסים שבתנאים שלהם מופיעה הדרישה") }) : null,
-    asking.length ? el("p", { class: "cond-note" }, asking.map((x, k) => el("span", {}, k ? ", " : "", numLink(x), " ", el("bdi", { text: courseName(x) })))) : null,
+    asking.length ? el("p", { class: "cond-note" }, asking.map((x, k) => el("span", {}, k ? ", " : "", courseLink(x)))) : null,
     ticked ? el("p", {}, el("span", { class: "tag ok", text: T("✓ סימנת שיש לך את הרקע הזה") })) : null,
     b.link ? el("p", {}, el("a", { href: b.link, target: "_blank", rel: "noopener", text: T("המקור: דף התכנית באתר האוניברסיטה") })) : null);
   if (!$("#info").open) $("#info").showModal();
@@ -1816,6 +1950,8 @@ function renderStatic() {
   $("#plan-length").hidden = lengths.length < 2;
   $("#program-link").hidden = !program.link;
   if (program.link) $("#program-link").href = program.link;
+  $("#advisors-link").hidden = !program.advisors;
+  if (program.advisors) $("#advisors-link").href = program.advisors;
   // the banner at the top: who the planning fits, and (in bold, so no student misses it; guy) that the tool is only
   // a help, that offerings and programs may change, and that the catalog has the up-to-date information. Only here,
   // not again at the bottom of the page (guy)
@@ -1823,7 +1959,8 @@ function renderStatic() {
     T`התכנון באתר מתאים לסטודנטים שהתחילו ללמוד בתכנית מסמסטר ${semName(program.planFrom)} ואילך. ` +
     T("לסטודנטים שהתחילו לפני כן חלים כללים אחרים, ומומלץ לפנות לייעוץ אקדמי."),
     el("strong", { class: "disclaimer-line" }, T("הכלי נועד לעזרה בלבד, ועשויים לחול שינויים בהיצע הקורסים ובתכניות הלימודים. המידע המעודכן ביותר על הקורסים נמצא ב"),
-      el("a", { href: "https://www.openu.ac.il/academic/Catalog/", target: "_blank", rel: "noopener", text: T("קטלוג הקורסים של האוניברסיטה הפתוחה") }), "."));
+      el("a", { href: "https://www.openu.ac.il/academic/Catalog/", target: "_blank", rel: "noopener", text: T("קטלוג הקורסים של האוניברסיטה הפתוחה") }), "."),
+    el("strong", { class: "disclaimer-line" }, APPROVAL()));
   $("#general").replaceChildren(...program.general.map((g) =>
     el("li", {}, el("strong", { text: g.name }), g.details ? ` – ${g.details} ` : " ",
       g.link ? el("a", { href: g.link, target: "_blank", rel: "noopener", text: T("הסבר") }) : null)));
@@ -1843,9 +1980,17 @@ function numLink(n) {
   return el("button", { type: "button", class: "num num-link", "data-show-course": n, title: T("הצגת הקורס במקום שלו"), text: n });
 }
 
+// the number and the name of a course as one button that jumps to it (guy, 2026-11-03: only the number was
+// clickable, and the name next to it is the bigger target); plain text when the course is nowhere on the page
+function courseLink(n) {
+  const parts = [el("span", { class: "num", text: n }), " ", el("bdi", { text: courseName(n) })];
+  if (locationOf(n) === null && !treeShows().has(n) && !state.extra.includes(n)) return el("span", {}, ...parts);
+  return el("button", { type: "button", class: "course-link", "data-show-course": n, title: T("הצגת הקורס במקום שלו") }, ...parts);
+}
+
 function formula(expr, top = true) {
   if (typeof expr === "string") {
-    return el("span", {}, numLink(expr), " ", el("bdi", { text: courseName(expr) }));
+    return courseLink(expr);
   }
   const parts = expr.and || expr.or || expr.of;
   const op = expr.and ? T("וגם") : T("או");
@@ -1864,7 +2009,7 @@ function courseLine(n, have, sameSemester) {
   const note = typeof where !== "number" ? null
     : where === sameSemester ? el("span", { class: "same", text: T(" (באותו סמסטר)") })
       : el("span", { class: "late", text: T` (נמצא ב-${semName(semesterIds()[where])})` });
-  return el("span", {}, numLink(n), " ", el("bdi", { text: courseName(n) }), note);
+  return el("span", {}, courseLink(n), note);
 }
 
 // an option inside "one of" / "at least k of": a single course, courses taken together (+), or a deeper formula
@@ -2183,6 +2328,12 @@ function showInfo(n) {
     const ticked = (state.background || []).includes(b.id);
     add(b.name, el("span", {}, b.explanation, " ", ticked ? el("span", { class: "tag ok", text: T("✓ סימנת שיש לך") }) : null));
   });
+  const bgOf = backgroundFor(n);
+  if (bgOf && bgOf.prep && DATA.courses[bgOf.prep] && !(state.background || []).includes(bgOf.id)) add(T("הכנה"), prepLine(bgOf, T("לקורס הזה")));
+  const prepFor = prepOf(n);
+  if (prepFor && prepFor.prepTest) add(T("מבחן התאמה"), el("span", {},
+    el("a", { href: prepFor.prepTest, target: "_blank", rel: "noopener", text: T("מבחן התאמה") }),
+    T` (כשעה) ימליץ אם כדאי לך ללמוד את הסדנה לפני ${plainCourses(prepFor.courses)}.`));
   add(T("הערות"), c.notes);
   // overlaps: one row per combination, the ones touching the student's plan first and marked
   const overlaps = c.overlaps
@@ -2402,7 +2553,7 @@ function setupClicks() {
     if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) e.currentTarget.close();
   }));
   document.addEventListener("click", (e) => {
-    if (e.target.closest("#show-problem")) {
+    if (e.target.closest("#show-problem, .show-problem")) {
       const first = document.querySelector(".chip.prob-bad, .chip.prob-warn");
       if (first) {
         first.scrollIntoView({ behavior: SMOOTH(), block: "center" });
@@ -2659,7 +2810,12 @@ function setupControls() {
   // the browser's print window draws the sheet best; a site cannot save a PDF without it. The page title
   // becomes the file name the browser suggests for "Save as PDF"
   const title = document.title;
-  $("#print").addEventListener("click", () => window.print());
+  $("#print").addEventListener("click", printPlan);
+  // Ctrl+P goes the same way, so an unfinished plan is never printed without the window (the browser's own menu
+  // still prints at once; then the page says "טיוטה" at the top)
+  document.addEventListener("keydown", (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.code === "KeyP" && !e.shiftKey && !e.altKey) { e.preventDefault(); printPlan(); }
+  });
   window.addEventListener("beforeprint", () => { buildPrint(); document.title = T`תכנית לימודים - ${program.code}`; });
   window.addEventListener("afterprint", () => { document.title = title; });
 }
@@ -2672,15 +2828,15 @@ const HELP_STEPS = [
   { shot: "top", title: T("1. בוחרים תואר ושנת התחלה"),
     text: T("בראש העמוד בוחרים את התואר. ליד \"הסמסטרים שלי\" בוחרים את שנת ההתחלה, והתכנית מתחילה תמיד בסמסטר א שלה. מי שמתחיל בסמסטר ב או בקיץ חוסם את הסמסטרים שלפני בכפתור ⊘ שבכותרת הסמסטר. \"+ הוספת שנה\" מתחת לסמסטרים מוסיף שנה שלמה.") },
   { shot: "controls", title: T("2. מתחילים מהר"),
-    text: T("\"מילוי לפי התכנית המומלצת\" ממלא את הסמסטרים לפי התכנית של המחלקה (3 או 4 שנים). \"השלמה אוטומטית\" משבצת רק את קורסי החובה שעוד חסרים, סביב מה שכבר שיבצת. את קורסי הבחירה בוחרים לבד. כל פעולה אפשר לבטל ב-↶ שבראש העמוד או ב-Ctrl+Z.") },
+    text: T("\"מילוי לפי התכנית המומלצת\" ממלא את הסמסטרים לפי התכנית של המחלקה (3 או 4 שנים). \"השלמה אוטומטית\" משבצת רק את קורסי החובה שעוד חסרים, סביב מה שכבר שיבצת. שניהם רק נקודת התחלה: את קורסי הבחירה בוחרים לבד, ואחרי המילוי חלון אומר מה עוד נשאר. כל פעולה אפשר לבטל ב-↶ שבראש העמוד או ב-Ctrl+Z.") },
   { shot: "drag", title: T("3. משבצים קורסים"),
     text: T("עץ הקורסים מראה את מה שהתואר דורש. גוררים קורס לסמסטר, או ל\"קורסים שכבר עשיתי\" אם כבר למדת אותו. אפשר גם ללחוץ על קורס ואז על \"+ שיבוץ כאן\" (כך בטלפון). כשהעכבר על קורס בעץ, ובזמן הגרירה, הסמסטרים נצבעים: כחול אפשר, אדום או כתום יחסר תנאי, ובסמסטר מפוספס הקורס לא מוצע. מה שכבר שיבצת מתכווץ בעץ, כך שרואים בעיקר את מה שנשאר.") },
   { shot: null, title: T("4. מסדרים ונועלים"),
     text: T("בתוך סמסטר גוררים קורס למעלה או למטה, וקו מראה איפה הוא ינחת. במקלדת: Alt וחץ. בטלפון: \"למעלה\" ו\"למטה\" בחלון הקורס (ⓘ). המנעול שעל הכרטיס משאיר קורס במקומו, גם בניקוי וגם במילוי לפי התכנית המומלצת.") },
   { shot: "warn", title: T("5. תנאים ואזהרות"),
     text: T("כל קורס נבדק מול הקורסים שבסמסטרים שלפניו. תגית אדומה: חסר תנאי קבלה או נ\"ז קודמים. כתומה: חסר ידע קודם דרוש. אפורה: ידע קודם שנלמד באותו סמסטר. \"פירוט\" או \"תנאים\" פותחים רשימה של כל תנאי עם ✓ או ✗. לחיצה על מספר של קורס בחלון קופצת אליו.") },
-  { shot: "status", title: T("6. מה עוד חסר לתואר"),
-    text: T("בראש התכנית שורה אומרת מה עוד חסר לתואר (לחיצה פותחת רשימה, וכל פריט קופץ אליו בעץ), ומתחתיה מוני נקודות הזכות מול מה שנדרש. כשהכול בתכנית, הם מתאחדים לכרטיס ירוק אחד. קורסים חופפים נספרים פעם אחת, וכרטיס הקורס אומר כמה הוא נספר.") },
+  { shot: "status", title: T("6. מה עוד נשאר לעשות"),
+    text: T("בראש התכנית כרטיס כתום, \"התכנית עוד לא גמורה\", עם הצעדים שנשארו: קורסי חובה, בחירות, קורסי בחירה, נ\"ז, תנאים שחסרים, ו\"רקע ודרישות\". כל פריט בו קופץ למקום שלו בעץ, וצעד שהושלם מסומן ✓. מתחתיו מוני נקודות הזכות מול מה שנדרש. כשהכול מסומן, הם מתאחדים לכרטיס ירוק אחד. קורסים חופפים נספרים פעם אחת, וכרטיס הקורס אומר כמה הוא נספר.") },
   { shot: "background", title: T("7. רקע ודרישות"),
     text: T("בכרטיס \"רקע ודרישות\" מסמנים אם יש לך בגרות שבאה במקום קורסי היסוד, ואם עמדת בדרישות האנגלית וההדרכה הביבליוגרפית. מה שלא סומן מופיע כתגית על הקורסים שדורשים אותו. כשהכול מסומן, הכרטיס מתקפל לשורה אחת.") },
   { shot: "search", title: T("8. חיפוש"),
@@ -2754,11 +2910,43 @@ function decodePlan(text) {
   return fromYearStart({ program: p.p, start: p.s, done: list(p.d), semesters: p.m.map(list), extra: list(p.x), background: list(p.b), skills: list(p.k), locked: list(p.l), blocked });
 }
 
+// "התכנית עוד לא גמורה: נשארו N צעדים" and the steps, for the print and share windows (guy, 2026-11-03)
+function unfinishedNote() {
+  const open = planSteps().filter((x) => !x.done);
+  if (!open.length) return null;
+  return el("div", { class: "unfinished" },
+    el("strong", { text: T("התכנית עוד לא גמורה.") }), " ",
+    open.length === 1 ? T("נשאר צעד 1:") : T`נשארו ${open.length} צעדים:`,
+    el("ul", {}, open.map((x) => el("li", { text: x.text }))));
+}
+
+// print: an unfinished plan first gets a window that says so, with "חזרה לעריכה" and "הדפסה בכל זאת" (guy,
+// 2026-11-03); a finished one prints at once
+function printPlan() {
+  const note = unfinishedNote();
+  reopenWindow = null;
+  // a finished plan gets the window too, for the approval note (guy, 2026-11-03)
+  fillInfo(
+    el("h3", { text: note ? T("להדפיס תכנית שעוד לא גמורה?") : T("הדפסת התכנית") }),
+    note,
+    approvalNote(),
+    el("p", { class: "after-fill-ok" },
+      el("button", { type: "button", class: "mini", id: "print-back", text: T("חזרה לעריכה") }), " ",
+      el("button", { type: "button", class: "mini", id: "print-anyway", text: note ? T("הדפסה בכל זאת") : T("הדפסה") })));
+  if (!$("#info").open) $("#info").showModal();
+  $("#print-back").addEventListener("click", () => $("#info").close());
+  $("#print-anyway").addEventListener("click", () => { $("#info").close(); setTimeout(() => window.print(), 50); });
+  $("#print-back").focus();
+}
+
 function sharePlan() {
   const link = `${location.origin}${location.pathname}#plan=${encodePlan()}`;
   const input = el("input", { class: "share-link", readonly: true, value: link });
   fillInfo(
     el("h3", { text: T("שיתוף התכנית") }),
+    // an unfinished plan says so first (guy, 2026-11-03): whoever gets the link should know it is a draft
+    unfinishedNote(),
+    approvalNote(),
     el("p", { text: T("הקישור הזה פותח את התכנית בדיוק כמו שהיא עכשיו, אצל כל מי שמקבל אותו (למשל יועץ אקדמי). אפשר לשלוח אותו במייל או בהודעה.") }),
     input,
     el("p", {}, el("button", { type: "button", class: "mini", id: "copy-link", text: T("העתקת הקישור") })),
@@ -2858,6 +3046,7 @@ function buildPrint() {
     if (c.offered === false && i !== "done") remarks.push(T("לא מוצע עוד"));
     if (overlapLine(n)) remarks.push(overlapLine(n).text);
     if (backgroundFor(n)) remarks.push(onlyWithoutBackground(backgroundFor(n)));
+    if (prepNote(n, i)) remarks.push(prepNote(n, i));
     const conds = [
       c.admission && el("div", {}, el("b", { text: T("תנאי קבלה: ") }), printFormula(c.admission, true, false, n)),
       c.required && el("div", {}, el("b", { text: T("ידע קודם: ") }), printFormula(c.required, true, false, n)),
@@ -2926,6 +3115,12 @@ function buildPrint() {
       el("td", { class: "n", text: target ? String(target) : "" }),
       el("td", { class: "n" }, !target ? "" : value >= target ? mark(true) : el("b", { class: "miss", text: String(target - value) }))))));
   const todo = gaps.filter((g) => g.kind !== "total");
+  // while the plan is not finished, a banner over the summary says so (guy, 2026-11-03: the PDF goes to advisers
+  // and colleagues, who read it as a finished plan)
+  const openSteps = planSteps().filter((x) => !x.done);
+  const draft = openSteps.length ? el("div", { class: "draft" },
+    el("strong", { text: T("טיוטה: התכנית עוד לא גמורה.") }), " ",
+    T`נשארו ${openSteps.length === 1 ? T("צעד 1") : T`${openSteps.length} צעדים`}: ${openSteps.map((x) => x.text).join("; ")}.`) : null;
   const summary = el("div", { class: "summary" },
     el("div", {}, el("h3", { text: T("נקודות זכות") }), creditsTable),
     el("div", {},
@@ -2971,11 +3166,13 @@ function buildPrint() {
         el("p", { class: "sub" }, el("a", { href: `${location.origin}${location.pathname}#plan=${encodePlan()}`, target: "_blank", rel: "noopener",
           text: T("פתיחת התכנית הזו בכלי התכנון, להמשך עבודה עליה") }))),
       $(".ou-logo svg").cloneNode(true)),
+    el("div", { class: "approval" }, el("strong", { text: T("חשוב: ") }), APPROVAL()),
+    draft,
     summary,
     ...tables,
     el("p", { class: "foot" }, el("strong", {}, T("הכלי נועד לעזרה בלבד, ועשויים לחול שינויים בהיצע הקורסים ובתכניות הלימודים. המידע המעודכן ביותר על הקורסים נמצא בקטלוג הקורסים של האוניברסיטה הפתוחה: "),
       // never broken across lines (guy saw "Catalog" alone on the next line), and clickable in a saved PDF
-      el("a", { href: "https://www.openu.ac.il/academic/Catalog/", class: "nowrap" }, el("bdi", { dir: "ltr", text: "www.openu.ac.il/academic/Catalog" }))), el("br"),
+      el("a", { href: "https://www.openu.ac.il/academic/Catalog/", class: "nowrap" }, el("bdi", { dir: "ltr", text: "www.openu.ac.il/academic/Catalog" })), " ", APPROVAL()), el("br"),
       T("תקלה או טעות במידע? כתבו לי (ד\"ר גיא עמית): "),
       el("a", { href: "mailto:guyam@openu.ac.il", class: "nowrap" }, el("bdi", { dir: "ltr", text: "guyam@openu.ac.il" }))),
   ].filter(Boolean)); // replaceChildren would print a null as the text "null"

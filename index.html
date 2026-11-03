@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=a1d4e493">
+<link rel="stylesheet" href="style.css?v=fb22b488">
 <script src="i18n.js?v=e2f3071e"></script>
-<script src="lang-ar.js?v=d565b84e"></script>
-<script src="lang-en.js?v=e758c789"></script>
+<script src="lang-ar.js?v=c348b343"></script>
+<script src="lang-en.js?v=13c8d107"></script>
 <script>
   // light by default; dark only when the user chose it with the button (set before paint, so no flash)
   try { if (localStorage.getItem("physics-planner-v1:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) { /* no storage */ }
@@ -43,6 +43,8 @@
       <select id="program"></select>
     </label>
     <a class="program-link" id="program-link" target="_blank" rel="noopener" data-t>דף התכנית באתר האוניברסיטה ↗</a>
+    <!-- the academic advisors of the program (guy, 2026-11-03), from the column "יועצים אקדמיים" of the programs file -->
+    <a class="program-link" id="advisors-link" target="_blank" rel="noopener" data-t>יועצים אקדמיים ↗</a>
     <!-- undo and redo act on the whole plan, so they sit in the header next to "איפוס" (guy, 2026-10-29, after trying a floating bar) -->
     <div class="history-bar" id="history-bar" role="group" aria-label="ביטול וחזרה" data-t-aria>
       <button type="button" class="history" id="undo" title="ביטול הפעולה האחרונה (Ctrl+Z)" data-t-title aria-label="ביטול" data-t-aria disabled>↶</button>
@@ -171,7 +173,7 @@
 </div>
 <div class="print-holder" aria-hidden="true"><section id="print-sheet" class="print-sheet"></section></div>
 
-<script src="data/data.js?v=9f809834"></script>
-<script src="app.js?v=b45614d0"></script>
+<script src="data/data.js?v=4013ba49"></script>
+<script src="app.js?v=5d3cc843"></script>
 </body>
 </html>

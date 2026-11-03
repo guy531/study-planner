@@ -17683,6 +17683,40 @@
    "link": "https://www.openu.ac.il/courses/06101.htm?t=h",
    "updated": "2026-10-31",
    "full": true
+  },
+  "91463": {
+   "name": "סדנת הכנה בפיסיקה",
+   "credits": 0,
+   "advanced": 0,
+   "opening": 0,
+   "level": "פתיחה",
+   "previousCredits": null,
+   "affiliation": [
+    "סדנות ומכינות / סדנות"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "א",
+    "ב",
+    "ג"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": "הסדנה אינה מקנה נקודות זכות, ואין בה בחינת גמר. מיועדת למי שלא למד פיסיקה או למד לימודים חלקיים, למי שלא עסק בפיסיקה שנים רבות, ולבעלי רקע מתמטי חלש. נעשה בה שימוש באלגברה בסיסית ברמה של חטיבת ביניים (למשל פתרון משוואות).",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/91463.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
   }
  },
  "programs": {
@@ -17695,7 +17729,8 @@
    "advancedCredits": 41,
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/NQ.aspx",
-   "updated": "2026-10-29",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
+   "updated": "2026-11-03",
    "sections": [
     {
      "id": "א",
@@ -18615,6 +18650,8 @@
      "field": "פיסיקה",
      "explanation": "למי שאין בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציון 80 לפחות, יסודות הפיסיקה (20125, או 20113 + 20114) הם רקע דרוש לכל קורס אחר בפיסיקה (לפי דף התכנית).",
      "link": "https://academic.openu.ac.il/natural_sciences/physics/program/NQ.aspx",
+     "prep": "91463",
+     "prepTest": "https://guy531.github.io/physics_test_yesodot/",
      "name_ar": "خلفية في الفيزياء والرياضيات",
      "name_en": "Background in physics and mathematics",
      "checkbox_ar": "لديّ بجروت 5 وحدات في الفيزياء والرياضيات بعلامة 80 على الأقل",
@@ -18678,6 +18715,7 @@
    "advancedCredits": 27,
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/CB.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
    "updated": "2026-11-03",
    "sections": [
     {
@@ -19766,6 +19804,8 @@
      "field": "פיסיקה",
      "explanation": "למי שאין בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציון 80 לפחות, יסודות הפיסיקה (20125, או 20113 + 20114) הם רקע דרוש לכל קורס אחר בפיסיקה (לפי דף התכנית).",
      "link": "https://academic.openu.ac.il/natural_sciences/physics/program/CB.aspx",
+     "prep": "91463",
+     "prepTest": "https://guy531.github.io/physics_test_yesodot/",
      "name_ar": "خلفية في الفيزياء والرياضيات",
      "name_en": "Background in physics and mathematics",
      "checkbox_ar": "لديّ بجروت 5 وحدات في الفيزياء والرياضيات بعلامة 80 على الأقل",
@@ -19842,6 +19882,7 @@
    "advancedCredits": 41,
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/C2.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
    "updated": "2026-11-03",
    "sections": [
     {
@@ -20959,6 +21000,8 @@
      "field": "פיסיקה",
      "explanation": "למי שאין בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציון 80 לפחות, יסודות הפיסיקה (20125, או 20113 + 20114) הם רקע דרוש לכל קורס אחר בפיסיקה (לפי דף התכנית).",
      "link": "https://academic.openu.ac.il/natural_sciences/physics/program/C2.aspx",
+     "prep": "91463",
+     "prepTest": "https://guy531.github.io/physics_test_yesodot/",
      "name_ar": "خلفية في الفيزياء والرياضيات",
      "name_en": "Background in physics and mathematics",
      "checkbox_ar": "لديّ بجروت 5 وحدات في الفيزياء والرياضيات بعلامة 80 على الأقل",
@@ -21048,6 +21091,7 @@
    "advancedCredits": 35,
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/EL.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
    "updated": "2026-11-03",
    "sections": [
     {
@@ -22211,6 +22255,8 @@
      "field": "פיסיקה",
      "explanation": "למי שאין בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציון 80 לפחות, יסודות הפיסיקה (20125, או 20113 + 20114) הם רקע דרוש לכל קורס אחר בפיסיקה (לפי דף התכנית).",
      "link": "https://academic.openu.ac.il/natural_sciences/physics/program/EL.aspx",
+     "prep": "91463",
+     "prepTest": "https://guy531.github.io/physics_test_yesodot/",
      "name_ar": "خلفية في الفيزياء والرياضيات",
      "name_en": "Background in physics and mathematics",
      "checkbox_ar": "لديّ بجروت 5 وحدات في الفيزياء والرياضيات بعلامة 80 على الأقل",
@@ -22287,6 +22333,7 @@
    "advancedCredits": 37,
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/OE.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
    "updated": "2026-11-03",
    "sections": [
     {
@@ -23516,6 +23563,8 @@
      "field": "פיסיקה",
      "explanation": "למי שאין בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציון 80 לפחות, יסודות הפיסיקה (20125, או 20113 + 20114) הם רקע דרוש לכל קורס אחר בפיסיקה (לפי דף התכנית).",
      "link": "https://academic.openu.ac.il/natural_sciences/physics/program/OE.aspx",
+     "prep": "91463",
+     "prepTest": "https://guy531.github.io/physics_test_yesodot/",
      "name_ar": "خلفية في الفيزياء والرياضيات",
      "name_en": "Background in physics and mathematics",
      "checkbox_ar": "لديّ بجروت 5 وحدات في الفيزياء والرياضيات بعلامة 80 على الأقل",
