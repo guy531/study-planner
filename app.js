@@ -1892,13 +1892,17 @@ function renderBackground() {
   $("#background").replaceChildren(...list.map((b) => {
     const ticked = (state.background || []).includes(b.id);
     const viaCourses = !ticked && satisfied(b.courses, planned);
+    // the courses already in the plan: the box shows grey with a check (guy, 2026-11-03: an empty box beside "כבר
+    // בתכנית שלך" looked odd). It is not ticked in the plan; a click ticks it for real, for whoever has the
+    // matriculation and placed the course by mistake (then the course card says it is not needed)
     return el("div", { class: "bg-item" },
-      el("label", { class: "check" },
-        el("input", { type: "checkbox", "data-background": b.id, checked: ticked }),
+      el("label", { class: `check${viaCourses ? " auto" : ""}`,
+        title: viaCourses ? T("יש לך בגרות כזו? לחיצה מסמנת אותה, ואז הקורסים האלה לא נדרשים ממך.") : null },
+        el("input", { type: "checkbox", "data-background": b.id, checked: ticked || viaCourses, class: viaCourses ? "auto" : null }),
         el("span", {}, b.checkbox, " ", el("button", { type: "button", class: "link", "data-background-info": b.id, text: T("הסבר") }))),
       // ticked: nothing to explain; otherwise either the courses are already in the plan, or where to find them
       ticked ? null : el("p", { class: `bg-note${viaCourses ? " ok" : ""}` }, viaCourses
-        ? T`✓ ${plainCourses((b.courses.or || [b.courses]).find((p) => satisfied(p, planned)))} כבר בתכנית שלך, ולכן אין צורך לסמן.`
+        ? T`✓ ${plainCourses((b.courses.or || [b.courses]).find((p) => satisfied(p, planned)))} בתכנית שלך, ולכן הדרישה מתקיימת.`
         : T`בלי בגרות כזו, יש ללמוד את ${plainCourses(b.courses).replace(", או ", ", או את ").replace(" + ", T(" ו-"))} (בראש העץ).`),
       ticked || viaCourses || !b.prep || !DATA.courses[b.prep] ? null : el("p", { class: "bg-note" }, prepLine(b, T("לקורסים האלה"))));
   }));
@@ -2759,7 +2763,8 @@ function setupControls() {
     const id = e.target.dataset.background;
     if (!id) return;
     const set = new Set(state.background || []);
-    if (e.target.checked) set.add(id); else set.delete(id);
+    // a grey box (the courses are in the plan) shows a check already; a click on it ticks it for real
+    if (e.target.checked || e.target.classList.contains("auto")) set.add(id); else set.delete(id);
     state.background = [...set];
     save(); render();
   });
