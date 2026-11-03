@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=2845aa45">
 <script src="i18n.js?v=e2f3071e"></script>
-<script src="lang-ar.js?v=a5442841"></script>
-<script src="lang-en.js?v=a37a11a7"></script>
+<script src="lang-ar.js?v=f18e95f0"></script>
+<script src="lang-en.js?v=a2d44839"></script>
 <script>
   // light by default; dark only when the user chose it with the button (set before paint, so no flash)
   try { if (localStorage.getItem("physics-planner-v1:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) { /* no storage */ }
@@ -39,6 +39,10 @@
   </div>
   </div>
   <div class="top-controls">
+    <!-- first a field, then a degree of that field (guy, 2026-11-03) -->
+    <label class="program-pick"><span data-t>תחום</span>
+      <select id="field"></select>
+    </label>
     <label class="program-pick"><span data-t>תואר</span>
       <select id="program"></select>
     </label>
@@ -173,7 +177,7 @@
 </div>
 <div class="print-holder" aria-hidden="true"><section id="print-sheet" class="print-sheet"></section></div>
 
-<script src="data/data.js?v=9c46a376"></script>
-<script src="app.js?v=f2ad3296"></script>
+<script src="data/data.js?v=90e9fd0e"></script>
+<script src="app.js?v=62649260"></script>
 </body>
 </html>

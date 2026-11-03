@@ -636,11 +636,11 @@ function onlyWithoutBackground(b) {
 const prepOf = (n) => (program.background || []).find((b) => b.prep === n);
 
 // "לא בטוחים שאתם מוכנים ...? מבחן התאמה (כשעה) ימליץ אם כדאי ללמוד קודם את 91463 סדנת הכנה בפיסיקה (ללא נ"ז)."
-function prepLine(b, forWhat) {
-  return el("span", { class: "prep-line" }, T`לא בטוחים שאתם מוכנים ${forWhat}? `,
-    b.prepTest ? [el("a", { href: b.prepTest, target: "_blank", rel: "noopener", text: T("מבחן התאמה") }),
-      T(" (כשעה) ימליץ אם כדאי ללמוד קודם את ")] : T("אפשר ללמוד קודם את "),
-    courseLink(b.prep), T(" (ללא נ\"ז)."));
+// guy's words (2026-11-03): what the workshop is, and the test that says whether to take it
+function prepLine(b) {
+  return el("span", { class: "prep-line" }, T("קורס הקדמה ליסודות הפיסיקה לסטודנטים בלי רקע בפיסיקה. "),
+    b.prepTest ? [T("בצעו את "), el("a", { href: b.prepTest, target: "_blank", rel: "noopener", text: T("מבחן ההתאמה") }),
+      T(" ובדקו אם כדאי לכם להירשם לסדנה.")] : null);
 }
 
 // the workshop in semester i: better before the courses it prepares for, and not needed with the box ticked
@@ -1730,7 +1730,7 @@ function renderTree() {
     const prep = !ok && b.prep && DATA.courses[b.prep] ? el("div", { class: "item prep" },
       el("div", { class: "ih" }, el("span", { text: T("הכנה, לא חובה") })),
       el("ul", { class: "zone chips" }, chip(b.prep, "tree")),
-      el("p", { class: "desc" }, prepLine(b, T("לקורסים האלה")))) : null;
+      el("p", { class: "desc" }, prepLine(b))) : null;
     return el("div", { class: "section basics", id: `group-${id}` },
       el("h3", { text: T("במקום בגרות (רק למי שצריך)") }),
       el("div", { class: "desc", text: T`רק למי שאין ${backgroundWhat(b)}. מי שיש לו לא צריך את הקורסים האלה, ויכול לסמן את זה ב"רקע ודרישות".` }),
@@ -1960,7 +1960,7 @@ function renderBackground() {
       ticked ? null : el("p", { class: `bg-note${viaCourses ? " ok" : ""}` }, viaCourses
         ? T`✓ ${plainCourses((b.courses.or || [b.courses]).find((p) => satisfied(p, planned)))} בתכנית שלך, ולכן הדרישה מתקיימת.`
         : T`בלי בגרות כזו, יש ללמוד את ${plainCourses(b.courses).replace(", או ", ", או את ").replace(" + ", T(" ו-"))} (בראש העץ).`),
-      ticked || viaCourses || !b.prep || !DATA.courses[b.prep] ? null : el("p", { class: "bg-note" }, prepLine(b, T("לקורסים האלה"))));
+      ticked || viaCourses || !b.prep || !DATA.courses[b.prep] ? null : el("p", { class: "bg-note" }, prepLine(b)));
   }));
 }
 
@@ -2393,7 +2393,7 @@ function showInfo(n) {
     add(b.name, el("span", {}, b.explanation, " ", ticked ? el("span", { class: "tag ok", text: T("✓ סימנת שיש לך") }) : null));
   });
   const bgOf = backgroundFor(n);
-  if (bgOf && bgOf.prep && DATA.courses[bgOf.prep] && !(state.background || []).includes(bgOf.id)) add(T("הכנה"), prepLine(bgOf, T("לקורס הזה")));
+  if (bgOf && bgOf.prep && DATA.courses[bgOf.prep] && !(state.background || []).includes(bgOf.id)) add(T("הכנה"), prepLine(bgOf));
   const prepFor = prepOf(n);
   if (prepFor && prepFor.prepTest) add(T("מבחן התאמה"), el("span", {},
     el("a", { href: prepFor.prepTest, target: "_blank", rel: "noopener", text: T("מבחן התאמה") }),
@@ -2874,6 +2874,12 @@ function setupControls() {
       kept === 1 ? T(" הקורס הנעול נשאר.") : kept ? T` ${kept} קורסים נעולים נשארו.` : ""].join(""), 8000, { label: T("ביטול"), run: undo });
   });
   $("#program").addEventListener("change", (e) => selectProgram(e.target.value));
+  // another field: its first degree, unless the current one is in it too
+  $("#field").addEventListener("change", (e) => {
+    const codes = fillPrograms(e.target.value);
+    if (codes.includes(program.code)) $("#program").value = program.code;
+    else selectProgram(codes[0]);
+  });
   $("#skills").addEventListener("change", (e) => {
     const id = e.target.dataset.skill;
     if (!id) return;
@@ -2899,7 +2905,7 @@ function setupControls() {
 // Rewritten for the finished site, 2026-11-01 (guy)
 const HELP_STEPS = [
   { shot: "top", title: T("1. בוחרים תואר ושנת התחלה"),
-    text: T("בראש העמוד בוחרים את התואר, ולידו יש קישור לדף התכנית ולרשימת היועצים האקדמיים. ליד \"הסמסטרים שלי\" בוחרים את שנת ההתחלה, והתכנית מתחילה תמיד בסמסטר א שלה. מי שמתחיל בסמסטר ב או בקיץ חוסם את הסמסטרים שלפני בכפתור ⊘ שבכותרת הסמסטר. \"+ הוספת שנה\" מתחת לסמסטרים מוסיף שנה שלמה.") },
+    text: T("בראש העמוד בוחרים תחום ואז תואר, ולידו יש קישור לדף התכנית ולרשימת היועצים האקדמיים. ליד \"הסמסטרים שלי\" בוחרים את שנת ההתחלה, והתכנית מתחילה תמיד בסמסטר א שלה. מי שמתחיל בסמסטר ב או בקיץ חוסם את הסמסטרים שלפני בכפתור ⊘ שבכותרת הסמסטר. \"+ הוספת שנה\" מתחת לסמסטרים מוסיף שנה שלמה.") },
   { shot: "controls", title: T("2. מתחילים מהר"),
     text: T("\"מילוי לפי התכנית המומלצת\" ממלא את הסמסטרים לפי התכנית של המחלקה (3 או 4 שנים). \"השלמה אוטומטית\" משבצת רק את קורסי החובה שעוד חסרים, סביב מה שכבר שיבצת. שניהם רק נקודת התחלה: את קורסי הבחירה בוחרים לבד, ואחרי המילוי חלון אומר מה עוד נשאר. כל פעולה אפשר לבטל ב-↶ שבראש העמוד או ב-Ctrl+Z.") },
   { shot: "drag", title: T("3. משבצים קורסים"),
@@ -3287,7 +3293,30 @@ function setupSearch() {
   });
 }
 
+// the field list and the degrees of the chosen field (guy, 2026-11-03): a degree is in every field it names
+const FIELD_ORDER = ["פיסיקה", "מדעי הטבע", "כימיה", "מדעי החיים", "מדעי כדור הארץ"];
+const fieldsOf = (code) => (DATA.programs[code].fields && DATA.programs[code].fields.length ? DATA.programs[code].fields : [FIELD_ORDER[0]]);
+function allFields() {
+  const used = new Set(Object.keys(DATA.programs).flatMap(fieldsOf));
+  return [...FIELD_ORDER.filter((f) => used.has(f)), ...[...used].filter((f) => !FIELD_ORDER.includes(f))];
+}
+function fillPrograms(field) {
+  $("#field").value = field;
+  const codes = Object.keys(DATA.programs).filter((code) => fieldsOf(code).includes(field));
+  $("#program").replaceChildren(...codes.map((code) => el("option", { value: code, text: DATA.programs[code].name })));
+  try { localStorage.setItem(`${STORE_KEY}:field`, field); } catch (e) { /* no storage */ }
+  return codes;
+}
+// the field list shows a field of the program (the one chosen before, if the program is in it)
+function showProgramIn(code) {
+  let field = $("#field").value;
+  if (!fieldsOf(code).includes(field)) field = fieldsOf(code)[0];
+  fillPrograms(field);
+  $("#program").value = code;
+}
+
 function selectProgram(code) {
+  showProgramIn(code);
   program = DATA.programs[code];
   state = load(code);
   selected = null;
@@ -3322,11 +3351,12 @@ async function main() {
   $("#lang").value = LANG;
   $("#lang").addEventListener("change", (e) => setLang(e.target.value));
   const codes = Object.keys(DATA.programs);
-  $("#program").replaceChildren(...codes.map((code) => el("option", { value: code, text: DATA.programs[code].name })));
-  let last = null;
-  try { last = localStorage.getItem(`${STORE_KEY}:last`); } catch (e) { /* no storage */ }
+  $("#field").replaceChildren(...allFields().map((f) => el("option", { value: f, text: T(f) })));
+  let last = null, field = null;
+  try { last = localStorage.getItem(`${STORE_KEY}:last`); field = localStorage.getItem(`${STORE_KEY}:field`); } catch (e) { /* no storage */ }
   const code = codes.includes(last) ? last : codes[0];
-  $("#program").value = code;
+  $("#field").value = allFields().includes(field) ? field : fieldsOf(code)[0];
+  showProgramIn(code);
   setupDragAndDrop();
   setupHoverMarks();
   setupFind();

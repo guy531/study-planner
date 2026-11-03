@@ -21936,6 +21936,9 @@
    "code": "NQ",
    "name": "תואר ראשון בפיסיקה חד חוגי",
    "degree": "B.Sc. בפיסיקה",
+   "fields": [
+    "פיסיקה"
+   ],
    "catalogYear": "תשפ\"ז",
    "totalCredits": 132,
    "advancedCredits": 41,
@@ -22925,6 +22928,9 @@
    "code": "CB",
    "name": "תואר ראשון במדעי הטבע בהדגשת פיסיקה",
    "degree": "B.Sc. במדעי הטבע",
+   "fields": [
+    "פיסיקה"
+   ],
    "catalogYear": "תשפ\"ז",
    "totalCredits": 120,
    "advancedCredits": 27,
@@ -24096,6 +24102,9 @@
    "code": "C2",
    "name": "תואר דו חוגי בפיסיקה ובמתמטיקה",
    "degree": "B.Sc. במתמטיקה ובפיסיקה",
+   "fields": [
+    "פיסיקה"
+   ],
    "catalogYear": "תשפ\"ז",
    "totalCredits": 149,
    "advancedCredits": 41,
@@ -25310,6 +25319,9 @@
    "code": "EL",
    "name": "תואר דו חוגי בפיסיקה ובמדעי המחשב",
    "degree": "B.Sc. בפיסיקה ובמדעי המחשב",
+   "fields": [
+    "פיסיקה"
+   ],
    "catalogYear": "תשפ\"ז",
    "totalCredits": 152,
    "advancedCredits": 35,
@@ -26556,6 +26568,10 @@
    "code": "OE",
    "name": "תואר דו חוגי בפיסיקה ובמדעי כדור הארץ",
    "degree": "B.Sc. בפיסיקה ובמדעי כדור הארץ",
+   "fields": [
+    "פיסיקה",
+    "מדעי כדור הארץ"
+   ],
    "catalogYear": "תשפ\"ז",
    "totalCredits": 149,
    "advancedCredits": 37,
@@ -27868,6 +27884,10 @@
    "code": "CC",
    "name": "תואר דו חוגי בכימיה ובפיסיקה",
    "degree": "B.Sc. בכימיה ובפיסיקה",
+   "fields": [
+    "פיסיקה",
+    "כימיה"
+   ],
    "catalogYear": "תשפ\"ז",
    "totalCredits": 146,
    "advancedCredits": 39,
@@ -29288,6 +29308,10 @@
    "code": "M8",
    "name": "תואר ראשון במדעי הטבע במסלול מדעי כדור הארץ",
    "degree": "B.Sc. במדעי הטבע",
+   "fields": [
+    "מדעי הטבע",
+    "מדעי כדור הארץ"
+   ],
    "catalogYear": "תשפ\"ז",
    "totalCredits": 120,
    "advancedCredits": 27,
@@ -30020,6 +30044,10 @@
    "code": "OD",
    "name": "תואר דו חוגי בכימיה ובמדעי כדור הארץ",
    "degree": "B.Sc. בכימיה ובמדעי כדור הארץ",
+   "fields": [
+    "כימיה",
+    "מדעי כדור הארץ"
+   ],
    "catalogYear": "תשפ\"ז",
    "totalCredits": 135,
    "advancedCredits": 30,
@@ -30772,6 +30800,10 @@
    "code": "OF",
    "name": "תואר דו חוגי במדעי החיים ובמדעי כדור הארץ",
    "degree": "B.Sc. במדעי החיים ובמדעי כדור הארץ",
+   "fields": [
+    "מדעי החיים",
+    "מדעי כדור הארץ"
+   ],
    "catalogYear": "תשפ\"ז",
    "totalCredits": 129,
    "advancedCredits": 30,
