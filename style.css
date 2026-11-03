@@ -172,6 +172,11 @@ select, input[type="search"] {
 .meter.full { background: var(--done-soft); border-color: var(--done); }
 .meter.full .label, .meter.full .value, .meter.full .value small { color: var(--done); }
 .meter.full::after { content: "✓"; position: absolute; top: 8px; inset-inline-end: 12px; color: var(--done); font-size: 1.2rem; font-weight: 700; line-height: 1; }
+/* a counter of "at most" (M8: opening credits): plain while within, red over it */
+.meter.cap .bar span { background: var(--muted); }
+.meter.cap.over { border-color: var(--bad); }
+.meter.cap.over .label, .meter.cap.over .value, .meter.cap.over .value small { color: var(--bad); }
+.meter.cap.over .bar span { background: var(--bad); }
 .meters-note { grid-column: 1 / -1; color: var(--muted); font-size: 0.8rem; margin-top: -4px; }
 
 /* zones */
@@ -408,6 +413,7 @@ button.history:disabled:hover { border-color: var(--line); }
 /* unmet conditions: red for admission, orange for required knowledge */
 .tag.bad { background: var(--bad-soft); color: var(--bad); }
 .tag.soft { background: var(--surface-2); color: var(--muted); }
+.tag.seminar { background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); }
 .chip .why.soft { color: var(--muted); }
 /* row 3: the notes */
 .chip .why { font-size: 0.78rem; line-height: 1.35; }

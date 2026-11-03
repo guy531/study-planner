@@ -14,6 +14,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -94,6 +95,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -167,6 +169,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -271,6 +274,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -345,6 +349,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -432,6 +437,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -498,6 +504,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -610,6 +617,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -738,6 +746,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -793,6 +802,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -851,6 +861,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -918,6 +929,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1009,6 +1021,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1099,6 +1112,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1212,6 +1226,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1327,6 +1342,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -1394,6 +1410,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -1475,6 +1492,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1552,6 +1570,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1621,6 +1640,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -1701,6 +1721,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1760,6 +1781,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -1820,6 +1842,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -1887,6 +1910,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -1982,6 +2006,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2055,6 +2080,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2148,6 +2174,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -2233,6 +2260,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -2308,6 +2336,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2391,6 +2420,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2494,6 +2524,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2594,6 +2625,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2633,6 +2665,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2698,6 +2731,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027א",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2771,6 +2805,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027ב",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2813,6 +2848,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027א",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2908,6 +2944,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027ב",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2992,6 +3029,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": "2027א",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -3025,6 +3063,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -3088,6 +3127,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -3185,6 +3225,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -3271,6 +3312,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -3349,6 +3391,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -3387,6 +3430,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -3466,6 +3510,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -3499,6 +3544,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -3547,6 +3593,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -3593,6 +3640,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -3663,6 +3711,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3692,6 +3741,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3723,6 +3773,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -3777,6 +3828,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3843,6 +3895,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3872,6 +3925,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3901,6 +3955,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3933,6 +3988,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -4011,6 +4067,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4080,6 +4137,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -4175,6 +4233,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4242,6 +4301,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4307,6 +4367,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4355,6 +4416,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -4419,6 +4481,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -4471,6 +4534,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4507,6 +4571,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4595,6 +4660,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4663,6 +4729,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -4694,6 +4761,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4778,6 +4846,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -4860,6 +4929,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -4949,6 +5019,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5016,6 +5087,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5081,6 +5153,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -5161,6 +5234,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -5223,6 +5297,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -5252,6 +5327,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -5283,6 +5359,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5371,6 +5448,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -5441,6 +5519,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5511,6 +5590,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5598,6 +5678,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -5732,6 +5813,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5820,6 +5902,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5895,6 +5978,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -5967,6 +6051,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -5998,6 +6083,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6033,6 +6119,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6092,6 +6179,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -6123,6 +6211,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -6178,6 +6267,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -6209,6 +6299,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -6269,6 +6360,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -6300,6 +6392,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -6388,6 +6481,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6436,6 +6530,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6495,6 +6590,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6549,6 +6645,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6603,6 +6700,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6662,6 +6760,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6742,6 +6841,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6805,6 +6905,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6853,6 +6954,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6903,6 +7005,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -6932,6 +7035,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -6965,6 +7069,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7015,6 +7120,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7044,6 +7150,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7073,6 +7180,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7102,6 +7210,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7133,6 +7242,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7207,6 +7317,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7288,6 +7399,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -7335,6 +7447,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7370,6 +7483,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -7465,6 +7579,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7496,6 +7611,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7549,6 +7665,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7595,6 +7712,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7630,6 +7748,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7673,6 +7792,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7707,6 +7827,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7761,6 +7882,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -7829,6 +7951,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -7878,6 +8001,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -7954,6 +8078,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7989,6 +8114,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8031,6 +8157,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -8069,6 +8196,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8103,6 +8231,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -8161,6 +8290,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": true,
    "semesters": [],
    "needsEnglish": false,
@@ -8221,6 +8351,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": true,
    "semesters": [],
    "needsEnglish": false,
@@ -8266,6 +8397,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8345,6 +8477,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8421,6 +8554,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -8452,6 +8586,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027ב",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8531,6 +8666,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8592,6 +8728,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8627,6 +8764,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8674,6 +8812,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8772,6 +8911,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": true,
@@ -8806,6 +8946,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": true,
@@ -8837,6 +8978,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -8874,6 +9016,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -8906,6 +9049,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -8939,6 +9083,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -8972,6 +9117,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9003,6 +9149,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -9043,6 +9190,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -9076,6 +9224,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -9121,6 +9270,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9159,6 +9309,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -9201,6 +9352,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -9235,6 +9387,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -9268,6 +9421,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -9301,6 +9455,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -9335,6 +9490,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -9366,6 +9522,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9397,6 +9554,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -9431,6 +9589,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -9466,6 +9625,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -9501,6 +9661,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -9536,6 +9697,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -9569,6 +9731,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -9600,6 +9763,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9636,6 +9800,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9667,6 +9832,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -9711,6 +9877,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -9745,6 +9912,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -9780,6 +9948,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -9821,6 +9990,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9857,6 +10027,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -9890,6 +10061,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -9930,6 +10102,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027א",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -9964,6 +10137,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -9998,6 +10172,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -10031,6 +10206,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -10064,6 +10240,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -10095,6 +10272,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -10128,6 +10306,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10160,6 +10339,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -10191,6 +10371,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10232,6 +10413,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10267,6 +10449,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2028א",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -10303,6 +10486,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10337,6 +10521,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10380,6 +10565,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10416,6 +10602,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10455,6 +10642,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -10489,6 +10677,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -10529,6 +10718,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -10564,6 +10754,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -10598,6 +10789,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10632,6 +10824,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10666,6 +10859,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -10700,6 +10894,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -10733,6 +10928,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -10766,6 +10962,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -10797,6 +10994,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -10830,6 +11028,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -10870,6 +11069,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -10904,6 +11104,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -10937,6 +11138,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -10977,6 +11179,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -11019,6 +11222,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11059,6 +11263,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027א",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11099,6 +11304,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -11134,6 +11340,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11169,6 +11376,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -11212,6 +11420,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11252,6 +11461,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -11286,6 +11496,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -11317,6 +11528,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -11348,6 +11560,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -11386,6 +11599,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -11426,6 +11640,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11460,6 +11675,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -11493,6 +11709,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -11526,6 +11743,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -11559,6 +11777,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11592,6 +11811,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11626,6 +11846,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11659,6 +11880,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2028א",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11697,6 +11919,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11730,6 +11953,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -11765,6 +11989,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -11813,6 +12038,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -11847,6 +12073,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -11878,6 +12105,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -11909,6 +12137,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -11940,6 +12169,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -11979,6 +12209,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12013,6 +12244,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -12046,6 +12278,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -12080,6 +12313,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -12114,6 +12348,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12147,6 +12382,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -12183,6 +12419,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -12216,6 +12453,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12249,6 +12487,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12282,6 +12521,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -12316,6 +12556,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12347,6 +12588,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -12378,6 +12620,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2028ב",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -12412,6 +12655,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2028א",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12450,6 +12694,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -12498,6 +12743,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12532,6 +12778,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -12565,6 +12812,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027ג",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -12596,6 +12844,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -12627,6 +12876,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12660,6 +12910,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -12694,6 +12945,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -12730,6 +12982,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12764,6 +13017,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -12805,6 +13059,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -12840,6 +13095,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -12875,6 +13131,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12913,6 +13170,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12946,6 +13204,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -12986,6 +13245,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13027,6 +13287,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13062,6 +13323,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -13095,6 +13357,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13130,6 +13393,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13165,6 +13429,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13200,6 +13465,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13235,6 +13501,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13274,6 +13541,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -13310,6 +13578,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13352,6 +13621,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13386,6 +13656,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -13420,6 +13691,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13457,6 +13729,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13496,6 +13769,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13530,6 +13804,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13564,6 +13839,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13599,6 +13875,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13633,6 +13910,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13667,6 +13945,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -13707,6 +13986,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -13747,6 +14027,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -13778,6 +14059,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -13809,6 +14091,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -13841,6 +14124,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -13872,6 +14156,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -13903,6 +14188,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -13934,6 +14220,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -13965,6 +14252,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -13998,6 +14286,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14031,6 +14320,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -14066,6 +14356,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14099,6 +14390,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14133,6 +14425,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14164,6 +14457,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14195,6 +14489,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14227,6 +14522,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14258,6 +14554,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14289,6 +14586,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14320,6 +14618,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -14354,6 +14653,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14385,6 +14685,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -14416,6 +14717,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14445,6 +14747,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14476,6 +14779,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -14511,6 +14815,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14543,6 +14848,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -14621,6 +14927,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14681,6 +14988,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14719,6 +15027,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -14765,6 +15074,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14804,6 +15114,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14842,6 +15153,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -14899,6 +15211,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14947,6 +15260,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -14991,6 +15305,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15054,6 +15369,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15104,6 +15420,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027א",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -15194,6 +15511,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15233,6 +15551,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -15262,6 +15581,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -15293,6 +15613,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15328,6 +15649,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15363,6 +15685,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15398,6 +15721,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -15431,6 +15755,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15466,6 +15791,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -15499,6 +15825,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15534,6 +15861,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15569,6 +15897,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15604,6 +15933,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15639,6 +15969,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15674,6 +16005,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15709,6 +16041,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -15742,6 +16075,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15777,6 +16111,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -15810,6 +16145,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15846,6 +16182,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15880,6 +16217,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -15915,6 +16253,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15950,6 +16289,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -15983,6 +16323,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -16016,6 +16357,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -16049,6 +16391,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16083,6 +16426,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16118,6 +16462,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -16149,6 +16494,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -16183,6 +16529,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -16216,6 +16563,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16248,6 +16596,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -16277,6 +16626,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -16306,6 +16656,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -16338,6 +16689,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -16372,6 +16724,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -16406,6 +16759,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16441,6 +16795,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -16472,6 +16827,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -16503,6 +16859,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16595,6 +16952,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16664,6 +17022,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16737,6 +17096,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16781,6 +17141,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16848,6 +17209,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16906,6 +17268,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -16956,6 +17319,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -17012,6 +17376,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -17060,6 +17425,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17104,6 +17470,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -17147,6 +17514,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17221,6 +17589,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -17260,6 +17629,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17315,6 +17685,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17376,6 +17747,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -17409,6 +17781,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -17459,6 +17832,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": "2027ב",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17519,6 +17893,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -17562,6 +17937,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -17595,6 +17971,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17638,6 +18015,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17687,6 +18065,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -17733,6 +18112,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -17788,6 +18168,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -17838,6 +18219,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": "2027ב",
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17922,6 +18304,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": "2027ב",
    "notYet": false,
    "semesters": [
     "ב"
@@ -17956,12 +18339,12 @@
     ]
    },
    "overlaps": [],
-   "notes": "הקורס בפיתוח, ויוצע לראשונה ב-2027ב.",
+   "notes": "הקורס בפיתוח.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20980.htm?t=h",
-   "updated": "2026-10-31",
+   "updated": "2026-11-03",
    "full": true
   },
   "20307": {
@@ -17977,6 +18360,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18023,6 +18407,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -18052,6 +18437,7 @@
    "seminar": null,
    "offered": false,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -18083,6 +18469,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -18119,6 +18506,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -18197,6 +18585,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18287,6 +18676,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18353,6 +18743,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": true,
    "semesters": [],
    "needsEnglish": false,
@@ -18384,6 +18775,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18444,6 +18836,7 @@
    "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18520,6 +18913,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -18584,6 +18978,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18638,6 +19033,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18715,6 +19111,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18792,6 +19189,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18889,6 +19287,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -18939,6 +19338,7 @@
    "seminar": "חובה",
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -18989,6 +19389,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -19023,6 +19424,7 @@
    "seminar": null,
    "offered": true,
    "offeredUntil": null,
+   "offeredFrom": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -19047,7 +19449,7 @@
  "programs": {
   "NQ": {
    "code": "NQ",
-   "name": "תוכנית חד-חוגית לתואר ראשון בפיסיקה",
+   "name": "תואר ראשון בפיסיקה חד חוגי",
    "degree": "B.Sc. בפיסיקה",
    "catalogYear": "תשפ\"ז",
    "totalCredits": 132,
@@ -19991,6 +20393,7 @@
      "field": "כל הקורסים",
      "kind": "credits",
      "min": 132,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בסך הכול",
@@ -20004,6 +20407,7 @@
      "field": "מקטע ב",
      "kind": "credits",
      "min": 93,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בפיסיקה",
@@ -20017,6 +20421,7 @@
      "field": "מקטע ב",
      "kind": "advanced",
      "min": 41,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "מתקדמות בפיסיקה",
@@ -20026,14 +20431,14 @@
      "phrase_en": "advanced in physics"
     }
    ],
-   "name_ar": "خطة أحادية التخصص للقب الأول في الفيزياء",
-   "name_en": "Single-major B.Sc. program in Physics",
+   "name_ar": "لقب أول في الفيزياء أحادي التخصص",
+   "name_en": "Single-major bachelor's degree in Physics",
    "degree_ar": "B.Sc. في الفيزياء",
    "degree_en": "B.Sc. in Physics"
   },
   "CB": {
    "code": "CB",
-   "name": "תוכנית לתואר ראשון במדעי הטבע בהדגשת פיסיקה",
+   "name": "תואר ראשון במדעי הטבע בהדגשת פיסיקה",
    "degree": "B.Sc. במדעי הטבע",
    "catalogYear": "תשפ\"ז",
    "totalCredits": 120,
@@ -21145,6 +21550,7 @@
      "field": "כל הקורסים",
      "kind": "credits",
      "min": 120,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בסך הכול",
@@ -21158,6 +21564,7 @@
      "field": "מדעים",
      "kind": "credits",
      "min": 103,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "במדעים",
@@ -21171,6 +21578,7 @@
      "field": "מדעים",
      "kind": "advanced",
      "min": 27,
+     "max": null,
      "capField": "מדעים-כללי",
      "cap": 5,
      "phrase": "מתקדמות במדעים",
@@ -21184,6 +21592,7 @@
      "field": "מקטע ג",
      "kind": "credits",
      "min": 75,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בפיסיקה",
@@ -21193,8 +21602,8 @@
      "phrase_en": "in physics"
     }
    ],
-   "name_ar": "خطة للقب الأول في علوم الطبيعة مع التركيز على الفيزياء",
-   "name_en": "B.Sc. program in Natural Sciences with emphasis on Physics",
+   "name_ar": "لقب أول في علوم الطبيعة مع التركيز على الفيزياء",
+   "name_en": "Bachelor's degree in Natural Sciences with emphasis on Physics",
    "degree_ar": "B.Sc. في علوم الطبيعة",
    "degree_en": "B.Sc. in Natural Sciences"
   },
@@ -22341,6 +22750,7 @@
      "field": "כל הקורסים",
      "kind": "credits",
      "min": 149,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בסך הכול",
@@ -22354,6 +22764,7 @@
      "field": "מקטע א",
      "kind": "credits",
      "min": 78,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "במתמטיקה",
@@ -22367,6 +22778,7 @@
      "field": "מקטע א",
      "kind": "advanced",
      "min": 19,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "מתקדמות במתמטיקה",
@@ -22380,6 +22792,7 @@
      "field": "מקטע ב",
      "kind": "credits",
      "min": 71,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בפיסיקה",
@@ -22393,6 +22806,7 @@
      "field": "מקטע ב",
      "kind": "advanced",
      "min": 22,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "מתקדמות בפיסיקה",
@@ -23596,6 +24010,7 @@
      "field": "כל הקורסים",
      "kind": "credits",
      "min": 152,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בסך הכול",
@@ -23609,6 +24024,7 @@
      "field": "מקטע ב",
      "kind": "credits",
      "min": 69,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בפיסיקה",
@@ -23622,6 +24038,7 @@
      "field": "מקטע ב",
      "kind": "advanced",
      "min": 22,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "מתקדמות בפיסיקה",
@@ -23635,6 +24052,7 @@
      "field": "מקטע ג",
      "kind": "credits",
      "min": 45,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "במדעי המחשב",
@@ -24904,6 +25322,7 @@
      "field": "כל הקורסים",
      "kind": "credits",
      "min": 149,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בסך הכול",
@@ -24917,6 +25336,7 @@
      "field": "מקטע ב",
      "kind": "credits",
      "min": 69,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בפיסיקה",
@@ -24930,6 +25350,7 @@
      "field": "מקטע ב",
      "kind": "advanced",
      "min": 22,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "מתקדמות בפיסיקה",
@@ -24943,6 +25364,7 @@
      "field": "מקטע ג",
      "kind": "credits",
      "min": 48,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "במדעי כדור הארץ",
@@ -26306,6 +26728,7 @@
      "field": "כל הקורסים",
      "kind": "credits",
      "min": 146,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בסך הכול",
@@ -26319,6 +26742,7 @@
      "field": "מקטע ב",
      "kind": "credits",
      "min": 60,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בפיסיקה",
@@ -26332,6 +26756,7 @@
      "field": "מקטע ב",
      "kind": "advanced",
      "min": 20,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "מתקדמות בפיסיקה",
@@ -26345,6 +26770,7 @@
      "field": "מקטע ד",
      "kind": "credits",
      "min": 53,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "בכימיה",
@@ -26358,6 +26784,7 @@
      "field": "מקטע ד",
      "kind": "advanced",
      "min": 12,
+     "max": null,
      "capField": null,
      "cap": null,
      "phrase": "מתקדמות בכימיה",
@@ -26371,6 +26798,738 @@
    "name_en": "Double-major degree in Chemistry and Physics",
    "degree_ar": "B.Sc. في الكيمياء والفيزياء",
    "degree_en": "B.Sc. in Chemistry and Physics"
+  },
+  "M8": {
+   "code": "M8",
+   "name": "תואר ראשון במדעי הטבע במסלול מדעי כדור הארץ",
+   "degree": "B.Sc. במדעי הטבע",
+   "catalogYear": "תשפ\"ז",
+   "totalCredits": 120,
+   "advancedCredits": 27,
+   "planFrom": "2024א",
+   "link": "https://academic.openu.ac.il/natural_sciences/earth/program/M8.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/earth/pages/counseling.aspx",
+   "updated": "2026-11-03",
+   "sections": [
+    {
+     "id": "א",
+     "name": "דרישות נקודות זכות",
+     "minCredits": 120,
+     "minAdvanced": 27,
+     "description": "לפחות 120 נ\"ז: לפחות 96 במדעים, ובהן לפחות 27 מתקדמות במדעים (מהן לפחות 15 במדעי הטבע ולכל היותר 6 במדעים-כללי); לפחות 60 נ\"ז במדעי הטבע; לא יותר מ-36 נ\"ז ברמת פתיחה.",
+     "groups": [],
+     "name_ar": "متطلبات نقاط الاستحقاق",
+     "name_en": "Credit requirements",
+     "description_ar": "على الأقل 120 نقطة: على الأقل 96 في العلوم، منها على الأقل 27 متقدمة في العلوم (منها على الأقل 15 في علوم الطبيعة وعلى الأكثر 6 في العلوم العامة)؛ على الأقل 60 نقطة في علوم الطبيعة؛ لا أكثر من 36 نقطة في المستوى التمهيدي.",
+     "description_en": "At least 120 credits: at least 96 in sciences, at least 27 of them advanced in sciences (at least 15 in natural sciences and at most 6 in general sciences); at least 60 credits in natural sciences; no more than 36 opening-level credits."
+    },
+    {
+     "id": "ב",
+     "name": "דרישות המסלול",
+     "minCredits": 39,
+     "minAdvanced": null,
+     "description": "מדעי כדור הארץ: 39 נ\"ז, 23 בחובה ולפחות 16 בבחירה.",
+     "groups": [
+      {
+       "id": "ב1",
+       "name": "קורסי חובה במדעי כדור הארץ",
+       "rule": "כל הפריטים",
+       "minCredits": 23,
+       "minAdvanced": null,
+       "notes": "הערות 4688, 4675: 20613 חובה מ-2027א; מי שהתחיל לפני 2027א ולמד את 06101 פטור ממנו (06101 חופף ל-20613 ב-3 נ\"ז ול-20117 ב-2, ואז החובה 21 נ\"ז ולא 23).",
+       "items": [
+        {
+         "label": "מבוא לגיאולוגיה: צפונות כדור הארץ",
+         "courses": "20117",
+         "notes": null
+        },
+        {
+         "label": "מינרלים וסלעים",
+         "courses": {
+          "or": [
+           "20613",
+           "06101"
+          ]
+         },
+         "notes": "06101 מהערות 4688, 4675: רק למי שלמד אותו לפני 2027א."
+        },
+        {
+         "label": "מבוא לאוקיינוגרפיה",
+         "courses": "20493",
+         "notes": null
+        },
+        {
+         "label": "מבוא למטאורולוגיה",
+         "courses": "20291",
+         "notes": null
+        },
+        {
+         "label": "מעבדה במטאורולוגיה: מדידות, תצפיות וניתוח סינופטי",
+         "courses": "20421",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات إلزامية في علوم الأرض",
+       "name_en": "Required earth sciences courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב2",
+       "name": "קורסי בחירה במדעי כדור הארץ",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 16,
+       "minAdvanced": null,
+       "notes": "הערה 2081 (בכותרת הרשימה): או 20548 (לא מוצע עוד, נלמד לאחרונה ב-2021א); לא נכתב במקום מה. הערה 502: לכל היותר שני קורסים בין-אוניברסיטאיים. הערה 500: לחלק מהקורסים דרישות קדם שאינן במסלול.",
+       "items": [
+        {
+         "label": "מיפוי גיאולוגי ויישומי GIS",
+         "courses": "20610",
+         "notes": null
+        },
+        {
+         "label": "מבוא לגיאופיסיקה",
+         "courses": "20434",
+         "notes": "הערות 4515, 4536: מ-2026ג 4 נ\"ז ברמה רגילה."
+        },
+        {
+         "label": "מעבדה במיקרוסקופיה של מינרלים וסלעים מגמטיים",
+         "courses": "20238",
+         "notes": "יוצע לאחרונה ב-2027ב (הערה 4656)."
+        },
+        {
+         "label": "מעבדה במיקרוסקופיה של סלעים מותמרים וסלעי משקע",
+         "courses": "20239",
+         "notes": "הערה 4593: תנאי הקבלה השתנו מ-2027א."
+        },
+        {
+         "label": "נדבכים בגיאולוגיה של ארץ-ישראל",
+         "courses": "20211",
+         "notes": null
+        },
+        {
+         "label": "תורת האקלים",
+         "courses": "20600",
+         "notes": null
+        },
+        {
+         "label": "מבוא לגיאוכימיה",
+         "courses": "20498",
+         "notes": null
+        },
+        {
+         "label": "מבוא למדעי הסביבה",
+         "courses": "20603",
+         "notes": null
+        },
+        {
+         "label": "גיאולוגיה של הכרמל",
+         "courses": "20321",
+         "notes": null
+        },
+        {
+         "label": "חוף הים התיכון של ישראל: היבטים גיאולוגיים וסביבתיים",
+         "courses": "20901",
+         "notes": null
+        },
+        {
+         "label": "יישומי הגיאולוגיה",
+         "courses": "20307",
+         "notes": "מתקדם סמינריוני. הערה 2385: תנאי הקבלה השתנו מ-2027א."
+        },
+        {
+         "label": "בעיית שינוי האקלים",
+         "courses": "20518",
+         "notes": "מתקדם סמינריוני."
+        },
+        {
+         "label": "נושאים בכימיה אטמוספרית",
+         "courses": "20553",
+         "notes": "מתקדם סמינריוני. יילמד לאחרונה ב-2027ב (הערה 4623)."
+        },
+        {
+         "label": "קורסים של המכון הבינאוניברסיטאי באילת א",
+         "courses": "20991",
+         "notes": null
+        },
+        {
+         "label": "קורסים של המכון הבינאוניברסיטאי באילת ב",
+         "courses": "20992",
+         "notes": null
+        },
+        {
+         "label": "פרויקט מחקר במדעי כדור הארץ",
+         "courses": "20575",
+         "notes": null,
+         "label_ar": "مشروع بحث في علوم الأرض",
+         "label_en": "Research project in earth sciences"
+        },
+        {
+         "label": "קורס סמינריוני במדעי כדור הארץ",
+         "courses": {
+          "or": [
+           "20591",
+           "20959"
+          ]
+         },
+         "notes": "מתקדם סמינריוני. 20959 באנגלית (הערה 2306).",
+         "label_ar": "مساق ندوة في علوم الأرض",
+         "label_en": "Seminar course in earth sciences"
+        },
+        {
+         "label": "איזוטופים יציבים בחקר כדור הארץ",
+         "courses": "20947",
+         "notes": null
+        },
+        {
+         "label": "דינמיקה אטמוספרית",
+         "courses": "20980",
+         "notes": "הערה 4692: הקורס בפיתוח, יוצע ב-2027ב (בקובץ הקורסים: מוצע מ-2027ב)."
+        }
+       ],
+       "name_ar": "مساقات اختيارية في علوم الأرض",
+       "name_en": "Earth sciences electives",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "متطلبات المسار",
+     "name_en": "Track requirements",
+     "description_ar": "علوم الأرض: 39 نقطة، 23 إلزامية وعلى الأقل 16 اختيارية.",
+     "description_en": "Earth sciences: 39 credits, 23 required and at least 16 elective."
+    },
+    {
+     "id": "ג",
+     "name": "קורסים נוספים במדעים",
+     "minCredits": 57,
+     "minAdvanced": null,
+     "description": "חובה במדעי המחשב, במתמטיקה, בפיסיקה ובכימיה, וקורס סמינריוני במדעים; ובבחירה, השלמת הנ\"ז לפי סעיף א.",
+     "groups": [
+      {
+       "id": "ג1",
+       "name": "קורסי חובה במדעים",
+       "rule": "כל הפריטים",
+       "minCredits": null,
+       "minAdvanced": null,
+       "notes": "בכל פריט יש לבחור אחת מהחלופות. רשימות המתמטיקה והקורסים הסמינריוניים הן הקורסים שבקובץ הקורסים שלנו (הסקה): הדף אומר רק \"לפחות קורס אחד במתמטיקה\" ו\"קורס סמינריוני/סמינר במדעים\".",
+       "items": [
+        {
+         "label": "מדעי המחשב",
+         "courses": {
+          "or": [
+           "20605",
+           "20127",
+           "20441",
+           {
+            "and": [
+             "20453",
+             "20454"
+            ]
+           },
+           "20606",
+           "20478"
+          ]
+         },
+         "notes": "20441, 20453 + 20454, 20606, 20478 מהערה 3337.",
+         "label_ar": "علم الحاسوب",
+         "label_en": "Computer science"
+        },
+        {
+         "label": "מתמטיקה: לפחות קורס אחד",
+         "courses": {
+          "or": [
+           "04101",
+           "10444",
+           "11231",
+           "20109",
+           "20218",
+           "20224",
+           "20229",
+           "20230",
+           "20243",
+           "20280",
+           "20281",
+           "20293",
+           "20324",
+           "20327",
+           "20381",
+           "20394",
+           "20406",
+           "20416",
+           "20423",
+           "20425",
+           "20430",
+           "20462",
+           "20466",
+           "20474",
+           "20475",
+           "20476",
+           "20492",
+           "20511",
+           "20521",
+           "20525",
+           "20599",
+           "20608",
+           "20900",
+           "20952",
+           "30203",
+           "30204"
+          ]
+         },
+         "notes": "הערה 505: לא 20472. הרשימה: הקורסים במתמטיקה שבקובץ שלנו (הסקה).",
+         "label_ar": "الرياضيات: مساق واحد على الأقل",
+         "label_en": "Mathematics: at least one course"
+        },
+        {
+         "label": "פיסיקה",
+         "courses": {
+          "or": [
+           "20125",
+           {
+            "and": [
+             "20113",
+             "20114"
+            ]
+           }
+          ]
+         },
+         "notes": "20113 + 20114 מהערה 2061.",
+         "label_ar": "الفيزياء",
+         "label_en": "Physics"
+        },
+        {
+         "label": "כימיה",
+         "courses": {
+          "or": [
+           "20116",
+           "20437",
+           {
+            "and": [
+             "20470",
+             {
+              "or": [
+               "20480",
+               "20490"
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "notes": "20470 + 20480/20490 מהערה 2062.",
+         "label_ar": "الكيمياء",
+         "label_en": "Chemistry"
+        },
+        {
+         "label": "קורס סמינריוני במדעים",
+         "courses": {
+          "or": [
+           "20307",
+           "20381",
+           "20382",
+           "20518",
+           "20553",
+           "20555",
+           "20578",
+           "20590",
+           "20591",
+           "20910",
+           "20917",
+           "20925",
+           "20933",
+           "20952",
+           "20956",
+           "20958",
+           "20959"
+          ]
+         },
+         "notes": "הערה 506: קורס סמינריוני במסלול עונה על הדרישה. הרשימה: הקורסים הסמינריוניים במדעים שבקובץ שלנו (הסקה).",
+         "label_ar": "مساق ندوة في العلوم",
+         "label_en": "Seminar course in sciences"
+        }
+       ],
+       "name_ar": "مساقات إلزامية في العلوم",
+       "name_en": "Required science courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג2",
+       "name": "קורסי בחירה במדעים",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": null,
+       "minAdvanced": null,
+       "notes": "בדף: \"השלמת מניין הנקודות על פי סעיף א\" (נבדק במונים), וברשימה רק 20969.",
+       "items": [
+        {
+         "label": "כתיבה מדעית (אנגלית)",
+         "courses": "20969",
+         "notes": "הערה 2306: נכלל בקורסי התוכן באנגלית."
+        }
+       ],
+       "name_ar": "مساقات اختيارية في العلوم",
+       "name_en": "Science electives",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "مساقات إضافية في العلوم",
+     "name_en": "Additional science courses",
+     "description_ar": "إلزامي في علم الحاسوب والرياضيات والفيزياء والكيمياء، ومساق ندوة في العلوم؛ واختياري لاستكمال النقاط حسب البند أ.",
+     "description_en": "Required in computer science, mathematics, physics and chemistry, and a seminar course in sciences; electives complete the credits of section A."
+    },
+    {
+     "id": "ד",
+     "name": "בחירה חופשית",
+     "minCredits": 24,
+     "minAdvanced": null,
+     "description": "קורס מרחיב-דעת אחד (במדעי הרוח או במדעי החברה, או 20472). את שאר הנ\"ז אפשר להשלים בקורסים במדעים או בכל תחום אחר.",
+     "groups": [
+      {
+       "id": "ד1",
+       "name": "קורס מרחיב-דעת",
+       "rule": "כל הפריטים",
+       "minCredits": null,
+       "minAdvanced": null,
+       "notes": "רשימת הקורסים מרחיבי-הדעת במדעי הרוח ובמדעי החברה, מהקישור שבדף התכנית, ועוד 20472.",
+       "items": [
+        {
+         "label": "קורס מרחיב-דעת",
+         "courses": {
+          "or": [
+           "20472",
+           "11402",
+           "10814",
+           "10403",
+           "10880",
+           "10821",
+           "10755",
+           "10856",
+           "11202",
+           "10234",
+           "10275",
+           "10961",
+           "20617",
+           "10122",
+           "10107",
+           "10818",
+           "10411",
+           "10830",
+           "10432",
+           "10154",
+           "10215",
+           "10858",
+           "10128",
+           "10898",
+           "10202",
+           "10251",
+           "10646",
+           "10425",
+           "10626",
+           "10112",
+           "10290",
+           "10655",
+           "10143",
+           "10675",
+           "10879",
+           "10844",
+           "10212",
+           "10204",
+           "11406",
+           "10110",
+           "10489",
+           "10250",
+           "10208",
+           "10843",
+           "10640",
+           "10641",
+           "10222",
+           "10845",
+           "10496",
+           "10140",
+           "10109",
+           "10703",
+           "10148",
+           "10113",
+           "10809",
+           "10278",
+           "11400",
+           "10888",
+           "10292",
+           "10678",
+           "10859",
+           "10423",
+           "11235",
+           "10419",
+           "10266",
+           "10446",
+           "10785",
+           "11230",
+           "10221",
+           "10742",
+           "10897",
+           "11200",
+           "10825",
+           "10799",
+           "10892",
+           "10744",
+           "10667",
+           "10834",
+           "10819",
+           "10674",
+           "10246",
+           "10412",
+           "10248",
+           "20202",
+           "10768",
+           "10483",
+           "10889",
+           "10817",
+           "10896",
+           "10762",
+           "10710",
+           "10436",
+           "10473",
+           "10784",
+           "10647",
+           "10738",
+           "10719",
+           "10732",
+           "10733",
+           "10839",
+           "11403",
+           "10648",
+           "10683",
+           "10895",
+           "10700",
+           "10734",
+           "10429",
+           "11401",
+           "10841",
+           "10265",
+           "10269",
+           "10206",
+           "10691",
+           "10664",
+           "10800",
+           "10829",
+           "10779",
+           "11232",
+           "10430",
+           "10153",
+           "10680",
+           "11206",
+           "10611",
+           "10131",
+           "10126",
+           "10660",
+           "10136",
+           "10205",
+           "10711",
+           "10682",
+           "10777",
+           "10139",
+           "10728",
+           "10485",
+           "10659",
+           "10765",
+           "10125",
+           "10493",
+           "10104",
+           "10781",
+           "10123",
+           "10454",
+           "10161",
+           "10408",
+           "10134"
+          ]
+         },
+         "notes": null,
+         "label_ar": "مساق لتوسيع الآفاق",
+         "label_en": "Broadening course"
+        }
+       ],
+       "name_ar": "مساق لتوسيع الآفاق",
+       "name_en": "Broadening course",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "اختيار حر",
+     "name_en": "Free choice",
+     "description_ar": "مساق واحد لتوسيع الآفاق (في العلوم الإنسانية أو الاجتماعية، أو 20472). يمكن استكمال باقي النقاط بمساقات في العلوم أو في أي مجال آخر.",
+     "description_en": "One broadening course (in the humanities or social sciences, or 20472). The rest of the credits can come from science courses or any other field."
+    },
+    {
+     "id": "ה",
+     "name": "דרישות כלליות לתואר",
+     "minCredits": null,
+     "minAdvanced": null,
+     "description": "ראו גיליון \"דרישות כלליות\".",
+     "groups": [],
+     "name_ar": "المتطلبات العامة للقب",
+     "name_en": "General degree requirements",
+     "description_ar": "انظر المتطلبات العامة.",
+     "description_en": "See the general requirements."
+    }
+   ],
+   "general": [
+    {
+     "name": "צבירת נקודות זכות לתואר",
+     "details": "לפחות 120 נ\"ז, מהן לפחות 96 במדעים, ובהן לפחות 27 מתקדמות במדעים (לפחות 15 במדעי הטבע, לכל היותר 6 במדעים-כללי); לפחות 60 נ\"ז במדעי הטבע; לא יותר מ-36 נ\"ז ברמת פתיחה.",
+     "link": null,
+     "name_ar": "تجميع نقاط الاستحقاق للقب",
+     "name_en": "Credits for the degree",
+     "details_ar": "على الأقل 120 نقطة، منها على الأقل 96 في العلوم، ومنها على الأقل 27 متقدمة في العلوم (على الأقل 15 في علوم الطبيعة، وعلى الأكثر 6 في العلوم العامة)؛ على الأقل 60 نقطة في علوم الطبيعة؛ لا أكثر من 36 نقطة في المستوى التمهيدي.",
+     "details_en": "At least 120 credits, at least 96 of them in sciences, including at least 27 advanced in sciences (at least 15 in natural sciences, at most 6 in general sciences); at least 60 credits in natural sciences; no more than 36 opening-level credits."
+    },
+    {
+     "name": "עמידה בדרישות האנגלית",
+     "details": "לפי דרישות האנגלית הכלליות של האוניברסיטה.",
+     "link": "https://academic.openu.ac.il/yedion/english/Pages/default.aspx",
+     "name_ar": "استيفاء متطلبات اللغة الإنجليزية",
+     "name_en": "Meeting the English requirements",
+     "details_ar": "حسب متطلبات اللغة الإنجليزية العامة في الجامعة.",
+     "details_en": "According to the university's general English requirements."
+    },
+    {
+     "name": "קורסי תוכן אקדמי באנגלית",
+     "details": "למי שהתחיל מ-2022א: מי שסווג לפטור מקורסי שפה לומד שני קורסי תוכן באנגלית; מי שסווג למתקדמים ב לומד אחד (בנוסף לקורס מתקדמים ב); מי שסווג לרמה נמוכה יותר לא נדרש. הרשימה בדף לימודי האנגלית.",
+     "link": "https://academic.openu.ac.il/yedion/english/pages/default.aspx",
+     "name_ar": "مساقات محتوى أكاديمي بالإنجليزية",
+     "name_en": "Academic content courses in English",
+     "details_ar": "لمن بدأ منذ 2022أ: من صُنّف للإعفاء من مساقات اللغة يدرس مساقَي محتوى بالإنجليزية؛ من صُنّف لمستوى متقدمين ب يدرس مساقًا واحدًا (إضافةً إلى مساق متقدمين ب)؛ ومن صُنّف لمستوى أدنى لا يُطالَب بذلك. القائمة في صفحة دراسة الإنجليزية.",
+     "details_en": "For students who started from 2022a: those classified as exempt from language courses take two content courses in English; those classified as Advanced B take one (besides the Advanced B course); lower levels are not required. The list is on the English studies page."
+    },
+    {
+     "name": "הדרכה ביבליוגרפית בספרייה",
+     "details": "השלמת ההדרכה הביבליוגרפית של הספרייה. היא נדרשת בתנאי הקבלה של חלק מהקורסים המתקדמים.",
+     "link": "https://academic.openu.ac.il/yedion/studies/Pages/default.aspx?expand=studies8",
+     "name_ar": "الإرشاد البيبليوغرافي في المكتبة",
+     "name_en": "Bibliographic instruction at the library",
+     "details_ar": "إكمال الإرشاد البيبليوغرافي في المكتبة. وهو مطلوب في شروط القبول لبعض المساقات المتقدمة.",
+     "details_en": "Completing the library's bibliographic instruction. Some advanced courses require it for admission."
+    },
+    {
+     "name": "קורס מרחיב-דעת",
+     "details": "קורס מרחיב-דעת אחד מרשימת הקורסים מרחיבי-הדעת במדעי הרוח או במדעי החברה, או הקורס 20472 (תולדות המתמטיקה). מי שלומד גם את 10768 וגם את 20202 צריך לפחות 102 נ\"ז במדעים, ואז פטור מקורס מרחיב-דעת (הערה 496).",
+     "link": "http://www3.openu.ac.il/ouweb/owal/yed.course_list?in_tchum=140&in_frame=n",
+     "name_ar": "مساق لتوسيع الآفاق",
+     "name_en": "Broadening course",
+     "details_ar": "مساق واحد لتوسيع الآفاق من قائمة مساقات توسيع الآفاق في العلوم الإنسانية أو الاجتماعية، أو المساق 20472 (تاريخ الرياضيات). من يدرس 10768 و20202 معًا يحتاج إلى 102 نقطة على الأقل في العلوم، وعندها يُعفى من مساق توسيع الآفاق.",
+     "details_en": "One broadening course from the list of broadening courses in the humanities or social sciences, or course 20472 (history of mathematics). Students who take both 10768 and 20202 need at least 102 credits in sciences, and are then exempt from the broadening course."
+    },
+    {
+     "name": "קורסים בין-אוניברסיטאיים",
+     "details": "במסגרת התכנית אפשר ללמוד לכל היותר שני קורסים בין-אוניברסיטאיים.",
+     "link": "https://www.openu.ac.il/courses/20991.htm?t=h",
+     "name_ar": "مساقات بين جامعية",
+     "name_en": "Inter-university courses",
+     "details_ar": "ضمن الخطة يمكن دراسة مساقين بين جامعيين على الأكثر.",
+     "details_en": "The program allows at most two inter-university courses."
+    },
+    {
+     "name": "לומדה למניעת הטרדה מינית",
+     "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
+     "link": null,
+     "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
+     "name_en": "Sexual harassment prevention tutorial",
+     "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
+     "details_en": "Students must complete the sexual harassment prevention tutorial."
+    }
+   ],
+   "recommended": [],
+   "background": [],
+   "counters": [
+    {
+     "label": "סך הכול נ\"ז",
+     "field": "כל הקורסים",
+     "kind": "credits",
+     "min": 120,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "בסך הכול",
+     "label_ar": "مجموع النقاط",
+     "label_en": "Total credits",
+     "phrase_ar": "في المجموع",
+     "phrase_en": "in total"
+    },
+    {
+     "label": "נ\"ז במדעים",
+     "field": "מדעים",
+     "kind": "credits",
+     "min": 96,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "במדעים",
+     "label_ar": "نقاط في العلوم",
+     "label_en": "Science credits",
+     "phrase_ar": "في العلوم",
+     "phrase_en": "in sciences"
+    },
+    {
+     "label": "נ\"ז מתקדמות במדעים",
+     "field": "מדעים",
+     "kind": "advanced",
+     "min": 27,
+     "max": null,
+     "capField": "מדעים-כללי",
+     "cap": 6,
+     "phrase": "מתקדמות במדעים",
+     "label_ar": "نقاط متقدمة في العلوم",
+     "label_en": "Advanced credits in sciences",
+     "phrase_ar": "متقدمة في العلوم",
+     "phrase_en": "advanced in sciences"
+    },
+    {
+     "label": "נ\"ז מתקדמות במדעי הטבע",
+     "field": "מדעי הטבע",
+     "kind": "advanced",
+     "min": 15,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "מתקדמות במדעי הטבע",
+     "label_ar": "نقاط متقدمة في علوم الطبيعة",
+     "label_en": "Advanced credits in natural sciences",
+     "phrase_ar": "متقدمة في علوم الطبيعة",
+     "phrase_en": "advanced in natural sciences"
+    },
+    {
+     "label": "נ\"ז במדעי הטבע",
+     "field": "מדעי הטבע",
+     "kind": "credits",
+     "min": 60,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "במדעי הטבע",
+     "label_ar": "نقاط في علوم الطبيعة",
+     "label_en": "Natural sciences credits",
+     "phrase_ar": "في علوم الطبيعة",
+     "phrase_en": "in natural sciences"
+    },
+    {
+     "label": "נ\"ז ברמת פתיחה",
+     "field": "כל הקורסים",
+     "kind": "opening",
+     "min": null,
+     "max": 36,
+     "capField": null,
+     "cap": null,
+     "phrase": "ברמת פתיחה",
+     "label_ar": "نقاط في المستوى التمهيدي",
+     "label_en": "Opening-level credits",
+     "phrase_ar": "في المستوى التمهيدي",
+     "phrase_en": "at opening level"
+    }
+   ],
+   "name_ar": "لقب أول في علوم الطبيعة، مسار علوم الأرض",
+   "name_en": "Bachelor's degree in Natural Sciences, Earth Sciences track",
+   "degree_ar": "B.Sc. في علوم الطبيعة",
+   "degree_en": "B.Sc. in Natural Sciences"
   }
  }
 }

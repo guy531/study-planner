@@ -181,6 +181,8 @@ const semesterOrder = (id) => Number(id.slice(0, 4)) * 3 + LETTERS.indexOf(id.sl
 
 // is semester id after the last semester the course is offered in ("מוצע עד")
 const afterLastOffer = (c, id) => !!c.offeredUntil && /^\d{4}[אבג]$/.test(c.offeredUntil) && semesterOrder(id) > semesterOrder(c.offeredUntil);
+// is semester id before the first semester a new course is offered in ("מוצע מ"; M8, 2026-11-03: 20980 from 2027ב)
+const beforeFirstOffer = (c, id) => !!c.offeredFrom && /^\d{4}[אבג]$/.test(c.offeredFrom) && semesterOrder(id) < semesterOrder(c.offeredFrom);
 
 // why course n cannot go into semester i, or null if it can
 function blockedReason(n, i) {
@@ -193,6 +195,7 @@ function blockedReason(n, i) {
   if (c.notYet) return T`${n} ${c.name} עוד לא מוצע: זה קורס חדש, שעוד לא נפתח באף סמסטר, ולכן אי אפשר לשבץ אותו עדיין.`;
   // after its last offer first: every later semester says the same thing, whatever its letter (guy, 2026-11-01)
   if (afterLastOffer(c, id)) return T`${n} ${c.name} מוצע רק עד ${semName(c.offeredUntil)}, ולכן אי אפשר לשבץ אותו ב-${semesterLabel(id)}.`;
+  if (beforeFirstOffer(c, id)) return T`${n} ${c.name} הוא קורס חדש, שמוצע רק מ-${semName(c.offeredFrom)}, ולכן אי אפשר לשבץ אותו ב-${semesterLabel(id)}.`;
   if (c.semesters.length && !c.semesters.includes(id.slice(4))) {
     return T`${n} ${c.name} לא מוצע בסמסטר ${letterName(id.slice(4))}. הוא מוצע בסמסטרים ${letterList(c.semesters)}.`;
   }
@@ -208,6 +211,7 @@ function blockedShort(n, i) {
   if (c.offered === false) return T("הקורס כבר לא מוצע");
   if (c.notYet) return T("הקורס עוד לא מוצע");
   if (afterLastOffer(c, id)) return T`הקורס מוצע רק עד ${semName(c.offeredUntil)}`;
+  if (beforeFirstOffer(c, id)) return T`הקורס מוצע רק מ-${semName(c.offeredFrom)}`;
   if (c.semesters.length && !c.semesters.includes(id.slice(4))) return T("הקורס לא מוצע בסמסטר הזה");
   return null;
 }
@@ -360,7 +364,8 @@ function inField(c, field) {
     const sciences = c.affiliation.filter((a) => a.startsWith("מדעים"));
     return sciences.length > 0 && sciences.every((a) => /כללי$/.test(a));
   }
-  const words = field.split(/ ו| /).filter((w) => w.length > 2);
+  // "מדעי" alone is no field: it matched every "מדעים" course, so "מדעי הטבע" counted mathematics too (M8, 2026-11-03)
+  const words = field.split(/ ו| /).filter((w) => w.length > 2 && w !== "מדעי");
   return c.affiliation.some((a) => words.some((w) => a.includes(w)));
 }
 
@@ -467,7 +472,7 @@ function autoFill() {
       plan.slice(0, i).forEach((x) => x.forEach((y) => real.add(y)));
       const have = new Set([...base, ...real]);
       if (c.semesters.length && !c.semesters.includes(idsFor(i + 1)[i].slice(4))) return false;
-      if (afterLastOffer(c, idsFor(i + 1)[i])) return false;
+      if (afterLastOffer(c, idsFor(i + 1)[i]) || beforeFirstOffer(c, idsFor(i + 1)[i])) return false;
       if (c.admission && !satisfied(c.admission, forCourse(n, have, real))) return false;
       if (c.required && !satisfied(c.required, same ? new Set([...have, ...plan[i].filter((x) => x !== n)]) : have)) return false;
       if (c.priorCredits) {
@@ -847,6 +852,8 @@ function chip(n, context) {
   });
 
   if (c && c.offered === false) tags.push(el("span", { class: "tag gone", text: T("לא מוצע עוד") }));
+  // a seminar course (advanced-seminar level), which some programs require (guy, 2026-11-03: M8, OE)
+  if (c && c.seminar === "חובה") tags.push(el("span", { class: "tag seminar", title: T("קורס ברמה מתקדמת-סמינריונית: כותבים בו עבודה סמינריונית"), text: T("סמינריוני") }));
   if (c && c.notYet) tags.push(el("span", { class: "tag gone", title: T("קורס חדש, שעוד לא נפתח באף סמסטר"), text: T("עוד לא מוצע") }));
   const skills = context === "done" || (c && c.offered === false) ? [] : missingSkills(n);
   if (skills.length) tags.push(el("span", { class: "tag need", title: T("סמנו למעלה כשתעמדו בדרישה"), text: skillsTag(skills) }));
@@ -857,6 +864,9 @@ function chip(n, context) {
   // a course left in a semester after its last offer (placed before this check existed, or from a shared link)
   if (typeof context === "number" && c && afterLastOffer(c, semesterIds()[context])) {
     tags.push(el("span", { class: "tag warn", text: T`מוצע רק עד ${semName(c.offeredUntil)}` }));
+  }
+  if (typeof context === "number" && c && beforeFirstOffer(c, semesterIds()[context])) {
+    tags.push(el("span", { class: "tag warn", text: T`מוצע רק מ-${semName(c.offeredFrom)}` }));
   }
   // where the course is, with an eye: a click takes you there and flashes the card (guy, 2026-10-31)
   if (placed) head.append(placeButton(n));
@@ -1235,7 +1245,10 @@ function counted(n, kind = "credits") {
   if (!c) return 0;
   const cut = overlapCuts().get(n);
   const credits = (c.credits || 0) - (cut ? cut.cut : 0);
-  return kind === "advanced" ? Math.min(c.advanced || 0, credits) : credits;
+  if (kind === "advanced") return Math.min(c.advanced || 0, credits);
+  // opening-level credits: the whole course at opening level, a course of two levels by its opening part (M8)
+  if (kind === "opening") return c.level === "פתיחה" ? credits : Math.min(c.opening || 0, credits);
+  return credits;
 }
 // one line on a course whose credits were cut: with which course, and what it counts
 function overlapLine(n) {
@@ -1252,14 +1265,25 @@ function creditTotals() {
   const have = [...new Set(plannedCourses())].filter((n) => DATA.courses[n]);
   // with the overlap cuts (counted), not the full credits
   const sum = (list, key) => list.reduce((s, n) => s + counted(n, key), 0);
-  return (program.counters || []).map((m) => {
-    const inIt = have.filter((n) => inCounter(n, m.field));
-    let value = sum(inIt, m.kind);
-    if (m.capField && m.cap != null) {
-      const capped = sum(inIt.filter((n) => inCounter(n, m.capField)), m.kind);
-      value = value - capped + Math.min(capped, m.cap);
-    }
-    return [m.label, value, m.min, m.phrase || m.label, m];
+  return (program.counters || []).filter((m) => m.max == null).map((m) => counterRow(m, have, sum));
+}
+// one counter: the sum of its field, with at most so many credits from a narrower field
+function counterRow(m, have, sum) {
+  const inIt = have.filter((n) => inCounter(n, m.field));
+  let value = sum(inIt, m.kind);
+  if (m.capField && m.cap != null) {
+    const capped = sum(inIt.filter((n) => inCounter(n, m.capField)), m.kind);
+    value = value - capped + Math.min(capped, m.cap);
+  }
+  return [m.label, value, m.min, m.phrase || m.label, m];
+}
+// the counters of "at most" (M8: no more than 36 opening credits): [label, value, max, phrase, counter]
+function creditCaps() {
+  const have = [...new Set(plannedCourses())].filter((n) => DATA.courses[n]);
+  const sum = (list, key) => list.reduce((s, n) => s + counted(n, key), 0);
+  return (program.counters || []).filter((m) => m.max != null).map((m) => {
+    const [label, value, , phrase] = counterRow(m, have, sum);
+    return [label, value, m.max, phrase, m];
   });
 }
 
@@ -1321,6 +1345,9 @@ function degreeGaps() {
   creditTotals().forEach(([label, value, target, phrase, counter]) => {
     if (target && value < target) gaps.push({ kind: "total", credits: target - value, text: T`${target - value} נ"ז ${phrase}`, label, counter });
   });
+  creditCaps().forEach(([label, value, max, phrase, counter]) => {
+    if (value > max) gaps.push({ kind: "cap", credits: value - max, text: T`${value} נ"ז ${phrase}, ומותר לכל היותר ${max}`, label, counter });
+  });
   return gaps;
 }
 
@@ -1350,6 +1377,13 @@ function planSteps() {
   steps.push(totals.length
     ? { done: false, text: T("להשלים נ\"ז"), subs: totals, hint: T("נ\"ז שחסרים בסך הכול אפשר להשלים גם בקורסי בחירה חופשית מכל תחום.") }
     : { done: true, text: T("כל הנ\"ז שהתואר דורש") });
+  // a counter of "at most" (M8): its own step, done while the plan stays within it
+  const caps = creditCaps();
+  if (caps.length) {
+    const over = gaps.filter((g) => g.kind === "cap");
+    steps.push(over.length ? { done: false, text: T("להוריד נ\"ז מעבר למותר"), subs: over }
+      : { done: true, text: caps.map(([, , max, phrase]) => T`לא יותר מ-${max} נ"ז ${phrase}`).join(" · ") });
+  }
   const open = new Set(problems.filter((x) => x.level !== "soft").map((x) => x.n)).size;
   // only with courses in the semesters: an empty plan does not "meet every condition" (guy, 2026-11-03)
   if (open) steps.push({ done: false, text: open === 1 ? T("לתקן קורס 1 שחסרים לו תנאים") : T`לתקן ${open} קורסים שחסרים להם תנאים`, problems: true });
@@ -1411,7 +1445,8 @@ function renderStatus() {
 
 function renderMeters() {
   const meters = creditTotals().map(([label, value, target]) => [capital(label), value, target]);
-  $("#meters").style.setProperty("--count", meters.length);
+  const caps = creditCaps();
+  $("#meters").style.setProperty("--count", meters.length + caps.length);
   $("#meters").replaceChildren(
     ...meters.map(([label, value, target]) => {
       const pct = target ? Math.min(100, (value / target) * 100) : 0;
@@ -1422,6 +1457,11 @@ function renderMeters() {
         el("div", { class: "value" }, target ? el("span", { dir: "ltr" }, el("small", { text: `${value} / ` }), String(target)) : String(value)),
         el("div", { class: "bar" }, el("span", { style: `width:${pct}%` })));
     }),
+    // "at most" (M8): within it, a plain meter; over it, red
+    ...caps.map(([label, value, max]) => el("div", { class: `meter cap${value > max ? " over" : ""}` },
+      el("div", { class: "label", text: capital(label) }),
+      el("div", { class: "value" }, el("span", { dir: "ltr" }, el("small", { text: `${value} / ` }), String(max)), el("small", { class: "at-most", text: T(" לכל היותר") })),
+      el("div", { class: "bar" }, el("span", { style: `width:${Math.min(100, (value / max) * 100)}%` })))),
     el("p", { class: "meters-note", text: meterNote() }));
 }
 
@@ -1743,6 +1783,8 @@ function renderTree() {
       const oneChoice = group.items.length === 1 && group.items[0].courses && (group.items[0].courses.or || group.items[0].courses.of);
       const rule = group.rule === "חובת בחירה" ? T`חובת בחירה: ${choiceText(group) || T("לפי הרשימה")}`
         : group.rule === "כל הפריטים" ? (oneChoice ? T("חובה: אחד מהקורסים") : T("חובה: כל הפריטים"))
+        // an elective list without its own minimum (M8: "completing the credits of section א"): the counters check it
+        : !group.minCredits ? T("בחירה: להשלמת הנ\"ז של התואר (ראו המונים)")
         : T`בחירה: לפחות ${group.minCredits} נ"ז מהרשימה` + (group.mustLabel ? T`, ובהן ${group.mustLabel}` : "");
       if (finished && !isRequired(group) && stillUseful(group)) {
         return el("div", { class: "group", id: `group-${group.id}` },
@@ -2315,6 +2357,8 @@ function showInfo(n) {
   const add = (label, value) => { if (value !== null && value !== undefined && value !== "") rows.push(el("dt", { text: label }), el("dd", {}, value)); };
   add(T("נקודות זכות"), c.credits === null ? null : `${c.credits}${c.level ? ` (${T(c.level)})` : ""}${c.advanced && c.advanced !== c.credits ? T`, מתוכן ${c.advanced} מתקדמות` : ""}`);
   add(T("ניקוד קודם"), c.previousCredits);
+  add(T("עבודה סמינריונית"), c.seminar === "חובה" ? T("חובה: קורס סמינריוני (רמה מתקדמת-סמינריונית)")
+    : c.seminar === "כן" ? T("אפשר לכתוב בקורס עבודה סמינריונית") : null);
   // in the student's plan, an overlap may cut what the course counts
   const cutLine = overlapLine(n);
   if (cutLine) add(T("בתכנית שלך"), el("span", { class: cutLine.level === "bad" ? "bad" : "", text: cutLine.text }));
@@ -2326,6 +2370,7 @@ function showInfo(n) {
     c.coordinatorEmail ? el("a", { href: `mailto:${c.coordinatorEmail}`, class: "email", text: c.coordinatorEmail }) : missing(T("אימייל"))));
   add(T("מוצע"), c.offered === false ? T("לא מוצע עוד") : c.notYet ? T("עוד לא: קורס חדש, שעוד לא נפתח באף סמסטר") : c.semesters.length ? T`בסמסטרים ${letterList(c.semesters)}` : null);
   add(T("מוצע עד"), c.offeredUntil ? semName(c.offeredUntil) : null);
+  add(T("מוצע מ"), c.offeredFrom ? T`${semName(c.offeredFrom)} (קורס חדש)` : null);
   const planned = new Set(plannedCourses());
   // a course in a semester gets marks against what comes before it; in the tree or in "done" there is nothing to check
   const where = locationOf(n);
@@ -3108,7 +3153,7 @@ function buildPrint() {
             c.priorCredits && el("div", { text: T`לפחות ${c.priorCredits} נ"ז קודמים (${T(c.priorField)})` }),
             SKILLS.some((s) => c[s.key]) && el("div", { text: SKILLS.filter((s) => c[s.key]).map((s) => s.short).join(", ") }),
           ].filter(Boolean)),
-          el("td", { class: "rem", text: c.notYet ? T("קורס חדש, עוד לא מוצע") : T`מוצע בסמסטרים ${letterList(c.semesters)}${c.offeredUntil ? T`, עד ${semName(c.offeredUntil)}` : ""}` }));
+          el("td", { class: "rem", text: c.notYet ? T("קורס חדש, עוד לא מוצע") : T`מוצע בסמסטרים ${letterList(c.semesters)}${c.offeredUntil ? T`, עד ${semName(c.offeredUntil)}` : ""}${c.offeredFrom ? T`, מ-${semName(c.offeredFrom)}` : ""}` }));
       }),
     };
   });
@@ -3139,7 +3184,12 @@ function buildPrint() {
       el("th", { text: label }),
       el("td", { class: "n", text: String(value) }),
       el("td", { class: "n", text: target ? String(target) : "" }),
-      el("td", { class: "n" }, !target ? "" : value >= target ? mark(true) : el("b", { class: "miss", text: String(target - value) }))))));
+      el("td", { class: "n" }, !target ? "" : value >= target ? mark(true) : el("b", { class: "miss", text: String(target - value) })))),
+      creditCaps().map(([label, value, max]) => el("tr", {},
+        el("th", { text: capital(label) }),
+        el("td", { class: "n", text: String(value) }),
+        el("td", { class: "n", text: T`לכל היותר ${max}` }),
+        el("td", { class: "n" }, value <= max ? mark(true) : el("b", { class: "miss", text: `+${value - max}` }))))));
   const todo = gaps.filter((g) => g.kind !== "total");
   // while the plan is not finished, a banner over the summary says so (guy, 2026-11-03: the PDF goes to advisers
   // and colleagues, who read it as a finished plan)
