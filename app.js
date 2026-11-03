@@ -1166,17 +1166,19 @@ const treeIsLayer = () => matchMedia("(max-width: 900px)").matches;
 // "מקטע ג": only the courses the program lists in that section (CB's 75 physics credits are from its lists,
 // not from any physics course; guy: stick to the program's own lists)
 function inCounter(n, field) {
-  const section = /^מקטע (.+)$/.exec(field || "");
+  // "מקטע ב", or several sections, "מקטעים ג, ד, ה" (OJ, 2026-11-03: 76 credits in life sciences, from three sections)
+  const section = /^מקטעים? (.+)$/.exec(field || "");
   if (!section) return inField(DATA.courses[n], field);
+  const ids = section[1].split(", ");
   const listed = new Set();
-  program.sections.filter((s) => s.id === section[1])
+  program.sections.filter((s) => ids.includes(s.id))
     .forEach((s) => s.groups.forEach((g) => g.items.forEach((it) => it.courses && coursesIn(it.courses, listed))));
   if (!listed.has(n)) return false;
   // a course that a required group of another section uses counts there, not here too (CC, 2026-11-03: 20320 is a
   // physics elective, and with 20955 the quantum requirement of section ג)
   const have = new Set(plannedCourses());
   const elsewhere = new Set();
-  program.sections.filter((s) => s.id !== section[1]).forEach((s) => s.groups.filter(isRequired)
+  program.sections.filter((s) => !ids.includes(s.id)).forEach((s) => s.groups.filter(isRequired)
     .forEach((g) => g.items.forEach((it) => it.courses && usedCourses(it.courses, have, elsewhere))));
   return !elsewhere.has(n);
 }
