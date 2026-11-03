@@ -412,7 +412,11 @@ function autoFill() {
     const cost = (o) => {
       const need = [...coursesIn(o)].filter((x) => !have.has(x));
       if (need.some((x) => !usable(x))) return [Infinity];
-      return [need.filter((x) => DATA.courses[x].offeredUntil).length, need.length, Math.min(99, ...need.map(rank)),
+      // then, among as many courses, the one whose admission conditions are already met or planned (83, 2026-11-03:
+      // of four labs, 20459 needs 20322, outside the required courses, and 20460 needs only what is there)
+      const known_ = new Set([...known(), ...need]);
+      const missingAdmission = need.filter((x) => DATA.courses[x].admission && !satisfied(DATA.courses[x].admission, known_)).length;
+      return [need.filter((x) => DATA.courses[x].offeredUntil).length, need.length, missingAdmission, Math.min(99, ...need.map(rank)),
         need.reduce((s, x) => s + (DATA.courses[x].credits || 0), 0)];
     };
     const before = (a, b) => { for (let j = 0; j < a.length; j++) if (a[j] !== b[j]) return a[j] - b[j]; return 0; };
@@ -3297,12 +3301,17 @@ function setupSearch() {
 const FIELD_ORDER = ["פיסיקה", "מדעי הטבע", "כימיה", "מדעי החיים", "מדעי כדור הארץ"];
 const fieldsOf = (code) => (DATA.programs[code].fields && DATA.programs[code].fields.length ? DATA.programs[code].fields : [FIELD_ORDER[0]]);
 function allFields() {
-  const used = new Set(Object.keys(DATA.programs).flatMap(fieldsOf));
+  const used = new Set(programOrder().flatMap(fieldsOf));
   return [...FIELD_ORDER.filter((f) => used.has(f)), ...[...used].filter((f) => !FIELD_ORDER.includes(f))];
 }
+// the degrees in the order of the programs file ("סדר ברשימה" first): Object.keys puts a code like "83" first
+const programOrder = () => Object.keys(DATA.programs).sort((a, b) => {
+  const pa = DATA.programs[a], pb = DATA.programs[b];
+  return (pa.order ?? 1e6) - (pb.order ?? 1e6) || (pa.position ?? 0) - (pb.position ?? 0);
+});
 function fillPrograms(field) {
   $("#field").value = field;
-  const codes = Object.keys(DATA.programs).filter((code) => fieldsOf(code).includes(field));
+  const codes = programOrder().filter((code) => fieldsOf(code).includes(field));
   $("#program").replaceChildren(...codes.map((code) => el("option", { value: code, text: DATA.programs[code].name })));
   try { localStorage.setItem(`${STORE_KEY}:field`, field); } catch (e) { /* no storage */ }
   return codes;
@@ -3350,7 +3359,7 @@ async function main() {
   $("#lang").replaceChildren(...Object.entries(LANGS).map(([code, l]) => el("option", { value: code, text: l.name })));
   $("#lang").value = LANG;
   $("#lang").addEventListener("change", (e) => setLang(e.target.value));
-  const codes = Object.keys(DATA.programs);
+  const codes = programOrder();
   $("#field").replaceChildren(...allFields().map((f) => el("option", { value: f, text: T(f) })));
   let last = null, field = null;
   try { last = localStorage.getItem(`${STORE_KEY}:last`); field = localStorage.getItem(`${STORE_KEY}:field`); } catch (e) { /* no storage */ }

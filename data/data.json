@@ -14646,7 +14646,7 @@
    "affiliation": [
     "מדעים / מדעי הטבע והחיים / מדעי החיים"
    ],
-   "seminar": null,
+   "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
@@ -14662,14 +14662,40 @@
    "admission": null,
    "required": null,
    "recommended": null,
-   "overlaps": [],
-   "notes": null,
+   "overlaps": [
+    {
+     "with": [
+      "11236"
+     ],
+     "total": 6.0
+    },
+    {
+     "with": [
+      "20118"
+     ],
+     "total": 6.0
+    },
+    {
+     "with": [
+      "20468"
+     ],
+     "total": 10.0
+    },
+    {
+     "with": [
+      "20468",
+      "20495"
+     ],
+     "total": 12.0
+    }
+   ],
+   "notes": "מי שלמד אותו יכול להמשיך לתואר במדעי החיים אחרי השלמת פרקים, מטלה ומעבדות של 20118, ולימוד 20119 במלואו.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20121.htm?t=h",
-   "updated": "2026-10-29",
-   "full": false
+   "updated": "2026-11-03",
+   "full": true
   },
   "20275": {
    "name": "גנטיקה",
@@ -14813,11 +14839,13 @@
    "credits": 4,
    "advanced": 0,
    "opening": 0,
-   "level": null,
+   "level": "רגילה",
    "previousCredits": null,
-   "affiliation": [],
-   "seminar": null,
-   "offered": null,
+   "affiliation": [
+    "מדעים / מדעי החיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
    "offeredUntil": null,
    "offeredFrom": "2028א",
    "notYet": false,
@@ -14826,17 +14854,51 @@
    "needsLibrary": false,
    "priorCredits": null,
    "priorField": null,
-   "admission": null,
+   "admission": {
+    "and": [
+     "20118",
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20490"
+        ]
+       },
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     }
+    ]
+   },
    "required": null,
-   "recommended": null,
-   "overlaps": [],
-   "notes": null,
+   "recommended": "20119",
+   "overlaps": [
+    {
+     "with": [
+      "20214"
+     ],
+     "total": 6.0
+    },
+    {
+     "with": [
+      "20452"
+     ],
+     "total": 6.0
+    }
+   ],
+   "notes": "יחד עם 20614, המתכונת החדשה של 20452 (התא), מ-2028א. מי שלמד את 20452 פטור ומנוע מללמוד אותו.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20615.htm?t=h",
    "updated": "2026-11-03",
-   "full": false
+   "full": true
   },
   "20924": {
    "name": "גנטיקה ב",
@@ -21929,6 +21991,130 @@
    "link": "https://www.openu.ac.il/courses/20953.htm?t=h",
    "updated": "2026-11-03",
    "full": false
+  },
+  "20120": {
+   "name": "צפונות היקום: אשנב לאסטרונומיה",
+   "credits": 4,
+   "advanced": 0,
+   "opening": 4,
+   "level": "פתיחה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / פיסיקה"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א",
+    "ג"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20120.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20908": {
+   "name": "פרויקט אינטגרטיבי בלימודי שדה",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א",
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי החיים",
+   "admission": {
+    "and": [
+     "20204",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     "20412",
+     "20494",
+     "20104",
+     {
+      "atleast": 1,
+      "of": [
+       "20457",
+       "20405",
+       "20460",
+       "20236",
+       "20459",
+       "20496"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": "\"לפחות קורס אחד במעבדה במדעי החיים\": ששת קורסי המעבדה (הסקה). לנושאים מסוימים ייתכנו דרישות לקורסים נוספים.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20908.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20328": {
+   "name": "תקשורת כימית בין בעלי חיים",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20328.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
   }
  },
  "programs": {
@@ -21939,6 +22125,8 @@
    "fields": [
     "פיסיקה"
    ],
+   "order": null,
+   "position": 0,
    "catalogYear": "תשפ\"ז",
    "totalCredits": 132,
    "advancedCredits": 41,
@@ -22931,6 +23119,8 @@
    "fields": [
     "פיסיקה"
    ],
+   "order": null,
+   "position": 1,
    "catalogYear": "תשפ\"ז",
    "totalCredits": 120,
    "advancedCredits": 27,
@@ -24105,6 +24295,8 @@
    "fields": [
     "פיסיקה"
    ],
+   "order": null,
+   "position": 2,
    "catalogYear": "תשפ\"ז",
    "totalCredits": 149,
    "advancedCredits": 41,
@@ -25322,6 +25514,8 @@
    "fields": [
     "פיסיקה"
    ],
+   "order": null,
+   "position": 3,
    "catalogYear": "תשפ\"ז",
    "totalCredits": 152,
    "advancedCredits": 35,
@@ -26572,6 +26766,8 @@
     "פיסיקה",
     "מדעי כדור הארץ"
    ],
+   "order": null,
+   "position": 4,
    "catalogYear": "תשפ\"ז",
    "totalCredits": 149,
    "advancedCredits": 37,
@@ -27888,6 +28084,8 @@
     "פיסיקה",
     "כימיה"
    ],
+   "order": null,
+   "position": 5,
    "catalogYear": "תשפ\"ז",
    "totalCredits": 146,
    "advancedCredits": 39,
@@ -29312,6 +29510,8 @@
     "מדעי הטבע",
     "מדעי כדור הארץ"
    ],
+   "order": null,
+   "position": 6,
    "catalogYear": "תשפ\"ז",
    "totalCredits": 120,
    "advancedCredits": 27,
@@ -30048,6 +30248,8 @@
     "כימיה",
     "מדעי כדור הארץ"
    ],
+   "order": null,
+   "position": 7,
    "catalogYear": "תשפ\"ז",
    "totalCredits": 135,
    "advancedCredits": 30,
@@ -30804,6 +31006,8 @@
     "מדעי החיים",
     "מדעי כדור הארץ"
    ],
+   "order": null,
+   "position": 8,
    "catalogYear": "תשפ\"ז",
    "totalCredits": 129,
    "advancedCredits": 30,
@@ -31692,6 +31896,1450 @@
    "name_en": "Double-major degree in Life Sciences and Earth Sciences",
    "degree_ar": "B.Sc. في علوم الحياة وعلوم الأرض",
    "degree_en": "B.Sc. in Life Sciences and Earth Sciences"
+  },
+  "KS": {
+   "code": "KS",
+   "name": "תואר ראשון בכימיה חד חוגי",
+   "degree": "B.Sc. בכימיה",
+   "fields": [
+    "כימיה"
+   ],
+   "order": 1,
+   "position": 9,
+   "catalogYear": "תשפ\"ז",
+   "totalCredits": 120,
+   "advancedCredits": 38,
+   "planFrom": "2024א",
+   "link": "https://academic.openu.ac.il/natural_sciences/chemistry/program/KS.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/chemistry/pages/counseling.aspx",
+   "updated": "2026-11-03",
+   "sections": [
+    {
+     "id": "א",
+     "name": "לימודי תשתית",
+     "minCredits": 32,
+     "minAdvanced": null,
+     "description": "חובה, לפחות 32 נ\"ז.",
+     "groups": [
+      {
+       "id": "א1",
+       "name": "לימודי תשתית",
+       "rule": "כל הפריטים",
+       "minCredits": 32,
+       "minAdvanced": null,
+       "notes": "בכל פריט יש לבחור אחת מהחלופות. הערה 4583: עד 3 נ\"ז עודפות בתשתית על חשבון הבחירה החופשית.",
+       "items": [
+        {
+         "label": "תכנות",
+         "courses": {
+          "or": [
+           "20605",
+           "20606",
+           "20441",
+           "20127"
+          ]
+         },
+         "notes": "20441, 20127 מהערה 4072: רק למי שלמד אותם עד 2025א (כולל) – הסקה, כמו ב-CC.",
+         "label_ar": "البرمجة",
+         "label_en": "Programming"
+        },
+        {
+         "label": "פיסיקה",
+         "courses": {
+          "or": [
+           "20125",
+           {
+            "and": [
+             "20113",
+             "20114"
+            ]
+           }
+          ]
+         },
+         "notes": null,
+         "label_ar": "الفيزياء",
+         "label_en": "Physics"
+        },
+        {
+         "label": "חשבון דיפרנציאלי ואינטגרלי א",
+         "courses": {
+          "or": [
+           "20406",
+           {
+            "and": [
+             "20474",
+             "20475"
+            ]
+           },
+           {
+            "and": [
+             "20474",
+             "20492"
+            ]
+           }
+          ]
+         },
+         "notes": "20474 + 20475 / 20474 + 20492 מהערה 207.",
+         "label_ar": "حساب التفاضل والتكامل أ",
+         "label_en": "Calculus A"
+        },
+        {
+         "label": "חשבון דיפרנציאלי ואינטגרלי ב",
+         "courses": "20423",
+         "notes": null
+        },
+        {
+         "label": "מבוא לסטטיסטיקה ולהסתברות למדעים",
+         "courses": "30203",
+         "notes": null
+        },
+        {
+         "label": "אלגברה לינארית",
+         "courses": {
+          "or": [
+           "20430",
+           "20109"
+          ]
+         },
+         "notes": null,
+         "label_ar": "الجبر الخطي",
+         "label_en": "Linear algebra"
+        },
+        {
+         "label": "משוואות דיפרנציאליות או הסקה סטטיסטית",
+         "courses": {
+          "or": [
+           "20218",
+           "30204"
+          ]
+         },
+         "notes": null,
+         "label_ar": "المعادلات التفاضلية أو الاستدلال الإحصائي",
+         "label_en": "Differential equations or statistical inference"
+        }
+       ],
+       "name_ar": "دراسات أساسية",
+       "name_en": "Foundation studies",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات أساسية",
+     "name_en": "Foundation studies",
+     "description_ar": "إلزامي، على الأقل 32 نقطة.",
+     "description_en": "Required, at least 32 credits."
+    },
+    {
+     "id": "ב",
+     "name": "לימודי כימיה",
+     "minCredits": 85,
+     "minAdvanced": 38,
+     "description": "חובה ובחירה, 85 נ\"ז: חובה לפחות 60, ובחירה לפחות 25 נ\"ז מתקדמות, ובהן קורס סמינריוני אחד.",
+     "groups": [
+      {
+       "id": "ב1",
+       "name": "קורסי חובה בכימיה",
+       "rule": "כל הפריטים",
+       "minCredits": 46,
+       "minAdvanced": 13,
+       "notes": "(i) קורסים עיוניים: 48 נ\"ז, מהם 13 מתקדמות (עם 20611 + 20612). הערה 4597 (4621): עם 20456 (6 נ\"ז) משלימים 2 נ\"ז בבחירה, ולכן המינימום כאן 46 (כמו ב-CC). הערה 4584: מי שצבר פחות מ-60 בחובה משלים מהבחירה בכימיה, או מ-20247, 20213, 20402 (קבוצה ב6).",
+       "items": [
+        {
+         "label": "כימיה כללית א",
+         "courses": "20470",
+         "notes": null
+        },
+        {
+         "label": "כימיה כללית ב",
+         "courses": "20480",
+         "notes": null
+        },
+        {
+         "label": "כימיה אורגנית",
+         "courses": {
+          "or": [
+           "20456",
+           {
+            "and": [
+             "20611",
+             "20612"
+            ]
+           }
+          ]
+         },
+         "notes": "הערה 4621/4597: 20456 יילמד לאחרונה ב-2027ב; 20611 ו-20612 בפיתוח.",
+         "label_ar": "الكيمياء العضوية",
+         "label_en": "Organic chemistry"
+        },
+        {
+         "label": "כימיה אי-אורגנית",
+         "courses": "20404",
+         "notes": null
+        },
+        {
+         "label": "תרמודינמיקה",
+         "courses": "20483",
+         "notes": null
+        },
+        {
+         "label": "פרקים בכימיה פיסיקלית",
+         "courses": "20497",
+         "notes": null
+        },
+        {
+         "label": "ביוכימיה",
+         "courses": {
+          "or": [
+           "20485",
+           "20204"
+          ]
+         },
+         "notes": null,
+         "label_ar": "الكيمياء الحيوية",
+         "label_en": "Biochemistry"
+        },
+        {
+         "label": "שיטות פיסיקליות לאנליזה כימית",
+         "courses": "20911",
+         "notes": "הערה 4593."
+        },
+        {
+         "label": "תורת הקוואנטים א",
+         "courses": "20522",
+         "notes": null
+        },
+        {
+         "label": "תורת הקוואנטים ב: קשר כימי",
+         "courses": "20523",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات إلزامية في الكيمياء",
+       "name_en": "Required chemistry courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב2",
+       "name": "מעבדות בכימיה",
+       "rule": "כל הפריטים",
+       "minCredits": 12,
+       "minAdvanced": null,
+       "notes": "(ii) ארבעה קורסי מעבדה, 12 נ\"ז. הערה 4587: כל אחד 2 נ\"ז עד 2026ג.",
+       "items": [
+        {
+         "label": "מעבדה בכימיה כללית",
+         "courses": "20234",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בכימיה אורגנית",
+         "courses": "20439",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בכימיה אי-אורגנית",
+         "courses": "20463",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בכימיה פיסיקלית",
+         "courses": "20289",
+         "notes": null
+        }
+       ],
+       "name_ar": "مختبرات في الكيمياء",
+       "name_en": "Chemistry laboratories",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב3",
+       "name": "קורסי בחירה בכימיה (i)",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 2,
+       "minAdvanced": 2,
+       "notes": "(i) \"יש לבחור לפחות קורס אחד מרשימה זו\" (המינימום 2: הקורס הקטן ברשימה, הסקה). הערה 4589: 20247, 20402, 20213 שנלמדו לפני 2027א נחשבים במקטע.",
+       "items": [
+        {
+         "label": "סדנה בכימיה חישובית",
+         "courses": "20932",
+         "notes": null
+        },
+        {
+         "label": "אנליזה של ניסויים",
+         "courses": "20340",
+         "notes": "יילמד לאחרונה ב-2027א (הערה 4590)."
+        },
+        {
+         "label": "כימיה אורגנית פיסיקלית",
+         "courses": "20926",
+         "notes": null
+        },
+        {
+         "label": "דינמיקה מולקולרית של תהליכים כימיים",
+         "courses": "20557",
+         "notes": null
+        },
+        {
+         "label": "מבוא לכימואינפורמטיקה",
+         "courses": "20979",
+         "notes": "הקורס בפיתוח (הערה 514)."
+        },
+        {
+         "label": "פיסיקה של מצב מוצק או פיסיקה סטטיסטית",
+         "courses": {
+          "or": [
+           "20913",
+           "20314"
+          ]
+         },
+         "notes": "הערה 1146: דרישות קדם מחוץ לתכנית.",
+         "label_ar": "فيزياء الحالة الصلبة أو الفيزياء الإحصائية",
+         "label_en": "Solid state physics or statistical physics"
+        }
+       ],
+       "name_ar": "مساقات اختيارية في الكيمياء (i)",
+       "name_en": "Chemistry electives (i)",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב4",
+       "name": "קורסי בחירה בכימיה (ii)",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 6,
+       "minAdvanced": 6,
+       "notes": "(ii) \"יש לבחור 3-1 קורסים\" (הכלי בודק רק את המינימום, קורס אחד).",
+       "items": [
+        {
+         "label": "כימיה אורגנית מתקדמת",
+         "courses": "20915",
+         "notes": null
+        },
+        {
+         "label": "לייזרים: עקרונות ושימושים",
+         "courses": "20912",
+         "notes": null
+        },
+        {
+         "label": "סימטריה וכירליות",
+         "courses": "20334",
+         "notes": null
+        },
+        {
+         "label": "פרויקט מחקר בכימיה",
+         "courses": {
+          "or": [
+           "20577",
+           "20957"
+          ]
+         },
+         "notes": "20957 באנגלית.",
+         "label_ar": "مشروع بحث في الكيمياء",
+         "label_en": "Research project in chemistry"
+        }
+       ],
+       "name_ar": "مساقات اختيارية في الكيمياء (ii)",
+       "name_en": "Chemistry electives (ii)",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב5",
+       "name": "קורס סמינריוני בכימיה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 3,
+       "minAdvanced": 3,
+       "notes": "(iii) \"יש לבחור 2-1 קורסים מתקדמים-סמינריוניים\" (הכלי בודק רק את המינימום). הערה 4592: 20553 יילמד לאחרונה ב-2027ב.",
+       "items": [
+        {
+         "label": "יסודות בכימיה של המצב המוצק",
+         "courses": "20555",
+         "notes": null
+        },
+        {
+         "label": "מבוא לפולימרים",
+         "courses": "20933",
+         "notes": null
+        },
+        {
+         "label": "מבט על ננו-חומרים",
+         "courses": {
+          "or": [
+           "20917",
+           "20958"
+          ]
+         },
+         "notes": "20958 באנגלית.",
+         "label_ar": "نظرة على المواد النانوية",
+         "label_en": "A look at nanomaterials"
+        },
+        {
+         "label": "נושאים בכימיה אטמוספרית",
+         "courses": "20553",
+         "notes": "יילמד לאחרונה ב-2027ב."
+        },
+        {
+         "label": "נושאים בכימיה חישובית",
+         "courses": "20910",
+         "notes": null
+        },
+        {
+         "label": "נושאים נבחרים בכימיה של אורגנו-מתכות מעבר",
+         "courses": {
+          "or": [
+           "20925",
+           "20956"
+          ]
+         },
+         "notes": "20956 באנגלית.",
+         "label_ar": "مواضيع مختارة في كيمياء العضو-فلزات الانتقالية",
+         "label_en": "Selected topics in transition organometallic chemistry"
+        }
+       ],
+       "name_ar": "مساق ندوة في الكيمياء",
+       "name_en": "Chemistry seminar course",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב6",
+       "name": "השלמת נ\"ז בכימיה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": null,
+       "minAdvanced": null,
+       "notes": "הערות 4584, 4589: להשלמת נ\"ז החובה בכימיה (למשל עם 20456). בלי מינימום משלה: נבדק במונה.",
+       "items": [
+        {
+         "label": "ביוכימיה ב",
+         "courses": "20247",
+         "notes": null
+        },
+        {
+         "label": "פרקים בפיסיקה מודרנית",
+         "courses": "20213",
+         "notes": null
+        },
+        {
+         "label": "מוליכים למחצה",
+         "courses": "20402",
+         "notes": null
+        }
+       ],
+       "name_ar": "استكمال النقاط في الكيمياء",
+       "name_en": "Completing the chemistry credits",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات الكيمياء",
+     "name_en": "Chemistry studies",
+     "description_ar": "إلزامي واختياري، 85 نقطة: إلزامي على الأقل 60، واختياري على الأقل 25 نقطة متقدمة، منها مساق ندوة واحد.",
+     "description_en": "Required and elective, 85 credits: at least 60 required, and at least 25 advanced elective credits, including one seminar course."
+    },
+    {
+     "id": "ג",
+     "name": "בחירה חופשית",
+     "minCredits": null,
+     "minAdvanced": null,
+     "description": "השלמה ל-120 נ\"ז: קורס מרחיב-דעת (במדעי הרוח או במדעי החברה, או 20472), או קורסים מהרשימה, או כל קורס אחר.",
+     "groups": [
+      {
+       "id": "ג1",
+       "name": "קורסים לבחירה חופשית",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": null,
+       "minAdvanced": null,
+       "notes": "הרשימה שבדף \"אפשר ללמוד... קורס אחד או יותר מהרשימה\". אפשר גם קורס מרחיב-דעת או כל קורס אחר. בלי מינימום: נבדק במונה של 120.",
+       "items": [
+        {
+         "label": "ביולוגיה כללית א: התא, גנטיקה, אבולוציה ומגוון",
+         "courses": {
+          "or": [
+           "20118",
+           "11236"
+          ]
+         },
+         "notes": "11236 מהערה 4474."
+        },
+        {
+         "label": "אשנב למדעי החיים",
+         "courses": "20121",
+         "notes": null
+        },
+        {
+         "label": "צפונות היקום: אשנב לאסטרונומיה",
+         "courses": "20120",
+         "notes": null
+        },
+        {
+         "label": "מבוא לגיאולוגיה: צפונות כדור הארץ",
+         "courses": {
+          "or": [
+           "20117",
+           "06101"
+          ]
+         },
+         "notes": "06101 מהערה 4687 (לא מוצע עוד)."
+        },
+        {
+         "label": "מבוא למטאורולוגיה",
+         "courses": "20291",
+         "notes": null
+        },
+        {
+         "label": "מבוא למשוואות דיפרנציאליות רגילות",
+         "courses": "20218",
+         "notes": "הערה 1147: רק אם לא נלמד בלימודי התשתית."
+        },
+        {
+         "label": "מעבדה בפיסיקה ב",
+         "courses": "20409",
+         "notes": null
+        },
+        {
+         "label": "כתיבה מדעית (אנגלית)",
+         "courses": "20969",
+         "notes": "הערה 2306."
+        }
+       ],
+       "name_ar": "مساقات للاختيار الحر",
+       "name_en": "Free-choice courses",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "اختيار حر",
+     "name_en": "Free choice",
+     "description_ar": "استكمال إلى 120 نقطة: مساق لتوسيع الآفاق (في العلوم الإنسانية أو الاجتماعية، أو 20472)، أو مساقات من القائمة، أو أي مساق آخر.",
+     "description_en": "Completing 120 credits: a broadening course (humanities or social sciences, or 20472), courses from the list, or any other course."
+    },
+    {
+     "id": "ד",
+     "name": "דרישות כלליות לתואר",
+     "minCredits": null,
+     "minAdvanced": null,
+     "description": "ראו גיליון \"דרישות כלליות\".",
+     "groups": [],
+     "name_ar": "المتطلبات العامة للقب",
+     "name_en": "General degree requirements",
+     "description_ar": "انظر المتطلبات العامة.",
+     "description_en": "See the general requirements."
+    }
+   ],
+   "general": [
+    {
+     "name": "צבירת נקודות זכות לתואר",
+     "details": "לפחות 120 נ\"ז, ובהן לא יותר מ-36 ברמת פתיחה ולפחות 38 מתקדמות: לפחות 32 בלימודי התשתית ו-85 בלימודי כימיה.",
+     "link": null,
+     "name_ar": "تجميع نقاط الاستحقاق للقب",
+     "name_en": "Credits for the degree",
+     "details_ar": "على الأقل 120 نقطة، منها لا أكثر من 36 في المستوى التمهيدي وعلى الأقل 38 متقدمة: على الأقل 32 في الدراسات الأساسية و85 في الكيمياء.",
+     "details_en": "At least 120 credits, no more than 36 at opening level and at least 38 advanced: at least 32 in foundation studies and 85 in chemistry."
+    },
+    {
+     "name": "עמידה בדרישות האנגלית",
+     "details": "לפי דרישות האנגלית הכלליות של האוניברסיטה.",
+     "link": "https://academic.openu.ac.il/yedion/english/Pages/default.aspx",
+     "name_ar": "استيفاء متطلبات اللغة الإنجليزية",
+     "name_en": "Meeting the English requirements",
+     "details_ar": "حسب متطلبات اللغة الإنجليزية العامة في الجامعة.",
+     "details_en": "According to the university's general English requirements."
+    },
+    {
+     "name": "הדרכה ביבליוגרפית בספרייה",
+     "details": "השלמת ההדרכה הביבליוגרפית של הספרייה. היא נדרשת בתנאי הקבלה של חלק מהקורסים המתקדמים.",
+     "link": "https://academic.openu.ac.il/yedion/studies/Pages/default.aspx?expand=studies8",
+     "name_ar": "الإرشاد البيبليوغرافي في المكتبة",
+     "name_en": "Bibliographic instruction at the library",
+     "details_ar": "إكمال الإرشاد البيبليوغرافي في المكتبة. وهو مطلوب في شروط القبول لبعض المساقات المتقدمة.",
+     "details_en": "Completing the library's bibliographic instruction. Some advanced courses require it for admission."
+    },
+    {
+     "name": "לומדה למניעת הטרדה מינית",
+     "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
+     "link": null,
+     "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
+     "name_en": "Sexual harassment prevention tutorial",
+     "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
+     "details_en": "Students must complete the sexual harassment prevention tutorial."
+    }
+   ],
+   "recommended": [],
+   "background": [],
+   "counters": [
+    {
+     "label": "סך הכול נ\"ז",
+     "field": "כל הקורסים",
+     "kind": "credits",
+     "min": 120,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "בסך הכול",
+     "label_ar": "مجموع النقاط",
+     "label_en": "Total credits",
+     "phrase_ar": "في المجموع",
+     "phrase_en": "in total"
+    },
+    {
+     "label": "נ\"ז מתקדמות",
+     "field": "כל הקורסים",
+     "kind": "advanced",
+     "min": 38,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "מתקדמות",
+     "label_ar": "نقاط متقدمة",
+     "label_en": "Advanced credits",
+     "phrase_ar": "متقدمة",
+     "phrase_en": "advanced"
+    },
+    {
+     "label": "נ\"ז בכימיה",
+     "field": "מקטע ב",
+     "kind": "credits",
+     "min": 85,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "בכימיה",
+     "label_ar": "نقاط في الكيمياء",
+     "label_en": "Chemistry credits",
+     "phrase_ar": "في الكيمياء",
+     "phrase_en": "in chemistry"
+    },
+    {
+     "label": "נ\"ז ברמת פתיחה",
+     "field": "כל הקורסים",
+     "kind": "opening",
+     "min": null,
+     "max": 36,
+     "capField": null,
+     "cap": null,
+     "phrase": "ברמת פתיחה",
+     "label_ar": "نقاط في المستوى التمهيدي",
+     "label_en": "Opening-level credits",
+     "phrase_ar": "في المستوى التمهيدي",
+     "phrase_en": "at opening level"
+    }
+   ],
+   "name_ar": "لقب أول في الكيمياء أحادي التخصص",
+   "name_en": "Single-major bachelor's degree in Chemistry",
+   "degree_ar": "B.Sc. في الكيمياء",
+   "degree_en": "B.Sc. in Chemistry"
+  },
+  "83": {
+   "code": "83",
+   "name": "תואר ראשון בכימיה ובמדעי החיים",
+   "degree": "B.Sc. בכימיה ובמדעי החיים",
+   "fields": [
+    "כימיה",
+    "מדעי החיים"
+   ],
+   "order": null,
+   "position": 10,
+   "catalogYear": "תשפ\"ז",
+   "totalCredits": 138,
+   "advancedCredits": 27,
+   "planFrom": "2024א",
+   "link": "https://academic.openu.ac.il/natural_sciences/chemistry/program/83.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/chemistry/pages/counseling.aspx",
+   "updated": "2026-11-03",
+   "sections": [
+    {
+     "id": "א",
+     "name": "לימודי תשתית",
+     "minCredits": 28,
+     "minAdvanced": null,
+     "description": "חובה, לפחות 28 נ\"ז.",
+     "groups": [
+      {
+       "id": "א1",
+       "name": "לימודי תשתית",
+       "rule": "כל הפריטים",
+       "minCredits": 28,
+       "minAdvanced": null,
+       "notes": "בכל פריט יש לבחור אחת מהחלופות. הערה 4629: מ-2027א השתנו דרישות המתמטיקה; מי שלמד 20441, 20453 + 20454 או 20478 פטור מקורס בפייתון.",
+       "items": [
+        {
+         "label": "תכנות",
+         "courses": {
+          "or": [
+           "20605",
+           "20606",
+           "20441",
+           {
+            "and": [
+             "20453",
+             "20454"
+            ]
+           },
+           "20478",
+           "20127"
+          ]
+         },
+         "notes": "20441, 20453 + 20454, 20478 מהערה 4629; 20127 מהערה 4758 (עד 2027א) – הסקה.",
+         "label_ar": "البرمجة",
+         "label_en": "Programming"
+        },
+        {
+         "label": "פיסיקה",
+         "courses": {
+          "or": [
+           "20125",
+           {
+            "and": [
+             "20113",
+             "20114"
+            ]
+           }
+          ]
+         },
+         "notes": null,
+         "label_ar": "الفيزياء",
+         "label_en": "Physics"
+        },
+        {
+         "label": "מבוא לסטטיסטיקה ולהסתברות למדעים",
+         "courses": "30203",
+         "notes": null
+        },
+        {
+         "label": "חשבון דיפרנציאלי ואינטגרלי א",
+         "courses": {
+          "or": [
+           "20406",
+           {
+            "and": [
+             "20474",
+             "20475"
+            ]
+           },
+           {
+            "and": [
+             "20474",
+             "20492"
+            ]
+           }
+          ]
+         },
+         "notes": "הערה 187.",
+         "label_ar": "حساب التفاضل والتكامل أ",
+         "label_en": "Calculus A"
+        },
+        {
+         "label": "חשבון דיפרנציאלי ואינטגרלי ב",
+         "courses": "20423",
+         "notes": "הערה 189."
+        },
+        {
+         "label": "לפחות קורס אחד (3 נ\"ז לפחות)",
+         "courses": {
+          "or": [
+           "30204",
+           "20430",
+           "20109",
+           "20218"
+          ]
+         },
+         "notes": "הערה 188: 20430 או 20109 דרוש ל-20522 שבבחירה.",
+         "label_ar": "مساق واحد على الأقل (3 نقاط على الأقل)",
+         "label_en": "At least one course (at least 3 credits)"
+        }
+       ],
+       "name_ar": "دراسات أساسية",
+       "name_en": "Foundation studies",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات أساسية",
+     "name_en": "Foundation studies",
+     "description_ar": "إلزامي، على الأقل 28 نقطة.",
+     "description_en": "Required, at least 28 credits."
+    },
+    {
+     "id": "ב",
+     "name": "לימודי כימיה ומדעי החיים: חובה",
+     "minCredits": 73,
+     "minAdvanced": null,
+     "description": "בדף: \"חובה - 69 נ\"ז\", אבל סכום החלקים 73 (38 בכימיה, 26 במדעי החיים, 9 משותפים; נרשמה חריגה).",
+     "groups": [
+      {
+       "id": "ב1",
+       "name": "קורסי חובה בכימיה",
+       "rule": "כל הפריטים",
+       "minCredits": 36,
+       "minAdvanced": null,
+       "notes": "בדף: 38 נ\"ז, (i) 35 ו-(ii) מעבדה אחת, 3. עם 20456 (הערה 4621) 36, והשאר בבחירה בכימיה. הערה 4630: מי שצבר פחות מ-38 משלים מהבחירה בכימיה, או מ-20213, 20402 אם נלמדו לפני 2028א.",
+       "items": [
+        {
+         "label": "כימיה כללית א",
+         "courses": "20470",
+         "notes": null
+        },
+        {
+         "label": "כימיה כללית ב",
+         "courses": "20480",
+         "notes": null
+        },
+        {
+         "label": "כימיה אורגנית",
+         "courses": {
+          "or": [
+           "20456",
+           {
+            "and": [
+             "20611",
+             "20612"
+            ]
+           }
+          ]
+         },
+         "notes": "הערה 4621/4597: 20456 יילמד לאחרונה ב-2027ב; 20611 ו-20612 בפיתוח.",
+         "label_ar": "الكيمياء العضوية",
+         "label_en": "Organic chemistry"
+        },
+        {
+         "label": "כימיה אי-אורגנית",
+         "courses": "20404",
+         "notes": null
+        },
+        {
+         "label": "פרקים בכימיה פיסיקלית",
+         "courses": "20497",
+         "notes": null
+        },
+        {
+         "label": "תרמודינמיקה",
+         "courses": "20483",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בכימיה כללית",
+         "courses": "20234",
+         "notes": "הערה 4603: 2 נ\"ז עד 2026ג."
+        },
+        {
+         "label": "קורס מעבדה אחד בכימיה",
+         "courses": {
+          "or": [
+           "20439",
+           "20463",
+           "20289"
+          ]
+         },
+         "notes": "(ii) בדף.",
+         "label_ar": "مساق مختبر واحد في الكيمياء",
+         "label_en": "One chemistry laboratory course"
+        }
+       ],
+       "name_ar": "مساقات إلزامية في الكيمياء",
+       "name_en": "Required chemistry courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב2",
+       "name": "קורסי חובה במדעי החיים",
+       "rule": "כל הפריטים",
+       "minCredits": 26,
+       "minAdvanced": null,
+       "notes": "(i) 24 נ\"ז ו-(ii) מעבדה אחת, 2. הערה 4781: 20452 יילמד לאחרונה ב-2027ב, ובמקומו 20614 + 20615 (הסקה, כמו ב-OF).",
+       "items": [
+        {
+         "label": "ביולוגיה כללית א: התא, גנטיקה, אבולוציה ומגוון",
+         "courses": {
+          "or": [
+           "20118",
+           "11236"
+          ]
+         },
+         "notes": "11236 מהערה 4474."
+        },
+        {
+         "label": "ביולוגיה כללית ב: מבנה ותפקוד צמחים ובעלי חיים, אקולוגיה",
+         "courses": "20119",
+         "notes": null
+        },
+        {
+         "label": "מעבדות מבוא בביולוגיה",
+         "courses": "20601",
+         "notes": "הערה 1763."
+        },
+        {
+         "label": "התא",
+         "courses": {
+          "or": [
+           "20452",
+           "20214",
+           {
+            "and": [
+             "20614",
+             "20615"
+            ]
+           }
+          ]
+         },
+         "notes": "20214 מהערות 192, 2405; 20614 + 20615 מהערה 4781 (הסקה).",
+         "label_ar": "الخلية",
+         "label_en": "The cell"
+        },
+        {
+         "label": "גנטיקה א",
+         "courses": "20495",
+         "notes": null
+        },
+        {
+         "label": "קורס מעבדה אחד במדעי החיים",
+         "courses": {
+          "or": [
+           "20459",
+           "20236",
+           "20460",
+           "20457"
+          ]
+         },
+         "notes": "(ii) בדף.",
+         "label_ar": "مساق مختبر واحد في علوم الحياة",
+         "label_en": "One life sciences laboratory course"
+        }
+       ],
+       "name_ar": "مساقات إلزامية في علوم الحياة",
+       "name_en": "Required life sciences courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב3",
+       "name": "קורסי חובה משותפים",
+       "rule": "כל הפריטים",
+       "minCredits": 9,
+       "minAdvanced": null,
+       "notes": "קורסי חובה משותפים בכימיה ובמדעי החיים: 9 נ\"ז. הערה 193: 20204 לפני 2017א (3 נ\"ז).",
+       "items": [
+        {
+         "label": "ביוכימיה א",
+         "courses": "20204",
+         "notes": "הערה 193."
+        },
+        {
+         "label": "ביוכימיה ב",
+         "courses": "20247",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בביוכימיה של חלבונים",
+         "courses": "20405",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات إلزامية مشتركة",
+       "name_en": "Shared required courses",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات الكيمياء وعلوم الحياة: إلزامي",
+     "name_en": "Chemistry and life sciences studies: required",
+     "description_ar": "إلزامي: 38 في الكيمياء، 26 في علوم الحياة، 9 مشتركة.",
+     "description_en": "Required: 38 in chemistry, 26 in life sciences, 9 shared."
+    },
+    {
+     "id": "ג",
+     "name": "לימודי כימיה ומדעי החיים: בחירה",
+     "minCredits": 37,
+     "minAdvanced": null,
+     "description": "בחירה, 37 נ\"ז: 12 מתקדמות בכימיה, קורס סמינריוני בכימיה, 19 במדעי החיים (ובהן 9 מתקדמות) וקורס סמינריוני במדעי החיים.",
+     "groups": [
+      {
+       "id": "ג1",
+       "name": "קורסי בחירה מתקדמים בכימיה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 12,
+       "minAdvanced": 12,
+       "notes": "(i) 12 נ\"ז מתקדמות. הערה 195: לוודא את תנאי הקבלה.",
+       "items": [
+        {
+         "label": "סדנה בכימיה חישובית",
+         "courses": "20932",
+         "notes": null
+        },
+        {
+         "label": "אנליזה של ניסויים",
+         "courses": "20340",
+         "notes": "יילמד לאחרונה ב-2027א (הערה 4590)."
+        },
+        {
+         "label": "כימיה אורגנית פיסיקלית",
+         "courses": "20926",
+         "notes": null
+        },
+        {
+         "label": "תורת הקוואנטים ב: קשר כימי",
+         "courses": "20523",
+         "notes": null
+        },
+        {
+         "label": "דינמיקה מולקולרית של תהליכים כימיים",
+         "courses": "20557",
+         "notes": null
+        },
+        {
+         "label": "מבוא לכימואינפורמטיקה",
+         "courses": "20979",
+         "notes": "הקורס בפיתוח."
+        },
+        {
+         "label": "תורת הקוואנטים א",
+         "courses": "20522",
+         "notes": "הערה 188."
+        },
+        {
+         "label": "כימיה אורגנית מתקדמת",
+         "courses": "20915",
+         "notes": null
+        },
+        {
+         "label": "לייזרים: עקרונות ושימושים",
+         "courses": "20912",
+         "notes": null
+        },
+        {
+         "label": "סימטריה וכירליות",
+         "courses": "20334",
+         "notes": null
+        },
+        {
+         "label": "פרויקט מחקר בכימיה",
+         "courses": {
+          "or": [
+           "20577",
+           "20957"
+          ]
+         },
+         "notes": "20957 באנגלית.",
+         "label_ar": "مشروع بحث في الكيمياء",
+         "label_en": "Research project in chemistry"
+        },
+        {
+         "label": "שיטות פיסיקליות לאנליזה כימית",
+         "courses": "20911",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات اختيارية متقدمة في الكيمياء",
+       "name_en": "Advanced chemistry electives",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג2",
+       "name": "קורס סמינריוני בכימיה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 3,
+       "minAdvanced": 3,
+       "notes": "(ii) אחד מהקורסים הסמינריוניים בכימיה.",
+       "items": [
+        {
+         "label": "יסודות בכימיה של המצב המוצק",
+         "courses": "20555",
+         "notes": null
+        },
+        {
+         "label": "מבוא לפולימרים",
+         "courses": "20933",
+         "notes": null
+        },
+        {
+         "label": "מבט על ננו-חומרים",
+         "courses": {
+          "or": [
+           "20917",
+           "20958"
+          ]
+         },
+         "notes": "20958 באנגלית.",
+         "label_ar": "نظرة على المواد النانوية",
+         "label_en": "A look at nanomaterials"
+        },
+        {
+         "label": "נושאים בכימיה אטמוספרית",
+         "courses": "20553",
+         "notes": "יילמד לאחרונה ב-2027ב."
+        },
+        {
+         "label": "נושאים בכימיה חישובית",
+         "courses": "20910",
+         "notes": null
+        },
+        {
+         "label": "נושאים נבחרים בכימיה של אורגנו-מתכות מעבר",
+         "courses": {
+          "or": [
+           "20925",
+           "20956"
+          ]
+         },
+         "notes": "20956 באנגלית.",
+         "label_ar": "مواضيع مختارة في كيمياء العضو-فلزات الانتقالية",
+         "label_en": "Selected topics in transition organometallic chemistry"
+        }
+       ],
+       "name_ar": "مساق ندوة في الكيمياء",
+       "name_en": "Chemistry seminar course",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג3",
+       "name": "קורסי בחירה במדעי החיים",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 19,
+       "minAdvanced": 9,
+       "notes": "(iii) 19 נ\"ז, ובהן לפחות 9 מתקדמות. הערה 196: כולל 20410 ו\"צומח וצמחים (20211)\", שאינם מוצעים עוד (20211 הוא מספר של קורס אחר: נרשמה חריגה, ונרשם רק 20410).",
+       "items": [
+        {
+         "label": "אקולוגיה",
+         "courses": "20412",
+         "notes": null
+        },
+        {
+         "label": "ביולוגיה התפתחותית",
+         "courses": "20929",
+         "notes": null
+        },
+        {
+         "label": "גנטיקה ב",
+         "courses": "20924",
+         "notes": null
+        },
+        {
+         "label": "החולייתנים",
+         "courses": "20104",
+         "notes": null
+        },
+        {
+         "label": "החרקים",
+         "courses": "20220",
+         "notes": null
+        },
+        {
+         "label": "נושאים בהתנהגות בעלי חיים",
+         "courses": "20415",
+         "notes": null
+        },
+        {
+         "label": "עולם החיידקים",
+         "courses": "20237",
+         "notes": null
+        },
+        {
+         "label": "עולם הנגיפים",
+         "courses": "20292",
+         "notes": null
+        },
+        {
+         "label": "חולייתנים בארץ ישראל",
+         "courses": "20252",
+         "notes": null
+        },
+        {
+         "label": "עולם הצמחים",
+         "courses": "20494",
+         "notes": null
+        },
+        {
+         "label": "צומח ארץ-ישראל",
+         "courses": "20262",
+         "notes": null
+        },
+        {
+         "label": "עקרונות הביוטכנולוגיה",
+         "courses": "20455",
+         "notes": null
+        },
+        {
+         "label": "אבולוציה",
+         "courses": "20397",
+         "notes": null
+        },
+        {
+         "label": "אימונולוגיה",
+         "courses": "20322",
+         "notes": null
+        },
+        {
+         "label": "ביואינפורמטיקה: אנליזה של רצפים וגנומים",
+         "courses": "20579",
+         "notes": null
+        },
+        {
+         "label": "ביולוגיה של ההזדקנות",
+         "courses": "20319",
+         "notes": null
+        },
+        {
+         "label": "פיזיולוגיה של מערכות באדם",
+         "courses": "20556",
+         "notes": null
+        },
+        {
+         "label": "פיזיולוגיה של הצמח",
+         "courses": "20536",
+         "notes": null
+        },
+        {
+         "label": "רביית היונקים",
+         "courses": "20313",
+         "notes": null
+        },
+        {
+         "label": "תאי עצב: מבוא לנוירוביולוגיה",
+         "courses": "20308",
+         "notes": null
+        },
+        {
+         "label": "כתיבה מדעית (אנגלית)",
+         "courses": "20969",
+         "notes": null
+        },
+        {
+         "label": "כלים יישומיים בניהול מחקר קליני",
+         "courses": "20967",
+         "notes": null
+        },
+        {
+         "label": "פרויקט מחקר במדעי החיים",
+         "courses": {
+          "or": [
+           "20576",
+           "20977"
+          ]
+         },
+         "notes": "20977 באנגלית.",
+         "label_ar": "مشروع بحث في علوم الحياة",
+         "label_en": "Research project in life sciences"
+        },
+        {
+         "label": "ביולוגיה התפתחותית (בגרסה הישנה)",
+         "courses": "20410",
+         "notes": "מהערה 196: לא מוצע עוד, רק למי שלמד אותו.",
+         "label_ar": "علم الأحياء التطوري (النسخة القديمة)",
+         "label_en": "Developmental biology (old version)"
+        }
+       ],
+       "name_ar": "مساقات اختيارية في علوم الحياة",
+       "name_en": "Life sciences electives",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג4",
+       "name": "קורס סמינריוני במדעי החיים",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 3,
+       "minAdvanced": 3,
+       "notes": "(iv) אחד מהקורסים הסמינריוניים במדעי החיים, וגם הקורסים שכבר לא מוצעים מההערות.",
+       "items": [
+        {
+         "label": "נושאים נבחרים בביוטכנולוגיה",
+         "courses": {
+          "or": [
+           "20515",
+           "20961"
+          ]
+         },
+         "notes": "20961 באנגלית.",
+         "label_ar": "مواضيع مختارة في التكنولوجيا الحيوية",
+         "label_en": "Selected topics in biotechnology"
+        },
+        {
+         "label": "נושאים נבחרים בביולוגיה של התא",
+         "courses": {
+          "or": [
+           "20920",
+           "20976"
+          ]
+         },
+         "notes": "20976 באנגלית.",
+         "label_ar": "مواضيع مختارة في بيولوجيا الخلية",
+         "label_en": "Selected topics in cell biology"
+        },
+        {
+         "label": "נושאים נבחרים באימונולוגיה",
+         "courses": {
+          "or": [
+           "20544",
+           "20960"
+          ]
+         },
+         "notes": "20960 באנגלית.",
+         "label_ar": "مواضيع مختارة في علم المناعة",
+         "label_en": "Selected topics in immunology"
+        },
+        {
+         "label": "נושאים נבחרים בנוירוביולוגיה",
+         "courses": {
+          "or": [
+           "20919",
+           "20962"
+          ]
+         },
+         "notes": "20962 באנגלית.",
+         "label_ar": "مواضيع مختارة في البيولوجيا العصبية",
+         "label_en": "Selected topics in neurobiology"
+        },
+        {
+         "label": "קולטנים והמרת אותות",
+         "courses": "20514",
+         "notes": "יוצע לאחרונה ב-2027ב."
+        },
+        {
+         "label": "פרויקט אינטגרטיבי בלימודי שדה",
+         "courses": "20908",
+         "notes": null
+        },
+        {
+         "label": "מגוון ביולוגי ושמירת טבע",
+         "courses": "20907",
+         "notes": "הוראת הקורס הופסקה זמנית (הערה 2001)."
+        },
+        {
+         "label": "קורס סמינריוני בנושא מיוחד במדעי החיים",
+         "courses": "20590",
+         "notes": null
+        },
+        {
+         "label": "נושאים נבחרים בזואולוגיה",
+         "courses": "20951",
+         "notes": null
+        },
+        {
+         "label": "נושאים נבחרים בגנטיקה וגנומיקה",
+         "courses": "20994",
+         "notes": null
+        },
+        {
+         "label": "קורס סמינריוני שכבר לא מוצע",
+         "courses": {
+          "or": [
+           "20909",
+           "20328",
+           "20530",
+           "20519",
+           "20316",
+           "20542",
+           "20346",
+           "20543"
+          ]
+         },
+         "notes": "מההערות 2406, 198, 1745, 3765, 4577, 3314, 4965: רק למי שלמד אותם.",
+         "label_ar": "مساق ندوة لم يعد يُقدَّم",
+         "label_en": "A seminar course no longer offered"
+        }
+       ],
+       "name_ar": "مساق ندوة في علوم الحياة",
+       "name_en": "Life sciences seminar course",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات الكيمياء وعلوم الحياة: اختياري",
+     "name_en": "Chemistry and life sciences studies: electives",
+     "description_ar": "اختياري، 37 نقطة: 12 متقدمة في الكيمياء، مساق ندوة في الكيمياء، 19 في علوم الحياة (منها 9 متقدمة) ومساق ندوة في علوم الحياة.",
+     "description_en": "Electives, 37 credits: 12 advanced in chemistry, a chemistry seminar course, 19 in life sciences (9 of them advanced) and a life sciences seminar course."
+    },
+    {
+     "id": "ד",
+     "name": "דרישות כלליות לתואר",
+     "minCredits": null,
+     "minAdvanced": null,
+     "description": "ראו גיליון \"דרישות כלליות\".",
+     "groups": [],
+     "name_ar": "المتطلبات العامة للقب",
+     "name_en": "General degree requirements",
+     "description_ar": "انظر المتطلبات العامة.",
+     "description_en": "See the general requirements."
+    }
+   ],
+   "general": [
+    {
+     "name": "צבירת נקודות זכות לתואר",
+     "details": "לפחות 138 נ\"ז, ובהן לפחות 27 מתקדמות: לפחות 28 בלימודי התשתית, 73 בחובה בכימיה ובמדעי החיים ו-37 בבחירה.",
+     "link": null,
+     "name_ar": "تجميع نقاط الاستحقاق للقب",
+     "name_en": "Credits for the degree",
+     "details_ar": "على الأقل 138 نقطة، منها على الأقل 27 متقدمة: على الأقل 28 في الدراسات الأساسية، 73 إلزامية في الكيمياء وعلوم الحياة و37 اختيارية.",
+     "details_en": "At least 138 credits, at least 27 of them advanced: at least 28 in foundation studies, 73 required in chemistry and life sciences, and 37 electives."
+    },
+    {
+     "name": "עמידה בדרישות האנגלית",
+     "details": "לפי דרישות האנגלית הכלליות של האוניברסיטה.",
+     "link": "https://academic.openu.ac.il/yedion/english/Pages/default.aspx",
+     "name_ar": "استيفاء متطلبات اللغة الإنجليزية",
+     "name_en": "Meeting the English requirements",
+     "details_ar": "حسب متطلبات اللغة الإنجليزية العامة في الجامعة.",
+     "details_en": "According to the university's general English requirements."
+    },
+    {
+     "name": "הדרכה ביבליוגרפית בספרייה",
+     "details": "השלמת ההדרכה הביבליוגרפית של הספרייה. היא נדרשת בתנאי הקבלה של חלק מהקורסים המתקדמים.",
+     "link": "https://academic.openu.ac.il/yedion/studies/Pages/default.aspx?expand=studies8",
+     "name_ar": "الإرشاد البيبليوغرافي في المكتبة",
+     "name_en": "Bibliographic instruction at the library",
+     "details_ar": "إكمال الإرشاد البيبليوغرافي في المكتبة. وهو مطلوب في شروط القبول لبعض المساقات المتقدمة.",
+     "details_en": "Completing the library's bibliographic instruction. Some advanced courses require it for admission."
+    },
+    {
+     "name": "לומדה למניעת הטרדה מינית",
+     "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
+     "link": null,
+     "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
+     "name_en": "Sexual harassment prevention tutorial",
+     "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
+     "details_en": "Students must complete the sexual harassment prevention tutorial."
+    }
+   ],
+   "recommended": [],
+   "background": [],
+   "counters": [
+    {
+     "label": "סך הכול נ\"ז",
+     "field": "כל הקורסים",
+     "kind": "credits",
+     "min": 138,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "בסך הכול",
+     "label_ar": "مجموع النقاط",
+     "label_en": "Total credits",
+     "phrase_ar": "في المجموع",
+     "phrase_en": "in total"
+    },
+    {
+     "label": "נ\"ז מתקדמות",
+     "field": "כל הקורסים",
+     "kind": "advanced",
+     "min": 27,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "מתקדמות",
+     "label_ar": "نقاط متقدمة",
+     "label_en": "Advanced credits",
+     "phrase_ar": "متقدمة",
+     "phrase_en": "advanced"
+    }
+   ],
+   "name_ar": "لقب أول في الكيمياء وعلوم الحياة",
+   "name_en": "Bachelor's degree in Chemistry and Life Sciences",
+   "degree_ar": "B.Sc. في الكيمياء وعلوم الحياة",
+   "degree_en": "B.Sc. in Chemistry and Life Sciences"
   }
  }
 }
