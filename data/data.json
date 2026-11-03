@@ -17717,6 +17717,929 @@
    "link": "https://www.openu.ac.il/courses/91463.htm?t=h",
    "updated": "2026-11-03",
    "full": true
+  },
+  "20289": {
+   "name": "מעבדה בכימיה פיסיקלית",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": "2 עד 2026ג",
+   "affiliation": [
+    "מדעים / מדעי הטבע / כימיה",
+    "מדעים / מדעי הטבע / פיסיקה"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ג"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20483",
+       "20482"
+      ]
+     },
+     "20497",
+     {
+      "or": [
+       "20406",
+       {
+        "and": [
+         "20474",
+         "20492"
+        ]
+       },
+       {
+        "and": [
+         "20474",
+         "20475"
+        ]
+       }
+      ]
+     },
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20490"
+        ]
+       },
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     },
+     "20234"
+    ]
+   },
+   "required": "20127",
+   "recommended": null,
+   "overlaps": [],
+   "notes": "מסמסטר 2028ב: בידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20289.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20932": {
+   "name": "סדנה בכימיה חישובית",
+   "credits": 2,
+   "advanced": 2,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / כימיה"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     },
+     "20456"
+    ]
+   },
+   "required": {
+    "and": [
+     {
+      "or": [
+       "20485",
+       "20204"
+      ]
+     },
+     {
+      "or": [
+       "20483",
+       "20482"
+      ]
+     },
+     "20497",
+     {
+      "or": [
+       "20406",
+       "20474"
+      ]
+     },
+     {
+      "and": [
+       "20113",
+       "20114"
+      ]
+     },
+     "20127"
+    ]
+   },
+   "recommended": {
+    "and": [
+     "20334",
+     "20522",
+     "20523"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20910"
+     ],
+     "total": 3.0
+    }
+   ],
+   "notes": "מסמסטר 2028ב: בידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20932.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20926": {
+   "name": "כימיה אורגנית פיסיקלית",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / כימיה"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20490"
+        ]
+       },
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     },
+     "20456",
+     "20404"
+    ]
+   },
+   "required": {
+    "and": [
+     "30203",
+     "20483",
+     {
+      "or": [
+       "20497",
+       "20241"
+      ]
+     }
+    ]
+   },
+   "recommended": "20334",
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20926.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20979": {
+   "name": "מבוא לכימואינפורמטיקה",
+   "credits": 4,
+   "advanced": 4,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / כימיה"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": "הקורס בפיתוח: בדף הקורס עוד אין תנאים ואין סמסטרים.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20979.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20915": {
+   "name": "כימיה אורגנית מתקדמת",
+   "credits": 6,
+   "advanced": 6,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / כימיה"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי הטבע",
+   "admission": {
+    "and": [
+     {
+      "or": [
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       },
+       {
+        "and": [
+         "20437",
+         "20404"
+        ]
+       },
+       {
+        "and": [
+         "20477",
+         "20487",
+         "20404"
+        ]
+       }
+      ]
+     },
+     "20456"
+    ]
+   },
+   "required": null,
+   "recommended": "20439",
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20915.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20911": {
+   "name": "שיטות פיסיקליות לאנליזה כימית",
+   "credits": 6,
+   "advanced": 6,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / כימיה"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20490"
+        ]
+       },
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     },
+     {
+      "or": [
+       "20125",
+       {
+        "and": [
+         "20113",
+         "20114"
+        ]
+       },
+       {
+        "and": [
+         "20123",
+         "20124"
+        ]
+       }
+      ]
+     },
+     {
+      "or": [
+       "20456",
+       "20282"
+      ]
+     }
+    ]
+   },
+   "required": "20127",
+   "recommended": "20404",
+   "overlaps": [],
+   "notes": "מסמסטר 2028ב: בידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20911.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20555": {
+   "name": "יסודות בכימיה של המצב המוצק",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / כימיה"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ג"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20490"
+        ]
+       },
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     },
+     "20404"
+    ]
+   },
+   "required": {
+    "or": [
+     "20125",
+     {
+      "and": [
+       "20113",
+       "20114"
+      ]
+     }
+    ]
+   },
+   "recommended": null,
+   "overlaps": [],
+   "notes": "הקורס נמשך שני סמסטרים עוקבים: בראשון פרקים מספר הקורס, ובשני עבודה סמינריונית בהדרכה.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20555.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20933": {
+   "name": "מבוא לפולימרים",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / כימיה"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 48,
+   "priorField": "כימיה",
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     },
+     "20456",
+     "20404"
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     "20911",
+     "20915"
+    ]
+   },
+   "overlaps": [],
+   "notes": "הקורס נמשך שני סמסטרים עוקבים: בראשון פרקים מספר הקורס, ובשני עבודה סמינריונית בהדרכה.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20933.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20917": {
+   "name": "מבט על ננו-חומרים",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / כימיה"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי הטבע והחיים",
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20125",
+       {
+        "and": [
+         "20113",
+         "20114"
+        ]
+       }
+      ]
+     },
+     {
+      "or": [
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       },
+       "20201"
+      ]
+     },
+     {
+      "or": [
+       "20483",
+       "20482",
+       "20217"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     "20911",
+     "20404"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20958"
+     ],
+     "total": null
+    }
+   ],
+   "notes": "הקורס נמשך שני סמסטרים עוקבים: בראשון פרקים מספר הקורס, ובשני עבודה סמינריונית בהדרכה.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20917.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20958": {
+   "name": "מבט על ננו חומרים (אנגלית)",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / כימיה"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי הטבע והחיים",
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20125",
+       {
+        "and": [
+         "20113",
+         "20114"
+        ]
+       }
+      ]
+     },
+     {
+      "or": [
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       },
+       "20201"
+      ]
+     },
+     {
+      "or": [
+       "20483",
+       "20482",
+       "20217"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     "20911",
+     "20404"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20917"
+     ],
+     "total": null
+    }
+   ],
+   "notes": "הקורס נלמד באנגלית. הקורס נמשך שני סמסטרים עוקבים: בראשון פרקים מספר הקורס, ובשני עבודה סמינריונית בהדרכה.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20958.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20910": {
+   "name": "נושאים בכימיה חישובית",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / כימיה"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     },
+     "20456"
+    ]
+   },
+   "required": {
+    "and": [
+     {
+      "or": [
+       "20485",
+       "20204"
+      ]
+     },
+     {
+      "or": [
+       "20483",
+       "20482",
+       "20217"
+      ]
+     },
+     {
+      "or": [
+       "20497",
+       "20241"
+      ]
+     },
+     {
+      "or": [
+       "20406",
+       "20474",
+       "20106"
+      ]
+     },
+     {
+      "and": [
+       "20113",
+       "20114"
+      ]
+     },
+     "20127"
+    ]
+   },
+   "recommended": {
+    "and": [
+     "20334",
+     "20522",
+     "20523"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20932"
+     ],
+     "total": 3.0
+    }
+   ],
+   "notes": "מסמסטר 2028ב: בידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20910.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20925": {
+   "name": "נושאים נבחרים בכימיה של אורגנו-מתכות מעבר",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / כימיה"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ג"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 48,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20404",
+     "20915"
+    ]
+   },
+   "required": {
+    "or": [
+     "20439",
+     "20463"
+    ]
+   },
+   "recommended": null,
+   "overlaps": [
+    {
+     "with": [
+      "20956"
+     ],
+     "total": null
+    }
+   ],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20925.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20956": {
+   "name": "נושאים נבחרים בכימיה של אורגנו-מתכות מעבר (אנגלית)",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / כימיה"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ג"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 48,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20404",
+     "20915"
+    ]
+   },
+   "required": {
+    "or": [
+     "20439",
+     "20463"
+    ]
+   },
+   "recommended": null,
+   "overlaps": [
+    {
+     "with": [
+      "20925"
+     ],
+     "total": null
+    }
+   ],
+   "notes": "הקורס נלמד באנגלית.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20956.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20439": {
+   "name": "מעבדה בכימיה אורגנית",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": "2 עד 2026ג",
+   "affiliation": [
+    "מדעים / מדעי הטבע / כימיה"
+   ],
+   "seminar": null,
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ב",
+    "ג"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20439.htm?t=h",
+   "updated": "2026-11-03",
+   "full": false
+  },
+  "20463": {
+   "name": "מעבדה בכימיה אי-אורגנית",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": "2 עד 2026ג",
+   "affiliation": [
+    "מדעים / מדעי הטבע / כימיה"
+   ],
+   "seminar": null,
+   "offered": true,
+   "offeredUntil": null,
+   "semesters": [
+    "ג"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20463.htm?t=h",
+   "updated": "2026-11-03",
+   "full": false
   }
  },
  "programs": {
@@ -23631,6 +24554,1439 @@
    "name_en": "Double-major degree in Physics and Earth Sciences",
    "degree_ar": "B.Sc. في الفيزياء وعلوم الأرض",
    "degree_en": "B.Sc. in Physics and Earth Sciences"
+  },
+  "CC": {
+   "code": "CC",
+   "name": "תואר דו חוגי בכימיה ובפיסיקה",
+   "degree": "B.Sc. בכימיה ובפיסיקה",
+   "catalogYear": "תשפ\"ז",
+   "totalCredits": 146,
+   "advancedCredits": 39,
+   "planFrom": "2024א",
+   "link": "https://academic.openu.ac.il/natural_sciences/physics/program/CC.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
+   "updated": "2026-11-03",
+   "sections": [
+    {
+     "id": "א",
+     "name": "לימודי תשתית",
+     "minCredits": 26,
+     "minAdvanced": null,
+     "description": "חובה, לפחות 26 נ\"ז. חובה לבחור קורסים מכל מקטע.",
+     "groups": [
+      {
+       "id": "א1",
+       "name": "לימודי תשתית",
+       "rule": "כל הפריטים",
+       "minCredits": 26,
+       "minAdvanced": null,
+       "notes": "בכל פריט יש לבחור אחת מהחלופות. הערה 4618: מי שלמד לפני 2027א את 20441, או 20453 + 20454, או 20478, פטור מקורס בפייתון (נרשמו כחלופות בפריט התכנות; הסקה, כי הפטור רק למי שלמד אותם לפני 2027א).",
+       "items": [
+        {
+         "label": "תכנות",
+         "courses": {
+          "or": [
+           "20605",
+           "20606",
+           "20441",
+           {
+            "and": [
+             "20453",
+             "20454"
+            ]
+           },
+           "20478"
+          ]
+         },
+         "notes": "20441, 20453 + 20454 ו-20478 מהערה 4618 (רק למי שלמד אותם לפני 2027א).",
+         "label_ar": "البرمجة",
+         "label_en": "Programming"
+        },
+        {
+         "label": "חשבון דיפרנציאלי ואינטגרלי",
+         "courses": {
+          "or": [
+           {
+            "and": [
+             "20406",
+             "20423"
+            ]
+           },
+           {
+            "and": [
+             "20474",
+             "20475",
+             "20224"
+            ]
+           },
+           {
+            "and": [
+             "20474",
+             "20492",
+             "20423"
+            ]
+           }
+          ]
+         },
+         "notes": "החלופה השלישית מהערה 1148.",
+         "label_ar": "حساب التفاضل والتكامل",
+         "label_en": "Calculus"
+        },
+        {
+         "label": "אלגברה לינארית",
+         "courses": {
+          "or": [
+           "20430",
+           "20109"
+          ]
+         },
+         "notes": null,
+         "label_ar": "الجبر الخطي",
+         "label_en": "Linear algebra"
+        },
+        {
+         "label": "משוואות דיפרנציאליות",
+         "courses": {
+          "or": [
+           "20218",
+           "20280"
+          ]
+         },
+         "notes": null,
+         "label_ar": "المعادلات التفاضلية",
+         "label_en": "Differential equations"
+        },
+        {
+         "label": "סטטיסטיקה והסתברות",
+         "courses": {
+          "or": [
+           "30203",
+           "20425",
+           "20416"
+          ]
+         },
+         "notes": null,
+         "label_ar": "الإحصاء والاحتمالات",
+         "label_en": "Statistics and probability"
+        }
+       ],
+       "name_ar": "دراسات أساسية",
+       "name_en": "Foundation studies",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات أساسية",
+     "name_en": "Foundation studies",
+     "description_ar": "إلزامي، على الأقل 26 نقطة. يجب اختيار مساقات من كل إطار.",
+     "description_en": "Required, at least 26 credits. Choose courses from each frame."
+    },
+    {
+     "id": "ב",
+     "name": "לימודי פיסיקה",
+     "minCredits": 60,
+     "minAdvanced": 20,
+     "description": "לפחות 60 נ\"ז, ובהן לפחות 20 נ\"ז מתקדמות.",
+     "groups": [
+      {
+       "id": "ב1",
+       "name": "קורסי חובה בפיסיקה",
+       "rule": "כל הפריטים",
+       "minCredits": 48,
+       "minAdvanced": 10,
+       "notes": "בדף: לפחות 55 נ\"ז, ובהן 17–18 מתקדמות, כולל \"שניים מתוך שלושה\" (7–8 נ\"ז מתקדמות), שנמצא בקבוצה ב1ב, \"חובת בחירה\". הערה 1149: מי שלא עבר פיסיקה ומתמטיקה תיכונית ב-5 יח\"ל בציון 80 לפחות – ראו גיליון \"דרישות רקע\".",
+       "items": [
+        {
+         "label": "מכניקה",
+         "courses": "20215",
+         "notes": null
+        },
+        {
+         "label": "חשמל ומגנטיות",
+         "courses": "20250",
+         "notes": null
+        },
+        {
+         "label": "פרקים בפיסיקה מודרנית",
+         "courses": "20213",
+         "notes": null
+        },
+        {
+         "label": "מעבדה ביסודות הפיסיקה",
+         "courses": "20418",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בפיסיקה ב",
+         "courses": "20409",
+         "notes": null
+        },
+        {
+         "label": "שיטות מתמטיות בפיסיקה",
+         "courses": "20602",
+         "notes": "הערה 3705: חובה לסטודנטים שהחלו מסמסטר 2024א ואילך."
+        },
+        {
+         "label": "גלים ואופטיקה",
+         "courses": "20248",
+         "notes": null
+        },
+        {
+         "label": "מכניקה אנליטית",
+         "courses": "20422",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בפיסיקה ג",
+         "courses": {
+          "or": [
+           "20916",
+           "20938"
+          ]
+         },
+         "notes": "הערה 3973: תנאי הקבלה השתנו מ-2026א.",
+         "label_ar": "مختبر في الفيزياء ج",
+         "label_en": "Physics laboratory C"
+        },
+        {
+         "label": "פיסיקה סטטיסטית",
+         "courses": "20314",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات إلزامية في الفيزياء",
+       "name_en": "Required physics courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב1ב",
+       "name": "חובת בחירה בפיסיקה",
+       "rule": "חובת בחירה",
+       "minCredits": 7,
+       "minAdvanced": 7,
+       "notes": "\"שניים מתוך שלושת הקורסים הבאים\" בחובה בפיסיקה. הסטודנט בוחר שניים מתוך השלושה (כולם מתקדמים), ולכן ההשלמה האוטומטית והתכנית המומלצת לא בוחרות בשבילו (כמו ב-CB, C2, EL, OE).",
+       "items": [
+        {
+         "label": "שניים מתוך שלושה: מצב מוצק, חלקיקים יסודיים, אסטרופיסיקה",
+         "courses": {
+          "atleast": 2,
+          "of": [
+           "20913",
+           "20326",
+           {
+            "or": [
+             "20968",
+             "20207"
+            ]
+           }
+          ]
+         },
+         "notes": "20207 מהערה 3706. הערה 4795: תנאי הקבלה של 20913 ישתנו מ-2028ב.",
+         "label_ar": "اثنان من ثلاثة: الحالة الصلبة، الجسيمات الأولية، الفيزياء الفلكية",
+         "label_en": "Two of three: solid state, elementary particles, astrophysics"
+        }
+       ],
+       "name_ar": "اختيار إلزامي في الفيزياء",
+       "name_en": "Required electives in physics",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב2",
+       "name": "קורסי בחירה בפיסיקה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 4,
+       "minAdvanced": null,
+       "notes": "בדף: \"לפחות 5 נ\"ז\", ובהן לפחות 3 מתקדמות (להשלמת 20 המתקדמות בפיסיקה); הערה 3651: לפחות 4 למי שלא לוקח את 20326 בחובה. הערות 1152, 1111: קורס שמופיע גם בחובה נספר בבחירה רק אם לא נלמד במסגרת החובה. הערות 4619, 4614: 20320 ו-20955 נספרים בחובה בתורת הקוואנטים או בבחירה, לא בשניהם.",
+       "items": [
+        {
+         "label": "עולם החשמל והאלקטרוניקה א",
+         "courses": "20488",
+         "notes": "יוצע לאחרונה ב-2027א (הערה 4938)."
+        },
+        {
+         "label": "עולם החשמל והאלקטרוניקה ב",
+         "courses": "20489",
+         "notes": "יוצע לאחרונה ב-2027ב (הערה 4939)."
+        },
+        {
+         "label": "אלקטרוניקה מתקדמת",
+         "courses": "20918",
+         "notes": "יוצע לאחרונה ב-2027א (הערה 4940)."
+        },
+        {
+         "label": "מוליכים למחצה",
+         "courses": "20402",
+         "notes": "יוצע לאחרונה ב-2027א (הערה 4936)."
+        },
+        {
+         "label": "התקני מוליכים למחצה ומיקרואלקטרוניקה",
+         "courses": "20403",
+         "notes": "יוצע לאחרונה ב-2027ב (הערה 4937)."
+        },
+        {
+         "label": "מבוא לפיסיקה חישובית",
+         "courses": "20432",
+         "notes": null
+        },
+        {
+         "label": "פיסיקה קוואנטית 1",
+         "courses": "20320",
+         "notes": "הערה 4619: בחובה בתורת הקוואנטים או בבחירה, לא בשניהם."
+        },
+        {
+         "label": "פיסיקה קוואנטית 2",
+         "courses": {
+          "or": [
+           "20955",
+           "20943"
+          ]
+         },
+         "notes": "20943 מהערה 3044. הערה 4614: בחובה או בבחירה, לא בשניהם."
+        },
+        {
+         "label": "פיסיקה גרעינית",
+         "courses": "20547",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בפיסיקה ג",
+         "courses": {
+          "or": [
+           "20916",
+           "20938"
+          ]
+         },
+         "notes": "הערה 1152: רק למי שלא למד אותה במסגרת החובה.",
+         "label_ar": "مختبر في الفيزياء ج",
+         "label_en": "Physics laboratory C"
+        },
+        {
+         "label": "פיסיקה של מצב מוצק",
+         "courses": "20913",
+         "notes": "הערה 1152."
+        },
+        {
+         "label": "מכניקת הזורמים",
+         "courses": "20965",
+         "notes": null
+        },
+        {
+         "label": "אלקטרומגנטיות אנליטית",
+         "courses": "20589",
+         "notes": null
+        },
+        {
+         "label": "לייזרים: עקרונות ושימושים",
+         "courses": "20912",
+         "notes": "הערה 1153: בבחירה בפיסיקה או בכימיה, לא בשתיהן. הערה 4606: 4 נ\"ז עד 2026ג."
+        },
+        {
+         "label": "נושאים מתקדמים בתורת הגלים",
+         "courses": "20923",
+         "notes": null
+        },
+        {
+         "label": "פיסיקה של החלקיקים היסודיים",
+         "courses": "20326",
+         "notes": "הערה 1152."
+        },
+        {
+         "label": "פיסיקת הפלסמה",
+         "courses": "20971",
+         "notes": null
+        },
+        {
+         "label": "פרקים באסטרופיסיקה",
+         "courses": {
+          "or": [
+           "20968",
+           "20207"
+          ]
+         },
+         "notes": "הערה 1111."
+        },
+        {
+         "label": "מבנה והתפתחות כוכבים",
+         "courses": "20970",
+         "notes": null
+        },
+        {
+         "label": "פרויקט מחקר בפיסיקה",
+         "courses": "20578",
+         "notes": "מתקדם סמינריוני. הערה 1154: 20382, 20383 ו-20578 יחד: 7 נ\"ז בלבד."
+        },
+        {
+         "label": "פרויקט מתקדם בפיסיקה א",
+         "courses": "20382",
+         "notes": "מתקדם סמינריוני."
+        }
+       ],
+       "name_ar": "مساقات اختيارية في الفيزياء",
+       "name_en": "Physics electives",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات الفيزياء",
+     "name_en": "Physics studies",
+     "description_ar": "على الأقل 60 نقطة، منها على الأقل 20 نقطة متقدمة.",
+     "description_en": "At least 60 credits, at least 20 of them advanced."
+    },
+    {
+     "id": "ג",
+     "name": "קורסי חובה בתורת הקוואנטים",
+     "minCredits": 7,
+     "minAdvanced": 7,
+     "description": "לפחות 7 נ\"ז מתקדמות.",
+     "groups": [
+      {
+       "id": "ג1",
+       "name": "קורסי חובה בתורת הקוואנטים",
+       "rule": "כל הפריטים",
+       "minCredits": 7,
+       "minAdvanced": 7,
+       "notes": "הערה 4615: בבחירת קורסים בתורת הקוואנטים יש לשים לב לתנאי הקדם של קורסי הבחירה בפיסיקה. הערות 3726, 4635: 20320 ו-20522 חופפים (יחד 7 נ\"ז).",
+       "items": [
+        {
+         "label": "תורת הקוואנטים",
+         "courses": {
+          "or": [
+           {
+            "and": [
+             "20320",
+             {
+              "or": [
+               "20955",
+               "20943"
+              ]
+             }
+            ]
+           },
+           {
+            "and": [
+             "20522",
+             "20523"
+            ]
+           }
+          ]
+         },
+         "notes": "20320 + 20955 (10 נ\"ז), או 20522 + 20523 (7 נ\"ז). 20943 מהערה 3044.",
+         "label_ar": "نظرية الكم",
+         "label_en": "Quantum theory"
+        }
+       ],
+       "name_ar": "مساقات إلزامية في نظرية الكم",
+       "name_en": "Required quantum theory courses",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "مساقات إلزامية في نظرية الكم",
+     "name_en": "Required quantum theory courses",
+     "description_ar": "على الأقل 7 نقاط متقدمة.",
+     "description_en": "At least 7 advanced credits."
+    },
+    {
+     "id": "ד",
+     "name": "לימודי כימיה",
+     "minCredits": 53,
+     "minAdvanced": 12,
+     "description": "לפחות 53 נ\"ז, ובהן לפחות 12 נ\"ז מתקדמות.",
+     "groups": [
+      {
+       "id": "ד1",
+       "name": "קורסי חובה בכימיה",
+       "rule": "כל הפריטים",
+       "minCredits": 39,
+       "minAdvanced": null,
+       "notes": "בדף: לפחות 41 נ\"ז (עם 20611 + 20612). הערה 4621: עד שיפותחו, אפשר 20456 (6 נ\"ז) במקומם, ואז יש להשלים 2 נ\"ז נוספות בבחירה בכימיה; לכן המינימום כאן 39, ו-53 הנ\"ז של המקטע נבדקים במונה. הערה 4620: מי שצבר פחות מ-41 נ\"ז בחובה בכימיה והשלים את כל קורסי החובה יסיים עם פחות מ-146.",
+       "items": [
+        {
+         "label": "כימיה כללית א",
+         "courses": "20470",
+         "notes": null
+        },
+        {
+         "label": "כימיה כללית ב",
+         "courses": "20480",
+         "notes": null
+        },
+        {
+         "label": "כימיה אורגנית",
+         "courses": {
+          "or": [
+           "20456",
+           {
+            "and": [
+             "20611",
+             "20612"
+            ]
+           }
+          ]
+         },
+         "notes": "הערה 4621: 20456 יילמד לאחרונה ב-2027ב; 20611 ו-20612 בפיתוח (הערה 3646).",
+         "label_ar": "الكيمياء العضوية",
+         "label_en": "Organic chemistry"
+        },
+        {
+         "label": "כימיה אי-אורגנית",
+         "courses": "20404",
+         "notes": null
+        },
+        {
+         "label": "ביוכימיה",
+         "courses": {
+          "or": [
+           "20485",
+           "20204"
+          ]
+         },
+         "notes": null,
+         "label_ar": "الكيمياء الحيوية",
+         "label_en": "Biochemistry"
+        },
+        {
+         "label": "תרמודינמיקה",
+         "courses": "20483",
+         "notes": null
+        },
+        {
+         "label": "פרקים בכימיה פיסיקלית",
+         "courses": "20497",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בכימיה כללית",
+         "courses": "20234",
+         "notes": "הערה 4603: 2 נ\"ז עד 2026ג."
+        },
+        {
+         "label": "מעבדה בכימיה פיסיקלית",
+         "courses": "20289",
+         "notes": "הערה 4587: 2 נ\"ז עד 2026ג."
+        }
+       ],
+       "name_ar": "مساقات إلزامية في الكيمياء",
+       "name_en": "Required chemistry courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ד2",
+       "name": "קורסי בחירה מתקדמים בכימיה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 9,
+       "minAdvanced": 9,
+       "notes": "(i) בדף: לפחות 9 נ\"ז מתקדמות מהרשימה. הערה 1153: 20912 נספר בבחירה בפיסיקה או בבחירה בכימיה, לא בשתיהן. הערה 4614: 20523 נספר בחובה בתורת הקוואנטים או כאן, לא בשניהם.",
+       "items": [
+        {
+         "label": "סדנה בכימיה חישובית",
+         "courses": "20932",
+         "notes": null
+        },
+        {
+         "label": "אנליזה של ניסויים",
+         "courses": "20340",
+         "notes": "יילמד לאחרונה ב-2027א (הערה 4622)."
+        },
+        {
+         "label": "כימיה אורגנית פיסיקלית",
+         "courses": "20926",
+         "notes": null
+        },
+        {
+         "label": "תורת הקוואנטים ב: קשר כימי",
+         "courses": "20523",
+         "notes": "הערה 4614."
+        },
+        {
+         "label": "דינמיקה מולקולרית של תהליכים כימיים",
+         "courses": "20557",
+         "notes": null
+        },
+        {
+         "label": "מבוא לכימואינפורמטיקה",
+         "courses": "20979",
+         "notes": "הקורס בפיתוח (הערה 3646)."
+        },
+        {
+         "label": "כימיה אורגנית מתקדמת",
+         "courses": "20915",
+         "notes": null
+        },
+        {
+         "label": "לייזרים: עקרונות ושימושים",
+         "courses": "20912",
+         "notes": "הערה 1153."
+        },
+        {
+         "label": "סימטריה וכירליות",
+         "courses": "20334",
+         "notes": "הערה 4606: 4 נ\"ז מתקדמות עד 2026ג."
+        },
+        {
+         "label": "פרויקט מחקר בכימיה",
+         "courses": {
+          "or": [
+           "20577",
+           "20957"
+          ]
+         },
+         "notes": "20957 באנגלית.",
+         "label_ar": "مشروع بحث في الكيمياء",
+         "label_en": "Research project in chemistry"
+        },
+        {
+         "label": "שיטות פיסיקליות לאנליזה כימית",
+         "courses": "20911",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات اختيارية متقدمة في الكيمياء",
+       "name_en": "Advanced chemistry electives",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ד3",
+       "name": "קורס סמינריוני בכימיה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 3,
+       "minAdvanced": 3,
+       "notes": "(ii) בדף: לפחות קורס אחד מהרשימה (כולם 3 נ\"ז, מתקדמים סמינריוניים).",
+       "items": [
+        {
+         "label": "יסודות בכימיה של המצב המוצק",
+         "courses": "20555",
+         "notes": null
+        },
+        {
+         "label": "מבוא לפולימרים",
+         "courses": "20933",
+         "notes": null
+        },
+        {
+         "label": "מבט על ננו-חומרים",
+         "courses": {
+          "or": [
+           "20917",
+           "20958"
+          ]
+         },
+         "notes": "20958 באנגלית.",
+         "label_ar": "نظرة على المواد النانوية",
+         "label_en": "A look at nanomaterials"
+        },
+        {
+         "label": "נושאים בכימיה אטמוספרית",
+         "courses": "20553",
+         "notes": "יילמד לאחרונה ב-2027ב (הערה 4623)."
+        },
+        {
+         "label": "נושאים בכימיה חישובית",
+         "courses": "20910",
+         "notes": null
+        },
+        {
+         "label": "נושאים נבחרים בכימיה של אורגנו-מתכות מעבר",
+         "courses": {
+          "or": [
+           "20925",
+           "20956"
+          ]
+         },
+         "notes": "20956 באנגלית.",
+         "label_ar": "مواضيع مختارة في كيمياء العضو-فلزات الانتقالية",
+         "label_en": "Selected topics in transition organometallic chemistry"
+        }
+       ],
+       "name_ar": "مساق ندوة في الكيمياء",
+       "name_en": "Chemistry seminar course",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات الكيمياء",
+     "name_en": "Chemistry studies",
+     "description_ar": "على الأقل 53 نقطة، منها على الأقل 12 نقطة متقدمة.",
+     "description_en": "At least 53 credits, at least 12 of them advanced."
+    },
+    {
+     "id": "ה",
+     "name": "דרישות כלליות לתואר",
+     "minCredits": null,
+     "minAdvanced": null,
+     "description": "ראו גיליון \"דרישות כלליות\".",
+     "groups": [],
+     "name_ar": "المتطلبات العامة للقب",
+     "name_en": "General degree requirements",
+     "description_ar": "انظر المتطلبات العامة.",
+     "description_en": "See the general requirements."
+    }
+   ],
+   "general": [
+    {
+     "name": "צבירת נקודות זכות לתואר",
+     "details": "לפחות 146 נ\"ז, ובהן לפחות 39 מתקדמות: לפחות 26 בלימודי התשתית, 60 בלימודי פיסיקה (מהן 20 מתקדמות), 7 מתקדמות בתורת הקוואנטים ו-53 בלימודי כימיה (מהן 12 מתקדמות).",
+     "link": null,
+     "name_ar": "تجميع نقاط الاستحقاق للقب",
+     "name_en": "Credits for the degree",
+     "details_ar": "على الأقل 146 نقطة، منها على الأقل 39 متقدمة: على الأقل 26 في الدراسات الأساسية، 60 في الفيزياء (منها 20 متقدمة)، 7 متقدمة في نظرية الكم و53 في الكيمياء (منها 12 متقدمة).",
+     "details_en": "At least 146 credits, at least 39 of them advanced: at least 26 in foundation studies, 60 in physics (20 of them advanced), 7 advanced in quantum theory and 53 in chemistry (12 of them advanced)."
+    },
+    {
+     "name": "עמידה בדרישות שני החוגים",
+     "details": "יש לעמוד בכל דרישות הלימודים של החוג בכימיה ושל החוג בפיסיקה.",
+     "link": null,
+     "name_ar": "استيفاء متطلبات التخصصين",
+     "name_en": "Meeting the requirements of both majors",
+     "details_ar": "يجب استيفاء جميع متطلبات الدراسة لتخصص الكيمياء ولتخصص الفيزياء.",
+     "details_en": "All the study requirements of the chemistry major and of the physics major must be met."
+    },
+    {
+     "name": "קורס בשני החוגים",
+     "details": "קורס חובה בשני החוגים עונה על החובה בשניהם. קורס שהוא חובה באחד ובחירה באחר נלמד במסגרת החוג שבו הוא חובה. קורס בחירה בשני החוגים נספר רק באחד מהם.",
+     "link": null,
+     "name_ar": "مساق في التخصصين",
+     "name_en": "A course in both majors",
+     "details_ar": "المساق الإلزامي في التخصصين يستوفي الإلزام في كليهما. المساق الإلزامي في أحدهما والاختياري في الآخر يُدرس ضمن التخصص الذي هو فيه إلزامي. المساق الاختياري في التخصصين يُحتسب في أحدهما فقط.",
+     "details_en": "A course required in both majors meets the requirement in both. A course required in one and elective in the other counts in the one where it is required. An elective in both counts in only one of them."
+    },
+    {
+     "name": "עמידה בדרישות האנגלית",
+     "details": "לפי דרישות האנגלית הכלליות של האוניברסיטה.",
+     "link": "https://academic.openu.ac.il/yedion/english/Pages/default.aspx",
+     "name_ar": "استيفاء متطلبات اللغة الإنجليزية",
+     "name_en": "Meeting the English requirements",
+     "details_ar": "حسب متطلبات اللغة الإنجليزية العامة في الجامعة.",
+     "details_en": "According to the university's general English requirements."
+    },
+    {
+     "name": "הדרכה ביבליוגרפית בספרייה",
+     "details": "השלמת ההדרכה הביבליוגרפית של הספרייה. היא נדרשת בתנאי הקבלה של חלק מהקורסים המתקדמים.",
+     "link": "https://academic.openu.ac.il/yedion/studies/Pages/default.aspx?expand=studies8",
+     "name_ar": "الإرشاد البيبليوغرافي في المكتبة",
+     "name_en": "Bibliographic instruction at the library",
+     "details_ar": "إكمال الإرشاد البيبليوغرافي في المكتبة. وهو مطلوب في شروط القبول لبعض المساقات المتقدمة.",
+     "details_en": "Completing the library's bibliographic instruction. Some advanced courses require it for admission."
+    },
+    {
+     "name": "רקע בפיסיקה ומתמטיקה",
+     "details": "לסטודנטים שלא עברו פיסיקה ומתמטיקה תיכונית ברמה של 5 יח\"ל בציון 80 לפחות, הקורסים יסודות הפיסיקה א (20113) + יסודות הפיסיקה ב (20114) הם רקע דרוש ללימוד כל קורס אחר בפיסיקה. במקומם אפשר ללמוד את הקורס יסודות הפיסיקה (20125).",
+     "link": null,
+     "name_ar": "خلفية في الفيزياء والرياضيات",
+     "name_en": "Background in physics and mathematics",
+     "details_ar": "للطلاب الذين لم ينهوا الفيزياء والرياضيات في الثانوية بمستوى 5 وحدات وبعلامة 80 على الأقل، المساقان 20113 + 20114 (أساسيات الفيزياء) هما خلفية مطلوبة لدراسة أي مساق آخر في الفيزياء. بدلًا منهما يمكن دراسة المساق 20125.",
+     "details_en": "For students who did not complete high-school physics and mathematics at 5-unit level with a grade of at least 80, courses 20113 + 20114 (fundamentals of physics) are required background for every other physics course. Course 20125 can be taken instead."
+    },
+    {
+     "name": "לומדה למניעת הטרדה מינית",
+     "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
+     "link": null,
+     "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
+     "name_en": "Sexual harassment prevention tutorial",
+     "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
+     "details_en": "Students must complete the sexual harassment prevention tutorial."
+    }
+   ],
+   "recommended": [
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "א",
+     "course": "20406",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "א",
+     "course": "20215",
+     "slot": null,
+     "credits": null,
+     "notes": "ידע קודם דרוש: 20406, שנלמד באותו סמסטר (כמו בכל התכניות)."
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "א",
+     "course": "20470",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "א",
+     "course": "20430",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "א",
+     "course": "20127",
+     "slot": null,
+     "credits": null,
+     "notes": "0 נ\"ז. ידע קודם דרוש של 20497 ושל 20289 (חובה); מ-2028ב יוחלף שם ב-20605 או 20606. בלעדיו יש אזהרה בתכנית, ולכן הוא כאן כל עוד הדפים דורשים אותו."
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "ב",
+     "course": "20250",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "ב",
+     "course": "20423",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "ב",
+     "course": "20480",
+     "slot": null,
+     "credits": null,
+     "notes": "אחרי 20470 (ידע קודם דרוש)."
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "ב",
+     "course": "30203",
+     "slot": null,
+     "credits": null,
+     "notes": "הסתברות בשנה 1."
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "ג",
+     "course": "20218",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 3,
+     "year": 1,
+     "semester": "ג",
+     "course": "20234",
+     "slot": null,
+     "credits": null,
+     "notes": "אחרי 20470 + 20480 (תנאי קבלה)."
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "א",
+     "course": "20213",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א."
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "א",
+     "course": "20483",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א. יסודות הפיסיקה ידע קודם דרוש בדף הקורס, בלי הערה על בגרות, ולכן עם תיבת הבגרות מסומנת יש כאן אזהרה (נרשמה חריגה, כמו 20482). תנאי קבלה ל-20314 ול-20289."
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "א",
+     "course": "20606",
+     "slot": null,
+     "credits": null,
+     "notes": "20606 ולא 20605: הידע הקודם הדרוש של המעבדה ג1 (20916) הוא 20606 או 20441 (נרשמה חריגה). הוא 6 נ\"ז ולא 4, ולכן התכנית ארוכה ב-2 נ\"ז."
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "א",
+     "course": "20485",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "ב",
+     "course": "20248",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר ב."
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "ב",
+     "course": "20404",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר ב."
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "ב",
+     "course": "20497",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר ב. 20113 + 20114 ידע קודם דרוש בדף הקורס, בלי הערה על בגרות, ולכן עם תיבת הבגרות מסומנת יש כאן אזהרה (נרשמה חריגה, כמו 20482)."
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "ב",
+     "course": "20418",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "ב",
+     "course": "20611",
+     "slot": null,
+     "credits": null,
+     "notes": "כימיה אורגנית: 20611 + 20612 (8 נ\"ז), ולא 20456, שיילמד לאחרונה ב-2027ב (הערה 4621). שניהם בפיתוח ועוד אין להם סמסטרים: הסמסטר הוא הנחה (20611 תנאי קבלה ל-20612)."
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "ג",
+     "course": "20409",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בקיץ. תנאי קבלה ל-20916."
+    },
+    {
+     "years": 3,
+     "year": 2,
+     "semester": "ג",
+     "course": "20289",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בקיץ. אחרי 20483, 20497 ו-20234."
+    },
+    {
+     "years": 3,
+     "year": 3,
+     "semester": "א",
+     "course": "20602",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א, ודורש לפניו את 20423, 20218, 20215 ושניים מ-20250, 20201, 20213."
+    },
+    {
+     "years": 3,
+     "year": 3,
+     "semester": "א",
+     "course": "20422",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א."
+    },
+    {
+     "years": 3,
+     "year": 3,
+     "semester": "א",
+     "course": "20314",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א."
+    },
+    {
+     "years": 3,
+     "year": 3,
+     "semester": "א",
+     "course": "20522",
+     "slot": null,
+     "credits": null,
+     "notes": "תורת הקוואנטים: 20522 + 20523 (7 נ\"ז). 20320 + 20955 לא נכנסים ב-3 שנים: 20955 (רק א) דורש לפניו את 20602 (רק א), ש-20213 (רק א) צריך לבוא לפניו. 20523 דורש בתנאי הקבלה את 20456, שיילמד לאחרונה ב-2027ב, ולכן יש עליו אזהרה (נרשמה חריגה). יסודות הפיסיקה ידע קודם דרוש בדף הקורס, בלי הערה על בגרות, ולכן עם תיבת הבגרות מסומנת יש כאן אזהרה (נרשמה חריגה, כמו 20482)."
+    },
+    {
+     "years": 3,
+     "year": 3,
+     "semester": "א",
+     "course": "20612",
+     "slot": null,
+     "credits": null,
+     "notes": "כימיה אורגנית: 20611 + 20612 (8 נ\"ז), ולא 20456, שיילמד לאחרונה ב-2027ב (הערה 4621). שניהם בפיתוח ועוד אין להם סמסטרים: הסמסטר הוא הנחה (20611 תנאי קבלה ל-20612)."
+    },
+    {
+     "years": 3,
+     "year": 3,
+     "semester": "ב",
+     "course": "20916",
+     "slot": null,
+     "credits": null,
+     "notes": "חובה רק מעבדה אחת מבין 20916 ו-20938, ו-20916 הוא תנאי קבלה ל-20938. אחרי 40 נ\"ז בפיסיקה, 20409, 20483, 20248 ו-20606. אחרי 20522 (תנאי קבלה)."
+    },
+    {
+     "years": 3,
+     "year": 3,
+     "semester": "ב",
+     "course": "20523",
+     "slot": null,
+     "credits": null,
+     "notes": "תורת הקוואנטים: 20522 + 20523 (7 נ\"ז). 20320 + 20955 לא נכנסים ב-3 שנים: 20955 (רק א) דורש לפניו את 20602 (רק א), ש-20213 (רק א) צריך לבוא לפניו. 20523 דורש בתנאי הקבלה את 20456, שיילמד לאחרונה ב-2027ב, ולכן יש עליו אזהרה (נרשמה חריגה)."
+    },
+    {
+     "years": 3,
+     "year": null,
+     "semester": null,
+     "course": null,
+     "slot": "ב1ב",
+     "credits": 7,
+     "notes": "\"שניים מתוך שלושה\" (20913, 20326, 20968): חובת בחירה, 7–8 נ\"ז מתקדמות, בלי שנה וסמסטר."
+    },
+    {
+     "years": 3,
+     "year": null,
+     "semester": null,
+     "course": null,
+     "slot": "ב2",
+     "credits": 5,
+     "notes": "קורסי בחירה בפיסיקה, 5 נ\"ז (4 למי שלא בחר ב-20326), ובהם לפחות 2–3 מתקדמות, כך שסך המתקדמות בפיסיקה יהיה 20: בלי שנה וסמסטר."
+    },
+    {
+     "years": 3,
+     "year": null,
+     "semester": null,
+     "course": null,
+     "slot": "ד2",
+     "credits": 9,
+     "notes": "קורסי בחירה מתקדמים בכימיה, רשימה (i), לפחות 9 נ\"ז: בלי שנה וסמסטר."
+    },
+    {
+     "years": 3,
+     "year": null,
+     "semester": null,
+     "course": null,
+     "slot": "ד3",
+     "credits": 3,
+     "notes": "קורס סמינריוני בכימיה, רשימה (ii), קורס אחד (3 נ\"ז): בלי שנה וסמסטר."
+    },
+    {
+     "years": 4,
+     "year": 1,
+     "semester": "א",
+     "course": "20406",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 4,
+     "year": 1,
+     "semester": "א",
+     "course": "20215",
+     "slot": null,
+     "credits": null,
+     "notes": "ידע קודם דרוש: 20406, שנלמד באותו סמסטר (כמו בכל התכניות)."
+    },
+    {
+     "years": 4,
+     "year": 1,
+     "semester": "א",
+     "course": "20470",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 4,
+     "year": 1,
+     "semester": "א",
+     "course": "20127",
+     "slot": null,
+     "credits": null,
+     "notes": "0 נ\"ז. ידע קודם דרוש של 20497 ושל 20289 (חובה); מ-2028ב יוחלף שם ב-20605 או 20606. בלעדיו יש אזהרה בתכנית, ולכן הוא כאן כל עוד הדפים דורשים אותו."
+    },
+    {
+     "years": 4,
+     "year": 1,
+     "semester": "ב",
+     "course": "20250",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 4,
+     "year": 1,
+     "semester": "ב",
+     "course": "20423",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 4,
+     "year": 1,
+     "semester": "ב",
+     "course": "20480",
+     "slot": null,
+     "credits": null,
+     "notes": "אחרי 20470 (ידע קודם דרוש)."
+    },
+    {
+     "years": 4,
+     "year": 1,
+     "semester": "ג",
+     "course": "20218",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 4,
+     "year": 1,
+     "semester": "ג",
+     "course": "30203",
+     "slot": null,
+     "credits": null,
+     "notes": "הסתברות בשנה 1."
+    },
+    {
+     "years": 4,
+     "year": 2,
+     "semester": "א",
+     "course": "20213",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א."
+    },
+    {
+     "years": 4,
+     "year": 2,
+     "semester": "א",
+     "course": "20430",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 4,
+     "year": 2,
+     "semester": "א",
+     "course": "20483",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א. יסודות הפיסיקה ידע קודם דרוש בדף הקורס, בלי הערה על בגרות, ולכן עם תיבת הבגרות מסומנת יש כאן אזהרה (נרשמה חריגה, כמו 20482). תנאי קבלה ל-20314 ול-20289."
+    },
+    {
+     "years": 4,
+     "year": 2,
+     "semester": "ב",
+     "course": "20248",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר ב."
+    },
+    {
+     "years": 4,
+     "year": 2,
+     "semester": "ב",
+     "course": "20404",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר ב."
+    },
+    {
+     "years": 4,
+     "year": 2,
+     "semester": "ב",
+     "course": "20497",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר ב. 20113 + 20114 ידע קודם דרוש בדף הקורס, בלי הערה על בגרות, ולכן עם תיבת הבגרות מסומנת יש כאן אזהרה (נרשמה חריגה, כמו 20482)."
+    },
+    {
+     "years": 4,
+     "year": 2,
+     "semester": "ב",
+     "course": "20418",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 4,
+     "year": 2,
+     "semester": "ג",
+     "course": "20409",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בקיץ. תנאי קבלה ל-20916."
+    },
+    {
+     "years": 4,
+     "year": 2,
+     "semester": "ג",
+     "course": "20234",
+     "slot": null,
+     "credits": null,
+     "notes": "אחרי 20470 + 20480 (תנאי קבלה)."
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "א",
+     "course": "20602",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א, ודורש לפניו את 20423, 20218, 20215 ושניים מ-20250, 20201, 20213."
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "א",
+     "course": "20422",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א."
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "א",
+     "course": "20606",
+     "slot": null,
+     "credits": null,
+     "notes": "20606 ולא 20605: הידע הקודם הדרוש של המעבדה ג1 (20916) הוא 20606 או 20441 (נרשמה חריגה). הוא 6 נ\"ז ולא 4, ולכן התכנית ארוכה ב-2 נ\"ז."
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "א",
+     "course": "20314",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א."
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "ב",
+     "course": "20320",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר ב. תורת הקוואנטים: 20320 + 20955 (10 נ\"ז), ולא 20522 + 20523: 20523 דורש בתנאי הקבלה את 20456, שיילמד לאחרונה ב-2027ב (נרשמה חריגה), ו-20522 דורש את יסודות הפיסיקה גם עם בגרות. כך אין אזהרות, אבל התכנית ארוכה ב-3 נ\"ז."
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "ב",
+     "course": "20611",
+     "slot": null,
+     "credits": null,
+     "notes": "כימיה אורגנית: 20611 + 20612 (8 נ\"ז), ולא 20456, שיילמד לאחרונה ב-2027ב (הערה 4621). שניהם בפיתוח ועוד אין להם סמסטרים: הסמסטר הוא הנחה (20611 תנאי קבלה ל-20612)."
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "ב",
+     "course": "20485",
+     "slot": null,
+     "credits": null,
+     "notes": null
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "ג",
+     "course": "20289",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בקיץ. אחרי 20483, 20497 ו-20234."
+    },
+    {
+     "years": 4,
+     "year": 4,
+     "semester": "א",
+     "course": "20955",
+     "slot": null,
+     "credits": null,
+     "notes": "מוצע רק בסמסטר א. אחרי 20320 ו-20602 (תנאי קבלה). נלמד באנגלית."
+    },
+    {
+     "years": 4,
+     "year": 4,
+     "semester": "א",
+     "course": "20916",
+     "slot": null,
+     "credits": null,
+     "notes": "חובה רק מעבדה אחת מבין 20916 ו-20938, ו-20916 הוא תנאי קבלה ל-20938. אחרי 40 נ\"ז בפיסיקה, 20409, 20483, 20248 ו-20606. אחרי 20320 (תנאי קבלה)."
+    },
+    {
+     "years": 4,
+     "year": 4,
+     "semester": "א",
+     "course": "20612",
+     "slot": null,
+     "credits": null,
+     "notes": "כימיה אורגנית: 20611 + 20612 (8 נ\"ז), ולא 20456, שיילמד לאחרונה ב-2027ב (הערה 4621). שניהם בפיתוח ועוד אין להם סמסטרים: הסמסטר הוא הנחה (20611 תנאי קבלה ל-20612). שנה 4 סמסטר ב קלה, בשביל קורסי הבחירה."
+    },
+    {
+     "years": 4,
+     "year": null,
+     "semester": null,
+     "course": null,
+     "slot": "ב1ב",
+     "credits": 7,
+     "notes": "\"שניים מתוך שלושה\" (20913, 20326, 20968): חובת בחירה, 7–8 נ\"ז מתקדמות, בלי שנה וסמסטר."
+    },
+    {
+     "years": 4,
+     "year": null,
+     "semester": null,
+     "course": null,
+     "slot": "ב2",
+     "credits": 5,
+     "notes": "קורסי בחירה בפיסיקה, 5 נ\"ז (4 למי שלא בחר ב-20326), ובהם לפחות 2–3 מתקדמות, כך שסך המתקדמות בפיסיקה יהיה 20: בלי שנה וסמסטר."
+    },
+    {
+     "years": 4,
+     "year": null,
+     "semester": null,
+     "course": null,
+     "slot": "ד2",
+     "credits": 9,
+     "notes": "קורסי בחירה מתקדמים בכימיה, רשימה (i), לפחות 9 נ\"ז: בלי שנה וסמסטר."
+    },
+    {
+     "years": 4,
+     "year": null,
+     "semester": null,
+     "course": null,
+     "slot": "ד3",
+     "credits": 3,
+     "notes": "קורס סמינריוני בכימיה, רשימה (ii), קורס אחד (3 נ\"ז): בלי שנה וסמסטר."
+    }
+   ],
+   "background": [
+    {
+     "id": "physics-bagrut",
+     "name": "רקע בפיסיקה ובמתמטיקה",
+     "checkbox": "יש לי בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציון 80 לפחות",
+     "courses": {
+      "or": [
+       "20125",
+       {
+        "and": [
+         "20113",
+         "20114"
+        ]
+       }
+      ]
+     },
+     "field": "פיסיקה",
+     "explanation": "למי שאין בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציון 80 לפחות, יסודות הפיסיקה (20125, או 20113 + 20114) הם רקע דרוש לכל קורס אחר בפיסיקה (לפי דף התכנית).",
+     "link": "https://academic.openu.ac.il/natural_sciences/physics/program/CC.aspx",
+     "prep": "91463",
+     "prepTest": "https://guy531.github.io/physics_test_yesodot/",
+     "name_ar": "خلفية في الفيزياء والرياضيات",
+     "name_en": "Background in physics and mathematics",
+     "checkbox_ar": "لديّ بجروت 5 وحدات في الفيزياء والرياضيات بعلامة 80 على الأقل",
+     "checkbox_en": "I have a 5-unit matriculation (bagrut) in physics and mathematics with a grade of at least 80",
+     "explanation_ar": "لمن ليس لديه بجروت 5 وحدات في الفيزياء والرياضيات بعلامة 80 على الأقل، أساسيات الفيزياء (20125، أو 20113 + 20114) هي خلفية مطلوبة لكل مساق آخر في الفيزياء (حسب صفحة الخطة).",
+     "explanation_en": "For students without a 5-unit matriculation in physics and mathematics with a grade of at least 80, the fundamentals of physics (20125, or 20113 + 20114) are required background for every other physics course (according to the program page)."
+    }
+   ],
+   "counters": [
+    {
+     "label": "סך הכול נ\"ז",
+     "field": "כל הקורסים",
+     "kind": "credits",
+     "min": 146,
+     "capField": null,
+     "cap": null,
+     "phrase": "בסך הכול",
+     "label_ar": "مجموع النقاط",
+     "label_en": "Total credits",
+     "phrase_ar": "في المجموع",
+     "phrase_en": "in total"
+    },
+    {
+     "label": "נ\"ז בפיסיקה",
+     "field": "מקטע ב",
+     "kind": "credits",
+     "min": 60,
+     "capField": null,
+     "cap": null,
+     "phrase": "בפיסיקה",
+     "label_ar": "نقاط في الفيزياء",
+     "label_en": "Physics credits",
+     "phrase_ar": "في الفيزياء",
+     "phrase_en": "in physics"
+    },
+    {
+     "label": "נ\"ז מתקדמות בפיסיקה",
+     "field": "מקטע ב",
+     "kind": "advanced",
+     "min": 20,
+     "capField": null,
+     "cap": null,
+     "phrase": "מתקדמות בפיסיקה",
+     "label_ar": "نقاط متقدمة في الفيزياء",
+     "label_en": "Advanced credits in physics",
+     "phrase_ar": "متقدمة في الفيزياء",
+     "phrase_en": "advanced in physics"
+    },
+    {
+     "label": "נ\"ז בכימיה",
+     "field": "מקטע ד",
+     "kind": "credits",
+     "min": 53,
+     "capField": null,
+     "cap": null,
+     "phrase": "בכימיה",
+     "label_ar": "نقاط في الكيمياء",
+     "label_en": "Chemistry credits",
+     "phrase_ar": "في الكيمياء",
+     "phrase_en": "in chemistry"
+    },
+    {
+     "label": "נ\"ז מתקדמות בכימיה",
+     "field": "מקטע ד",
+     "kind": "advanced",
+     "min": 12,
+     "capField": null,
+     "cap": null,
+     "phrase": "מתקדמות בכימיה",
+     "label_ar": "نقاط متقدمة في الكيمياء",
+     "label_en": "Advanced credits in chemistry",
+     "phrase_ar": "متقدمة في الكيمياء",
+     "phrase_en": "advanced in chemistry"
+    }
+   ],
+   "name_ar": "لقب مزدوج التخصص في الكيمياء والفيزياء",
+   "name_en": "Double-major degree in Chemistry and Physics",
+   "degree_ar": "B.Sc. في الكيمياء والفيزياء",
+   "degree_en": "B.Sc. in Chemistry and Physics"
   }
  }
 }

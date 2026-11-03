@@ -544,5 +544,6 @@ I18N.en = {
  "חזרה לעריכה": "Back to editing",
  "הדפסה בכל זאת": "Print anyway",
  "הדפסה": "Print",
- "יועצים אקדמיים ↗": "Academic advisors ↗"
+ "יועצים אקדמיים ↗": "Academic advisors ↗",
+ "הוספה לעץ והצגה": "Add to the tree and show"
 };

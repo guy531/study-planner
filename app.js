@@ -1150,7 +1150,14 @@ function inCounter(n, field) {
   const listed = new Set();
   program.sections.filter((s) => s.id === section[1])
     .forEach((s) => s.groups.forEach((g) => g.items.forEach((it) => it.courses && coursesIn(it.courses, listed))));
-  return listed.has(n);
+  if (!listed.has(n)) return false;
+  // a course that a required group of another section uses counts there, not here too (CC, 2026-11-03: 20320 is a
+  // physics elective, and with 20955 the quantum requirement of section ג)
+  const have = new Set(plannedCourses());
+  const elsewhere = new Set();
+  program.sections.filter((s) => s.id !== section[1]).forEach((s) => s.groups.filter(isRequired)
+    .forEach((g) => g.items.forEach((it) => it.courses && usedCourses(it.courses, have, elsewhere))));
+  return !elsewhere.has(n);
 }
 
 // ---------- overlapping courses (guy, 2026-10-31) ----------
@@ -1979,8 +1986,13 @@ function renderStatic() {
 
 // a course number in a window (conditions, overlaps...) jumps to the course where it is now, in the plan or in the
 // tree, and flashes it, like the eye buttons (guy, 2026-11-01). A course that is nowhere on the page stays plain text
+// a course that is nowhere on the page yet but is offered: a click adds it to "קורסים נוספים" and jumps there
+// (guy, 2026-11-03: instead of a separate "+ הוספה" button)
+const onPage = (n) => locationOf(n) !== null || treeShows().has(n) || state.extra.includes(n);
+const canAdd = (n) => DATA.courses[n] && DATA.courses[n].offered !== false;
 function numLink(n) {
-  if (locationOf(n) === null && !treeShows().has(n) && !state.extra.includes(n)) return el("span", { class: "num", text: n });
+  if (!onPage(n) && canAdd(n)) return el("button", { type: "button", class: "num num-link", "data-add-show": n, title: T("הוספה לעץ והצגה"), text: n });
+  if (!onPage(n)) return el("span", { class: "num", text: n });
   return el("button", { type: "button", class: "num num-link", "data-show-course": n, title: T("הצגת הקורס במקום שלו"), text: n });
 }
 
@@ -1988,7 +2000,8 @@ function numLink(n) {
 // clickable, and the name next to it is the bigger target); plain text when the course is nowhere on the page
 function courseLink(n) {
   const parts = [el("span", { class: "num", text: n }), " ", el("bdi", { text: courseName(n) })];
-  if (locationOf(n) === null && !treeShows().has(n) && !state.extra.includes(n)) return el("span", {}, ...parts);
+  if (!onPage(n) && canAdd(n)) return el("button", { type: "button", class: "course-link", "data-add-show": n, title: T("הוספה לעץ והצגה") }, ...parts);
+  if (!onPage(n)) return el("span", {}, ...parts);
   return el("button", { type: "button", class: "course-link", "data-show-course": n, title: T("הצגת הקורס במקום שלו") }, ...parts);
 }
 
@@ -2163,10 +2176,8 @@ function showConditions(n, i) {
       ? el("span", { class: "mark rec", "aria-label": T("עוד לא נלמד"), text: "○" }) : mark(ok));
     // no "הצגה" buttons: every course number here jumps to the course (guy, 2026-11-01)
     const inTree = treeShows();
-    // a course the student cannot drag from anywhere yet: offer to put it in "קורסים נוספים"
-    const addButtons = (o) => [...coursesIn(o)]
-      .filter((x) => !have.has(x) && !inTree.has(x) && !state.extra.includes(x) && locationOf(x) === null && DATA.courses[x] && DATA.courses[x].offered !== false)
-      .map((x) => el("button", { type: "button", class: "link add", "data-add-extra": x, text: T`הוספת ${x} לקורסים נוספים` }));
+    // a course the student cannot drag from anywhere yet: its number adds it (numLink), no separate link
+    const addButtons = () => [];
     const rows = parts.map((part, index) => {
       const ok = satisfied(part, have);
       if (!ok && cond.key !== "admission" && satisfied(part, withSame)) {
@@ -2231,11 +2242,8 @@ function courseAction(x, named, forN) {
     return el("span", {}, named ? numLink(x) : null, named ? " " : null,
       el("span", { class: "tag warn", text: where === "done" ? T("עשיתי") : T`ב-${semName(semesterIds()[where])}` }));
   }
-  if (treeShows().has(x) || state.extra.includes(x)) return named ? numLink(x) : null;
-  if (DATA.courses[x] && DATA.courses[x].offered !== false) {
-    return el("button", { type: "button", class: "mini", "data-add-extra": x, title: T("הוספה לקורסים נוספים"), text: T`+ ${label}הוספה` });
-  }
-  return null;
+  // in the tree, or addable: the course number itself does it (numLink)
+  return named ? numLink(x) : null;
 }
 
 // a condition as a list a student can scan: one row per requirement, alternatives listed under "one of",
@@ -2589,6 +2597,14 @@ function setupClicks() {
     }
     const moveOpen = e.target.closest("[data-move-open]");
     if (moveOpen) { $("#info").close(); openMove(moveOpen.dataset.moveOpen); return; }
+    const addShow = e.target.closest("[data-add-show]");
+    if (addShow) {
+      const n = addShow.dataset.addShow;
+      if (!state.extra.includes(n)) state.extra.push(n);
+      save(); render();
+      flashInTree([n]);
+      return;
+    }
     const showCourse = e.target.closest("[data-show-course]");
     if (showCourse) { flashInTree(showCourse.dataset.showCourse.split(",")); return; } // one course, or several (an overlap row)
     const cond = e.target.closest("[data-cond]");
@@ -3186,12 +3202,11 @@ function buildPrint() {
 function setShowPlaced(on) {
   showPlaced = on;
   $("#show-placed").checked = on;
-  try { localStorage.setItem(`${STORE_KEY}:showPlaced`, on ? "1" : ""); } catch (e) { /* no storage */ }
   renderTree();
 }
 
 function setupSearch() {
-  try { showPlaced = !!localStorage.getItem(`${STORE_KEY}:showPlaced`); } catch (e) { /* no storage */ }
+  // not remembered (guy, 2026-11-03): a refresh starts with the switch off
   $("#show-placed").checked = showPlaced;
   $("#show-placed").addEventListener("change", (e) => setShowPlaced(e.target.checked));
   // toggle does not bubble, so it is caught on the way down
