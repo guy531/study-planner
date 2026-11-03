@@ -189,6 +189,8 @@ function blockedReason(n, i) {
   if (isBlockedSemester(i)) return T`סמסטר ${semesterLabel(id)} חסום. כדי לשבץ בו, משחררים אותו בכפתור שבכותרת שלו.`;
   if (!c) return null;
   if (c.offered === false) return T`${n} ${c.name} כבר לא מוצע, ולכן אפשר לשים אותו רק ב"קורסים שכבר עשיתי".`;
+  // a new course that has not opened yet (guy, 2026-11-03: 20611, 20612)
+  if (c.notYet) return T`${n} ${c.name} עוד לא מוצע: זה קורס חדש, שעוד לא נפתח באף סמסטר, ולכן אי אפשר לשבץ אותו עדיין.`;
   // after its last offer first: every later semester says the same thing, whatever its letter (guy, 2026-11-01)
   if (afterLastOffer(c, id)) return T`${n} ${c.name} מוצע רק עד ${semName(c.offeredUntil)}, ולכן אי אפשר לשבץ אותו ב-${semesterLabel(id)}.`;
   if (c.semesters.length && !c.semesters.includes(id.slice(4))) {
@@ -204,6 +206,7 @@ function blockedShort(n, i) {
   if (!c || isBlockedSemester(i)) return null;
   const id = semesterIds()[i];
   if (c.offered === false) return T("הקורס כבר לא מוצע");
+  if (c.notYet) return T("הקורס עוד לא מוצע");
   if (afterLastOffer(c, id)) return T`הקורס מוצע רק עד ${semName(c.offeredUntil)}`;
   if (c.semesters.length && !c.semesters.includes(id.slice(4))) return T("הקורס לא מוצע בסמסטר הזה");
   return null;
@@ -374,7 +377,7 @@ function choiceText(g) {
 }
 
 function autoFill() {
-  const usable = (n) => DATA.courses[n] && DATA.courses[n].offered !== false;
+  const usable = (n) => DATA.courses[n] && DATA.courses[n].offered !== false && !DATA.courses[n].notYet;
   const planned = new Set(plannedCourses());
   // courses a background requirement replaces are never added: ticked or not, the student decides about them
   const assumed = new Set();
@@ -844,6 +847,7 @@ function chip(n, context) {
   });
 
   if (c && c.offered === false) tags.push(el("span", { class: "tag gone", text: T("לא מוצע עוד") }));
+  if (c && c.notYet) tags.push(el("span", { class: "tag gone", title: T("קורס חדש, שעוד לא נפתח באף סמסטר"), text: T("עוד לא מוצע") }));
   const skills = context === "done" || (c && c.offered === false) ? [] : missingSkills(n);
   if (skills.length) tags.push(el("span", { class: "tag need", title: T("סמנו למעלה כשתעמדו בדרישה"), text: skillsTag(skills) }));
   if (typeof context === "number" && c && c.semesters.length) {
@@ -2320,7 +2324,7 @@ function showInfo(n) {
   add(T("מרכז/ת ההוראה"), el("span", {},
     c.coordinator ? el("bdi", { text: c.coordinator }) : missing(T("שם")), " · ",
     c.coordinatorEmail ? el("a", { href: `mailto:${c.coordinatorEmail}`, class: "email", text: c.coordinatorEmail }) : missing(T("אימייל"))));
-  add(T("מוצע"), c.offered === false ? T("לא מוצע עוד") : c.semesters.length ? T`בסמסטרים ${letterList(c.semesters)}` : null);
+  add(T("מוצע"), c.offered === false ? T("לא מוצע עוד") : c.notYet ? T("עוד לא: קורס חדש, שעוד לא נפתח באף סמסטר") : c.semesters.length ? T`בסמסטרים ${letterList(c.semesters)}` : null);
   add(T("מוצע עד"), c.offeredUntil ? semName(c.offeredUntil) : null);
   const planned = new Set(plannedCourses());
   // a course in a semester gets marks against what comes before it; in the tree or in "done" there is nothing to check
@@ -3065,6 +3069,7 @@ function buildPrint() {
       if (missingSkills(n).length) remarks.push(skillsTag(missingSkills(n)));
     }
     if (c.offered === false && i !== "done") remarks.push(T("לא מוצע עוד"));
+    if (c.notYet && i !== "done") remarks.push(T("עוד לא מוצע"));
     if (overlapLine(n)) remarks.push(overlapLine(n).text);
     if (backgroundFor(n)) remarks.push(onlyWithoutBackground(backgroundFor(n)));
     if (prepNote(n, i)) remarks.push(prepNote(n, i));
@@ -3103,7 +3108,7 @@ function buildPrint() {
             c.priorCredits && el("div", { text: T`לפחות ${c.priorCredits} נ"ז קודמים (${T(c.priorField)})` }),
             SKILLS.some((s) => c[s.key]) && el("div", { text: SKILLS.filter((s) => c[s.key]).map((s) => s.short).join(", ") }),
           ].filter(Boolean)),
-          el("td", { class: "rem", text: T`מוצע בסמסטרים ${letterList(c.semesters)}${c.offeredUntil ? T`, עד ${semName(c.offeredUntil)}` : ""}` }));
+          el("td", { class: "rem", text: c.notYet ? T("קורס חדש, עוד לא מוצע") : T`מוצע בסמסטרים ${letterList(c.semesters)}${c.offeredUntil ? T`, עד ${semName(c.offeredUntil)}` : ""}` }));
       }),
     };
   });
