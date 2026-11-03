@@ -1167,7 +1167,7 @@ const treeIsLayer = () => matchMedia("(max-width: 900px)").matches;
 // not from any physics course; guy: stick to the program's own lists)
 function inCounter(n, field) {
   // "מקטע ב", or several sections, "מקטעים ג, ד, ה" (OJ, 2026-11-03: 76 credits in life sciences, from three sections)
-  const section = /^מקטעים? (.+)$/.exec(field || "");
+  const section = /^מקטע(?:ים)? (.+)$/.exec(field || "");  // not /מקטעים?/, which needs "מקטעי" (broke every "מקטע X", 2026-11-03)
   if (!section) return inField(DATA.courses[n], field);
   const ids = section[1].split(", ");
   const listed = new Set();
