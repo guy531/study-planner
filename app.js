@@ -299,7 +299,7 @@ function fillRecommended() {
   rows.filter((r) => r.slot).forEach((r) => {
     // a slot for one course from a list (the broadening course) is named, not counted in credits
     const group = program.sections.flatMap((s) => s.groups).find((g) => g.id === r.slot);
-    if (group && group.rule === "כל הפריטים") notes.push(T`נשאר לבחירתך: ${slotName(r.slot)}, בכל סמסטר שמתאים לך (הרשימה בעץ).`);
+    if (group && isRequired(group)) notes.push(T`נשאר לבחירתך: ${slotName(r.slot)}${group.rule === "חובת בחירה" && choiceText(group) ? ` (${choiceText(group)})` : ""}, בכל סמסטר שמתאים לך (הרשימה בעץ).`);
     else notes.push(T`נשארו ${r.credits} נ"ז ${slotName(r.slot)} לבחירתך, בכל סמסטר שמתאים לך (הרשימה בעץ).`);
   });
   if (skipped.length) notes.push(T`לא שובצו קורסים שכבר עשיתם: ${skipped.join(", ")}.`);
@@ -327,6 +327,18 @@ function inField(c, field) {
   }
   const words = field.split(/ ו| /).filter((w) => w.length > 2);
   return c.affiliation.some((a) => words.some((w) => a.includes(w)));
+}
+
+// a group the degree requires: every item ("כל הפריטים"), or a required choice ("חובת בחירה", guy 2026-11-03: two of
+// three courses the student picks; required like the first, but the automatic completion and the recommended plans
+// leave it to the student)
+const isRequired = (g) => g.rule === "כל הפריטים" || g.rule === "חובת בחירה";
+// "2 מתוך 3 קורסים": what a required choice asks, from its one item
+function choiceText(g) {
+  const c = g.items.length === 1 && g.items[0].courses;
+  if (c && c.of) return T`${c.atleast} מתוך ${c.of.length} קורסים`;
+  if (c && c.or) return T`קורס אחד מתוך ${c.or.length}`;
+  return null;
 }
 
 function autoFill() {
@@ -368,8 +380,11 @@ function autoFill() {
   const add = (list) => list.forEach((n) => {
     if (toPlace.has(n) || planned.has(n) || assumed.has(n) || !usable(n)) return;
     toPlace.add(n);
+    // the background counts for required knowledge too, as "הנחתי שיש לך": the course is placed and the card shows
+    // what is missing (20482 needs the foundations, and its page says nothing about a matriculation); an admission
+    // condition is a hard one, and there it counts only where the course accepts it (20418, 20434)
     add(choose(DATA.courses[n].admission, n));
-    add(choose(DATA.courses[n].required, n));
+    add(choose(DATA.courses[n].required));
   });
   program.sections.forEach((s) => s.groups.forEach((g) => {
     if (g.rule === "כל הפריטים") g.items.forEach((it) => it.courses && !isLongList(it.courses) && add(choose(it.courses)));
@@ -415,10 +430,10 @@ function autoFill() {
       if (!c) return true;
       const real = new Set(state.done);
       plan.slice(0, i).forEach((x) => x.forEach((y) => real.add(y)));
-      const have = forCourse(n, new Set([...base, ...real]), real);
+      const have = new Set([...base, ...real]);
       if (c.semesters.length && !c.semesters.includes(idsFor(i + 1)[i].slice(4))) return false;
       if (afterLastOffer(c, idsFor(i + 1)[i])) return false;
-      if (c.admission && !satisfied(c.admission, have)) return false;
+      if (c.admission && !satisfied(c.admission, forCourse(n, have, real))) return false;
       if (c.required && !satisfied(c.required, same ? new Set([...have, ...plan[i].filter((x) => x !== n)]) : have)) return false;
       if (c.priorCredits) {
         const order = new Map([...base].map((x) => [x, -1]));
@@ -519,8 +534,8 @@ function autoFill() {
     notes.push(T`כדי לסיים ב-${semesterLabel(semesterIds()[loose.last])} ולא ב-${semesterLabel(idsFor(strict.last + 1)[strict.last])}, ${n === 1 ? T("קורס 1 נלמד") : T`${n} קורסים נלמדים`} במקביל לידע הקודם שלהם (מסומנים "ידע קודם במקביל").`);
   }
   degreeGaps().filter((g) => g.kind === "credits").forEach((g) => notes.push(T`נשארו לבחירתך ${g.text}.`));
-  program.sections.forEach((s) => s.groups.forEach((g) => g.rule === "כל הפריטים" && g.items
-    .filter((it) => isLongList(it.courses) && !satisfied(it.courses, new Set(plannedCourses())))
+  program.sections.forEach((s) => s.groups.forEach((g) => isRequired(g) && g.items
+    .filter((it) => (isLongList(it.courses) || g.rule === "חובת בחירה") && !satisfied(it.courses, new Set(plannedCourses())))
     .forEach((it) => notes.push(T`נשאר לבחירתך: ${it.label}.`))));
   (program.background || []).filter((b) => !(state.background || []).includes(b.id) && !satisfied(b.courses, new Set(plannedCourses())))
     .forEach((b) => notes.push(T`הנחתי שיש לך ${b.name} מהתיכון. אם לא, הוסיפו את ${plainCourses(b.courses)} לסמסטר הראשון.`));
@@ -1090,7 +1105,7 @@ function cutsFor(courses, order) {
   const planned = courses.filter((n) => DATA.courses[n]);
   const have = new Set(planned);
   const required = new Set();
-  program.sections.forEach((s) => s.groups.filter((g) => g.rule === "כל הפריטים")
+  program.sections.forEach((s) => s.groups.filter(isRequired)
     .forEach((g) => g.items.forEach((it) => it.courses && !isLongList(it.courses) && usedCourses(it.courses, have, required))));
   const combos = new Map(); // each combination once, by its sorted members
   planned.forEach((n) => (DATA.courses[n].overlaps || []).forEach((o) => {
@@ -1186,7 +1201,7 @@ function usedCourses(expr, have, out = new Set()) {
 function groupCredits(group) {
   const have = new Set(plannedCourses());
   const required = new Set();
-  program.sections.forEach((s) => s.groups.filter((g) => g.rule === "כל הפריטים")
+  program.sections.forEach((s) => s.groups.filter(isRequired)
     .forEach((g) => g.items.forEach((it) => it.courses && usedCourses(it.courses, have, required))));
   const inGroup = new Set();
   group.items.forEach((it) => it.courses && coursesIn(it.courses, inGroup));
@@ -1199,7 +1214,7 @@ function degreeGaps() {
   const have = new Set(plannedCourses());
   const gaps = [];
   program.sections.forEach((section) => section.groups.forEach((group) => {
-    if (group.rule === "כל הפריטים") {
+    if (isRequired(group)) {
       group.items.forEach((item, i) => {
         if (item.courses && !satisfied(item.courses, have)) {
           // the course numbers too (guy, 2026-10-31), on the site and in print: "20229 אלגברה לינארית 2" for one course,
@@ -1571,7 +1586,7 @@ function renderTree() {
       });
       let progress = "";
       let finished = false;
-      if (group.rule === "כל הפריטים") {
+      if (isRequired(group)) {
         const met = group.items.filter((it) => it.courses && satisfied(it.courses, have)).length;
         progress = `${met}/${group.items.length}`;
         finished = met === group.items.length;
@@ -1582,9 +1597,10 @@ function renderTree() {
       }
       // a required group of a single choice ("one of the 27 seminars") is not "all the items" (guy, 2026-10-31)
       const oneChoice = group.items.length === 1 && group.items[0].courses && (group.items[0].courses.or || group.items[0].courses.of);
-      const rule = group.rule === "כל הפריטים" ? (oneChoice ? T("חובה: אחד מהקורסים") : T("חובה: כל הפריטים"))
+      const rule = group.rule === "חובת בחירה" ? T`חובת בחירה: ${choiceText(group) || T("לפי הרשימה")}. הבחירה שלך: ההשלמה האוטומטית והתכנית המומלצת לא בוחרות בשבילך.`
+        : group.rule === "כל הפריטים" ? (oneChoice ? T("חובה: אחד מהקורסים") : T("חובה: כל הפריטים"))
         : T`בחירה: לפחות ${group.minCredits} נ"ז מהרשימה` + (group.mustLabel ? T`, ובהן ${group.mustLabel}` : "");
-      if (finished && group.rule !== "כל הפריטים" && stillUseful(group)) {
+      if (finished && !isRequired(group) && stillUseful(group)) {
         return el("div", { class: "group", id: `group-${group.id}` },
           el("div", { class: "gh" }, el("span", { text: group.name }), el("span", { class: "rule done-mark", text: `✓ ${progress}` })),
           el("div", { class: "rule", text: T`${rule}. הגעת למינימום, אבל לתואר עוד חסרות נ"ז, ואפשר להשלים אותן גם מכאן.` }),
@@ -1594,7 +1610,7 @@ function renderTree() {
         // an elective group stays openable after its minimum: many students take more than the minimum
         return el("details", { class: "group finished", id: `group-${group.id}`, "data-group": group.id, open: openGroups.has(group.id) },
           el("summary", { class: "gh" }, el("span", { text: group.name }), el("span", { class: "rule done-mark", text: `✓ ${progress}` })),
-          el("div", { class: "rule", text: group.rule === "כל הפריטים" ? rule : T`${rule}. אפשר ללמוד גם יותר מהמינימום.` }),
+          el("div", { class: "rule", text: isRequired(group) ? rule : T`${rule}. אפשר ללמוד גם יותר מהמינימום.` }),
           items);
       }
       return el("div", { class: "group", id: `group-${group.id}` },
