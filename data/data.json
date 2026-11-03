@@ -6569,12 +6569,12 @@
      "total": null
     }
    ],
-   "notes": "תנאי קבלה נוסף: ממוצע 80 לפחות ב-50 הנ\"ז האלה. ייתכנו תנאים נוספים לפי נושא הפרויקט, ונדרש אישור הרשמה ממרכז ההוראה. ההרשמה אינה תלויה במועדי ההרשמה הכלליים. ללומדים חוג במדעי החיים במתכונת דו-חוגית ובתכנית בוגר במדעי המחשב ומדעי החיים: יש לפנות למרכז ההוראה.",
+   "notes": "ממוצע 80 לפחות ב-50 הנ\"ז; ייתכנו תנאים נוספים לפי הנושא, ונדרש אישור הרשמה ממרכז ההוראה; ההרשמה אינה תלויה במועדי ההרשמה הכלליים.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20576.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-03",
    "full": true
   },
   "20577": {
@@ -6739,12 +6739,12 @@
      "total": null
     }
    ],
-   "notes": "תנאי קבלה נוסף: ממוצע 80 לפחות ב-50 הנ\"ז האלה. ייתכנו תנאים נוספים לפי נושא הפרויקט, ונדרש אישור הרשמה ממרכז ההוראה. הקורס נלמד באנגלית.",
+   "notes": "ממוצע 80 לפחות ב-50 הנ\"ז; ייתכנו תנאים נוספים לפי הנושא, ונדרש אישור הרשמה ממרכז ההוראה.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20977.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-03",
    "full": true
   },
   "20978": {
@@ -6820,12 +6820,12 @@
      "total": null
     }
    ],
-   "notes": "תנאי קבלה נוסף: ממוצע מעל 90 ב-50 הנ\"ז האלה. ייתכנו תנאים נוספים לפי נושא הפרויקט. ההרשמה מותנית באישור מרכז ההוראה ובראיון אישי עם המנחה. הקורס נלמד באנגלית.",
+   "notes": "ממוצע מעל 90 ב-50 הנ\"ז; ייתכנו תנאים נוספים לפי הנושא.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20978.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-03",
    "full": true
   },
   "20966": {
@@ -6859,7 +6859,12 @@
      "20601",
      "20452",
      "20204",
-     "20495"
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     }
     ]
    },
    "required": null,
@@ -6884,12 +6889,12 @@
      "total": null
     }
    ],
-   "notes": "תנאי קבלה נוסף: ממוצע מעל 90 ב-50 הנ\"ז האלה. ייתכנו תנאים נוספים לפי נושא הפרויקט. ההרשמה מותנית באישור מרכז ההוראה ובראיון אישי עם המנחה. ההרשמה אינה תלויה במועדי ההרשמה הכלליים. ללומדים חוג במדעי החיים במתכונת דו-חוגית ובתכנית בוגר במדעי המחשב ומדעי החיים: יש לפנות למרכז ההוראה.",
+   "notes": "ממוצע מעל 90 ב-50 הנ\"ז; ייתכנו תנאים נוספים לפי הנושא; ההרשמה באישור מרכז ההוראה וראיון עם המנחה, ולא במועדי ההרשמה הכלליים.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20966.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-03",
    "full": true
   },
   "20590": {
@@ -14551,7 +14556,7 @@
    "affiliation": [
     "מדעים / מדעי הטבע / מדעי החיים"
    ],
-   "seminar": null,
+   "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
@@ -14566,14 +14571,40 @@
    "admission": null,
    "required": null,
    "recommended": null,
-   "overlaps": [],
+   "overlaps": [
+    {
+     "with": [
+      "20118"
+     ],
+     "total": null
+    },
+    {
+     "with": [
+      "20468"
+     ],
+     "total": 10.0
+    },
+    {
+     "with": [
+      "20468",
+      "20495"
+     ],
+     "total": 12.0
+    },
+    {
+     "with": [
+      "20121"
+     ],
+     "total": 6.0
+    }
+   ],
    "notes": null,
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/11236.htm?t=h",
-   "updated": "2026-10-29",
-   "full": false
+   "updated": "2026-11-03",
+   "full": true
   },
   "11404": {
    "name": "מקדש, מדינה וספר: תולדות הבית השני",
@@ -14711,30 +14742,71 @@
    "credits": 4,
    "advanced": 0,
    "opening": 0,
-   "level": null,
+   "level": "רגילה",
    "previousCredits": null,
-   "affiliation": [],
-   "seminar": null,
-   "offered": null,
+   "affiliation": [
+    "מדעים / מדעי החיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
    "offeredUntil": null,
-   "offeredFrom": null,
+   "offeredFrom": "2028א",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
    "needsLibrary": false,
    "priorCredits": null,
    "priorField": null,
-   "admission": null,
+   "admission": {
+    "and": [
+     "20118",
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20490"
+        ]
+       },
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     }
+    ]
+   },
    "required": null,
-   "recommended": null,
-   "overlaps": [],
-   "notes": null,
+   "recommended": {
+    "and": [
+     "20119",
+     "20615"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20214"
+     ],
+     "total": 6.0
+    },
+    {
+     "with": [
+      "20452"
+     ],
+     "total": 6.0
+    }
+   ],
+   "notes": "המתכונת החדשה של 20452 (התא), יחד עם 20615, מ-2028א (הערה 4781 בדף התכנית). מי שלמד את 20452 פטור ומנוע מללמוד אותו.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20614.htm?t=h",
-   "updated": "2026-10-29",
-   "full": false
+   "updated": "2026-11-03",
+   "full": true
   },
   "20615": {
    "name": "ביולוגיה מולקולרית",
@@ -14747,7 +14819,7 @@
    "seminar": null,
    "offered": null,
    "offeredUntil": null,
-   "offeredFrom": null,
+   "offeredFrom": "2028א",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14763,20 +14835,20 @@
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20615.htm?t=h",
-   "updated": "2026-10-29",
+   "updated": "2026-11-03",
    "full": false
   },
   "20924": {
    "name": "גנטיקה ב",
-   "credits": 2,
-   "advanced": 0,
+   "credits": 4,
+   "advanced": 2,
    "opening": 0,
-   "level": "רגילה",
+   "level": "רגילה + מתקדמת",
    "previousCredits": null,
    "affiliation": [
     "מדעים / מדעי הטבע / מדעי החיים"
    ],
-   "seminar": null,
+   "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
@@ -14785,21 +14857,49 @@
     "א",
     "ב"
    ],
-   "needsEnglish": false,
-   "needsLibrary": false,
+   "needsEnglish": true,
+   "needsLibrary": true,
    "priorCredits": null,
    "priorField": null,
-   "admission": null,
+   "admission": {
+    "and": [
+     "20495",
+     {
+      "or": [
+       {
+        "or": [
+         "20204",
+         "20485"
+        ]
+       },
+       {
+        "or": [
+         "20214",
+         "20452"
+        ]
+       }
+      ]
+     }
+    ]
+   },
    "required": null,
    "recommended": null,
-   "overlaps": [],
+   "overlaps": [
+    {
+     "with": [
+      "20275",
+      "20495"
+     ],
+     "total": 8.0
+    }
+   ],
    "notes": null,
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20924.htm?t=h",
-   "updated": "2026-10-29",
-   "full": false
+   "updated": "2026-11-03",
+   "full": true
   },
   "91412": {
    "name": "השתתפות במחקרים בפסיכולוגיה ובחינוך",
@@ -19510,6 +19610,2325 @@
    "link": "https://www.openu.ac.il/courses/20247.htm?t=h",
    "updated": "2026-11-03",
    "full": true
+  },
+  "20412": {
+   "name": "אקולוגיה",
+   "credits": 4,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": {
+    "and": [
+     {
+      "or": [
+       "20437",
+       "20470",
+       "20116"
+      ]
+     },
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     },
+     "30203"
+    ]
+   },
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20412.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20104": {
+   "name": "החולייתנים",
+   "credits": 4,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": "6 עד 2021ג",
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20118",
+     "20119"
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20104.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20415": {
+   "name": "נושאים בהתנהגות בעלי חיים",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": {
+    "and": [
+     "20118",
+     "20119"
+    ]
+   },
+   "recommended": "20104",
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20415.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20237": {
+   "name": "עולם החיידקים",
+   "credits": 6,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א",
+    "ב"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20121",
+       "20118"
+      ]
+     },
+     {
+      "or": [
+       "20204",
+       {
+        "or": [
+         "20214",
+         "20452"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20127",
+   "overlaps": [],
+   "notes": "הקורס חובה למי שרוצה להגיש מועמדות, אחרי התואר, למסלול הארבע-שנתי של לימודי רפואה.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20237.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20494": {
+   "name": "עולם הצמחים",
+   "credits": 6,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20118",
+     "20119"
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20494.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20220": {
+   "name": "החרקים",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": {
+    "and": [
+     "20118",
+     "20119"
+    ]
+   },
+   "recommended": "20104",
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20220.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20292": {
+   "name": "עולם הנגיפים",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20924",
+   "overlaps": [],
+   "notes": "ידע קודם דרוש נוסף: יכולת קריאה של טקסטים מדעיים באנגלית.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20292.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20252": {
+   "name": "חולייתנים בארץ ישראל",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": "20118",
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": "הקורס כולל סיורים; היעדרות משלושה סיורים או יותר פירושה כישלון בקורס.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20252.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20262": {
+   "name": "צומח ארץ-ישראל",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": "הקורס מורכב משישה סיורים לימודיים, בני יום או יומיים.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20262.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20397": {
+   "name": "אבולוציה",
+   "credits": 4,
+   "advanced": 4,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "or": [
+     "20495",
+     "20275"
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     "20119"
+    ]
+   },
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20397.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20930": {
+   "name": "האקולוגיה וההתנהגות של הזנבן הערבי",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20415",
+     "20496",
+     "20412"
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     "20397",
+     "20252",
+     "30204",
+     "30203"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20496",
+      "20559"
+     ],
+     "total": 5.0
+    }
+   ],
+   "notes": "המשך של 20496; נלמד פעם בשנה, בסמסטר ב.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20930.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20322": {
+   "name": "אימונולוגיה",
+   "credits": 6,
+   "advanced": 6,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20924",
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20322.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20929": {
+   "name": "ביולוגיה התפתחותית",
+   "credits": 4,
+   "advanced": 4,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20118",
+     "20119"
+    ]
+   },
+   "required": {
+    "and": [
+     "20495",
+     "20104",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     }
+    ]
+   },
+   "recommended": null,
+   "overlaps": [
+    {
+     "with": [
+      "20410"
+     ],
+     "total": 6.0
+    }
+   ],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20929.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20455": {
+   "name": "עקרונות הביוטכנולוגיה",
+   "credits": 4,
+   "advanced": 4,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": "3 עד 2025א",
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20452",
+     "20237",
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     }
+    ]
+   },
+   "required": "20204",
+   "recommended": null,
+   "overlaps": [],
+   "notes": "עד 2025א (כולל) הקנה 3 נ\"ז ברמה רגילה.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20455.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20579": {
+   "name": "ביואינפורמטיקה: אנליזה של רצפים וגנומים",
+   "credits": 4,
+   "advanced": 4,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20204",
+       "20485"
+      ]
+     },
+     {
+      "or": [
+       "30203",
+       "20425"
+      ]
+     },
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     },
+     {
+      "or": [
+       "20127",
+       "20126",
+       "20441",
+       "20606",
+       "20605",
+       "20478"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20579.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20319": {
+   "name": "ביולוגיה של ההזדקנות",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     {
+      "or": [
+       {
+        "or": [
+         "20214",
+         "20452"
+        ]
+       },
+       "20204"
+      ]
+     },
+     {
+      "or": [
+       "20119",
+       "20556"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     },
+     "20313",
+     "20322"
+    ]
+   },
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20319.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20556": {
+   "name": "פיזיולוגיה של מערכות באדם",
+   "credits": 6,
+   "advanced": 6,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": "2027א",
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20118",
+     {
+      "or": [
+       "20119",
+       "20104"
+      ]
+     },
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     }
+    ]
+   },
+   "required": {
+    "and": [
+     {
+      "or": [
+       {
+        "and": [
+         "20123",
+         "20124"
+        ]
+       },
+       {
+        "and": [
+         "20113",
+         "20114"
+        ]
+       },
+       "20125"
+      ]
+     },
+     {
+      "or": [
+       "20437",
+       {
+        "and": [
+         "20470",
+         "20490"
+        ]
+       },
+       {
+        "and": [
+         "20470",
+         "20480"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "recommended": {
+    "or": [
+     "20204",
+     "20485"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20953"
+     ],
+     "total": 8.0
+    }
+   ],
+   "notes": "הקורס חובה למי שרוצה להגיש מועמדות, אחרי התואר, למסלול הארבע-שנתי של לימודי רפואה. אחריו יבוא 20953 (פיזיולוגיה של בעלי חיים).",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20556.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20536": {
+   "name": "פיזיולוגיה של הצמח",
+   "credits": 6,
+   "advanced": 6,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20119",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20204",
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20536.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20313": {
+   "name": "רביית היונקים",
+   "credits": 4,
+   "advanced": 4,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20119",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20104",
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20313.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20308": {
+   "name": "תאי עצב: מבוא לנוירוביולוגיה",
+   "credits": 6,
+   "advanced": 6,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20119",
+     "20204",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     {
+      "atleast": 1,
+      "of": [
+       "20457",
+       "20405",
+       "20460",
+       "20236",
+       "20459",
+       "20496"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     {
+      "or": [
+       "20406",
+       "20106",
+       {
+        "and": [
+         "20474",
+         "20475"
+        ]
+       },
+       {
+        "and": [
+         "20474",
+         "20492"
+        ]
+       }
+      ]
+     },
+     "30203"
+    ]
+   },
+   "overlaps": [],
+   "notes": "\"אחד מקורסי המעבדה במדעי החיים\": נרשמו ששת קורסי המעבדה של רשימת הבחירה (הסקה).",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20308.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20967": {
+   "name": "כלים יישומיים בניהול מחקר קליני",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 60,
+   "priorField": "מדעי החיים",
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20967.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20457": {
+   "name": "מעבדה בביוטכנולוגיה:תהליכים מיקרוביאליים",
+   "credits": 2,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20601",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     "20237"
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     "20495",
+     "20924"
+    ]
+   },
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20457.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20405": {
+   "name": "מעבדה בביוכימיה של חלבונים",
+   "credits": 2,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים",
+    "מדעים / מדעי הטבע / כימיה"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב",
+    "ג"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     {
+      "or": [
+       "20601",
+       "20234"
+      ]
+     },
+     {
+      "or": [
+       "20204",
+       "20485"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20405.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20460": {
+   "name": "מעבדה בביולוגיה מולקולרית",
+   "credits": 2,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א",
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20601",
+     "20495"
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     "20924",
+     "20237"
+    ]
+   },
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20460.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20236": {
+   "name": "מעבדה בביולוגיה של התא",
+   "credits": 2,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א",
+    "ג"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20601",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20495",
+   "overlaps": [],
+   "notes": "ידע קודם דרוש נוסף: יכולת קריאה של טקסטים מדעיים באנגלית.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20236.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20459": {
+   "name": "מעבדה באימונולוגיה",
+   "credits": 2,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "and": [
+     "20601",
+     "20322"
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20459.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20496": {
+   "name": "מעבדת שדה: ביולוגיה של הזנבן הערבי",
+   "credits": 2,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "or": [
+     "20119",
+     "20415"
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [
+    {
+     "with": [
+      "20559",
+      "20930"
+     ],
+     "total": 5.0
+    }
+   ],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20496.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20515": {
+   "name": "נושאים נבחרים בביוטכנולוגיה",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20118",
+     "20119",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     "20237"
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     },
+     "20455"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20961"
+     ],
+     "total": null
+    }
+   ],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20515.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20961": {
+   "name": "נושאים נבחרים בביוטכנולוגיה (אנגלית)",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20118",
+     "20119",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     "20237"
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "and": [
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     },
+     "20455"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20515"
+     ],
+     "total": null
+    }
+   ],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20961.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20544": {
+   "name": "נושאים נבחרים באימונולוגיה",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א",
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20322",
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20924",
+   "overlaps": [
+    {
+     "with": [
+      "20960"
+     ],
+     "total": null
+    }
+   ],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20544.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20960": {
+   "name": "נושאים נבחרים באימונולוגיה (אנגלית)",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20322",
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20924",
+   "overlaps": [
+    {
+     "with": [
+      "20544"
+     ],
+     "total": null
+    }
+   ],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20960.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20920": {
+   "name": "נושאים נבחרים בביולוגיה של התא",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי החיים",
+   "admission": {
+    "and": [
+     "20118",
+     "20119",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "or": [
+     "20495",
+     "20275"
+    ]
+   },
+   "overlaps": [
+    {
+     "with": [
+      "20976"
+     ],
+     "total": null
+    }
+   ],
+   "notes": "תנאי קבלה נוספים ייקבעו לפי הנושא.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20920.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20976": {
+   "name": "נושאים נבחרים בביולוגיה של התא (אנגלית)",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי החיים",
+   "admission": {
+    "and": [
+     "20118",
+     "20119",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20495",
+   "overlaps": [
+    {
+     "with": [
+      "20920"
+     ],
+     "total": null
+    }
+   ],
+   "notes": "תנאי קבלה נוספים ייקבעו לפי הנושא.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20976.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20919": {
+   "name": "נושאים נבחרים בנוירוביולוגיה",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א",
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי החיים",
+   "admission": {
+    "and": [
+     "20118",
+     "20119",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     "20308"
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [
+    {
+     "with": [
+      "20962"
+     ],
+     "total": null
+    }
+   ],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20919.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20962": {
+   "name": "נושאים נבחרים בנוירוביולוגיה (אנגלית)",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי החיים",
+   "admission": {
+    "and": [
+     "20118",
+     "20119",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     "20308"
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [
+    {
+     "with": [
+      "20919"
+     ],
+     "total": null
+    }
+   ],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20962.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20907": {
+   "name": "מגוון ביולוגי ושמירת טבע",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20118",
+     "20119",
+     "20412"
+    ]
+   },
+   "required": null,
+   "recommended": {
+    "or": [
+     "20494",
+     "20252",
+     "20220",
+     "20496",
+     "20415",
+     "20559"
+    ]
+   },
+   "overlaps": [],
+   "notes": "הוראת הקורס הופסקה זמנית.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20907.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20514": {
+   "name": "קולטנים והמרת אותות",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": "2027ב",
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי החיים",
+   "admission": {
+    "and": [
+     "20204",
+     {
+      "or": [
+       "20214",
+       "20452"
+      ]
+     },
+     {
+      "or": [
+       "20495",
+       "20275"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": "20924",
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20514.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20951": {
+   "name": "נושאים נבחרים בזואולוגיה",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "א"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעים",
+   "admission": {
+    "and": [
+     "20118",
+     "20119",
+     {
+      "atleast": 2,
+      "of": [
+       "20412",
+       "20397",
+       "20104",
+       "20415",
+       "20220",
+       "20252",
+       "20313",
+       {
+        "or": [
+         "20496",
+         "20559"
+        ]
+       },
+       "20930"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": "בדף ה\"החולייתנים\" מקושר ל-20415; נרשם 20104 (נרשמה חריגה).",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20951.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20994": {
+   "name": "נושאים נבחרים בגנטיקה וגנומיקה",
+   "credits": 3,
+   "advanced": 3,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים"
+   ],
+   "seminar": "חובה",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": true,
+   "needsLibrary": true,
+   "priorCredits": 36,
+   "priorField": "מדעי החיים",
+   "admission": {
+    "and": [
+     "20495",
+     {
+      "or": [
+       "20924",
+       "20579",
+       "20397"
+      ]
+     }
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20994.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20559": {
+   "name": "מעבדת שדה בביולוגיה: התנהגות חברתית של הזנבן הערבי",
+   "credits": 4,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20559.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20126": {
+   "name": "יישומי מחשב למדעים",
+   "credits": 0,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20126.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20410": {
+   "name": "ביולוגיה התפתחותית: תופעות, עקרונות ושאלות פתוחות",
+   "credits": 4,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20410.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20530": {
+   "name": "סימביוזה: חיים ביחד של יצורים",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20530.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20909": {
+   "name": "תאי גזע: ממחקר בסיסי ליישומים רפואיים",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20909.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20542": {
+   "name": "הנדסה גנטית בצמחים: היבטים מחקריים ויישומיים בחקלאות",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20542.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20519": {
+   "name": "רעלים והרעלות (נושאים נבחרים בטוקסיקולוגיה)",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20519.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20316": {
+   "name": "שעונים ביולוגיים",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20316.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20346": {
+   "name": "בקרת התפתחות בצמחים",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20346.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20543": {
+   "name": "הסתגלות והתאמה לעקות סביבה בצמחים",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": null,
+   "previousCredits": null,
+   "affiliation": [],
+   "seminar": null,
+   "offered": false,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": null,
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20543.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
+  },
+  "20953": {
+   "name": "פיזיולוגיה של בעלי חיים",
+   "credits": 6,
+   "advanced": 6,
+   "opening": 0,
+   "level": "מתקדמת",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע / מדעי החיים"
+   ],
+   "seminar": null,
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": null,
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": "אין עדיין דף בקטלוג; הנ\"ז מדף החפיפה של 20556, הסמסטר מדף ההיצע, והרמה והשיוך הסקה (כמו 20556).",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20953.htm?t=h",
+   "updated": "2026-11-03",
+   "full": false
   }
  },
  "programs": {
@@ -28348,6 +30767,899 @@
    "name_en": "Double-major degree in Chemistry and Earth Sciences",
    "degree_ar": "B.Sc. في الكيمياء وعلوم الأرض",
    "degree_en": "B.Sc. in Chemistry and Earth Sciences"
+  },
+  "OF": {
+   "code": "OF",
+   "name": "תואר דו חוגי במדעי החיים ובמדעי כדור הארץ",
+   "degree": "B.Sc. במדעי החיים ובמדעי כדור הארץ",
+   "catalogYear": "תשפ\"ז",
+   "totalCredits": 129,
+   "advancedCredits": 30,
+   "planFrom": "2024א",
+   "link": "https://academic.openu.ac.il/natural_sciences/earth/program/OF.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/earth/pages/counseling.aspx",
+   "updated": "2026-11-03",
+   "sections": [
+    {
+     "id": "א",
+     "name": "לימודי תשתית",
+     "minCredits": 28,
+     "minAdvanced": null,
+     "description": "לפחות 28 נ\"ז.",
+     "groups": [
+      {
+       "id": "א1",
+       "name": "לימודי תשתית",
+       "rule": "כל הפריטים",
+       "minCredits": 28,
+       "minAdvanced": null,
+       "notes": "בכל פריט יש לבחור אחת מהחלופות. החלופות בתכנות ובחשבון מהערות שבדף בלי סימון ליד קורס (הסקה לפי התוכן).",
+       "items": [
+        {
+         "label": "תכנות",
+         "courses": {
+          "or": [
+           "20127",
+           "20605",
+           "20441",
+           {
+            "and": [
+             "20453",
+             "20454"
+            ]
+           },
+           "20606",
+           "20478"
+          ]
+         },
+         "notes": "20441, 20453 + 20454, 20606, 20478 כתובים בדף (ו-20478 לא מוצע עוד).",
+         "label_ar": "البرمجة",
+         "label_en": "Programming"
+        },
+        {
+         "label": "מבוא לסטטיסטיקה ולהסתברות למדעים",
+         "courses": "30203",
+         "notes": null
+        },
+        {
+         "label": "חשבון דיפרנציאלי ואינטגרלי א",
+         "courses": {
+          "or": [
+           "20406",
+           {
+            "and": [
+             "20474",
+             "20475"
+            ]
+           },
+           {
+            "and": [
+             "20474",
+             "20492"
+            ]
+           }
+          ]
+         },
+         "notes": "20474 + 20475 או 20474 + 20492 מהערה שבדף בלי סימון ליד קורס (הסקה: במקום 20406).",
+         "label_ar": "حساب التفاضل والتكامل أ",
+         "label_en": "Calculus A"
+        },
+        {
+         "label": "חשבון דיפרנציאלי ואינטגרלי ב, או הסקה סטטיסטית",
+         "courses": {
+          "or": [
+           "20423",
+           "30204"
+          ]
+         },
+         "notes": null,
+         "label_ar": "حساب التفاضل والتكامل ب، أو الاستدلال الإحصائي",
+         "label_en": "Calculus B, or statistical inference"
+        },
+        {
+         "label": "פיסיקה",
+         "courses": {
+          "or": [
+           "20125",
+           {
+            "and": [
+             "20113",
+             "20114"
+            ]
+           }
+          ]
+         },
+         "notes": null,
+         "label_ar": "الفيزياء",
+         "label_en": "Physics"
+        },
+        {
+         "label": "כימיה כללית",
+         "courses": {
+          "or": [
+           "20437",
+           {
+            "and": [
+             "20470",
+             {
+              "or": [
+               "20480",
+               "20490"
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         "notes": null,
+         "label_ar": "الكيمياء العامة",
+         "label_en": "General chemistry"
+        },
+        {
+         "label": "כימיה אורגנית",
+         "courses": {
+          "or": [
+           "20282",
+           "20456"
+          ]
+         },
+         "notes": null,
+         "label_ar": "الكيمياء العضوية",
+         "label_en": "Organic chemistry"
+        }
+       ],
+       "name_ar": "دراسات أساسية",
+       "name_en": "Foundation studies",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات أساسية",
+     "name_en": "Foundation studies",
+     "description_ar": "على الأقل 28 نقطة.",
+     "description_en": "At least 28 credits."
+    },
+    {
+     "id": "ב",
+     "name": "לימודי מדעי החיים",
+     "minCredits": 54,
+     "minAdvanced": 15,
+     "description": "לפחות 54 נ\"ז: 28 בחובה, ולפחות 26 בבחירה מהרשימות (i), (ii), (iii), ובהן לפחות 15 מתקדמות וקורס סמינריוני אחד.",
+     "groups": [
+      {
+       "id": "ב1",
+       "name": "קורסי חובה במדעי החיים",
+       "rule": "כל הפריטים",
+       "minCredits": 28,
+       "minAdvanced": null,
+       "notes": "הערה 1763: 20601 חובה רק למי שלא למד עד 2022ב שניים מקורסי היסוד (או מעבדה עד 2023א). הערה 4781: 20452 יילמד לאחרונה ב-2027ב; מ-2028א המתכונת החדשה, 20614 + 20615 (הסקה: שניהם במקומו).",
+       "items": [
+        {
+         "label": "ביולוגיה כללית א: התא, גנטיקה, אבולוציה ומגוון",
+         "courses": {
+          "or": [
+           "20118",
+           "11236"
+          ]
+         },
+         "notes": "11236 (מסלול גמיש) מהערה 4474."
+        },
+        {
+         "label": "ביולוגיה כללית ב: מבנה ותפקוד צמחים ובעלי חיים, אקולוגיה",
+         "courses": "20119",
+         "notes": null
+        },
+        {
+         "label": "מעבדות מבוא בביולוגיה",
+         "courses": "20601",
+         "notes": "הערה 1763."
+        },
+        {
+         "label": "ביוכימיה א",
+         "courses": "20204",
+         "notes": null
+        },
+        {
+         "label": "התא",
+         "courses": {
+          "or": [
+           "20452",
+           "20214",
+           {
+            "and": [
+             "20614",
+             "20615"
+            ]
+           }
+          ]
+         },
+         "notes": "20214 (לא מוצע עוד) מהערה 2405; 20614 + 20615 מ-2028א (הערה 4781, הסקה).",
+         "label_ar": "الخلية",
+         "label_en": "The cell"
+        },
+        {
+         "label": "גנטיקה א",
+         "courses": "20495",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات إلزامية في علوم الحياة",
+       "name_en": "Required life sciences courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב2",
+       "name": "קורסי בחירה במדעי החיים",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 21,
+       "minAdvanced": 12,
+       "notes": "(i) בדף: לפחות 21 נ\"ז, ובהן לפחות 12 מתקדמות. הערה 3327: מבין 20576 ו-20966 רק אחד נספר כאן (מגבלה ידועה: הכלי סופר את שניהם). הערה 3505: 20556 יילמד לאחרונה ב-2027א, ובמקומו 20953.",
+       "items": [
+        {
+         "label": "אקולוגיה",
+         "courses": "20412",
+         "notes": null
+        },
+        {
+         "label": "גנטיקה ב",
+         "courses": "20924",
+         "notes": "הערה 3950: חובה למועמדות לרפואה."
+        },
+        {
+         "label": "החולייתנים",
+         "courses": "20104",
+         "notes": null
+        },
+        {
+         "label": "נושאים בהתנהגות בעלי חיים",
+         "courses": "20415",
+         "notes": null
+        },
+        {
+         "label": "עולם החיידקים",
+         "courses": "20237",
+         "notes": null
+        },
+        {
+         "label": "עולם הצמחים",
+         "courses": "20494",
+         "notes": null
+        },
+        {
+         "label": "ביוכימיה ב",
+         "courses": "20247",
+         "notes": null
+        },
+        {
+         "label": "החרקים",
+         "courses": "20220",
+         "notes": null
+        },
+        {
+         "label": "עולם הנגיפים",
+         "courses": "20292",
+         "notes": null
+        },
+        {
+         "label": "חולייתנים בארץ ישראל",
+         "courses": "20252",
+         "notes": null
+        },
+        {
+         "label": "צומח ארץ-ישראל",
+         "courses": "20262",
+         "notes": null
+        },
+        {
+         "label": "אבולוציה",
+         "courses": "20397",
+         "notes": null
+        },
+        {
+         "label": "האקולוגיה וההתנהגות של הזנבן הערבי",
+         "courses": "20930",
+         "notes": null
+        },
+        {
+         "label": "אימונולוגיה",
+         "courses": "20322",
+         "notes": null
+        },
+        {
+         "label": "ביולוגיה התפתחותית",
+         "courses": "20929",
+         "notes": null
+        },
+        {
+         "label": "עקרונות הביוטכנולוגיה",
+         "courses": "20455",
+         "notes": "הערה 3606: מ-2025ב ברמה מתקדמת."
+        },
+        {
+         "label": "ביואינפורמטיקה: אנליזה של רצפים וגנומים",
+         "courses": "20579",
+         "notes": null
+        },
+        {
+         "label": "ביולוגיה של ההזדקנות",
+         "courses": "20319",
+         "notes": null
+        },
+        {
+         "label": "פיזיולוגיה של מערכות באדם",
+         "courses": "20556",
+         "notes": "יילמד לאחרונה ב-2027א (הערה 3505)."
+        },
+        {
+         "label": "פיזיולוגיה של הצמח",
+         "courses": "20536",
+         "notes": null
+        },
+        {
+         "label": "פרויקט מחקר במדעי החיים",
+         "courses": {
+          "or": [
+           "20576",
+           "20977"
+          ]
+         },
+         "notes": "20977 באנגלית. הערה 3327.",
+         "label_ar": "مشروع بحث في علوم الحياة",
+         "label_en": "Research project in life sciences"
+        },
+        {
+         "label": "רביית היונקים",
+         "courses": "20313",
+         "notes": null
+        },
+        {
+         "label": "תאי עצב: מבוא לנוירוביולוגיה",
+         "courses": "20308",
+         "notes": null
+        },
+        {
+         "label": "כתיבה מדעית (אנגלית)",
+         "courses": "20969",
+         "notes": "הערה 2306."
+        },
+        {
+         "label": "כלים יישומיים בניהול מחקר קליני",
+         "courses": "20967",
+         "notes": null
+        },
+        {
+         "label": "פרויקט מחקר למצטיינים במדעי החיים",
+         "courses": {
+          "or": [
+           "20966",
+           "20978"
+          ]
+         },
+         "notes": "20978 באנגלית. הערה 3327.",
+         "label_ar": "مشروع بحث للمتفوقين في علوم الحياة",
+         "label_en": "Research project for outstanding students in life sciences"
+        }
+       ],
+       "name_ar": "مساقات اختيارية في علوم الحياة",
+       "name_en": "Life sciences electives",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב3",
+       "name": "קורס מעבדה במדעי החיים",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 2,
+       "minAdvanced": null,
+       "notes": "(ii) בדף: קורס מעבדה אחד, 2 נ\"ז.",
+       "items": [
+        {
+         "label": "מעבדה בביוטכנולוגיה:תהליכים מיקרוביאליים",
+         "courses": "20457",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בביוכימיה של חלבונים",
+         "courses": "20405",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בביולוגיה מולקולרית",
+         "courses": "20460",
+         "notes": null
+        },
+        {
+         "label": "מעבדה בביולוגיה של התא",
+         "courses": "20236",
+         "notes": null
+        },
+        {
+         "label": "מעבדה באימונולוגיה",
+         "courses": "20459",
+         "notes": null
+        },
+        {
+         "label": "מעבדת שדה: ביולוגיה של הזנבן הערבי",
+         "courses": "20496",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساق مختبر في علوم الحياة",
+       "name_en": "Life sciences laboratory course",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב4",
+       "name": "קורס סמינריוני במדעי החיים",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 3,
+       "minAdvanced": 3,
+       "notes": "(iii) בדף: קורס סמינריוני אחד במדעי החיים. הקורסים שכבר לא מוצעים נוספו מההערות 1745, 2406, 3314, 3765, 4577, 4965 (מי שלמד אותם).",
+       "items": [
+        {
+         "label": "נושאים נבחרים בביוטכנולוגיה",
+         "courses": {
+          "or": [
+           "20515",
+           "20961"
+          ]
+         },
+         "notes": "20961 באנגלית.",
+         "label_ar": "مواضيع مختارة في التكنولوجيا الحيوية",
+         "label_en": "Selected topics in biotechnology"
+        },
+        {
+         "label": "נושאים נבחרים באימונולוגיה",
+         "courses": {
+          "or": [
+           "20544",
+           "20960"
+          ]
+         },
+         "notes": "20960 באנגלית.",
+         "label_ar": "مواضيع مختارة في علم المناعة",
+         "label_en": "Selected topics in immunology"
+        },
+        {
+         "label": "נושאים נבחרים בביולוגיה של התא",
+         "courses": {
+          "or": [
+           "20920",
+           "20976"
+          ]
+         },
+         "notes": "20976 באנגלית.",
+         "label_ar": "مواضيع مختارة في بيولوجيا الخلية",
+         "label_en": "Selected topics in cell biology"
+        },
+        {
+         "label": "נושאים נבחרים בנוירוביולוגיה",
+         "courses": {
+          "or": [
+           "20919",
+           "20962"
+          ]
+         },
+         "notes": "20962 באנגלית. הערה 3973.",
+         "label_ar": "مواضيع مختارة في البيولوجيا العصبية",
+         "label_en": "Selected topics in neurobiology"
+        },
+        {
+         "label": "מגוון ביולוגי ושמירת טבע",
+         "courses": "20907",
+         "notes": "הוראת הקורס הופסקה זמנית (הערה 2001)."
+        },
+        {
+         "label": "קולטנים והמרת אותות",
+         "courses": "20514",
+         "notes": "יוצע לאחרונה ב-2027ב (הערה 4962)."
+        },
+        {
+         "label": "קורס סמינריוני בנושא מיוחד במדעי החיים",
+         "courses": "20590",
+         "notes": null
+        },
+        {
+         "label": "נושאים נבחרים בזואולוגיה",
+         "courses": "20951",
+         "notes": null
+        },
+        {
+         "label": "נושאים נבחרים בגנטיקה וגנומיקה",
+         "courses": "20994",
+         "notes": null
+        },
+        {
+         "label": "קורס סמינריוני שכבר לא מוצע",
+         "courses": {
+          "or": [
+           "20530",
+           "20909",
+           "20542",
+           "20519",
+           "20316",
+           "20346",
+           "20543"
+          ]
+         },
+         "notes": "מההערות 1745, 2406, 3314, 3765, 4577, 4965: רק למי שלמד אותם.",
+         "label_ar": "مساق ندوة لم يعد يُقدَّم",
+         "label_en": "A seminar course no longer offered"
+        }
+       ],
+       "name_ar": "مساق ندوة في علوم الحياة",
+       "name_en": "Life sciences seminar course",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات علوم الحياة",
+     "name_en": "Life sciences studies",
+     "description_ar": "على الأقل 54 نقطة: 28 إلزامية، وعلى الأقل 26 اختيارية من القوائم (i)، (ii)، (iii)، منها على الأقل 15 متقدمة ومساق ندوة واحد.",
+     "description_en": "At least 54 credits: 28 required, and at least 26 elective from lists (i), (ii), (iii), at least 15 of them advanced, including one seminar course."
+    },
+    {
+     "id": "ג",
+     "name": "לימודי מדעי כדור הארץ",
+     "minCredits": 48,
+     "minAdvanced": null,
+     "description": "לפחות 48 נ\"ז: 20 בחובה, ולפחות 28 בבחירה מהרשימות (i), (ii), (iii).",
+     "groups": [
+      {
+       "id": "ג1",
+       "name": "קורסי חובה במדעי כדור הארץ",
+       "rule": "כל הפריטים",
+       "minCredits": 20,
+       "minAdvanced": null,
+       "notes": "הערה 4311: 20613 חובה מ-2027א; מי שלמד את 20211 לפני כן פטור ממנו (ואז 20211 לא נספר בבחירה, הערה 4658). הערה 526: 20117 ו-06101 יחד: 10 נ\"ז.",
+       "items": [
+        {
+         "label": "מבוא לגיאולוגיה: צפונות כדור הארץ",
+         "courses": "20117",
+         "notes": null
+        },
+        {
+         "label": "מבוא לאוקיינוגרפיה",
+         "courses": "20493",
+         "notes": null
+        },
+        {
+         "label": "מבוא למטאורולוגיה",
+         "courses": "20291",
+         "notes": null
+        },
+        {
+         "label": "מינרלים וסלעים",
+         "courses": "20613",
+         "notes": "הערה 4311."
+        }
+       ],
+       "name_ar": "مساقات إلزامية في علوم الأرض",
+       "name_en": "Required earth sciences courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג2",
+       "name": "קורסים רגילים במדעי כדור הארץ",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 8,
+       "minAdvanced": null,
+       "notes": "(i) בדף: לפחות 8 נ\"ז. הערה 4314: 06101 (שנגנז) נחשב כאן, אבל חופף ל-20613 ב-3 נ\"ז.",
+       "items": [
+        {
+         "label": "נדבכים בגיאולוגיה של ארץ-ישראל",
+         "courses": "20211",
+         "notes": "הערה 4658."
+        },
+        {
+         "label": "מבוא לגיאופיסיקה",
+         "courses": "20434",
+         "notes": "הערות 4515, 4536: מ-2026ג 4 נ\"ז ברמה רגילה."
+        },
+        {
+         "label": "תורת האקלים",
+         "courses": "20600",
+         "notes": null
+        },
+        {
+         "label": "מבוא לגיאוכימיה",
+         "courses": "20498",
+         "notes": null
+        },
+        {
+         "label": "מבוא למדעי הסביבה",
+         "courses": "20603",
+         "notes": "בדף: מי שלמד את 06101 לא יצטרך את 20603 (הערה בלי סימון)."
+        }
+       ],
+       "name_ar": "مساقات عادية في علوم الأرض",
+       "name_en": "Regular earth sciences courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג3",
+       "name": "קורסי מעבדה במדעי כדור הארץ",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 5,
+       "minAdvanced": null,
+       "notes": "(ii) בדף: לפחות 5 נ\"ז קורסי מעבדה.",
+       "items": [
+        {
+         "label": "מעבדה בכימיה כללית",
+         "courses": "20234",
+         "notes": "הערה 4603: 2 נ\"ז עד 2026ג."
+        },
+        {
+         "label": "מעבדה במיקרוסקופיה של מינרלים וסלעים מגמטיים",
+         "courses": "20238",
+         "notes": "יוצע לאחרונה ב-2027ב (הערה 4656)."
+        },
+        {
+         "label": "מיפוי גיאולוגי ויישומי GIS",
+         "courses": "20610",
+         "notes": null
+        },
+        {
+         "label": "מעבדה במיקרוסקופיה של סלעים מותמרים וסלעי משקע",
+         "courses": "20239",
+         "notes": "הערה 2384."
+        },
+        {
+         "label": "מעבדה במטאורולוגיה: מדידות, תצפיות וניתוח סינופטי",
+         "courses": "20421",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات مختبر في علوم الأرض",
+       "name_en": "Earth sciences laboratory courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג4",
+       "name": "קורסים מתקדמים במדעי כדור הארץ",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 15,
+       "minAdvanced": null,
+       "notes": "(iii) בדף: לפחות 15 נ\"ז, מהן לפחות קורס סמינריוני אחד (עמודה \"חובה מתוך הקבוצה\"). הערה 2081: או 20548 (לא מוצע עוד). הערה 528: לכל היותר שני קורסים בין-אוניברסיטאיים. 20969 גם ברשימה (i) במדעי החיים (מגבלה ידועה: נספר בשני המונים).",
+       "items": [
+        {
+         "label": "גיאולוגיה של הכרמל",
+         "courses": "20321",
+         "notes": null
+        },
+        {
+         "label": "חוף הים התיכון של ישראל: היבטים גיאולוגיים וסביבתיים",
+         "courses": "20901",
+         "notes": null
+        },
+        {
+         "label": "קורסים של המכון הבינאוניברסיטאי באילת א",
+         "courses": "20991",
+         "notes": "הערה 528."
+        },
+        {
+         "label": "קורסים של המכון הבינאוניברסיטאי באילת ב",
+         "courses": "20992",
+         "notes": "הערה 528."
+        },
+        {
+         "label": "פרויקט מחקר במדעי כדור הארץ",
+         "courses": "20575",
+         "notes": null,
+         "label_ar": "مشروع بحث في علوم الأرض",
+         "label_en": "Research project in earth sciences"
+        },
+        {
+         "label": "כתיבה מדעית (אנגלית)",
+         "courses": "20969",
+         "notes": "הערה 2306."
+        },
+        {
+         "label": "איזוטופים יציבים בחקר כדור הארץ",
+         "courses": "20947",
+         "notes": null
+        },
+        {
+         "label": "בעיית שינוי האקלים",
+         "courses": "20518",
+         "notes": "מתקדם סמינריוני."
+        },
+        {
+         "label": "נושאים בכימיה אטמוספרית",
+         "courses": "20553",
+         "notes": "מתקדם סמינריוני. יילמד לאחרונה ב-2027ב (הערה 4623)."
+        },
+        {
+         "label": "דינמיקה אטמוספרית",
+         "courses": "20980",
+         "notes": "הערה 4692: בפיתוח, יוצע ב-2027ב."
+        },
+        {
+         "label": "קורס סמינריוני במדעי כדור הארץ",
+         "courses": {
+          "or": [
+           "20591",
+           "20959"
+          ]
+         },
+         "notes": "מתקדם סמינריוני. 20959 באנגלית.",
+         "label_ar": "مساق ندوة في علوم الأرض",
+         "label_en": "Seminar course in earth sciences"
+        },
+        {
+         "label": "יישומי הגיאולוגיה",
+         "courses": "20307",
+         "notes": "מתקדם סמינריוני. הערה 2385."
+        }
+       ],
+       "name_ar": "مساقات متقدمة في علوم الأرض",
+       "name_en": "Advanced earth sciences courses",
+       "mustInclude": {
+        "or": [
+         "20518",
+         "20553",
+         "20591",
+         "20959",
+         "20307"
+        ]
+       },
+       "mustLabel": "קורס סמינריוני אחד",
+       "mustLabel_ar": "مساق ندوة واحد",
+       "mustLabel_en": "one seminar course"
+      }
+     ],
+     "name_ar": "دراسات علوم الأرض",
+     "name_en": "Earth sciences studies",
+     "description_ar": "على الأقل 48 نقطة: 20 إلزامية، وعلى الأقل 28 اختيارية من القوائم (i)، (ii)، (iii).",
+     "description_en": "At least 48 credits: 20 required, and at least 28 elective from lists (i), (ii), (iii)."
+    },
+    {
+     "id": "ד",
+     "name": "דרישות כלליות לתואר",
+     "minCredits": null,
+     "minAdvanced": null,
+     "description": "ראו גיליון \"דרישות כלליות\".",
+     "groups": [],
+     "name_ar": "المتطلبات العامة للقب",
+     "name_en": "General degree requirements",
+     "description_ar": "انظر المتطلبات العامة.",
+     "description_en": "See the general requirements."
+    }
+   ],
+   "general": [
+    {
+     "name": "צבירת נקודות זכות לתואר",
+     "details": "לפחות 129 נ\"ז: לפחות 28 בלימודי התשתית, 54 בלימודי מדעי החיים (מהן 15 מתקדמות) ו-48 בלימודי מדעי כדור הארץ.",
+     "link": null,
+     "name_ar": "تجميع نقاط الاستحقاق للقب",
+     "name_en": "Credits for the degree",
+     "details_ar": "على الأقل 129 نقطة: على الأقل 28 في الدراسات الأساسية، 54 في علوم الحياة (منها 15 متقدمة) و48 في علوم الأرض.",
+     "details_en": "At least 129 credits: at least 28 in foundation studies, 54 in life sciences (15 of them advanced) and 48 in earth sciences."
+    },
+    {
+     "name": "עמידה בדרישות שני החוגים",
+     "details": "יש לעמוד בכל דרישות הלימודים של החוג במדעי החיים ושל החוג במדעי כדור הארץ.",
+     "link": null,
+     "name_ar": "استيفاء متطلبات التخصصين",
+     "name_en": "Meeting the requirements of both majors",
+     "details_ar": "يجب استيفاء جميع متطلبات الدراسة لتخصص علوم الحياة ولتخصص علوم الأرض.",
+     "details_en": "All the study requirements of the life sciences major and of the earth sciences major must be met."
+    },
+    {
+     "name": "קורס בשני החוגים",
+     "details": "קורס חובה בשני החוגים עונה על החובה בשניהם. קורס שהוא חובה באחד ובחירה באחר נלמד במסגרת החוג שבו הוא חובה. קורס בחירה בשני החוגים נספר רק באחד מהם.",
+     "link": null,
+     "name_ar": "مساق في التخصصين",
+     "name_en": "A course in both majors",
+     "details_ar": "المساق الإلزامي في التخصصين يستوفي الإلزام في كليهما. المساق الإلزامي في أحدهما والاختياري في الآخر يُدرس ضمن التخصص الذي هو فيه إلزامي. المساق الاختياري في التخصصين يُحتسب في أحدهما فقط.",
+     "details_en": "A course required in both majors meets the requirement in both. A course required in one and elective in the other counts in the one where it is required. An elective in both counts in only one of them."
+    },
+    {
+     "name": "עמידה בדרישות האנגלית",
+     "details": "לפי דרישות האנגלית הכלליות של האוניברסיטה.",
+     "link": "https://academic.openu.ac.il/yedion/english/Pages/default.aspx",
+     "name_ar": "استيفاء متطلبات اللغة الإنجليزية",
+     "name_en": "Meeting the English requirements",
+     "details_ar": "حسب متطلبات اللغة الإنجليزية العامة في الجامعة.",
+     "details_en": "According to the university's general English requirements."
+    },
+    {
+     "name": "הדרכה ביבליוגרפית בספרייה",
+     "details": "השלמת ההדרכה הביבליוגרפית של הספרייה. היא נדרשת בתנאי הקבלה של חלק מהקורסים המתקדמים.",
+     "link": "https://academic.openu.ac.il/yedion/studies/Pages/default.aspx?expand=studies8",
+     "name_ar": "الإرشاد البيبليوغرافي في المكتبة",
+     "name_en": "Bibliographic instruction at the library",
+     "details_ar": "إكمال الإرشاد البيبليوغرافي في المكتبة. وهو مطلوب في شروط القبول لبعض المساقات المتقدمة.",
+     "details_en": "Completing the library's bibliographic instruction. Some advanced courses require it for admission."
+    },
+    {
+     "name": "לומדה למניעת הטרדה מינית",
+     "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
+     "link": null,
+     "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
+     "name_en": "Sexual harassment prevention tutorial",
+     "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
+     "details_en": "Students must complete the sexual harassment prevention tutorial."
+    },
+    {
+     "name": "קורסים בין-אוניברסיטאיים",
+     "details": "במסגרת התכנית אפשר ללמוד לכל היותר שני קורסים בין-אוניברסיטאיים.",
+     "link": null,
+     "name_ar": "مساقات بين جامعية",
+     "name_en": "Inter-university courses",
+     "details_ar": "ضمن الخطة يمكن دراسة مساقين بين جامعيين على الأكثر.",
+     "details_en": "The program allows at most two inter-university courses."
+    }
+   ],
+   "recommended": [],
+   "background": [],
+   "counters": [
+    {
+     "label": "סך הכול נ\"ז",
+     "field": "כל הקורסים",
+     "kind": "credits",
+     "min": 129,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "בסך הכול",
+     "label_ar": "مجموع النقاط",
+     "label_en": "Total credits",
+     "phrase_ar": "في المجموع",
+     "phrase_en": "in total"
+    },
+    {
+     "label": "נ\"ז במדעי החיים",
+     "field": "מקטע ב",
+     "kind": "credits",
+     "min": 54,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "במדעי החיים",
+     "label_ar": "نقاط في علوم الحياة",
+     "label_en": "Life sciences credits",
+     "phrase_ar": "في علوم الحياة",
+     "phrase_en": "in life sciences"
+    },
+    {
+     "label": "נ\"ז מתקדמות במדעי החיים",
+     "field": "מקטע ב",
+     "kind": "advanced",
+     "min": 15,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "מתקדמות במדעי החיים",
+     "label_ar": "نقاط متقدمة في علوم الحياة",
+     "label_en": "Advanced credits in life sciences",
+     "phrase_ar": "متقدمة في علوم الحياة",
+     "phrase_en": "advanced in life sciences"
+    },
+    {
+     "label": "נ\"ז במדעי כדור הארץ",
+     "field": "מקטע ג",
+     "kind": "credits",
+     "min": 48,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "במדעי כדור הארץ",
+     "label_ar": "نقاط في علوم الأرض",
+     "label_en": "Earth sciences credits",
+     "phrase_ar": "في علوم الأرض",
+     "phrase_en": "in earth sciences"
+    }
+   ],
+   "name_ar": "لقب مزدوج التخصص في علوم الحياة وعلوم الأرض",
+   "name_en": "Double-major degree in Life Sciences and Earth Sciences",
+   "degree_ar": "B.Sc. في علوم الحياة وعلوم الأرض",
+   "degree_en": "B.Sc. in Life Sciences and Earth Sciences"
   }
  }
 }

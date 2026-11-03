@@ -407,12 +407,15 @@ function autoFill() {
     if (expr.and) return expr.and.flatMap((e) => choose(e, n));
     const options = expr.or || expr.of;
     const k = expr.of ? expr.atleast : 1;
+    // first, an alternative with no course that is being phased out ("מוצע עד"; OF, 2026-11-03: 20452 ends in
+    // 2027ב, before its conditions can come, and 20614 + 20615 replace it)
     const cost = (o) => {
       const need = [...coursesIn(o)].filter((x) => !have.has(x));
       if (need.some((x) => !usable(x))) return [Infinity];
-      return [need.length, Math.min(99, ...need.map(rank)), need.reduce((s, x) => s + (DATA.courses[x].credits || 0), 0)];
+      return [need.filter((x) => DATA.courses[x].offeredUntil).length, need.length, Math.min(99, ...need.map(rank)),
+        need.reduce((s, x) => s + (DATA.courses[x].credits || 0), 0)];
     };
-    const before = (a, b) => { for (let j = 0; j < 3; j++) if (a[j] !== b[j]) return a[j] - b[j]; return 0; };
+    const before = (a, b) => { for (let j = 0; j < a.length; j++) if (a[j] !== b[j]) return a[j] - b[j]; return 0; };
     const open = options.filter((o) => !satisfied(o, have)).map((o) => ({ o, c: cost(o) })).sort((a, b) => before(a.c, b.c));
     const missing = k - (options.length - open.length);
     return open.slice(0, Math.max(0, missing)).filter((x) => x.c[0] !== Infinity).flatMap((x) => choose(x.o, n));
