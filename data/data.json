@@ -19386,7 +19386,7 @@
    "affiliation": [
     "מדעים / מדעי הטבע / כימיה"
    ],
-   "seminar": null,
+   "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
@@ -19399,7 +19399,12 @@
    "needsLibrary": false,
    "priorCredits": null,
    "priorField": null,
-   "admission": null,
+   "admission": {
+    "and": [
+     "20456",
+     "20234"
+    ]
+   },
    "required": null,
    "recommended": null,
    "overlaps": [],
@@ -19409,7 +19414,7 @@
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20439.htm?t=h",
    "updated": "2026-11-03",
-   "full": false
+   "full": true
   },
   "20463": {
    "name": "מעבדה בכימיה אי-אורגנית",
@@ -19421,7 +19426,7 @@
    "affiliation": [
     "מדעים / מדעי הטבע / כימיה"
    ],
-   "seminar": null,
+   "seminar": "לא",
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
@@ -19433,8 +19438,29 @@
    "needsLibrary": false,
    "priorCredits": null,
    "priorField": null,
-   "admission": null,
-   "required": null,
+   "admission": {
+    "and": [
+     "20404",
+     "20234"
+    ]
+   },
+   "required": {
+    "or": [
+     "20437",
+     {
+      "and": [
+       "20470",
+       "20490"
+      ]
+     },
+     {
+      "and": [
+       "20470",
+       "20480"
+      ]
+     }
+    ]
+   },
    "recommended": null,
    "overlaps": [],
    "notes": null,
@@ -19443,7 +19469,47 @@
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20463.htm?t=h",
    "updated": "2026-11-03",
-   "full": false
+   "full": true
+  },
+  "20247": {
+   "name": "ביוכימיה ב",
+   "credits": 3,
+   "advanced": 0,
+   "opening": 0,
+   "level": "רגילה",
+   "previousCredits": null,
+   "affiliation": [
+    "מדעים / מדעי הטבע והחיים / מדעי החיים",
+    "מדעים / מדעי הטבע והחיים / כימיה"
+   ],
+   "seminar": "לא",
+   "offered": true,
+   "offeredUntil": null,
+   "offeredFrom": null,
+   "notYet": false,
+   "semesters": [
+    "ב"
+   ],
+   "needsEnglish": false,
+   "needsLibrary": false,
+   "priorCredits": null,
+   "priorField": null,
+   "admission": {
+    "or": [
+     "20204",
+     "20485"
+    ]
+   },
+   "required": null,
+   "recommended": null,
+   "overlaps": [],
+   "notes": "מי שלמד את 20204 צריך את הגרסה החדשה שלו, שנלמדה לראשונה ב-2017א.",
+   "acceptsBackground": [],
+   "coordinator": null,
+   "coordinatorEmail": null,
+   "link": "https://www.openu.ac.il/courses/20247.htm?t=h",
+   "updated": "2026-11-03",
+   "full": true
   }
  },
  "programs": {
@@ -27530,6 +27596,758 @@
    "name_en": "Bachelor's degree in Natural Sciences, Earth Sciences track",
    "degree_ar": "B.Sc. في علوم الطبيعة",
    "degree_en": "B.Sc. in Natural Sciences"
+  },
+  "OD": {
+   "code": "OD",
+   "name": "תואר דו חוגי בכימיה ובמדעי כדור הארץ",
+   "degree": "B.Sc. בכימיה ובמדעי כדור הארץ",
+   "catalogYear": "תשפ\"ז",
+   "totalCredits": 135,
+   "advancedCredits": 30,
+   "planFrom": "2024א",
+   "link": "https://academic.openu.ac.il/natural_sciences/earth/program/OD.aspx",
+   "advisors": "https://academic.openu.ac.il/natural_sciences/earth/pages/counseling.aspx",
+   "updated": "2026-11-03",
+   "sections": [
+    {
+     "id": "א",
+     "name": "לימודי תשתית",
+     "minCredits": 28,
+     "minAdvanced": null,
+     "description": "לפחות 28 נ\"ז.",
+     "groups": [
+      {
+       "id": "א1",
+       "name": "לימודי תשתית",
+       "rule": "כל הפריטים",
+       "minCredits": 28,
+       "minAdvanced": null,
+       "notes": "בכל פריט יש לבחור אחת מהחלופות. הערה 4626: מ-2027א דרישות המתמטיקה השתנו; מי שלמד עד 2028א 4 קורסים מהרשימה בלי 20423 משלים את התכנית במספר מופחת של נ\"ז (לא נבדק).",
+       "items": [
+        {
+         "label": "תכנות",
+         "courses": {
+          "or": [
+           "20605",
+           "20606",
+           "20127"
+          ]
+         },
+         "notes": "20127 מהערה 4602: רק למי שלמד אותו עד 2027א (כולל) – הסקה, כמו ב-CC.",
+         "label_ar": "البرمجة",
+         "label_en": "Programming"
+        },
+        {
+         "label": "מבוא לסטטיסטיקה ולהסתברות למדעים",
+         "courses": "30203",
+         "notes": null
+        },
+        {
+         "label": "חשבון דיפרנציאלי ואינטגרלי א",
+         "courses": "20406",
+         "notes": null
+        },
+        {
+         "label": "חשבון דיפרנציאלי ואינטגרלי ב",
+         "courses": "20423",
+         "notes": "הערה 4626."
+        },
+        {
+         "label": "לפחות קורס אחד מתוך הארבעה",
+         "courses": {
+          "or": [
+           "30204",
+           "20430",
+           "20109",
+           "20218"
+          ]
+         },
+         "notes": null,
+         "label_ar": "مساق واحد على الأقل من الأربعة",
+         "label_en": "At least one course of the four"
+        },
+        {
+         "label": "פיסיקה",
+         "courses": {
+          "or": [
+           "20125",
+           {
+            "and": [
+             "20113",
+             "20114"
+            ]
+           }
+          ]
+         },
+         "notes": null,
+         "label_ar": "الفيزياء",
+         "label_en": "Physics"
+        }
+       ],
+       "name_ar": "دراسات أساسية",
+       "name_en": "Foundation studies",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات أساسية",
+     "name_en": "Foundation studies",
+     "description_ar": "على الأقل 28 نقطة.",
+     "description_en": "At least 28 credits."
+    },
+    {
+     "id": "ב",
+     "name": "לימודי כימיה",
+     "minCredits": 59,
+     "minAdvanced": 15,
+     "description": "59 נ\"ז, ובהן 15 נ\"ז מתקדמות.",
+     "groups": [
+      {
+       "id": "ב1",
+       "name": "קורסי חובה בכימיה",
+       "rule": "כל הפריטים",
+       "minCredits": 36,
+       "minAdvanced": null,
+       "notes": "בדף: (i) לפחות 38 נ\"ז (עם 20611 + 20612). הערה 4621: עד שיפותחו, אפשר 20456 (6 נ\"ז) במקומם, ואז יש להשלים 2 נ\"ז בבחירה בכימיה; לכן המינימום כאן 36, ו-59 הנ\"ז של המקטע נבדקים במונה (כמו ב-CC). הערה 4624: מי שהשלים את החובה עם פחות מ-44 נ\"ז משלים מקורסי הבחירה בכימיה, או מ-20247, 20213, 20402 (קבוצה ב4).",
+       "items": [
+        {
+         "label": "כימיה כללית א",
+         "courses": "20470",
+         "notes": null
+        },
+        {
+         "label": "כימיה כללית ב",
+         "courses": "20480",
+         "notes": null
+        },
+        {
+         "label": "כימיה אורגנית",
+         "courses": {
+          "or": [
+           "20456",
+           {
+            "and": [
+             "20611",
+             "20612"
+            ]
+           }
+          ]
+         },
+         "notes": "הערה 4621: 20456 יילמד לאחרונה ב-2027ב; 20611 ו-20612 בפיתוח (הערה 3646).",
+         "label_ar": "الكيمياء العضوية",
+         "label_en": "Organic chemistry"
+        },
+        {
+         "label": "כימיה אי-אורגנית",
+         "courses": "20404",
+         "notes": null
+        },
+        {
+         "label": "תרמודינמיקה",
+         "courses": "20483",
+         "notes": null
+        },
+        {
+         "label": "פרקים בכימיה פיסיקלית",
+         "courses": "20497",
+         "notes": null
+        },
+        {
+         "label": "ביוכימיה",
+         "courses": {
+          "or": [
+           "20485",
+           "20204"
+          ]
+         },
+         "notes": null,
+         "label_ar": "الكيمياء الحيوية",
+         "label_en": "Biochemistry"
+        },
+        {
+         "label": "מעבדה בכימיה כללית",
+         "courses": "20234",
+         "notes": "הערה 4603: 2 נ\"ז עד 2026ג."
+        }
+       ],
+       "name_ar": "مساقات إلزامية في الكيمياء",
+       "name_en": "Required chemistry courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב1ב",
+       "name": "מעבדות בכימיה",
+       "rule": "חובת בחירה",
+       "minCredits": 6,
+       "minAdvanced": null,
+       "notes": "(ii) בדף: \"שני קורסי מעבדה - 6 נ\"ז\", ושלושה קורסים ברשימה: שניים מתוך שלושה (הסקה), שהסטודנט בוחר.",
+       "items": [
+        {
+         "label": "שני קורסי מעבדה מתוך שלושה",
+         "courses": {
+          "atleast": 2,
+          "of": [
+           "20439",
+           "20463",
+           "20289"
+          ]
+         },
+         "notes": "הערה 4603: כל אחד 2 נ\"ז עד 2026ג.",
+         "label_ar": "مختبران من ثلاثة",
+         "label_en": "Two laboratory courses of three"
+        }
+       ],
+       "name_ar": "مختبرات في الكيمياء",
+       "name_en": "Chemistry laboratories",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב2",
+       "name": "קורסי בחירה מתקדמים בכימיה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 12,
+       "minAdvanced": 12,
+       "notes": "ב. בחירה: 12 נ\"ז מתקדמות. הערה 4590: 20340 יילמד לאחרונה ב-2027א.",
+       "items": [
+        {
+         "label": "סדנה בכימיה חישובית",
+         "courses": "20932",
+         "notes": null
+        },
+        {
+         "label": "אנליזה של ניסויים",
+         "courses": "20340",
+         "notes": "יילמד לאחרונה ב-2027א (הערה 4590)."
+        },
+        {
+         "label": "כימיה אורגנית פיסיקלית",
+         "courses": "20926",
+         "notes": null
+        },
+        {
+         "label": "תורת הקוואנטים ב: קשר כימי",
+         "courses": "20523",
+         "notes": null
+        },
+        {
+         "label": "דינמיקה מולקולרית של תהליכים כימיים",
+         "courses": "20557",
+         "notes": null
+        },
+        {
+         "label": "מבוא לכימואינפורמטיקה",
+         "courses": "20979",
+         "notes": "הקורס בפיתוח (הערה 3646)."
+        },
+        {
+         "label": "תורת הקוואנטים א",
+         "courses": "20522",
+         "notes": null
+        },
+        {
+         "label": "כימיה אורגנית מתקדמת",
+         "courses": "20915",
+         "notes": null
+        },
+        {
+         "label": "לייזרים: עקרונות ושימושים",
+         "courses": "20912",
+         "notes": "הערה 4591: 4 נ\"ז מתקדמות עד 2026ג."
+        },
+        {
+         "label": "סימטריה וכירליות",
+         "courses": "20334",
+         "notes": "הערה 4606: 4 נ\"ז מתקדמות עד 2026ג."
+        },
+        {
+         "label": "פרויקט מחקר בכימיה",
+         "courses": {
+          "or": [
+           "20577",
+           "20957"
+          ]
+         },
+         "notes": "20957 באנגלית.",
+         "label_ar": "مشروع بحث في الكيمياء",
+         "label_en": "Research project in chemistry"
+        },
+        {
+         "label": "שיטות פיסיקליות לאנליזה כימית",
+         "courses": "20911",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات اختيارية متقدمة في الكيمياء",
+       "name_en": "Advanced chemistry electives",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב3",
+       "name": "קורס סמינריוני בכימיה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 3,
+       "minAdvanced": 3,
+       "notes": "ג. דרישות סמינריוניות: לפחות 3 נ\"ז, לפחות קורס מתקדם סמינריוני אחד. הערה 512: 20553 בבחירה בכימיה או במדעי כדור הארץ, לא בשניהם (מגבלה ידועה: הכלי סופר אותו בשני המונים).",
+       "items": [
+        {
+         "label": "יסודות בכימיה של המצב המוצק",
+         "courses": "20555",
+         "notes": null
+        },
+        {
+         "label": "מבוא לפולימרים",
+         "courses": "20933",
+         "notes": null
+        },
+        {
+         "label": "מבט על ננו-חומרים",
+         "courses": {
+          "or": [
+           "20917",
+           "20958"
+          ]
+         },
+         "notes": "20958 באנגלית.",
+         "label_ar": "نظرة على المواد النانوية",
+         "label_en": "A look at nanomaterials"
+        },
+        {
+         "label": "נושאים בכימיה אטמוספרית",
+         "courses": "20553",
+         "notes": "יילמד לאחרונה ב-2027ב (הערה 4628). הערה 512."
+        },
+        {
+         "label": "נושאים בכימיה חישובית",
+         "courses": "20910",
+         "notes": null
+        },
+        {
+         "label": "נושאים נבחרים בכימיה של אורגנו-מתכות מעבר",
+         "courses": {
+          "or": [
+           "20925",
+           "20956"
+          ]
+         },
+         "notes": "20956 באנגלית.",
+         "label_ar": "مواضيع مختارة في كيمياء العضو-فلزات الانتقالية",
+         "label_en": "Selected topics in transition organometallic chemistry"
+        }
+       ],
+       "name_ar": "مساق ندوة في الكيمياء",
+       "name_en": "Chemistry seminar course",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ב4",
+       "name": "השלמת נ\"ז בכימיה",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": null,
+       "minAdvanced": null,
+       "notes": "הערה 4624: מי שצבר פחות מ-44 נ\"ז בחובה (למשל עם 20456) משלים מקורסי הבחירה בכימיה, או מהקורסים האלה. בלי מינימום משלהם: נבדק במונה של המקטע.",
+       "items": [
+        {
+         "label": "ביוכימיה ב",
+         "courses": "20247",
+         "notes": "הערה 4624."
+        },
+        {
+         "label": "פרקים בפיסיקה מודרנית",
+         "courses": "20213",
+         "notes": "הערה 4624."
+        },
+        {
+         "label": "מוליכים למחצה",
+         "courses": "20402",
+         "notes": "הערה 4624."
+        }
+       ],
+       "name_ar": "استكمال النقاط في الكيمياء",
+       "name_en": "Completing the chemistry credits",
+       "mustInclude": null,
+       "mustLabel": null
+      }
+     ],
+     "name_ar": "دراسات الكيمياء",
+     "name_en": "Chemistry studies",
+     "description_ar": "59 نقطة، منها 15 نقطة متقدمة.",
+     "description_en": "59 credits, 15 of them advanced."
+    },
+    {
+     "id": "ג",
+     "name": "לימודי מדעי כדור הארץ",
+     "minCredits": 48,
+     "minAdvanced": 15,
+     "description": "לפחות 48 נ\"ז, ובהן 15 נ\"ז מתקדמות: 20 בחובה, ולפחות 28 בבחירה מהרשימות (i), (ii), (iii).",
+     "groups": [
+      {
+       "id": "ג1",
+       "name": "קורסי חובה במדעי כדור הארץ",
+       "rule": "כל הפריטים",
+       "minCredits": 20,
+       "minAdvanced": null,
+       "notes": "הערה 4684: 20613 חובה מ-2027א; מי שלמד את 20211 לפני כן פטור ממנו (ואז 20211 לא נספר בבחירה, הערה 4686). הערה 513: 20117 ו-06101 יחד: 10 נ\"ז.",
+       "items": [
+        {
+         "label": "מבוא לגיאולוגיה: צפונות כדור הארץ",
+         "courses": "20117",
+         "notes": null
+        },
+        {
+         "label": "מבוא לאוקיינוגרפיה",
+         "courses": "20493",
+         "notes": null
+        },
+        {
+         "label": "מבוא למטאורולוגיה",
+         "courses": "20291",
+         "notes": null
+        },
+        {
+         "label": "מינרלים וסלעים",
+         "courses": "20613",
+         "notes": "הערה 4684."
+        }
+       ],
+       "name_ar": "مساقات إلزامية في علوم الأرض",
+       "name_en": "Required earth sciences courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג2",
+       "name": "קורסים רגילים במדעי כדור הארץ",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 8,
+       "minAdvanced": null,
+       "notes": "(i) בדף: לפחות 8 נ\"ז. הערה 4685: 06101 (שנגנז) נחשב כאן, אבל חופף ל-20613 ב-3 נ\"ז.",
+       "items": [
+        {
+         "label": "נדבכים בגיאולוגיה של ארץ-ישראל",
+         "courses": "20211",
+         "notes": "הערה 4686."
+        },
+        {
+         "label": "מבוא לגיאופיסיקה",
+         "courses": "20434",
+         "notes": "הערות 4515, 4536: מ-2026ג 4 נ\"ז ברמה רגילה."
+        },
+        {
+         "label": "תורת האקלים",
+         "courses": "20600",
+         "notes": null
+        },
+        {
+         "label": "מבוא לגיאוכימיה",
+         "courses": "20498",
+         "notes": null
+        },
+        {
+         "label": "מבוא למדעי הסביבה",
+         "courses": "20603",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات عادية في علوم الأرض",
+       "name_en": "Regular earth sciences courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג3",
+       "name": "קורסי מעבדה במדעי כדור הארץ",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 6,
+       "minAdvanced": null,
+       "notes": "(ii) בדף: לפחות 6 נ\"ז קורסי מעבדה.",
+       "items": [
+        {
+         "label": "מעבדה במיקרוסקופיה של מינרלים וסלעים מגמטיים, או מיפוי גיאולוגי",
+         "courses": {
+          "or": [
+           "20238",
+           "20610"
+          ]
+         },
+         "notes": "20238 מוצע לאחרונה ב-2027ב (הערה 4656).",
+         "label_ar": "مختبر المجهر للمعادن والصخور النارية، أو الخرائط الجيولوجية",
+         "label_en": "Microscopy lab of minerals and igneous rocks, or geological mapping"
+        },
+        {
+         "label": "מעבדה במיקרוסקופיה של סלעים מותמרים וסלעי משקע",
+         "courses": "20239",
+         "notes": "הערה 2384."
+        },
+        {
+         "label": "מעבדה במטאורולוגיה: מדידות, תצפיות וניתוח סינופטי",
+         "courses": "20421",
+         "notes": null
+        }
+       ],
+       "name_ar": "مساقات مختبر في علوم الأرض",
+       "name_en": "Earth sciences laboratory courses",
+       "mustInclude": null,
+       "mustLabel": null
+      },
+      {
+       "id": "ג4",
+       "name": "קורסים מתקדמים במדעי כדור הארץ",
+       "rule": "לפחות נ\"ז מהרשימה",
+       "minCredits": 15,
+       "minAdvanced": null,
+       "notes": "(iii) בדף: לפחות 15 נ\"ז, מהן לפחות קורס סמינריוני אחד (עמודה \"חובה מתוך הקבוצה\"). הערה 2081: או 20548 (לא מוצע עוד). הערה 515: לכל היותר שני קורסים בין-אוניברסיטאיים.",
+       "items": [
+        {
+         "label": "גיאולוגיה של הכרמל",
+         "courses": "20321",
+         "notes": null
+        },
+        {
+         "label": "חוף הים התיכון של ישראל: היבטים גיאולוגיים וסביבתיים",
+         "courses": "20901",
+         "notes": null
+        },
+        {
+         "label": "קורסים של המכון הבינאוניברסיטאי באילת א",
+         "courses": "20991",
+         "notes": "הערה 515."
+        },
+        {
+         "label": "קורסים של המכון הבינאוניברסיטאי באילת ב",
+         "courses": "20992",
+         "notes": "הערה 515."
+        },
+        {
+         "label": "פרויקט מחקר במדעי כדור הארץ",
+         "courses": "20575",
+         "notes": null,
+         "label_ar": "مشروع بحث في علوم الأرض",
+         "label_en": "Research project in earth sciences"
+        },
+        {
+         "label": "איזוטופים יציבים בחקר כדור הארץ",
+         "courses": "20947",
+         "notes": null
+        },
+        {
+         "label": "כתיבה מדעית (אנגלית)",
+         "courses": "20969",
+         "notes": "הערה 2306."
+        },
+        {
+         "label": "בעיית שינוי האקלים",
+         "courses": "20518",
+         "notes": "מתקדם סמינריוני."
+        },
+        {
+         "label": "נושאים בכימיה אטמוספרית",
+         "courses": "20553",
+         "notes": "מתקדם סמינריוני. הערות 516, 4628."
+        },
+        {
+         "label": "דינמיקה אטמוספרית",
+         "courses": "20980",
+         "notes": "הערה 4692: בפיתוח, יוצע ב-2027ב (בקובץ הקורסים: מוצע מ-2027ב)."
+        },
+        {
+         "label": "קורס סמינריוני במדעי כדור הארץ",
+         "courses": {
+          "or": [
+           "20591",
+           "20959"
+          ]
+         },
+         "notes": "מתקדם סמינריוני. 20959 באנגלית.",
+         "label_ar": "مساق ندوة في علوم الأرض",
+         "label_en": "Seminar course in earth sciences"
+        },
+        {
+         "label": "יישומי הגיאולוגיה",
+         "courses": "20307",
+         "notes": "מתקדם סמינריוני. הערה 2385."
+        }
+       ],
+       "name_ar": "مساقات متقدمة في علوم الأرض",
+       "name_en": "Advanced earth sciences courses",
+       "mustInclude": {
+        "or": [
+         "20518",
+         "20553",
+         "20591",
+         "20959",
+         "20307"
+        ]
+       },
+       "mustLabel": "קורס סמינריוני אחד",
+       "mustLabel_ar": "مساق ندوة واحد",
+       "mustLabel_en": "one seminar course"
+      }
+     ],
+     "name_ar": "دراسات علوم الأرض",
+     "name_en": "Earth sciences studies",
+     "description_ar": "على الأقل 48 نقطة، منها 15 نقطة متقدمة: 20 إلزامية، وعلى الأقل 28 اختيارية من القوائم (i)، (ii)، (iii).",
+     "description_en": "At least 48 credits, 15 of them advanced: 20 required, and at least 28 elective from lists (i), (ii), (iii)."
+    },
+    {
+     "id": "ד",
+     "name": "דרישות כלליות לתואר",
+     "minCredits": null,
+     "minAdvanced": null,
+     "description": "ראו גיליון \"דרישות כלליות\".",
+     "groups": [],
+     "name_ar": "المتطلبات العامة للقب",
+     "name_en": "General degree requirements",
+     "description_ar": "انظر المتطلبات العامة.",
+     "description_en": "See the general requirements."
+    }
+   ],
+   "general": [
+    {
+     "name": "צבירת נקודות זכות לתואר",
+     "details": "לפחות 135 נ\"ז, ובהן לפחות 30 מתקדמות: לפחות 28 בלימודי התשתית, 59 בלימודי כימיה (מהן 15 מתקדמות) ו-48 בלימודי מדעי כדור הארץ (מהן 15 מתקדמות).",
+     "link": null,
+     "name_ar": "تجميع نقاط الاستحقاق للقب",
+     "name_en": "Credits for the degree",
+     "details_ar": "على الأقل 135 نقطة، منها على الأقل 30 متقدمة: على الأقل 28 في الدراسات الأساسية، 59 في الكيمياء (منها 15 متقدمة) و48 في علوم الأرض (منها 15 متقدمة).",
+     "details_en": "At least 135 credits, at least 30 of them advanced: at least 28 in foundation studies, 59 in chemistry (15 of them advanced) and 48 in earth sciences (15 of them advanced)."
+    },
+    {
+     "name": "עמידה בדרישות שני החוגים",
+     "details": "יש לעמוד בכל דרישות הלימודים של החוג בכימיה ושל החוג במדעי כדור הארץ.",
+     "link": null,
+     "name_ar": "استيفاء متطلبات التخصصين",
+     "name_en": "Meeting the requirements of both majors",
+     "details_ar": "يجب استيفاء جميع متطلبات الدراسة لتخصص الكيمياء ولتخصص علوم الأرض.",
+     "details_en": "All the study requirements of the chemistry major and of the earth sciences major must be met."
+    },
+    {
+     "name": "קורס בשני החוגים",
+     "details": "קורס חובה בשני החוגים עונה על החובה בשניהם. קורס שהוא חובה באחד ובחירה באחר נלמד במסגרת החוג שבו הוא חובה. קורס בחירה בשני החוגים נספר רק באחד מהם.",
+     "link": null,
+     "name_ar": "مساق في التخصصين",
+     "name_en": "A course in both majors",
+     "details_ar": "المساق الإلزامي في التخصصين يستوفي الإلزام في كليهما. المساق الإلزامي في أحدهما والاختياري في الآخر يُدرس ضمن التخصص الذي هو فيه إلزامي. المساق الاختياري في التخصصين يُحتسب في أحدهما فقط.",
+     "details_en": "A course required in both majors meets the requirement in both. A course required in one and elective in the other counts in the one where it is required. An elective in both counts in only one of them."
+    },
+    {
+     "name": "עמידה בדרישות האנגלית",
+     "details": "לפי דרישות האנגלית הכלליות של האוניברסיטה.",
+     "link": "https://academic.openu.ac.il/yedion/english/Pages/default.aspx",
+     "name_ar": "استيفاء متطلبات اللغة الإنجليزية",
+     "name_en": "Meeting the English requirements",
+     "details_ar": "حسب متطلبات اللغة الإنجليزية العامة في الجامعة.",
+     "details_en": "According to the university's general English requirements."
+    },
+    {
+     "name": "הדרכה ביבליוגרפית בספרייה",
+     "details": "השלמת ההדרכה הביבליוגרפית של הספרייה. היא נדרשת בתנאי הקבלה של חלק מהקורסים המתקדמים.",
+     "link": "https://academic.openu.ac.il/yedion/studies/Pages/default.aspx?expand=studies8",
+     "name_ar": "الإرشاد البيبليوغرافي في المكتبة",
+     "name_en": "Bibliographic instruction at the library",
+     "details_ar": "إكمال الإرشاد البيبليوغرافي في المكتبة. وهو مطلوب في شروط القبول لبعض المساقات المتقدمة.",
+     "details_en": "Completing the library's bibliographic instruction. Some advanced courses require it for admission."
+    },
+    {
+     "name": "לומדה למניעת הטרדה מינית",
+     "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
+     "link": null,
+     "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
+     "name_en": "Sexual harassment prevention tutorial",
+     "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
+     "details_en": "Students must complete the sexual harassment prevention tutorial."
+    },
+    {
+     "name": "קורסים בין-אוניברסיטאיים",
+     "details": "במסגרת התכנית אפשר ללמוד לכל היותר שני קורסים בין-אוניברסיטאיים.",
+     "link": null,
+     "name_ar": "مساقات بين جامعية",
+     "name_en": "Inter-university courses",
+     "details_ar": "ضمن الخطة يمكن دراسة مساقين بين جامعيين على الأكثر.",
+     "details_en": "The program allows at most two inter-university courses."
+    }
+   ],
+   "recommended": [],
+   "background": [],
+   "counters": [
+    {
+     "label": "סך הכול נ\"ז",
+     "field": "כל הקורסים",
+     "kind": "credits",
+     "min": 135,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "בסך הכול",
+     "label_ar": "مجموع النقاط",
+     "label_en": "Total credits",
+     "phrase_ar": "في المجموع",
+     "phrase_en": "in total"
+    },
+    {
+     "label": "נ\"ז בכימיה",
+     "field": "מקטע ב",
+     "kind": "credits",
+     "min": 59,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "בכימיה",
+     "label_ar": "نقاط في الكيمياء",
+     "label_en": "Chemistry credits",
+     "phrase_ar": "في الكيمياء",
+     "phrase_en": "in chemistry"
+    },
+    {
+     "label": "נ\"ז מתקדמות בכימיה",
+     "field": "מקטע ב",
+     "kind": "advanced",
+     "min": 15,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "מתקדמות בכימיה",
+     "label_ar": "نقاط متقدمة في الكيمياء",
+     "label_en": "Advanced credits in chemistry",
+     "phrase_ar": "متقدمة في الكيمياء",
+     "phrase_en": "advanced in chemistry"
+    },
+    {
+     "label": "נ\"ז במדעי כדור הארץ",
+     "field": "מקטע ג",
+     "kind": "credits",
+     "min": 48,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "במדעי כדור הארץ",
+     "label_ar": "نقاط في علوم الأرض",
+     "label_en": "Earth sciences credits",
+     "phrase_ar": "في علوم الأرض",
+     "phrase_en": "in earth sciences"
+    },
+    {
+     "label": "נ\"ז מתקדמות במדעי כדור הארץ",
+     "field": "מקטע ג",
+     "kind": "advanced",
+     "min": 15,
+     "max": null,
+     "capField": null,
+     "cap": null,
+     "phrase": "מתקדמות במדעי כדור הארץ",
+     "label_ar": "نقاط متقدمة في علوم الأرض",
+     "label_en": "Advanced credits in earth sciences",
+     "phrase_ar": "متقدمة في علوم الأرض",
+     "phrase_en": "advanced in earth sciences"
+    }
+   ],
+   "name_ar": "لقب مزدوج التخصص في الكيمياء وعلوم الأرض",
+   "name_en": "Double-major degree in Chemistry and Earth Sciences",
+   "degree_ar": "B.Sc. في الكيمياء وعلوم الأرض",
+   "degree_en": "B.Sc. in Chemistry and Earth Sciences"
   }
  }
 }
