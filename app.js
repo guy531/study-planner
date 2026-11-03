@@ -2016,8 +2016,7 @@ function renderStatic() {
   $("#plan-length").hidden = lengths.length < 2;
   $("#program-link").hidden = !program.link;
   if (program.link) $("#program-link").href = program.link;
-  $("#advisors-link").hidden = !program.advisors;
-  if (program.advisors) $("#advisors-link").href = program.advisors;
+  showAdvisors();
   // the banner at the top: who the planning fits, and (in bold, so no student misses it; guy) that the tool is only
   // a help, that offerings and programs may change, and that the catalog has the up-to-date information. Only here,
   // not again at the bottom of the page (guy)
@@ -2883,7 +2882,7 @@ function setupControls() {
   // another field: its first degree, unless the current one is in it too
   $("#field").addEventListener("change", (e) => {
     const codes = fillPrograms(e.target.value);
-    if (codes.includes(program.code)) $("#program").value = program.code;
+    if (codes.includes(program.code)) { $("#program").value = program.code; showAdvisors(); }
     else selectProgram(codes[0]);
   });
   $("#skills").addEventListener("change", (e) => {
@@ -3301,6 +3300,20 @@ function setupSearch() {
 
 // the field list and the degrees of the chosen field (guy, 2026-11-03): a degree is in every field it names
 const FIELD_ORDER = ["פיסיקה", "מדעי הטבע", "כימיה", "מדעי החיים", "מדעי כדור הארץ"];
+// the academic advisors link follows the chosen field, not the degree (guy, 2026-11-03); a field without one here
+// falls back to the program's own link (column "יועצים אקדמיים")
+const FIELD_ADVISORS = {
+  "פיסיקה": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
+  "מדעי הטבע": "https://academic.openu.ac.il/natural_sciences/pages/counselling.aspx",
+  "כימיה": "https://academic.openu.ac.il/natural_sciences/chemistry/pages/counseling.aspx",
+  "מדעי החיים": "https://academic.openu.ac.il/natural_sciences/life/pages/counseling.aspx",
+  "מדעי כדור הארץ": "https://academic.openu.ac.il/natural_sciences/earth/pages/counseling.aspx",
+};
+function showAdvisors() {
+  const url = FIELD_ADVISORS[$("#field").value] || (program && program.advisors);
+  $("#advisors-link").hidden = !url;
+  if (url) $("#advisors-link").href = url;
+}
 const fieldsOf = (code) => (DATA.programs[code].fields && DATA.programs[code].fields.length ? DATA.programs[code].fields : [FIELD_ORDER[0]]);
 function allFields() {
   const used = new Set(programOrder().flatMap(fieldsOf));
