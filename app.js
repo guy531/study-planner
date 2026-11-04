@@ -1599,16 +1599,15 @@ function meterNote() {
   return base + " " + T`בגלל קורסים חופפים נספרים ${total} נ"ז פחות: ${cuts.map(([n]) => n).join(", ")} (פירוט בכרטיס הקורס).`;
 }
 
+// only what stops a registration (guy, 2026-11-04: an orange bar for missing required knowledge alone scared
+// students; the gray note in the status card says it)
 function renderProblems() {
   const bad = new Set(problems.filter((p) => p.level === "bad").map((p) => p.n));
-  const warn = new Set(problems.filter((p) => p.level === "warn" && !bad.has(p.n)).map((p) => p.n));
   const box = $("#problems");
-  box.hidden = !bad.size && !warn.size;
-  const parts = [];
-  if (bad.size) parts.push(bad.size === 1 ? T("קורס 1 לא עומד בתנאי הקבלה") : T`${bad.size} קורסים לא עומדים בתנאי הקבלה`);
-  if (warn.size) parts.push(warn.size === 1 ? T("לקורס 1 חסר ידע קודם דרוש") : T`ל-${warn.size} קורסים חסר ידע קודם דרוש`);
-  box.className = `problems ${bad.size ? "bad" : "warn"}`;
-  box.replaceChildren(el("span", { text: T`בתכנית: ${parts.join("; ")}.` }),
+  box.hidden = !bad.size;
+  if (!bad.size) return;
+  box.className = "problems bad";
+  box.replaceChildren(el("span", { text: T`בתכנית: ${bad.size === 1 ? T("קורס 1 לא עומד בתנאי הקבלה") : T`${bad.size} קורסים לא עומדים בתנאי הקבלה`}.` }),
     el("button", { type: "button", class: "link", id: "show-problem" }, eyeIcon(), T("הצגה")));
 }
 
