@@ -1914,6 +1914,8 @@ function filterTree() {
   const hideEmpty = (selector) => tree.querySelectorAll(selector).forEach((box) => {
     if (!box.querySelector(".chip:not(.f-hide)")) box.classList.add("f-hide");
   });
+  // an option of one course is a box of its own (a zone, with a minimum height): an empty one left a gap (guy, 2026-11-04)
+  hideEmpty(".zone.chips");
   hideEmpty(".alt");
   hideEmpty(".choice");
   tree.querySelectorAll(".long-list details").forEach((d) => { if (d.querySelector(".chip:not(.f-hide)")) d.open = true; });
