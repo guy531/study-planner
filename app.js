@@ -732,7 +732,11 @@ const CONDITIONS = [
 // general requirements some courses ask for (English, the library course): the student ticks them,
 // and until then every course that asks for one carries a tag, so they are not missed
 const SKILLS = [
-  { id: "english", key: "needsEnglish", checkbox: T("יש לי פטור מקורסי שפה באנגלית"), short: T("פטור מאנגלית"),
+  // English (guy, 2026-11-04): the one box is the exemption from the language courses, which is not a must ("לא חובה");
+// what the degree and the courses ask for is meeting the English requirements. All the courses are taken to ask for
+// that, also the 38 whose page says "פטור" (an anomaly, "ניסוח האנגלית" in the anomalies file). Without the exemption
+// the requirement stays open: the other English levels are not built yet
+{ id: "english", key: "needsEnglish", checkbox: T("יש לי פטור מקורסי שפה באנגלית"), short: T("עמידה בדרישות האנגלית"), optional: true,
     link: "https://academic.openu.ac.il/yedion/english/pages/default.aspx" },
   { id: "library", key: "needsLibrary", checkbox: T("עמדתי בדרישות ההדרכה הביבליוגרפית"), short: T("הדרכה ביבליוגרפית"),
     link: "https://academic.openu.ac.il/yedion/studies/pages/default.aspx?expand=studies8" },
@@ -749,11 +753,14 @@ const askedSkills = () => SKILLS.filter((s) => degreeAsks(s) || courseAsks(s));
 // the "what is left" lines for them: before the courses that ask (the courses set the deadline), or, with no
 // such course, as a general requirement of the degree, which sets no date (guy, 2026-11-04)
 function skillTodos(list, planned) {
+  const english = list.some((s) => s.optional);
+  list = list.filter((s) => !s.optional);
   const byCourse = list.filter((s) => courseAsks(s, planned)), general = list.filter((s) => !courseAsks(s, planned));
   const names = (l) => l.map((sk) => sk.short).join(T(" ו"));
   return [
     ...(byCourse.length ? [T`להשלים ${names(byCourse)} לפני הקורסים שדורשים אותם, ולסמן את זה ב"רקע ודרישות"`] : []),
     ...(general.length ? [T`להשלים ${names(general)} (דרישה כללית של התואר), ולסמן את זה ב"רקע ודרישות"`] : []),
+    ...(english ? [T("לעמוד בדרישות האנגלית של התואר (אם יש לך פטור מקורסי שפה, סמנו אותו ב\"רקע ודרישות\")")] : []),
   ];
 }
 
@@ -764,7 +771,7 @@ function missingSkills(n) {
 }
 
 // "דרוש", not "דורש" (guy, 2026-11-01)
-const skillsTag = (list) => T`דרוש ${list.map((s) => s.short).join(T(" ו"))}`;
+const skillsTag = (list) => T`דרוש: ${list.map((s) => s.short).join(T(" ו"))}`;
 
 // for each requirement not ticked yet: the planned courses that ask for it, in plan order (the first one sets the deadline)
 function skillNeeds() {
@@ -1431,12 +1438,20 @@ function planSteps() {
   const planned = new Set(plannedCourses());
   const bg = (program.background || []).filter((b) => !(state.background || []).includes(b.id) && !satisfied(b.courses, planned));
   // English / library: also those the degree itself asks for, with no course yet (guy, 2026-11-04)
-  const openSkills = askedSkills().filter((sk) => !hasSkill(sk.id));
+  const openSkills = askedSkills().filter((sk) => !hasSkill(sk.id) && !sk.optional);
   if (bg.length || openSkills.length) {
     steps.push({ done: false, text: T("לסמן את \"רקע ודרישות\""), target: "prereq-card",
       detail: [...bg.map((b) => T`${backgroundWhat(b)}, או ${plainCourses(b.courses)} בתכנית`), ...openSkills.map((sk) => sk.short)].join(" · ") });
   } else if ((program.background || []).length || askedSkills().length) {
     steps.push({ done: true, text: T("\"רקע ודרישות\"") });
+  }
+  // without the exemption: meeting the English requirements of the degree, a step of its own (guy, 2026-11-04)
+  const english = SKILLS.find((sk) => sk.optional);
+  if (!hasSkill(english.id) && askedSkills().includes(english)) {
+    const need = skillNeeds().find((x) => x.skill === english);
+    steps.push({ done: false, text: T("לעמוד בדרישות האנגלית של התואר"), target: "prereq-card",
+      detail: need ? T`נדרש לפני ${semesterLabel(semesterIds()[need.courses[0].i])}, בשביל ${fewCourses(need.courses.map((x) => x.n))}. אם יש לך פטור מקורסי שפה, סמנו אותו.`
+        : T("אם יש לך פטור מקורסי שפה, סמנו אותו.") });
   }
   // with the exemption from the English language courses ticked: two academic content courses in English, from the
   // program itself (guy, 2026-11-04; CHE: courses of the student's regular program). The other English levels have
@@ -1610,7 +1625,10 @@ function renderSkills() {
         el("input", { type: "checkbox", "data-skill": s.id, checked: hasSkill(s.id) }),
         // the link inside the text, so a long text wraps beside the checkbox and not under it (guy, 2026-11-01: phone)
         el("span", {}, s.checkbox, " ", el("a", { href: s.link, target: "_blank", rel: "noopener", class: "muted", text: T("מה זה? ↗") }))),
-      need || (degreeAsks(s) && !hasSkill(s.id)) ? el("p", { class: "need-line", text: [
+      s.optional && !hasSkill(s.id) ? el("p", { class: "need-line", text: [T("לא חובה. אם יש לך פטור, סמנו אותו."),
+        need ? T`בלי פטור, צריך לעמוד בדרישות האנגלית לפני ${semesterLabel(ids[need.courses[0].i])}, בשביל ${fewCourses(need.courses.map((x) => x.n))}.` : "",
+      ].filter(Boolean).join(" ") })
+      : need || (degreeAsks(s) && !hasSkill(s.id)) ? el("p", { class: "need-line", text: [
         degreeAsks(s) ? T("דרישה כללית של התואר.") : "",
         need ? T`נדרש לפני ${semesterLabel(ids[need.courses[0].i])}, בשביל ${fewCourses(need.courses.map((x) => x.n))}.` : "",
       ].filter(Boolean).join(" ") }) : null);
@@ -1627,10 +1645,13 @@ function renderPrereq() {
   const planned = new Set(plannedCourses());
   const bg = $("#background-card").hidden ? [] : (program.background || []).map((b) => ({
     text: T("בגרות"), ok: (state.background || []).includes(b.id) || satisfied(b.courses, planned) }));
-  const skills = SKILLS.filter((s) => $(`#skills [data-skill='${s.id}']`)).map((s) => ({ text: s.short, ok: hasSkill(s.id) }));
+  // the exemption is not a must: it does not hold the card open, and folded it reads "✓ פטור מאנגלית" or "בלי פטור מאנגלית"
+  const skills = SKILLS.filter((s) => $(`#skills [data-skill='${s.id}']`)).map((s) => (s.optional
+    ? { text: hasSkill(s.id) ? T("פטור מאנגלית") : T("בלי פטור מאנגלית"), ok: true, bare: !hasSkill(s.id) }
+    : { text: s.short, ok: hasSkill(s.id) }));
   const all = [...bg, ...skills];
   card.hidden = !all.length;
-  $("#prereq-sum").textContent = all.map((x) => `${x.ok ? "✓" : "○"} ${x.text}`).join(" · ");
+  $("#prereq-sum").textContent = all.map((x) => (x.bare ? x.text : `${x.ok ? "✓" : "○"} ${x.text}`)).join(" · ");
   const done = all.every((x) => x.ok);
   if (done !== prereqDone) card.open = !done;
   prereqDone = done;
@@ -2452,7 +2473,7 @@ function showInfo(n) {
   add(T("נ\"ז קודמים"), c.priorCredits ? T`לפחות ${c.priorCredits} נ"ז (${T(c.priorField)})` : null);
   const extras = SKILLS.filter((s) => c[s.key]);
   add(T("דרישות נוספות"), extras.length ? el("span", {}, extras.map((s, k) => el("span", {}, k ? " · " : "", s.short, " ",
-    hasSkill(s.id) ? el("span", { class: "mark yes", text: "✓" }) : el("span", { class: "tag need", text: T("עוד לא סימנת") })))) : null);
+    hasSkill(s.id) ? el("span", { class: "mark yes", text: "✓" }) : el("span", { class: "tag need", text: s.optional ? T("לא סימנת פטור") : T("עוד לא סימנת") })))) : null);
   add(T("ידע קודם דרוש"), c.required && conditionList(c.required, planned, check("required"), n));
   add(T("ידע קודם מומלץ"), c.recommended && conditionList(c.recommended, planned, check("recommended"), n));
   // a program background requirement that this course accepts (guy, 2026-11-03: not every course in its field)
@@ -3241,6 +3262,8 @@ function buildPrint() {
   const ticks = [
     ...asked.map((s) => {
       const need = needs.find((x) => x.skill === s);
+      if (s.optional) return { ok: hasSkill(s.id), text: s.short, note: hasSkill(s.id) ? T("סימנת שיש לך פטור מקורסי שפה")
+        : need ? T`אין פטור מסומן, נדרש לפני ${semesterLabel(ids[need.courses[0].i])}` : T("אין פטור מסומן, דרישה כללית של התואר") };
       return { ok: hasSkill(s.id), text: s.short, note: need ? T`לא סומן, נדרש לפני ${semesterLabel(ids[need.courses[0].i])}`
         : degreeAsks(s) ? T("לא סומן, דרישה כללית של התואר") : T("לא סומן") };
     }),
