@@ -877,6 +877,8 @@ function chip(n, context) {
   if (c && c.offered === false) tags.push(el("span", { class: "tag gone", text: T("לא מוצע עוד") }));
   // a seminar course (advanced-seminar level), which some programs require (guy, 2026-11-03: M8, OE)
   if (c && c.seminar === "חובה") tags.push(el("span", { class: "tag seminar", title: T("קורס ברמה מתקדמת-סמינריונית: כותבים בו עבודה סמינריונית"), text: T("סמינריוני") }));
+  // a broadening course this program allows beyond the shared list (guy, 2026-11-04: 22006 in 15, OJ, OH)
+  if (context !== "outside" && programBroadening(n)) tags.push(el("span", { class: "tag own-broadening", title: T("קורס שהתכנית שלך מתירה במקום קורס מרחיב-דעת, מעבר לרשימה הכללית"), text: T("מרחיב-דעת ייחודי לתכנית") }));
   if (c && c.notYet) tags.push(el("span", { class: "tag gone", title: T("קורס חדש, שעוד לא נפתח באף סמסטר"), text: T("עוד לא מוצע") }));
   const skills = context === "done" || (c && c.offered === false) ? [] : missingSkills(n);
   if (skills.length) tags.push(el("span", { class: "tag need", title: T("סמנו למעלה כשתעמדו בדרישה"), text: skillsTag(skills) }));
@@ -1681,6 +1683,8 @@ function toggleBlock(i) {
 // each alternative gets its own box, with an "או" divider between boxes; the alternative already covered turns green
 // a choice of one course from a long list (CB's broadening course: 145 courses), not alternatives to weigh
 const LONG_LIST = 12;
+// "מה זה?" beside a broadening list, to the catalog page (guy, 2026-11-04)
+const whatBroadening = () => el("a", { href: BROADENING_LINK, target: "_blank", rel: "noopener", class: "muted", text: T("מה זה? ↗") });
 const isLongList = (expr) => !!(expr && expr.or && expr.or.length > LONG_LIST && expr.or.every((e) => typeof e === "string"));
 
 // Every "one of" (or "at least k of") is a dashed box with "או" between its options (guy, 2026-10-29). An option of
@@ -1692,7 +1696,8 @@ function renderExpr(expr, have, inner = false) {
   // folded: the search above the tree finds a course in it (and opens it), or the student opens the whole list
   if (isLongList(expr)) {
     return el("div", { class: "expr long-list" },
-      el("p", { class: "alt-label", text: T`אחד מ-${expr.or.length} הקורסים ברשימה. אפשר לחפש קורס לפי שם בחיפוש שבראש העץ.` }),
+      el("p", { class: "alt-label" }, T`אחד מ-${expr.or.length} הקורסים ברשימה. אפשר לחפש קורס לפי שם בחיפוש שבראש העץ.`,
+        ...(isBroadeningList(expr) ? [" ", whatBroadening()] : [])),
       el("details", {}, el("summary", { text: T`הצגת כל ${expr.or.length} הקורסים` }),
         el("ul", { class: "zone chips" }, expr.or.map((n) => chip(n, "tree")))));
   }
@@ -1919,23 +1924,36 @@ function filterTree() {
 // science seminars and workshops) belong to their own program and showed up here by mistake (guy)
 let listsOpen = new Set();
 // the lists shown under the tree, as [key, { name, program, courses }]
+// one broadening list, shared by all programs (guy, 2026-11-04): the catalog's, from the sheet "קורסים מרחיבי-דעת".
+// Its part "במדעים" is left out of science programs (all of ours): a broadening course comes from outside the
+// student's field. A program's own extra courses (22006 in 15, OJ, OH) are only in its own item, with a tag
+const BROADENING_LINK = "https://www3.openu.ac.il/ouweb/owal/yed.marchiv_daat";
+const isScience = (p) => (p.fields || []).some((f) => FIELD_ORDER.includes(f));
+const broadeningCourses = (p = program) => (DATA.broadening || []).filter((b) => !(isScience(p) && /במדעים$/.test(b.part || ""))).map((b) => b.n);
+const broadeningItems = (p = program) => p.sections.flatMap((sec) => sec.groups
+  .filter((g) => (g.name_he || g.name).includes("מרחיב-דעת")).flatMap((g) => g.items.filter((it) => isLongList(it.courses))));
+// the courses of the program's broadening item that are not on the shared list
+const ownBroadening = new Map();
+function programBroadening(n) {
+  if (!ownBroadening.has(program.code)) {
+    const shared = new Set((DATA.broadening || []).map((b) => b.n));
+    ownBroadening.set(program.code, new Set(broadeningItems().flatMap((it) => it.courses.or).filter((x) => !shared.has(x))));
+  }
+  return ownBroadening.get(program.code).has(n);
+}
+const isBroadeningList = (expr) => broadeningItems().some((it) => it.courses === expr);
+
+// the shared list under "מחוץ לתואר שלך", unless the program has a broadening item of its own (then it is in the tree)
 function otherLists() {
-  const own = new Set();
-  const lists = new Map();
-  Object.values(DATA.programs).forEach((p) => p.sections.forEach((sec) => sec.groups.forEach((g) => g.items.forEach((it) => {
-    if (!isLongList(it.courses) || !(g.name_he || g.name).includes("מרחיב-דעת")) return;
-    const key = it.courses.or.join(",");
-    if (p === program) own.add(key);
-    else if (!lists.has(key)) lists.set(key, { name: g.name, program: p, courses: it.courses.or });
-  }))));
-  return [...lists].filter(([key]) => !own.has(key));
+  if (broadeningItems().length || !(DATA.broadening || []).length) return [];
+  return [["broadening", { courses: broadeningCourses() }]];
 }
 function renderLists() {
   const shown = otherLists();
   $("#lists").replaceChildren(...shown.map(([key, l]) =>
     el("details", { class: "lists-block", "data-list": key, ...(listsOpen.has(key) ? { open: "" } : {}) },
       el("summary", { text: T`קורסים מרחיבי-דעת (${l.courses.length})` }),
-      el("p", { class: "hint", text: T("מותר ללמוד גם קורסים מרחיבי-דעת, במדעי הרוח ובמדעי החברה. זו לא דרישה של התואר שלך. גוררים קורס לסמסטר, והוא נשמר ב\"קורסים נוספים\".") }),
+      el("p", { class: "hint" }, T("מותר ללמוד גם קורסים מרחיבי-דעת. זו לא דרישה של התואר שלך. גוררים קורס לסמסטר, והוא נשמר ב\"קורסים נוספים\"."), " ", whatBroadening()),
       ...(listsOpen.has(key) ? [el("ul", { class: "outside-list" }, l.courses.map((n) => chip(n, "outside")))] : []))));
 }
 

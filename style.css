@@ -414,6 +414,7 @@ button.history:disabled:hover { border-color: var(--line); }
 .tag.bad { background: var(--bad-soft); color: var(--bad); }
 .tag.soft { background: var(--surface-2); color: var(--muted); }
 .tag.seminar { background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); }
+.tag.own-broadening { background: var(--surface-2); color: var(--ink); border: 1px dashed var(--line); }
 .chip .why.soft { color: var(--muted); }
 /* row 3: the notes */
 .chip .why { font-size: 0.78rem; line-height: 1.35; }
