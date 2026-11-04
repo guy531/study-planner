@@ -1480,7 +1480,9 @@ function planSteps() {
     steps.push(taken.length >= CONTENT_NEEDED
       ? { done: true, text: T`${CONTENT_NEEDED} קורסי תוכן באנגלית בתכנית` }
       : { done: false, text: T`ללמוד ${CONTENT_NEEDED} קורסי תוכן באנגלית (יש לך פטור מקורסי שפה)`, show: all.filter((n) => !taken.includes(n)),
-        detail: all.length ? T`בתכנית: ${taken.length} מתוך ${CONTENT_NEEDED}. בתואר שלך: ${fewCourses(all.filter((n) => !taken.includes(n)))}` : T("בתואר שלך אין קורסי תוכן באנגלית") });
+        // the course numbers jump to the courses (guy, 2026-11-04)
+        detail: all.length ? [T`בתכנית: ${taken.length} מתוך ${CONTENT_NEEDED}. בתואר שלך: `,
+          ...all.filter((n) => !taken.includes(n)).flatMap((n, k) => [k ? ", " : "", numLink(n)])] : T("בתואר שלך אין קורסי תוכן באנגלית") });
   }
   return steps;
 }
@@ -1517,7 +1519,7 @@ function knowledgeOnly() {
 const knowledgeText = (list) => (list.length === 1 ? T("בקורס 1 חסר ידע קודם דרוש. ניתן להירשם, אבל מומלץ להשלים את הידע לפני.")
   : T`ב-${list.length} קורסים חסר ידע קודם דרוש. ניתן להירשם, אבל מומלץ להשלים את הידע לפני.`);
 const knowledgeNote = (list) => (list.length ? el("p", { class: "knowledge-note" }, el("span", { class: "mark", "aria-hidden": "true", text: "ⓘ" }), " ",
-  knowledgeText(list), " ", el("button", { type: "button", class: "link", "data-show-course": list.join(",") }, eyeIcon(), T("הצגה"))) : null);
+  knowledgeText(list), " ", el("button", { type: "button", class: "link", "data-show-turn": list.join(",") }, eyeIcon(), T("הצגה"))) : null);
 
 function renderStatus() {
   const steps = planSteps();
@@ -1535,20 +1537,35 @@ function renderStatus() {
   box.replaceChildren(
     el("div", { class: "steps-head" }, el("strong", { text: T("התכנית עוד לא גמורה") }), " ",
       el("span", { text: open.length === 1 ? T("נשאר צעד 1") : T`נשארו ${open.length} צעדים` })),
-    el("ol", { class: "steps" }, steps.map((x) => el("li", { class: x.done ? "done" : "open" },
+    stepsList(steps),
+    knowledgeNote(knowledge));
+}
+
+// "הצגה" over several courses shows one at a time: each click the next (guy, 2026-11-04: it always showed the first)
+const showNext = new Map();
+function showInTurn(list) {
+  if (!list.length) return;
+  const key = list.join(",");
+  const i = (showNext.get(key) || 0) % list.length;
+  showNext.set(key, i + 1);
+  flashInTree([list[i]]);
+  if (list.length > 1) announce(T`${list[i]} (${i + 1} מתוך ${list.length})`);
+}
+
+function stepsList(steps) {
+  return el("ol", { class: "steps" }, steps.map((x) => el("li", { class: x.done ? "done" : "open" },
       el("span", { class: "mark", "aria-label": x.done ? T("בוצע") : T("עוד לא"), text: x.done ? "✓" : "○" }),
       el("div", {},
         el("span", { class: "step-text", text: x.text }),
         x.problems ? el("span", {}, " ", el("button", { type: "button", class: "link show-problem" }, eyeIcon(), T("הצגה"))) : null,
         x.target ? el("span", {}, " ", el("button", { type: "button", class: "link", "data-goto": x.target, text: T("סימון") })) : null,
-        x.show && x.show.length ? el("span", {}, " ", el("button", { type: "button", class: "link", "data-show-course": x.show.join(",") }, eyeIcon(), T("הצגה"))) : null,
-        x.detail ? el("div", { class: "step-sub", text: x.detail }) : null,
+        x.show && x.show.length ? el("span", {}, " ", el("button", { type: "button", class: "link", "data-show-turn": x.show.join(",") }, eyeIcon(), T("הצגה"))) : null,
+        x.detail ? el("div", { class: "step-sub" }, x.detail) : null,
         // a few gaps inline; many (an empty plan has some 20 required courses) folded under "הצגה"
         x.subs && x.subs.length <= 4 ? el("div", { class: "step-sub" }, x.subs.flatMap((g, k) => [k ? " · " : null, gapLink(g)])) : null,
         x.subs && x.subs.length > 4 ? el("details", { class: "step-sub" }, el("summary", { text: T`הצגת ${x.subs.length} הפריטים` }),
           el("ul", {}, x.subs.map((g) => el("li", {}, gapLink(g), g.where ? el("span", { class: "where", text: ` (${g.where})` }) : null)))) : null,
-        x.hint ? el("div", { class: "step-sub hint", text: x.hint }) : null)))),
-    knowledgeNote(knowledge));
+        x.hint ? el("div", { class: "step-sub hint", text: x.hint }) : null))));
 }
 
 function renderMeters() {
@@ -1587,6 +1604,12 @@ function renderMini() {
   const done = !left;
   const box = $("#mini-status");
   box.classList.toggle("done", done);
+  // the panel above the bar: the steps, as in the status card, while open
+  const panel = $("#mini-panel");
+  if (!panel.hidden) panel.replaceChildren(
+    el("div", { class: "steps-head" }, el("strong", { text: done ? T("✓ כל דרישות התואר בתכנית") : T("התכנית עוד לא גמורה") }),
+      done ? null : el("span", { text: ` ${leftText}` })),
+    stepsList(planSteps()), knowledgeNote(knowledgeOnly()));
   box.replaceChildren(
     el("span", { class: "mini-head" }, done ? el("strong", { text: T("✓ כל דרישות התואר בתכנית") })
       : [el("span", { class: "l", text: T("התכנית עוד לא גמורה") }), el("strong", { text: leftText })]),
@@ -1601,15 +1624,24 @@ function renderMini() {
 // every render
 function placeMini() {
   const above = $("#meters").getBoundingClientRect().bottom < 0;
-  if ($("#mini-status").hidden === !above) return;
-  $("#mini-status").hidden = !above;
+  if ($("#mini-wrap").hidden === !above) return;
+  $("#mini-wrap").hidden = !above;
+  if (!above) setMiniOpen(false);
   document.body.classList.toggle("mini-on", above);
 }
 function setupMini() {
   // capture: also a scroll of any box inside the page, not only of the page itself
   document.addEventListener("scroll", placeMini, { passive: true, capture: true });
   addEventListener("resize", placeMini);
-  $("#mini-status").addEventListener("click", () => $("#status").scrollIntoView({ behavior: SMOOTH(), block: "start" }));
+  // a click opens the steps above the bar, a second one closes them (guy, 2026-11-04: scrolling up was annoying)
+  $("#mini-status").addEventListener("click", () => setMiniOpen($("#mini-panel").hidden));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#mini-panel").hidden) setMiniOpen(false); });
+}
+function setMiniOpen(open) {
+  $("#mini-panel").hidden = !open;
+  $("#mini-status").setAttribute("aria-expanded", open ? "true" : "false");
+  $("#mini-wrap").classList.toggle("open", open);
+  if (open) renderMini();
 }
 
 // under the counters: what they include, and the overlap cuts, if any (guy, 2026-10-31: the old note said the
@@ -2798,14 +2830,12 @@ function setupClicks() {
   }));
   document.addEventListener("click", (e) => {
     if (e.target.closest("#show-problem, .show-problem")) {
-      const first = document.querySelector(".chip.prob-bad") || document.querySelector(".chip.prob-warn");
-      if (first) {
-        first.scrollIntoView({ behavior: SMOOTH(), block: "center" });
-        first.classList.add("flash");
-        setTimeout(() => first.classList.remove("flash"), 1600);
-      }
+      const bad = [...new Set(problems.filter((x) => x.level === "bad").map((x) => x.n))];
+      showInTurn(bad.length ? bad : knowledgeOnly());
       return;
     }
+    const turn = e.target.closest("[data-show-turn]");
+    if (turn) { showInTurn(turn.dataset.showTurn.split(",")); return; }
     const goto = e.target.closest("[data-goto]");
     if (goto) {
       const target = document.getElementById(goto.dataset.goto);

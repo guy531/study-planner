@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=031a6059">
+<link rel="stylesheet" href="style.css?v=9928f8e6">
 <script src="i18n.js?v=e2f3071e"></script>
-<script src="lang-ar.js?v=69dc7324"></script>
-<script src="lang-en.js?v=9572116f"></script>
+<script src="lang-ar.js?v=f2afdbcd"></script>
+<script src="lang-en.js?v=da2314be"></script>
 <script>
   // light by default; dark only when the user chose it with the button (set before paint, so no flash)
   try { if (localStorage.getItem("physics-planner-v1:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) { /* no storage */ }
@@ -101,7 +101,10 @@
     </div>
     <div class="semesters" id="semesters"></div>
     <!-- what the degree still needs, floating at the bottom while the counters at the top are out of sight (guy, 2026-11-01) -->
-    <button type="button" class="mini-status" id="mini-status" hidden title="למעלה, לפירוט של מה שחסר" data-t-title></button>
+    <div class="mini-wrap" id="mini-wrap" hidden>
+      <div class="mini-panel" id="mini-panel" hidden></div>
+      <button type="button" class="mini-status" id="mini-status" aria-expanded="false" aria-controls="mini-panel" title="מה עוד חסר (לחיצה פותחת וסוגרת)" data-t-title></button>
+    </div>
 
     <details class="general">
       <summary data-t>דרישות כלליות לתואר</summary>
@@ -179,6 +182,6 @@
 <div class="print-holder" aria-hidden="true"><section id="print-sheet" class="print-sheet"></section></div>
 
 <script src="data/data.js?v=755a2c30"></script>
-<script src="app.js?v=e342d299"></script>
+<script src="app.js?v=0f806f37"></script>
 </body>
 </html>

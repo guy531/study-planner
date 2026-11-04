@@ -246,8 +246,23 @@ button.course-link { border: none; background: none; padding: 0; color: inherit;
 button.course-link:hover { color: var(--accent); text-decoration-style: solid; }
 
 /* the floating summary at the bottom of the plan column, while the counters are out of sight (guy, 2026-11-01) */
+/* the bar and, above it while open, the steps (guy, 2026-11-04: a click opens them instead of scrolling up) */
+.mini-wrap { position: sticky; bottom: 12px; z-index: 15; margin-top: 14px; }
+.mini-wrap[hidden] { display: none; }
+.mini-panel { max-height: 55vh; overflow: auto; overscroll-behavior: contain; margin-bottom: 6px; padding: 10px 14px;
+  border: 1px solid var(--warn); border-radius: 10px; background: var(--warn-soft); box-shadow: 0 2px 12px rgb(0 0 0 / 12%); }
+.mini-panel[hidden] { display: none; }
+.mini-panel .steps-head strong { color: var(--warn); }
+.mini-panel .steps { list-style: none; margin: 6px 0 0; padding: 0; }
+.mini-panel .steps > li { display: flex; gap: 8px; align-items: baseline; margin: 3px 0; }
+.mini-panel .steps > li > .mark { flex: none; width: 1.1em; text-align: center; font-weight: 700; }
+.mini-panel .steps > li.open > .mark { color: var(--warn); }
+.mini-panel .steps > li.done { color: var(--muted); }
+.mini-panel .steps > li.done > .mark { color: var(--done); }
+.mini-panel .steps > li.open .step-text { font-weight: 600; }
+.mini-panel .knowledge-note { margin: 8px 0 0; font-size: 0.9rem; color: var(--muted); }
 .mini-status {
-  position: sticky; bottom: 12px; z-index: 15; width: 100%; margin-top: 14px; display: flex; align-items: stretch; gap: 8px;
+  position: relative; width: 100%; display: flex; align-items: stretch; gap: 8px;
   padding: 8px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink);
   box-shadow: 0 2px 12px rgb(0 0 0 / 12%); font: inherit; text-align: start; cursor: pointer;
 }
@@ -274,7 +289,7 @@ button.course-link:hover { color: var(--accent); text-decoration-style: solid; }
 .mini-meter.full .v strong { color: var(--done); }
 .mini-short { display: none; }
 /* while dragging, drops go through it to the semester under it */
-body.dragging .mini-status { pointer-events: none; opacity: 0.6; }
+body.dragging .mini-status, body.dragging .mini-panel { pointer-events: none; opacity: 0.6; }
 /* the other bars at the bottom go above it */
 body.mini-on .toast, body.mini-on .pick-bar, body.mini-on .find-bar { bottom: 84px; }
 @media (max-width: 900px) {
@@ -553,7 +568,9 @@ button.history:disabled:hover { border-color: var(--line); }
 .status.todo .steps > li.open .step-text { font-weight: 600; }
 .status .knowledge-note { margin: 8px 0 0; font-size: 0.9rem; color: var(--muted); }
 .status.done .knowledge-note { display: block; }
-.status.todo .step-sub { font-size: 0.85rem; margin-top: 1px; }
+.status.todo .step-sub, .mini-panel .step-sub { font-size: 0.85rem; margin-top: 1px; }
+.mini-panel .step-sub summary { cursor: pointer; color: var(--accent); }
+.mini-panel .step-sub ul { margin: 4px 0 2px; padding-inline-start: 18px; }
 .status.todo .step-sub summary { cursor: pointer; color: var(--accent); }
 .status.todo .step-sub ul { margin: 4px 0 2px; padding-inline-start: 18px; }
 .status.todo .step-sub li { margin: 2px 0; }
