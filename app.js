@@ -3299,7 +3299,7 @@ function setupSearch() {
 }
 
 // the field list and the degrees of the chosen field (guy, 2026-11-03): a degree is in every field it names
-const FIELD_ORDER = ["פיסיקה", "מדעי הטבע", "כימיה", "מדעי החיים", "מדעי כדור הארץ"];
+const FIELD_ORDER = ["פיסיקה", "כימיה", "מדעי החיים", "מדעי כדור הארץ", "מדעי הטבע"];  // natural sciences last (guy, 2026-11-04)
 // the academic advisors link follows the chosen field, not the degree (guy, 2026-11-03); a field without one here
 // falls back to the program's own link (column "יועצים אקדמיים")
 const FIELD_ADVISORS = {
