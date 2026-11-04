@@ -475,6 +475,7 @@ I18N.en = {
  "אין פטור מסומן, דרישה כללית של התואר": "No exemption ticked, a general requirement of the degree",
  "תוכן באנגלית": "content in English",
  "מרחיב-דעת": "broadening",
+ "{0}. יש כאן קורסי תוכן באנגלית, ועוד חסרים לך {1} כאלה.": "{0}. There are content courses in English here, and you still need {1}.",
  "מרחיב-דעת ייחודי לתכנית": "Broadening, this program only",
  "קורס שהתכנית שלך מתירה במקום קורס מרחיב-דעת, מעבר לרשימה הכללית": "A course your program allows instead of a broadening course, beyond the general list",
  "עץ הקורסים": "Course tree",

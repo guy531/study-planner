@@ -1785,6 +1785,12 @@ function renderTree() {
   const have = new Set(plannedCourses());
   const treeCourses = programCourses();
   const full = showPlaced || !!$("#tree-search").value.trim();
+  // with the exemption ticked and fewer than two content courses in English in the plan, every list that holds an
+  // unplaced one opens again, also a finished one, and a met item shows its options (guy, 2026-11-04)
+  const content = contentCourses();
+  const contentShort = hasSkill("english") ? Math.max(0, CONTENT_NEEDED - [...content].filter((n) => have.has(n)).length) : 0;
+  const contentLeft = new Set(contentShort ? [...content].filter((n) => !have.has(n) && DATA.courses[n].offered !== false && !DATA.courses[n].notYet) : []);
+  const holdsContent = (expr) => !!expr && [...coursesIn(expr)].some((n) => contentLeft.has(n));
   // the counters the plan is still short of: an elective group past its own minimum stays open while one of its
   // unplaced courses would still count in one of them (guy, 2026-10-29: NQ's free choice can be physics electives)
   const short = creditTotals().filter(([, value, target]) => value < target).map((r) => r[4]);
@@ -1838,7 +1844,7 @@ function renderTree() {
             k === 1 ? T(" אחת מהאפשרויות המסומנות") : T` לפחות ${k} מהאפשרויות המסומנות`,
             `, ${deadline(p.i)}`, hint ? ` · ${hint}` : "");
         });
-        if (ok && !full) {
+        if (ok && !full && !holdsContent(item.courses)) {
           const mine = [...coursesIn(item.courses)].filter((n) => have.has(n));
           return el("div", { class: "item ok compact", id: `item-${group.id}-${itemIndex}` },
             el("div", { class: "ih" }, el("span", { text: item.label }), el("span", { class: "mark", text: "✓" })),
@@ -1872,6 +1878,12 @@ function renderTree() {
         // an elective list without its own minimum (M8: "completing the credits of section א"): the counters check it
         : !group.minCredits ? T("בחירה: להשלמת הנ\"ז של התואר (ראו המונים)")
         : T`בחירה: לפחות ${group.minCredits} נ"ז מהרשימה` + (group.mustLabel ? T`, ובהן ${group.mustLabel}` : "");
+      if (finished && group.items.some((it) => holdsContent(it.courses))) {
+        return el("div", { class: "group", id: `group-${group.id}` },
+          el("div", { class: "gh" }, el("span", { text: group.name }), el("span", { class: "rule done-mark", text: `✓ ${progress}` })),
+          el("div", { class: "rule", text: T`${rule}. יש כאן קורסי תוכן באנגלית, ועוד חסרים לך ${contentShort} כאלה.` }),
+          items);
+      }
       if (finished && !isRequired(group) && stillUseful(group)) {
         return el("div", { class: "group", id: `group-${group.id}` },
           el("div", { class: "gh" }, el("span", { text: group.name }), el("span", { class: "rule done-mark", text: `✓ ${progress}` })),
