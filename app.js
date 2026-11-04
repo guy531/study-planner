@@ -1801,11 +1801,14 @@ function renderTree() {
   const basics = (program.background || []).filter((b) => !(state.background || []).includes(b.id)).map((b) => {
     const ok = satisfied(b.courses, have);
     const id = `bg-${b.id}`;
+    // met: shrunk to one line, which opens to the whole choice like a finished group (guy, 2026-11-04)
     const body = ok && !full
-      ? el("div", { class: "item ok compact", id: `item-${id}` },
-        el("div", { class: "ih" }, el("span", { text: plainCourses(b.courses) }), el("span", { class: "mark", text: "✓" })),
-        el("div", { class: "placed-list" }, [...coursesIn(b.courses)].filter((n) => have.has(n)).map((n, k) => el("span", {}, k ? ", " : "",
-          el("span", { class: "num", text: n }), " ", placeButton(n)))))
+      ? el("details", { class: "item ok compact basics-done", id: `item-${id}`, "data-group": id, open: openGroups.has(id) },
+        el("summary", {},
+          el("div", { class: "ih" }, el("span", { text: plainCourses(b.courses) }), el("span", { class: "mark", text: "✓" })),
+          el("div", { class: "placed-list" }, [...coursesIn(b.courses)].filter((n) => have.has(n)).map((n, k) => el("span", {}, k ? ", " : "",
+            el("span", { class: "num", text: n }), " ", placeButton(n))))),
+        renderExpr(b.courses, have))
       : el("div", { class: `item${ok ? " ok" : ""}`, id: `item-${id}` }, renderExpr(b.courses, have));
     const prep = !ok && b.prep && DATA.courses[b.prep] ? el("div", { class: "item prep" },
       el("div", { class: "ih" }, el("span", { text: T("הכנה, לא חובה") })),
@@ -2021,7 +2024,9 @@ function renderLists() {
 function renderExtra() {
   const zone = $("#extra");
   zone.dataset.empty = T("קורס שאינו חלק מהתואר: מחפשים אותו בחיפוש שבראש העץ וגוררים לכאן");
-  zone.replaceChildren(...state.extra.map((n) => chip(n, "extra")));
+  // a course the tree already shows (kept here before keepOutside knew of "במקום בגרות") is not shown twice
+  const shown = treeShows();
+  zone.replaceChildren(...state.extra.filter((n) => !shown.has(n)).map((n) => chip(n, "extra")));
 }
 
 // one missing part of a condition, in short for a card: a course number, "X או Y" for a choice of two, and
@@ -2660,7 +2665,8 @@ function showDropLine(zone, e) {
 // a course from the search results outside the degree is kept in "קורסים נוספים" wherever it is dropped, so taking
 // it out of a semester later leaves it in the tree instead of losing it
 function keepOutside(n) {
-  if (DATA.courses[n] && !programCourses().has(n) && !state.extra.includes(n)) state.extra.push(n);
+  // not a course the tree shows anyway, like 20125 in "במקום בגרות" (guy, 2026-11-04)
+  if (DATA.courses[n] && !treeShows().has(n) && !state.extra.includes(n)) state.extra.push(n);
 }
 
 function setupDragAndDrop() {

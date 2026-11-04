@@ -588,6 +588,12 @@ button.history:disabled:hover { border-color: var(--line); }
 .item.compact { padding: 4px 8px; }
 .item.compact .ih { margin-bottom: 1px; }
 .item.compact .placed-list { font-size: 0.8rem; color: var(--muted); }
+.item.basics-done > summary { cursor: pointer; list-style: none; }
+.item.basics-done > summary::-webkit-details-marker { display: none; }
+.item.basics-done > summary .ih span:first-child::before { content: "▸ "; color: var(--muted); }
+[dir="rtl"] .item.basics-done > summary .ih span:first-child::before { content: "◂ "; }
+.item.basics-done[open] > summary .ih span:first-child::before { content: "▾ "; }
+.item.basics-done[open] > summary { margin-bottom: 6px; }
 /* a finished group, shrunk to its heading; a click opens it */
 details.group > summary { list-style: none; cursor: pointer; }
 details.group > summary::-webkit-details-marker { display: none; }
