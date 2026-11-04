@@ -312,8 +312,8 @@ function fillRecommended() {
   });
   // the recommended plans leave the foundations out: they take the matriculation for granted
   (program.background || []).forEach((b) => todo.push(T`לסמן ב"רקע ודרישות" אם יש לך ${backgroundWhat(b)}. התכנית המומלצת מניחה שיש לך; אם לא, צריך להוסיף את ${plainCourses(b.courses)}`));
-  const skills = SKILLS.filter((sk) => plan.some((r) => (DATA.courses[r.course] || {})[sk.key]));
-  if (skills.length) todo.push(T`להשלים ${skills.map((sk) => sk.short).join(T(" ו"))} לפני הקורסים שדורשים אותם, ולסמן את זה ב"רקע ודרישות"`);
+  const planCourses = plan.filter((r) => r.course).map((r) => r.course);
+  todo.push(...skillTodos(SKILLS.filter((sk) => degreeAsks(sk) || courseAsks(sk, planCourses)), planCourses));
   const notes = [];
   if (skipped.length) notes.push(T`לא שובצו קורסים שכבר עשיתם: ${skipped.join(", ")}.`);
   if (state.locked && state.locked.length) notes.push(T`קורסים נעולים נשארו במקומם: ${state.locked.join(", ")}.`);
@@ -589,8 +589,7 @@ function autoFill() {
   degreeGaps().filter((g) => g.kind === "credits").forEach((g) => todo.push(T`לבחור ${g.text}`));
   (program.background || []).filter((b) => !(state.background || []).includes(b.id) && !satisfied(b.courses, new Set(plannedCourses())))
     .forEach((b) => todo.push(T`לסמן ב"רקע ודרישות" אם יש לך ${backgroundWhat(b)}. ההשלמה הניחה שיש לך; אם לא, צריך להוסיף את ${plainCourses(b.courses)}`));
-  const skills = skillNeeds().map((x) => x.skill);
-  if (skills.length) todo.push(T`להשלים ${skills.map((sk) => sk.short).join(T(" ו"))} לפני הקורסים שדורשים אותם, ולסמן את זה ב"רקע ודרישות"`);
+  todo.push(...skillTodos(askedSkills().filter((sk) => !hasSkill(sk.id)), state.semesters.flat()));
   // a hint of what was added, once the window is closed: the new cards flash for a moment (guy)
   const flashAdded = () => {
     const added = [...document.querySelectorAll("#semesters .chip")].filter((c) => toPlace.has(c.dataset.n) && !remaining.has(c.dataset.n));
@@ -740,6 +739,23 @@ const SKILLS = [
 ];
 
 const hasSkill = (id) => (state.skills || []).includes(id);
+
+// a requirement the degree itself asks for, course or not (guy, 2026-11-04): its general requirements link to the
+// same rules page (by link, not by name, which is translated)
+const degreeAsks = (s) => (program.general || []).some((g) => (g.link || "").toLowerCase() === s.link.toLowerCase());
+const courseAsks = (s, list = state.semesters.flat()) => list.some((n) => (DATA.courses[n] || {})[s.key]);
+// the requirements the student is asked about: the degree's own, and any a planned course asks for
+const askedSkills = () => SKILLS.filter((s) => degreeAsks(s) || courseAsks(s));
+// the "what is left" lines for them: before the courses that ask (the courses set the deadline), or, with no
+// such course, as a general requirement of the degree, which sets no date (guy, 2026-11-04)
+function skillTodos(list, planned) {
+  const byCourse = list.filter((s) => courseAsks(s, planned)), general = list.filter((s) => !courseAsks(s, planned));
+  const names = (l) => l.map((sk) => sk.short).join(T(" ו"));
+  return [
+    ...(byCourse.length ? [T`להשלים ${names(byCourse)} לפני הקורסים שדורשים אותם, ולסמן את זה ב"רקע ודרישות"`] : []),
+    ...(general.length ? [T`להשלים ${names(general)} (דרישה כללית של התואר), ולסמן את זה ב"רקע ודרישות"`] : []),
+  ];
+}
 
 // the general requirements course n asks for that the student has not ticked yet
 function missingSkills(n) {
@@ -1400,11 +1416,12 @@ function planSteps() {
   // a background box neither ticked nor replaced by its courses in the plan, and English / library a course needs
   const planned = new Set(plannedCourses());
   const bg = (program.background || []).filter((b) => !(state.background || []).includes(b.id) && !satisfied(b.courses, planned));
-  const needs = skillNeeds();
-  if (bg.length || needs.length) {
+  // English / library: also those the degree itself asks for, with no course yet (guy, 2026-11-04)
+  const openSkills = askedSkills().filter((sk) => !hasSkill(sk.id));
+  if (bg.length || openSkills.length) {
     steps.push({ done: false, text: T("לסמן את \"רקע ודרישות\""), target: "prereq-card",
-      detail: [...bg.map((b) => T`${backgroundWhat(b)}, או ${plainCourses(b.courses)} בתכנית`), ...needs.map((x) => x.skill.short)].join(" · ") });
-  } else if ((program.background || []).length || SKILLS.some((sk) => state.semesters.flat().some((n) => (DATA.courses[n] || {})[sk.key]))) {
+      detail: [...bg.map((b) => T`${backgroundWhat(b)}, או ${plainCourses(b.courses)} בתכנית`), ...openSkills.map((sk) => sk.short)].join(" · ") });
+  } else if ((program.background || []).length || askedSkills().length) {
     steps.push({ done: true, text: T("\"רקע ודרישות\"") });
   }
   return steps;
@@ -1552,13 +1569,13 @@ function renderNeeds() {
     el("button", { type: "button", class: "link", "data-goto": "prereq-card", text: T("סימון") }));
 }
 
-// a checkbox for each requirement that a course in the semesters asks for (none asked, no box),
-// with a link to the rules and, while unticked, where the plan needs it
+// a checkbox for each requirement that the degree or a course in the semesters asks for (none asked, no box),
+// with a link to the rules and, while unticked, where the plan needs it; one the degree asks for is open even before
+// any course needs it, and says so (guy, 2026-11-04)
 function renderSkills() {
   const needs = skillNeeds();
   const ids = semesterIds();
-  const planned = state.semesters.flat();
-  const asked = SKILLS.filter((s) => planned.some((n) => (DATA.courses[n] || {})[s.key]));
+  const asked = askedSkills();
   $("#skills-card").hidden = !asked.length;
   $("#skills").replaceChildren(...asked.map((s) => {
     const need = needs.find((x) => x.skill === s);
@@ -1567,7 +1584,10 @@ function renderSkills() {
         el("input", { type: "checkbox", "data-skill": s.id, checked: hasSkill(s.id) }),
         // the link inside the text, so a long text wraps beside the checkbox and not under it (guy, 2026-11-01: phone)
         el("span", {}, s.checkbox, " ", el("a", { href: s.link, target: "_blank", rel: "noopener", class: "muted", text: T("מה זה? ↗") }))),
-      need ? el("p", { class: "need-line", text: T`נדרש לפני ${semesterLabel(ids[need.courses[0].i])}, בשביל ${fewCourses(need.courses.map((x) => x.n))}.` }) : null);
+      need || (degreeAsks(s) && !hasSkill(s.id)) ? el("p", { class: "need-line", text: [
+        degreeAsks(s) ? T("דרישה כללית של התואר.") : "",
+        need ? T`נדרש לפני ${semesterLabel(ids[need.courses[0].i])}, בשביל ${fewCourses(need.courses.map((x) => x.n))}.` : "",
+      ].filter(Boolean).join(" ") }) : null);
   }));
   renderPrereq();
 }
@@ -3171,13 +3191,14 @@ function buildPrint() {
       }),
     };
   });
-  // English / library (only what a planned course asks for) and the background requirements, ticked or not
+  // English / library (what the degree or a planned course asks for) and the background requirements, ticked or not
   const needs = skillNeeds();
-  const asked = SKILLS.filter((s) => state.semesters.flat().some((n) => (DATA.courses[n] || {})[s.key]));
+  const asked = askedSkills();
   const ticks = [
     ...asked.map((s) => {
       const need = needs.find((x) => x.skill === s);
-      return { ok: hasSkill(s.id), text: s.short, note: need ? T`לא סומן, נדרש לפני ${semesterLabel(ids[need.courses[0].i])}` : T("לא סומן") };
+      return { ok: hasSkill(s.id), text: s.short, note: need ? T`לא סומן, נדרש לפני ${semesterLabel(ids[need.courses[0].i])}`
+        : degreeAsks(s) ? T("לא סומן, דרישה כללית של התואר") : T("לא סומן") };
     }),
   ];
   // a background requirement is printed as what it is, an alternative: "20125 או (20113 וגם 20114), או בגרות ..."
