@@ -2342,7 +2342,13 @@ function flashInTree(wanted, flash = true) {
     toast(T`${wanted.join(", ")} לא נמצאים בעץ, כי הם לא חלק מהתכנית. אפשר להוסיף אותם ל"קורסים נוספים" בכפתור שליד הקורס, או בחיפוש שבראש העץ.`);
     return;
   }
-  chips[0].scrollIntoView({ behavior: SMOOTH(), block: "center" });
+  // a card in the tree beside the plan (not a phone's layer): only the tree scrolls, the page stays where it is (guy,
+  // 2026-11-04: a click on a number in a semester scrolled the plan down too)
+  const tree = chips[0].closest(".tree");
+  if (tree && !treeIsLayer()) {
+    const r = chips[0].getBoundingClientRect(), t = tree.getBoundingClientRect();
+    tree.scrollBy({ top: r.top - t.top - (t.height - r.height) / 2, behavior: SMOOTH() });
+  } else chips[0].scrollIntoView({ behavior: SMOOTH(), block: "center" });
   if (flash) chips.forEach((c) => { c.classList.add("flash"); setTimeout(() => c.classList.remove("flash"), 2400); });
 }
 

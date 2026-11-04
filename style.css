@@ -442,8 +442,8 @@ button.history:disabled:hover { border-color: var(--line); }
 /* unmet conditions: red for admission, orange for required knowledge */
 .tag.bad { background: var(--bad-soft); color: var(--bad); }
 .tag.soft { background: var(--surface-2); color: var(--muted); }
-.tag.seminar { background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); }
-.tag.content-english { background: var(--surface-2); color: var(--ink); border: 1px solid var(--accent); }
+/* both say something about the course, not something to do: the same gray (guy, 2026-11-04) */
+.tag.seminar, .tag.content-english { background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); }
 .tag.own-broadening { background: var(--surface-2); color: var(--ink); border: 1px dashed var(--line); }
 .chip .why.soft { color: var(--muted); }
 /* row 3: the notes */
