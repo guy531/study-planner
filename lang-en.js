@@ -496,6 +496,7 @@ I18N.en = {
  "בתכנית: {0} מתוך {1}. בתואר שלך: ": "In the plan: {0} of {1}. In your degree: ",
  "{0} ({1} מתוך {2})": "{0} ({1} of {2})",
  "מה עוד חסר (לחיצה פותחת וסוגרת)": "What is still missing (click to open and close)",
+ "חסר {0} נ\"ז": "{0} credits missing",
  "מרחיב-דעת ייחודי לתכנית": "Broadening, this program only",
  "קורס שהתכנית שלך מתירה במקום קורס מרחיב-דעת, מעבר לרשימה הכללית": "A course your program allows instead of a broadening course, beyond the general list",
  "עץ הקורסים": "Course tree",

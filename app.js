@@ -1576,12 +1576,12 @@ function stepsList(steps) {
         x.problems ? el("span", {}, " ", el("button", { type: "button", class: "link show-problem" }, eyeIcon(), T("הצגה"))) : null,
         x.target ? el("span", {}, " ", el("button", { type: "button", class: "link", "data-goto": x.target, text: T("סימון") })) : null,
         x.show && x.show.length ? el("span", {}, " ", el("button", { type: "button", class: "link", "data-show-turn": x.show.join(",") }, eyeIcon(), T("הצגה"))) : null,
-        x.detail ? el("div", { class: "step-sub" }, x.detail) : null,
+        x.detail ? el("div", { class: "step-sub" }, linkNums(x.detail)) : null,
         // a few gaps inline; many (an empty plan has some 20 required courses) folded under "הצגה"
         x.subs && x.subs.length <= 4 ? el("div", { class: "step-sub" }, x.subs.flatMap((g, k) => [k ? " · " : null, gapLink(g)])) : null,
         x.subs && x.subs.length > 4 ? el("details", { class: "step-sub" }, el("summary", { text: T`הצגת ${x.subs.length} הפריטים` }),
           el("ul", {}, x.subs.map((g) => el("li", {}, gapLink(g), g.where ? el("span", { class: "where", text: ` (${g.where})` }) : null)))) : null,
-        x.hint ? el("div", { class: "step-sub hint", text: x.hint }) : null))));
+        x.hint ? el("div", { class: "step-sub hint" }, linkNums(x.hint)) : null))));
 }
 
 function renderMeters() {
@@ -1639,7 +1639,7 @@ function renderMini() {
       el("span", { class: "v" }, target ? el("span", { dir: "ltr" }, `${value} / `, el("strong", { text: String(target) })) : el("strong", { text: String(value) })),
       el("span", { class: "bar" }, el("span", { style: `width:${target ? Math.min(100, (value / target) * 100) : 0}%` })))),
     el("span", { class: "mini-short", text: done ? T("✓ כל דרישות התואר בתכנית")
-      : [T("לא גמורה"), leftText, total ? T`חסר: ${total.credits} נ"ז` : null].filter(Boolean).join(" · ") }));
+      : [leftText, total ? T`חסר ${total.credits} נ"ז` : null].filter(Boolean).join(" · ") }));
 }
 // shown once the counters are above the screen (not while they are in sight); checked on scroll, on resize and after
 // every render
@@ -1719,13 +1719,13 @@ function renderSkills() {
         el("input", { type: "checkbox", "data-skill": s.id, checked: hasSkill(s.id) }),
         // the link inside the text, so a long text wraps beside the checkbox and not under it (guy, 2026-11-01: phone)
         el("span", {}, s.checkbox, " ", el("a", { href: s.link, target: "_blank", rel: "noopener", class: "muted", text: T("מה זה? ↗") }))),
-      s.optional && !hasSkill(s.id) ? el("p", { class: "need-line", text: [T("לא חובה. אם יש לך פטור, סמנו אותו."),
+      s.optional && !hasSkill(s.id) ? el("p", { class: "need-line" }, linkNums([T("לא חובה. אם יש לך פטור, סמנו אותו."),
         need ? T`בלי פטור, צריך לעמוד בדרישות האנגלית לפני ${semesterLabel(ids[need.courses[0].i])}, בשביל ${fewCourses(need.courses.map((x) => x.n))}.` : "",
-      ].filter(Boolean).join(" ") })
-      : need || (degreeAsks(s) && !hasSkill(s.id)) ? el("p", { class: "need-line", text: [
+      ].filter(Boolean).join(" ")))
+      : need || (degreeAsks(s) && !hasSkill(s.id)) ? el("p", { class: "need-line" }, linkNums([
         degreeAsks(s) ? T("דרישה כללית של התואר.") : "",
         need ? T`נדרש לפני ${semesterLabel(ids[need.courses[0].i])}, בשביל ${fewCourses(need.courses.map((x) => x.n))}.` : "",
-      ].filter(Boolean).join(" ") }) : null);
+      ].filter(Boolean).join(" "))) : null);
   }));
   renderPrereq();
 }
@@ -2172,9 +2172,9 @@ function renderBackground() {
         el("input", { type: "checkbox", "data-background": b.id, checked: ticked || viaCourses, class: viaCourses ? "auto" : null }),
         el("span", {}, b.checkbox, " ", el("button", { type: "button", class: "link", "data-background-info": b.id, text: T("הסבר") }))),
       // ticked: nothing to explain; otherwise either the courses are already in the plan, or where to find them
-      ticked ? null : el("p", { class: `bg-note${viaCourses ? " ok" : ""}` }, viaCourses
+      ticked ? null : el("p", { class: `bg-note${viaCourses ? " ok" : ""}` }, linkNums(viaCourses
         ? T`✓ ${plainCourses((b.courses.or || [b.courses]).find((p) => satisfied(p, planned)))} בתכנית שלך, ולכן הדרישה מתקיימת.`
-        : T`בלי בגרות כזו, יש ללמוד את ${plainCourses(b.courses).replace(", או ", ", או את ").replace(" + ", T(" ו-"))} (בראש העץ).`),
+        : T`בלי בגרות כזו, יש ללמוד את ${plainCourses(b.courses).replace(", או ", ", או את ").replace(" + ", T(" ו-"))} (בראש העץ).`)),
       ticked || viaCourses || !b.prep || !DATA.courses[b.prep] ? null : el("p", { class: "bg-note" }, prepLine(b)));
   }));
 }
@@ -2253,6 +2253,10 @@ function renderStatic() {
 // (guy, 2026-11-03: instead of a separate "+ הוספה" button)
 const onPage = (n) => locationOf(n) !== null || treeShows().has(n) || state.extra.includes(n);
 const canAdd = (n) => DATA.courses[n] && DATA.courses[n].offered !== false;
+// a text with course numbers in it: every number of a course of ours a button that jumps to it (guy, 2026-11-04:
+// numbers in a line like this should always be clickable)
+const linkNums = (t) => (typeof t !== "string" ? t
+  : t.split(/(\d{5})/).map((p, k) => (k % 2 && DATA.courses[p] ? numLink(p) : p)).filter((p) => p !== ""));
 function numLink(n) {
   if (!onPage(n) && canAdd(n)) return el("button", { type: "button", class: "num num-link", "data-add-show": n, title: T("הוספה לעץ והצגה"), text: n });
   if (!onPage(n)) return el("span", { class: "num", text: n });
@@ -2709,7 +2713,7 @@ function setupHoverMarks() {
   let mouseN = null, focusN = null;
   const update = () => { const n = mouseN || focusN; if (n !== hovering) { hovering = n; markBlocked(); } };
   const set = (n) => { mouseN = n; update(); };
-  const treeChip = (t) => t && t.closest ? t.closest("aside.tree .chip[draggable]") : null;
+  const treeChip = (t) => t && t.closest ? t.closest(".chip[draggable]") : null;
   // keyboard focus only (:focus-visible): a click also focuses the card, and its colors would stay after the mouse left
   document.addEventListener("focusin", (e) => {
     const chip = e.target.matches(":focus-visible") ? treeChip(e.target) : null;
@@ -2723,8 +2727,8 @@ function setupHoverMarks() {
   const hover = (e) => {
     if (e.pointerType !== "mouse" || dragging) return;
     if (hoverSkip) { if (onDropped(e)) return; hoverSkip = null; }
-    // only the courses in the tree column (the tree, the search results, "קורסים נוספים", the lists): a course already
-    // placed shows its colors only when clicked or dragged (guy, 2026-11-01)
+    // every course that can be moved: in the tree column and also one already in a semester or in "עשיתי" (guy,
+    // 2026-11-04: on trial again; on 2026-11-01 it was only the tree column)
     const chip = treeChip(e.target);
     set(chip ? chip.dataset.n : null);
   };
@@ -2929,6 +2933,8 @@ function setupClicks() {
     if (c) {
       selected = selected === c.dataset.n ? null : c.dataset.n;
       if (selected !== null && c.closest(".tree")) setTreeOpen(false); // phones: the tree makes way for the semesters
+      // the steps panel over the floating bar closes too, so the semesters are free to take the course (guy, 2026-11-04)
+      if (selected !== null && !$("#mini-panel").hidden) setMiniOpen(false);
       render();
       return;
     }
