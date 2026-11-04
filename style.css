@@ -254,6 +254,11 @@ button.course-link:hover { color: var(--accent); text-decoration-style: solid; }
 .mini-panel { max-height: 55vh; overflow: auto; overscroll-behavior: contain; margin-bottom: 6px; padding: 10px 14px;
   border: 1px solid var(--warn); border-radius: 10px; background: var(--warn-soft); box-shadow: 0 2px 12px rgb(0 0 0 / 12%); }
 .mini-panel[hidden] { display: none; }
+.mini-panel .steps-head { display: flex; align-items: baseline; gap: 4px; }
+.mini-panel .mini-close { margin-inline-start: auto; border: none; background: none; color: var(--muted); font-size: 1.25rem; line-height: 1; cursor: pointer; padding: 0 2px; }
+.mini-panel .mini-close:hover { color: var(--ink); }
+.mini-chev { flex: none; align-self: center; color: var(--muted); font-size: 0.95rem; line-height: 1; }
+.mini-status:hover .mini-chev { color: var(--accent); }
 .mini-panel .steps-head strong { color: var(--warn); }
 .mini-panel .steps { list-style: none; margin: 6px 0 0; padding: 0; }
 .mini-panel .steps > li { display: flex; gap: 8px; align-items: baseline; margin: 3px 0; }

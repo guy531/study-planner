@@ -1624,9 +1624,12 @@ function renderMini() {
   const panel = $("#mini-panel");
   if (!panel.hidden) panel.replaceChildren(
     el("div", { class: "steps-head" }, el("strong", { text: done ? T("✓ כל דרישות התואר בתכנית") : T("התכנית עוד לא גמורה") }),
-      done ? null : el("span", { text: ` ${leftText}` })),
+      done ? null : el("span", { text: ` ${leftText}` }),
+      el("button", { type: "button", class: "mini-close", "aria-label": T("סגירה"), title: T("סגירה"), text: "×" })),
     stepsList(planSteps()), knowledgeNote(knowledgeOnly()) || "");
+  // an arrow at the start says the bar opens (▴) and, while open, closes (▾) (guy, 2026-11-04)
   box.replaceChildren(
+    el("span", { class: "mini-chev", "aria-hidden": "true", text: panel.hidden ? "▴" : "▾" }),
     el("span", { class: "mini-head" }, done ? el("strong", { text: T("✓ כל דרישות התואר בתכנית") })
       : [el("span", { class: "l", text: T("התכנית עוד לא גמורה") }), el("strong", { text: leftText })]),
     ...creditTotals().map(([label, value, target]) => el("span", { class: `mini-meter${target && value >= target ? " full" : ""}` },
@@ -1651,13 +1654,14 @@ function setupMini() {
   addEventListener("resize", placeMini);
   // a click opens the steps above the bar, a second one closes them (guy, 2026-11-04: scrolling up was annoying)
   $("#mini-status").addEventListener("click", () => setMiniOpen($("#mini-panel").hidden));
+  $("#mini-panel").addEventListener("click", (e) => { if (e.target.closest(".mini-close")) setMiniOpen(false); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#mini-panel").hidden) setMiniOpen(false); });
 }
 function setMiniOpen(open) {
   $("#mini-panel").hidden = !open;
   $("#mini-status").setAttribute("aria-expanded", open ? "true" : "false");
   $("#mini-wrap").classList.toggle("open", open);
-  if (open) renderMini();
+  renderMini();
 }
 
 // under the counters: what they include, and the overlap cuts, if any (guy, 2026-10-31: the old note said the
