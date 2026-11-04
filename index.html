@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=9928f8e6">
+<link rel="stylesheet" href="style.css?v=9bcf78d0">
 <script src="i18n.js?v=e2f3071e"></script>
-<script src="lang-ar.js?v=f2afdbcd"></script>
-<script src="lang-en.js?v=da2314be"></script>
+<script src="lang-ar.js?v=1533becb"></script>
+<script src="lang-en.js?v=30207ec4"></script>
 <script>
   // light by default; dark only when the user chose it with the button (set before paint, so no flash)
   try { if (localStorage.getItem("physics-planner-v1:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) { /* no storage */ }
@@ -174,7 +174,6 @@
 <div class="find-bar" id="find-bar" role="search" hidden>
   <input id="find-input" type="search" autocomplete="off" placeholder="חיפוש קורס בעמוד, לפי שם או מספר" data-t-placeholder aria-label="חיפוש קורס בעמוד, לפי שם או מספר" data-t-aria>
   <span id="find-count" aria-live="polite"></span>
-  <button type="button" id="find-outside" class="link" hidden></button>
   <button type="button" id="find-prev" title="הקודם (Shift+Enter)" data-t-title aria-label="הקודם" data-t-aria>↑</button>
   <button type="button" id="find-next" title="הבא (Enter)" data-t-title aria-label="הבא" data-t-aria>↓</button>
   <button type="button" id="find-close" class="find-close" title="סגירה (Esc)" data-t-title aria-label="סגירת החיפוש" data-t-aria>×</button>
@@ -182,6 +181,6 @@
 <div class="print-holder" aria-hidden="true"><section id="print-sheet" class="print-sheet"></section></div>
 
 <script src="data/data.js?v=755a2c30"></script>
-<script src="app.js?v=0f806f37"></script>
+<script src="app.js?v=0565f9e4"></script>
 </body>
 </html>

@@ -1538,7 +1538,7 @@ function renderStatus() {
     el("div", { class: "steps-head" }, el("strong", { text: T("התכנית עוד לא גמורה") }), " ",
       el("span", { text: open.length === 1 ? T("נשאר צעד 1") : T`נשארו ${open.length} צעדים` })),
     stepsList(steps),
-    knowledgeNote(knowledge));
+    knowledgeNote(knowledge) || "");
 }
 
 // "הצגה" over several courses shows one at a time: each click the next (guy, 2026-11-04: it always showed the first)
@@ -1582,8 +1582,8 @@ function renderMeters() {
         el("div", { class: "value" }, target ? el("span", { dir: "ltr" }, el("small", { text: `${value} / ` }), String(target)) : String(value)),
         el("div", { class: "bar" }, el("span", { style: `width:${pct}%` })));
     }),
-    // "at most" (M8): within it, a plain meter; over it, red
-    ...caps.map(([label, value, max]) => el("div", { class: `meter cap${value > max ? " over" : ""}` },
+    // "at most" (M8, KS): within it, green with ✓ like a met counter; over it, red with ✗ (guy, 2026-11-04)
+    ...caps.map(([label, value, max]) => el("div", { class: `meter cap${value > max ? " over" : " full"}` },
       el("div", { class: "label", text: capital(label) }),
       el("div", { class: "value" }, el("span", { dir: "ltr" }, el("small", { text: `${value} / ` }), String(max)), el("small", { class: "at-most", text: T(" לכל היותר") })),
       el("div", { class: "bar" }, el("span", { style: `width:${Math.min(100, (value / max) * 100)}%` })))),
@@ -1609,7 +1609,7 @@ function renderMini() {
   if (!panel.hidden) panel.replaceChildren(
     el("div", { class: "steps-head" }, el("strong", { text: done ? T("✓ כל דרישות התואר בתכנית") : T("התכנית עוד לא גמורה") }),
       done ? null : el("span", { text: ` ${leftText}` })),
-    stepsList(planSteps()), knowledgeNote(knowledgeOnly()));
+    stepsList(planSteps()), knowledgeNote(knowledgeOnly()) || "");
   box.replaceChildren(
     el("span", { class: "mini-head" }, done ? el("strong", { text: T("✓ כל דרישות התואר בתכנית") })
       : [el("span", { class: "l", text: T("התכנית עוד לא גמורה") }), el("strong", { text: leftText })]),
@@ -2344,11 +2344,7 @@ function findShow() {
   const q = $("#find-input").value;
   const count = $("#find-count");
   $("#find-input").classList.toggle("none", !!q.trim() && !findHits.length);
-  count.textContent = !q.trim() ? "" : !findHits.length ? (findOutside.length ? T("לא נמצא בתכנית ובעץ ·") : T("לא נמצא")) : T`${findAt + 1} מתוך ${findHits.length}`;
-  // courses outside the degree are not on the page: the bar says how many, and shows them on request (guy, 2026-11-04)
-  const more = $("#find-outside");
-  more.hidden = !q.trim() || !findOutside.length;
-  if (!more.hidden) more.replaceChildren(eyeIcon(), findHits.length ? T`עוד ${findOutside.length} מחוץ לתואר` : T`${findOutside.length} קורסים מחוץ לתואר`);
+  count.textContent = !q.trim() ? "" : !findHits.length ? T("לא נמצא") : T`${findAt + 1} מתוך ${findHits.length}`;
   $("#find-prev").disabled = $("#find-next").disabled = findHits.length < 2;
 }
 function findGo(step) {
@@ -2364,14 +2360,9 @@ function findGo(step) {
   flashInTree([n], false);
   markFound();
 }
-let findOutside = [];
 function findUpdate() {
   const words = searchText($("#find-input").value).split(" ").filter(Boolean);
-  const candidates = words.length ? findCandidates() : [];
-  findHits = candidates.filter((n) => searchScore(n, words) > 0);
-  // the rest, as the tree's search finds them under "לא חלק מהתואר שלך"
-  const known = new Set([...candidates, ...treeShows()]);
-  findOutside = words.length ? Object.keys(DATA.courses).filter((n) => !known.has(n) && searchScore(n, words) > 0) : [];
+  findHits = words.length ? findCandidates().filter((n) => searchScore(n, words) > 0) : [];
   findAt = -1;
   if (findHits.length) findGo(1); else { findShow(); markFound(); }
 }
@@ -2406,16 +2397,6 @@ function setupFind() {
   $("#find-next").addEventListener("click", () => findGo(1));
   $("#find-prev").addEventListener("click", () => findGo(-1));
   $("#find-close").addEventListener("click", closeFind);
-  // the courses outside the degree: the tree's search shows them (all of them), with their cards and "+"
-  $("#find-outside").addEventListener("click", () => {
-    $("#tree-search").value = $("#find-input").value;
-    showAllOutside = true;
-    renderTree();
-    if (treeIsLayer()) setTreeOpen(true);
-    const first = document.querySelector("#outside-list .chip");
-    $("#outside").scrollIntoView({ behavior: SMOOTH(), block: "start" });
-    if (first) { first.classList.add("flash"); setTimeout(() => first.classList.remove("flash"), 1600); }
-  });
 }
 
 // the conditions of course n in semester i as a checklist: one row per condition, ✓ or ✗, alternatives listed under it
@@ -3129,7 +3110,7 @@ const HELP_STEPS = [
   { shot: "background", title: T("7. רקע ודרישות"),
     text: T("בכרטיס \"רקע ודרישות\" מסמנים אם יש לך בגרות שבאה במקום קורסי היסוד, ואם עמדת בדרישות האנגלית וההדרכה הביבליוגרפית. מה שלא סומן מופיע כתגית על הקורסים שדורשים אותו. כשקורסי היסוד כבר בתכנית, תיבת הבגרות אפורה ועם ✓. בלי בגרות, מבחן התאמה ימליץ אם כדאי ללמוד קודם את סדנת ההכנה (ללא נ\"ז). כשהכול מסומן, הכרטיס מתקפל לשורה אחת.") },
   { shot: "search", title: T("8. חיפוש"),
-    text: T("החיפוש בראש העץ מוצא קורס לפי שם או מספר, ומתחת לעץ מציג גם קורסים מתאימים שאינם חלק מהתואר; אפשר לגרור אותם ישר לסמסטר. Ctrl+F פותח חיפוש בכל העמוד, בעץ ובתכנית: Enter עובר להתאמה הבאה, והקורסים שנמצאו מסומנים בצהוב. אם יש קורסים מתאימים מחוץ לתואר, הפס אומר כמה, ולחיצה מציגה אותם מתחת לעץ. Ctrl+F שוב סוגר אותו.") },
+    text: T("החיפוש בראש העץ מוצא קורס לפי שם או מספר, ומתחת לעץ מציג גם קורסים מתאימים שאינם חלק מהתואר; אפשר לגרור אותם ישר לסמסטר. Ctrl+F פותח חיפוש בכל העמוד, בעץ ובתכנית: Enter עובר להתאמה הבאה, והקורסים שנמצאו מסומנים בצהוב. Ctrl+F שוב סוגר אותו.") },
   { shot: "share", title: T("9. הדפסה ושיתוף"),
     text: T("\"הדפסה / PDF\" מכין טבלה של התכנית לפי סמסטרים, להדפסה או לשמירה כ-PDF, עם מה שעוד חסר. \"שיתוף\" יוצר קישור שפותח את התכנית אצל מי שמקבל אותו, למשל יועץ אקדמי. תכנית שבונים כאן אינה מאושרת: אישור תכנית לימודים סופית מתקבל רק דרך מערכת השאילתא.") },
 ];

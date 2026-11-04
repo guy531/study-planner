@@ -174,9 +174,11 @@ select, input[type="search"] {
 .meter.full::after { content: "✓"; position: absolute; top: 8px; inset-inline-end: 12px; color: var(--done); font-size: 1.2rem; font-weight: 700; line-height: 1; }
 /* a counter of "at most" (M8: opening credits): plain while within, red over it */
 .meter.cap .bar span { background: var(--muted); }
-.meter.cap.over { border-color: var(--bad); }
+.meter.cap.full .bar span { background: var(--done); }
+.meter.cap.over { border-color: var(--bad); background: var(--bad-soft); }
 .meter.cap.over .label, .meter.cap.over .value, .meter.cap.over .value small { color: var(--bad); }
 .meter.cap.over .bar span { background: var(--bad); }
+.meter.cap.over::after { content: "✗"; position: absolute; top: 8px; inset-inline-end: 12px; color: var(--bad); font-size: 1.2rem; font-weight: 700; line-height: 1; }
 .meters-note { grid-column: 1 / -1; color: var(--muted); font-size: 0.8rem; margin-top: -4px; }
 
 /* zones */
@@ -310,8 +312,6 @@ body.mini-on .toast, body.mini-on .pick-bar, body.mini-on .find-bar { bottom: 84
 .find-bar[hidden] { display: none; }
 .find-bar input { width: 260px; max-width: 50vw; padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); font: inherit; }
 .find-bar input.none { border-color: var(--bad); }
-.find-bar #find-outside { white-space: nowrap; font-size: 0.85rem; padding: 2px 4px; display: inline-flex; align-items: center; gap: 3px; }
-.find-bar #find-outside[hidden] { display: none; }
 .find-bar #find-count { min-width: 5.5em; color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 .find-bar button { padding: 2px 9px; }
 .find-bar button:disabled { opacity: 0.45; cursor: default; }
