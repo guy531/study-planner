@@ -1013,6 +1013,8 @@ function chip(n, context) {
     (!inTree || context === "extra") && !(lockable && isLocked(n))
       ? el("button", { type: "button", class: "x", "data-remove": n, "data-from": context === "extra" ? "extra" : "plan", "aria-label": T("הסרה"), text: "×" })
       : null));
+  // the course numbers in the lines under the card jump to those courses (guy, 2026-11-04)
+  notes.forEach(linkNumsIn);
   node.append(head, el("div", { class: "chip-tags" }, tags), ...notes);
   // what a screen reader says on reaching the card: number, name, credits and tags (not the buttons in it)
   if (!placed) node.setAttribute("aria-label", [n, courseName(n), ...tags.filter((t) => t.tagName === "SPAN").map((t) => t.textContent)].join(", "));
@@ -2257,6 +2259,13 @@ const canAdd = (n) => DATA.courses[n] && DATA.courses[n].offered !== false;
 // numbers in a line like this should always be clickable)
 const linkNums = (t) => (typeof t !== "string" ? t
   : t.split(/(\d{5})/).map((p, k) => (k % 2 && DATA.courses[p] ? numLink(p) : p)).filter((p) => p !== ""));
+// the same inside an element already built: its text, not what is already in a button or a link
+function linkNumsIn(root) {
+  const walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const texts = [];
+  for (let t = walk.nextNode(); t; t = walk.nextNode()) if (/\d{5}/.test(t.data) && !t.parentNode.closest("button, a")) texts.push(t);
+  texts.forEach((t) => t.replaceWith(...linkNums(t.data)));
+}
 function numLink(n) {
   if (!onPage(n) && canAdd(n)) return el("button", { type: "button", class: "num num-link", "data-add-show": n, title: T("הוספה לעץ והצגה"), text: n });
   if (!onPage(n)) return el("span", { class: "num", text: n });
