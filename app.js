@@ -1622,6 +1622,8 @@ function renderMini() {
   box.classList.toggle("done", done);
   // the panel above the bar: the steps, as in the status card, while open
   const panel = $("#mini-panel");
+  // green like the bar when nothing is left (guy, 2026-11-04)
+  panel.classList.toggle("done", done);
   if (!panel.hidden) panel.replaceChildren(
     el("div", { class: "steps-head" }, el("strong", { text: done ? T("✓ כל דרישות התואר בתכנית") : T("התכנית עוד לא גמורה") }),
       done ? null : el("span", { text: ` ${leftText}` }),

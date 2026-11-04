@@ -260,6 +260,8 @@ button.course-link:hover { color: var(--accent); text-decoration-style: solid; }
 .mini-chev { flex: none; align-self: center; color: var(--muted); font-size: 0.95rem; line-height: 1; }
 .mini-status:hover .mini-chev { color: var(--accent); }
 .mini-panel .steps-head strong { color: var(--warn); }
+.mini-panel.done { background: var(--done-soft); border-color: var(--done); }
+.mini-panel.done .steps-head strong { color: var(--done); }
 .mini-panel .steps { list-style: none; margin: 6px 0 0; padding: 0; }
 .mini-panel .steps > li { display: flex; gap: 8px; align-items: baseline; margin: 3px 0; }
 .mini-panel .steps > li > .mark { flex: none; width: 1.1em; text-align: center; font-weight: 700; }
