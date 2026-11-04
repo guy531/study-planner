@@ -775,6 +775,10 @@ function skillNeeds() {
   }).filter((x) => x.courses.length);
 }
 
+// academic content courses in English that count for this program: on the university's list and in the program's
+// own lists (guy, 2026-11-04). Two are needed by a student exempt from the English language courses
+const CONTENT_NEEDED = 2;
+const contentCourses = () => new Set([...programCourses()].filter((n) => (DATA.courses[n] || {}).contentEnglish));
 const fewCourses = (list) => (list.length > 3 ? T`${list.slice(0, 3).join(", ")} ועוד ${list.length - 3}` : list.join(", "));
 
 // a "prior credits" condition of course n in semester i (for example 40 credits in physics before it): what the
@@ -877,6 +881,9 @@ function chip(n, context) {
   if (c && c.offered === false) tags.push(el("span", { class: "tag gone", text: T("לא מוצע עוד") }));
   // a seminar course (advanced-seminar level), which some programs require (guy, 2026-11-03: M8, OE)
   if (c && c.seminar === "חובה") tags.push(el("span", { class: "tag seminar", title: T("קורס ברמה מתקדמת-סמינריונית: כותבים בו עבודה סמינריונית"), text: T("סמינריוני") }));
+  // a content course in English that counts here, once the exemption is ticked (guy, 2026-11-04: only then, and
+  // only on the courses that count)
+  if (context !== "outside" && hasSkill("english") && contentCourses().has(n)) tags.push(el("span", { class: "tag content-english", title: T("נספר בשני קורסי התוכן באנגלית שנדרשים ממי שיש לו פטור מקורסי שפה באנגלית"), text: T("קורס תוכן באנגלית") }));
   // a broadening course this program allows beyond the shared list (guy, 2026-11-04: 22006 in 15, OJ, OH)
   if (context !== "outside" && programBroadening(n)) tags.push(el("span", { class: "tag own-broadening", title: T("קורס שהתכנית שלך מתירה במקום קורס מרחיב-דעת, מעבר לרשימה הכללית"), text: T("מרחיב-דעת ייחודי לתכנית") }));
   if (c && c.notYet) tags.push(el("span", { class: "tag gone", title: T("קורס חדש, שעוד לא נפתח באף סמסטר"), text: T("עוד לא מוצע") }));
@@ -1431,6 +1438,17 @@ function planSteps() {
   } else if ((program.background || []).length || askedSkills().length) {
     steps.push({ done: true, text: T("\"רקע ודרישות\"") });
   }
+  // with the exemption from the English language courses ticked: two academic content courses in English, from the
+  // program itself (guy, 2026-11-04; CHE: courses of the student's regular program). The other English levels have
+  // rules of their own, not built yet
+  if (hasSkill("english")) {
+    const all = [...contentCourses()];
+    const taken = all.filter((n) => plannedCourses().includes(n));
+    steps.push(taken.length >= CONTENT_NEEDED
+      ? { done: true, text: T`${CONTENT_NEEDED} קורסי תוכן באנגלית בתכנית` }
+      : { done: false, text: T`ללמוד ${CONTENT_NEEDED} קורסי תוכן באנגלית (יש לך פטור מקורסי שפה)`, show: all.filter((n) => !taken.includes(n)),
+        detail: all.length ? T`בתכנית: ${taken.length} מתוך ${CONTENT_NEEDED}. בתואר שלך: ${fewCourses(all.filter((n) => !taken.includes(n)))}` : T("בתואר שלך אין קורסי תוכן באנגלית") });
+  }
   return steps;
 }
 
@@ -1468,6 +1486,7 @@ function renderStatus() {
         el("span", { class: "step-text", text: x.text }),
         x.problems ? el("span", {}, " ", el("button", { type: "button", class: "link show-problem" }, eyeIcon(), T("הצגה"))) : null,
         x.target ? el("span", {}, " ", el("button", { type: "button", class: "link", "data-goto": x.target, text: T("סימון") })) : null,
+        x.show && x.show.length ? el("span", {}, " ", el("button", { type: "button", class: "link", "data-show-course": x.show.join(",") }, eyeIcon(), T("הצגה"))) : null,
         x.detail ? el("div", { class: "step-sub", text: x.detail }) : null,
         // a few gaps inline; many (an empty plan has some 20 required courses) folded under "הצגה"
         x.subs && x.subs.length <= 4 ? el("div", { class: "step-sub" }, x.subs.flatMap((g, k) => [k ? " · " : null, gapLink(g)])) : null,
