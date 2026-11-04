@@ -1434,10 +1434,12 @@ function planSteps() {
     steps.push(over.length ? { done: false, text: T("להוריד נ\"ז מעבר למותר"), subs: over }
       : { done: true, text: caps.map(([, , max, phrase]) => T`לא יותר מ-${max} נ"ז ${phrase}`).join(" · ") });
   }
-  const open = new Set(problems.filter((x) => x.level !== "soft").map((x) => x.n)).size;
+  // only what stops a registration: admission conditions and prior credits. Missing required knowledge does not
+  // (one may register without it), so it is a note beside the steps, not a step (guy, 2026-11-04)
+  const open = new Set(problems.filter((x) => x.level === "bad").map((x) => x.n)).size;
   // only with courses in the semesters: an empty plan does not "meet every condition" (guy, 2026-11-03)
-  if (open) steps.push({ done: false, text: open === 1 ? T("לתקן קורס 1 שחסרים לו תנאים") : T`לתקן ${open} קורסים שחסרים להם תנאים`, problems: true });
-  else if (state.semesters.some((x) => x.length)) steps.push({ done: true, text: T("כל הקורסים עומדים בתנאים שלהם") });
+  if (open) steps.push({ done: false, text: open === 1 ? T("לתקן קורס 1 שחסרים לו תנאי קבלה") : T`לתקן ${open} קורסים שחסרים להם תנאי קבלה`, problems: true });
+  else if (state.semesters.some((x) => x.length)) steps.push({ done: true, text: T("כל הקורסים עומדים בתנאי הקבלה שלהם") });
   // a background box neither ticked nor replaced by its courses in the plan, and English / library a course needs
   const planned = new Set(plannedCourses());
   const bg = (program.background || []).filter((b) => !(state.background || []).includes(b.id) && !satisfied(b.courses, planned));
@@ -1484,15 +1486,26 @@ const approvalFinal = () => [T("אישור תכנית לימודים סופית 
 const APPROVAL = () => [T("תכנית שבונים כאן אינה מאושרת. "), ...approvalFinal()];
 const approvalNote = () => el("p", { class: "approval" }, el("strong", { text: T("חשוב: ") }), APPROVAL());
 
+// placed courses that miss only required knowledge (no admission problem): allowed, but better completed first
+function knowledgeOnly() {
+  const bad = new Set(problems.filter((x) => x.level === "bad").map((x) => x.n));
+  return [...new Set(problems.filter((x) => x.level === "warn" && !bad.has(x.n)).map((x) => x.n))];
+}
+const knowledgeText = (list) => (list.length === 1 ? T("בקורס 1 חסר ידע קודם דרוש. ניתן להירשם, אבל מומלץ להשלים את הידע לפני.")
+  : T`ב-${list.length} קורסים חסר ידע קודם דרוש. ניתן להירשם, אבל מומלץ להשלים את הידע לפני.`);
+const knowledgeNote = (list) => (list.length ? el("p", { class: "knowledge-note" }, el("span", { class: "mark", "aria-hidden": "true", text: "ⓘ" }), " ",
+  knowledgeText(list), " ", el("button", { type: "button", class: "link", "data-show-course": list.join(",") }, eyeIcon(), T("הצגה"))) : null);
+
 function renderStatus() {
   const steps = planSteps();
   const open = steps.filter((x) => !x.done);
   const box = $("#status");
+  const knowledge = knowledgeOnly();
   if (!open.length) {
     box.className = "status done";
     box.replaceChildren(el("span", { class: "big", text: "✓" }),
-      el("span", {}, el("strong", { text: T("התכנית כוללת את כל דרישות התואר") }), T(", וכל הקורסים בה עומדים בתנאים שלהם."),
-        el("span", { class: "next" }, approvalFinal())));
+      el("span", {}, el("strong", { text: T("התכנית כוללת את כל דרישות התואר") }), T(", וכל הקורסים בה עומדים בתנאי הקבלה שלהם."),
+        el("span", { class: "next" }, approvalFinal()), knowledgeNote(knowledge)));
     return;
   }
   box.className = "status todo";
@@ -1511,7 +1524,8 @@ function renderStatus() {
         x.subs && x.subs.length <= 4 ? el("div", { class: "step-sub" }, x.subs.flatMap((g, k) => [k ? " · " : null, gapLink(g)])) : null,
         x.subs && x.subs.length > 4 ? el("details", { class: "step-sub" }, el("summary", { text: T`הצגת ${x.subs.length} הפריטים` }),
           el("ul", {}, x.subs.map((g) => el("li", {}, gapLink(g), g.where ? el("span", { class: "where", text: ` (${g.where})` }) : null)))) : null,
-        x.hint ? el("div", { class: "step-sub hint", text: x.hint }) : null)))));
+        x.hint ? el("div", { class: "step-sub hint", text: x.hint }) : null)))),
+    knowledgeNote(knowledge));
 }
 
 function renderMeters() {
@@ -2740,7 +2754,7 @@ function setupClicks() {
   }));
   document.addEventListener("click", (e) => {
     if (e.target.closest("#show-problem, .show-problem")) {
-      const first = document.querySelector(".chip.prob-bad, .chip.prob-warn");
+      const first = document.querySelector(".chip.prob-bad") || document.querySelector(".chip.prob-warn");
       if (first) {
         first.scrollIntoView({ behavior: SMOOTH(), block: "center" });
         first.classList.add("flash");
@@ -3328,9 +3342,13 @@ function buildPrint() {
   // while the plan is not finished, a banner over the summary says so (guy, 2026-11-03: the PDF goes to advisers
   // and colleagues, who read it as a finished plan)
   const openSteps = planSteps().filter((x) => !x.done);
-  const draft = openSteps.length ? el("div", { class: "draft" },
-    el("strong", { text: T("טיוטה: התכנית עוד לא גמורה.") }), " ",
-    T`נשארו ${openSteps.length === 1 ? T("צעד 1") : T`${openSteps.length} צעדים`}: ${openSteps.map((x) => x.text).join("; ")}.`) : null;
+  // always a draft (guy, 2026-11-04): even a finished plan needs the university's approval in Sheilta
+  const knowledge = knowledgeOnly();
+  const draft = el("div", { class: "draft" }, ...(openSteps.length
+    ? [el("strong", { text: T("טיוטה: התכנית עוד לא גמורה.") }), " ",
+      T`נשארו ${openSteps.length === 1 ? T("צעד 1") : T`${openSteps.length} צעדים`}: ${openSteps.map((x) => x.text).join("; ")}.`]
+    : [el("strong", { text: T("טיוטה: התכנית כוללת את כל דרישות התואר, אבל אינה מאושרת.") }), " ", ...approvalFinal()]),
+    ...(knowledge.length ? [el("br"), T`${knowledgeText(knowledge)} (${knowledge.join(", ")})`] : []));
   const summary = el("div", { class: "summary" },
     el("div", {}, el("h3", { text: T("נקודות זכות") }), creditsTable),
     el("div", {},

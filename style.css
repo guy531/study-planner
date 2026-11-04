@@ -549,6 +549,8 @@ button.history:disabled:hover { border-color: var(--line); }
 .status.todo .steps > li.done { color: var(--muted); }
 .status.todo .steps > li.done > .mark { color: var(--done); }
 .status.todo .steps > li.open .step-text { font-weight: 600; }
+.status .knowledge-note { margin: 8px 0 0; font-size: 0.9rem; color: var(--muted); }
+.status.done .knowledge-note { display: block; }
 .status.todo .step-sub { font-size: 0.85rem; margin-top: 1px; }
 .status.todo .step-sub summary { cursor: pointer; color: var(--accent); }
 .status.todo .step-sub ul { margin: 4px 0 2px; padding-inline-start: 18px; }
