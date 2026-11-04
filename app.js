@@ -1486,6 +1486,17 @@ const approvalFinal = () => [T("אישור תכנית לימודים סופית 
 const APPROVAL = () => [T("תכנית שבונים כאן אינה מאושרת. "), ...approvalFinal()];
 const approvalNote = () => el("p", { class: "approval" }, el("strong", { text: T("חשוב: ") }), APPROVAL());
 
+// for the print summary: the placed courses that cannot be registered for, with what each lacks, or a ✓
+function admissionLine() {
+  if (!state.semesters.some((x) => x.length)) return null;
+  const mk = (ok) => el("span", { class: `mk ${ok ? "ok" : "no"}`, text: ok ? "✓" : "✗" });
+  const bad = new Map();
+  problems.filter((x) => x.level === "bad").forEach((x) => bad.set(x.n, [...new Set([...(bad.get(x.n) || []), x.tag])]));
+  if (!bad.size) return el("p", {}, mk(true), T(" כל הקורסים עומדים בתנאי הקבלה"));
+  const list = [...bad].map(([n, tags]) => `${n} (${tags.join(", ")})`).join(", ");
+  return el("p", {}, mk(false), " ", bad.size === 1 ? T`קורס 1 לא עומד בתנאי הקבלה: ${list}` : T`${bad.size} קורסים לא עומדים בתנאי הקבלה: ${list}`);
+}
+
 // placed courses that miss only required knowledge (no admission problem): allowed, but better completed first
 function knowledgeOnly() {
   const bad = new Set(problems.filter((x) => x.level === "bad").map((x) => x.n));
@@ -3342,12 +3353,10 @@ function buildPrint() {
   // and colleagues, who read it as a finished plan)
   const openSteps = planSteps().filter((x) => !x.done);
   // always a draft (guy, 2026-11-04): even a finished plan needs the university's approval in Sheilta
-  const knowledge = knowledgeOnly();
   const draft = el("div", { class: "draft" }, ...(openSteps.length
     ? [el("strong", { text: T("טיוטה: התכנית עוד לא גמורה.") }), " ",
       T`נשארו ${openSteps.length === 1 ? T("צעד 1") : T`${openSteps.length} צעדים`}: ${openSteps.map((x) => x.text).join("; ")}.`]
-    : [el("strong", { text: T("טיוטה: התכנית כוללת את כל דרישות התואר, אבל אינה מאושרת.") }), " ", ...approvalFinal()]),
-    ...(knowledge.length ? [el("br"), T`${knowledgeText(knowledge)} (${knowledge.join(", ")})`] : []));
+    : [el("strong", { text: T("טיוטה: התכנית כוללת את כל דרישות התואר, אבל אינה מאושרת.") }), " ", ...approvalFinal()]));
   const summary = el("div", { class: "summary" },
     el("div", {}, el("h3", { text: T("נקודות זכות") }), creditsTable),
     el("div", {},
@@ -3356,6 +3365,10 @@ function buildPrint() {
         ? el("ul", {}, todo.map((g) => el("li", {}, mark(false), " ", g.kind === "item" ? T`פריט חובה: ${g.text}` : g.text,
           g.where ? el("span", { class: "where", text: ` (${g.where})` }) : null)))
         : el("p", {}, mark(true), T(" כל פריטי החובה והבחירה בתכנית")),
+      // the admission conditions of the placed courses, a line of their own (guy, 2026-11-04: "all the items are in
+      // the plan" with a course that cannot be registered for read as too sure), and a gray note on required knowledge
+      admissionLine(),
+      knowledgeOnly().length ? el("p", { class: "where" }, "ⓘ ", T`${knowledgeText(knowledgeOnly())} (${knowledgeOnly().join(", ")})`) : null,
       basics.length ? el("h3", { text: T("יסודות (אחד מהשניים)") }) : null,
       basics.length ? el("ul", {}, basics.map((t) => el("li", {}, mark(t.ok), " ", t.text,
         el("span", { class: "where" }, " (", t.note, ")")))) : null,
