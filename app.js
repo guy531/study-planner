@@ -433,9 +433,25 @@ function autoFill() {
     add(choose(DATA.courses[n].admission, n));
     add(choose(DATA.courses[n].required));
   });
-  program.sections.forEach((s) => s.groups.forEach((g) => {
-    if (g.rule === "כל הפריטים") g.items.forEach((it) => it.courses && !isLongList(it.courses) && add(choose(it.courses)));
-  }));
+  const items = program.sections.flatMap((s) => s.groups.filter((g) => g.rule === "כל הפריטים")
+    .flatMap((g) => g.items.filter((it) => it.courses && !isLongList(it.courses))));
+  items.forEach((it) => add(choose(it.courses)));
+  // then drop what nothing needs any more (guy, 2026-11-04: in KS the item took 20125, and 20497's required
+  // knowledge, 20113 + 20114 only, brought those too, so 20125 was there for nothing): a course goes when every
+  // required item and every condition that was met is still met without it; the bigger ones are tried first
+  const metWith = (set) => {
+    const all = new Set([...planned, ...set, ...assumed]);
+    return { items: items.filter((it) => satisfied(it.courses, all)).length,
+      conds: [...set].filter((n) => ["admission", "required"].every((k) => !DATA.courses[n][k]
+        || satisfied(DATA.courses[n][k], k === "admission" ? forCourse(n, all, new Set([...planned, ...set])) : all))) };
+  };
+  const before = metWith(toPlace);
+  const size = (n) => (DATA.courses[n] || {}).credits || 0;
+  [...toPlace].sort((a, b) => size(b) - size(a)).forEach((x) => {
+    const rest = new Set([...toPlace].filter((n) => n !== x));
+    const now = metWith(rest);
+    if (now.items === before.items && before.conds.filter((n) => rest.has(n)).every((n) => now.conds.includes(n))) toPlace.delete(x);
+  });
   if (!toPlace.size) {
     toast(T("אין קורסי חובה שחסרים בתכנית. את קורסי הבחירה בוחרים בעצמכם, מהעץ."), 7000);
     return;
