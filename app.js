@@ -958,7 +958,9 @@ function chip(n, context) {
       const open = p.parts.filter((e) => !satisfied(e, p.have));
       const missing = fewCourses((p.level === "soft" ? open : open.filter((e) => !satisfied(e, same))).map(shortPart));
       notes.push(el("div", { class: `why ${p.level}` },
-        p.level === "soft" ? T("נלמד באותו סמסטר ") : p.key === "prior" ? priorText(p.prior) + " "
+        // which course is studied in the same semester (guy, 2026-11-04: the line did not say)
+        p.level === "soft" ? T("ידע קודם במקביל: ") + state.semesters[context].filter((x) => x !== n && open.some((e) => coursesIn(e).has(x))).join(", ") + " "
+          : p.key === "prior" ? priorText(p.prior) + " "
           : p.key === "admission" ? T`חסר תנאי קבלה: ${missing}` + " " : T`חסר ידע קודם: ${missing}` + " ",
         el("button", { type: "button", class: "link", "data-cond": `${n}|${context}`, text: T("פירוט") })));
     });
@@ -983,6 +985,12 @@ function chip(n, context) {
   if (cutLine) {
     tags.push(el("span", { class: `tag ${cutLine.level === "bad" ? "bad" : "soft"}`, text: cutLine.level === "bad" ? T("אסור יחד") : T`נספרים ${counted(n)} נ"ז` }));
     notes.push(el("div", { class: `why ${cutLine.level}` }, cutLine.text + " ",
+      el("button", { type: "button", class: "link", "data-info": n, text: T("פירוט") })));
+  }
+  // not placed yet: what an overlap with a course in the plan would do (guy, 2026-11-04)
+  const willCut = cutLine ? null : wouldOverlap(n);
+  if (willCut) {
+    notes.push(el("div", { class: `why ${willCut.level}` }, willCut.text + " ",
       el("button", { type: "button", class: "link", "data-info": n, text: T("פירוט") })));
   }
   const bg = c && backgroundFor(n);
@@ -1339,6 +1347,32 @@ function overlapLine(n) {
   if (forbidden) return { level: "bad", text: T`אסור ללמוד יחד עם ${forbidden.with.join(" + ")}: מי שלמד אחד מהם לא יכול ללמוד את השני. הקורס לא נספר בתכנית.` };
   const others = [...new Set(cut.notes.flatMap((x) => x.with))].join(", ");
   return { level: "soft", text: T`חופף ל-${others}: נספרים ${counted(n)} נ"ז מתוך ${c.credits}.` };
+}
+
+// before placing: a course not in the plan yet that overlaps one already in it says what placing it would do (guy,
+// 2026-11-04). The same cuts as after placing, with the course added as the last one studied
+function wouldOverlap(n) {
+  const c = DATA.courses[n];
+  if (!c || locationOf(n) !== null) return null;
+  const planned = new Set(plannedCourses());
+  const combos = (c.overlaps || []).filter((o) => o.with.every((m) => planned.has(m)));
+  if (!combos.length) return null;
+  const forbidden = combos.find((o) => o.total === null);
+  if (forbidden) return { level: "bad", text: T`אסור ללמוד יחד עם ${forbidden.with.join(" + ")} שבתכנית: מי שלמד אחד מהם לא יכול ללמוד את השני.` };
+  const order = new Map();
+  state.done.forEach((x) => order.set(x, -1));
+  state.semesters.forEach((list, i) => list.forEach((x) => order.set(x, i)));
+  order.set(n, state.semesters.length);
+  const now = overlapCuts();
+  const after = cutsFor([...planned, n], order);
+  const others = [...new Set(combos.flatMap((o) => o.with))].join(", ");
+  const own = after.get(n) ? after.get(n).cut : 0;
+  const lost = [...after].filter(([x]) => x !== n).map(([x, v]) => [x, v.cut - (now.get(x) ? now.get(x).cut : 0)]).filter(([, d]) => d > 0);
+  if (own >= (c.credits || 0)) return { level: "soft", text: T`חופף ל-${others} שבתכנית: אם תשבצו אותו, הוא לא ייספר בכלל (0 נ"ז מתוך ${c.credits}).` };
+  if (own) return { level: "soft", text: T`חופף ל-${others} שבתכנית: אם תשבצו אותו, ייספרו לו ${Math.max(0, (c.credits || 0) - own)} נ"ז מתוך ${c.credits}.` };
+  if (lost.length === 1) return { level: "soft", text: T`חופף ל-${others} שבתכנית: הוא ייספר במלואו, ומ-${lost[0][0]} יירדו ${lost[0][1]} נ"ז.` };
+  if (lost.length) return { level: "soft", text: T`חופף ל-${others} שבתכנית: הוא ייספר במלואו, ומ-${lost.map(([x, d]) => T`${x} (${d} נ"ז)`).join(", ")} יירדו נ"ז.` };
+  return null;
 }
 
 function creditTotals() {
