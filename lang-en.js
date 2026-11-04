@@ -473,6 +473,8 @@ I18N.en = {
  "סימנת שיש לך פטור מקורסי שפה": "You ticked an exemption from the language courses",
  "אין פטור מסומן, נדרש לפני {0}": "No exemption ticked, required before {0}",
  "אין פטור מסומן, דרישה כללית של התואר": "No exemption ticked, a general requirement of the degree",
+ "תוכן באנגלית": "content in English",
+ "מרחיב-דעת": "broadening",
  "מרחיב-דעת ייחודי לתכנית": "Broadening, this program only",
  "קורס שהתכנית שלך מתירה במקום קורס מרחיב-דעת, מעבר לרשימה הכללית": "A course your program allows instead of a broadening course, beyond the general list",
  "עץ הקורסים": "Course tree",

@@ -785,7 +785,11 @@ function skillNeeds() {
 // academic content courses in English that count for this program: on the university's list and in the program's
 // own lists (guy, 2026-11-04). Two are needed by a student exempt from the English language courses
 const CONTENT_NEEDED = 2;
-const contentCourses = () => new Set([...programCourses()].filter((n) => (DATA.courses[n] || {}).contentEnglish));
+const contentCache = new Map();
+const contentCourses = () => {
+  if (!contentCache.has(program.code)) contentCache.set(program.code, new Set([...programCourses()].filter((n) => (DATA.courses[n] || {}).contentEnglish)));
+  return contentCache.get(program.code);
+};
 const fewCourses = (list) => (list.length > 3 ? T`${list.slice(0, 3).join(", ")} ועוד ${list.length - 3}` : list.join(", "));
 
 // a "prior credits" condition of course n in semester i (for example 40 credits in physics before it): what the
@@ -1902,8 +1906,18 @@ const wordForms = (w) => [w, ...(PREFIX.includes(w[0]) ? [w.slice(1)] : []),
 // how well course n matches the search words (any order; every word must match): 0 = not at all. A number matches
 // the start of the course number; a word scores 3 as a whole word (also after a prefix letter), 2 as the start of
 // a word, 1 anywhere. So "מדע" puts "פילוסופיה של המדע" before "מדעי החברה" (guy, 2026-10-29)
+// what a course's tags say, searched with its name (guy, 2026-11-04: "תוכן באנגלית" finds the content courses).
+// Without the word "קורס", which every course would then match
+function tagWords(n) {
+  const c = DATA.courses[n] || {};
+  // in Hebrew and in the site's language, so both find it
+  const words = [contentCourses().has(n) && "תוכן באנגלית", c.seminar === "חובה" && "סמינריוני",
+    ((c.broadening && c.broadening !== "מדעים") || programBroadening(n)) && "מרחיב-דעת"].filter(Boolean);
+  return [...words, ...(LANG === "he" ? [] : words.map((w) => T(w)))].join(" ");
+}
+
 function searchScore(n, words) {
-  const nameWords = searchText(courseName(n)).split(" ");
+  const nameWords = searchText(`${courseName(n)} ${tagWords(n)}`).split(" ");
   let score = 0;
   for (const w of words) {
     if (/^\d+$/.test(w)) {
