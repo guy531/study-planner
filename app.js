@@ -3420,7 +3420,8 @@ function buildPrint() {
   // always a draft (guy, 2026-11-04): even a finished plan needs the university's approval in Sheilta
   const draft = el("div", { class: "draft" }, ...(openSteps.length
     ? [el("strong", { text: T("טיוטה: התכנית עוד לא גמורה.") }), " ",
-      T`נשארו ${openSteps.length === 1 ? T("צעד 1") : T`${openSteps.length} צעדים`}: ${openSteps.map((x) => x.text).join("; ")}.`]
+      T`נשארו ${openSteps.length === 1 ? T("צעד 1") : T`${openSteps.length} צעדים`}: ${openSteps.map((x) => x.text).join("; ")}.`,
+      el("br"), ...APPROVAL()]
     : [el("strong", { text: T("טיוטה: התכנית כוללת את כל דרישות התואר, אבל אינה מאושרת.") }), " ", ...approvalFinal()]));
   const summary = el("div", { class: "summary" },
     el("div", {}, el("h3", { text: T("נקודות זכות") }), creditsTable),
@@ -3471,7 +3472,7 @@ function buildPrint() {
         el("p", { class: "sub" }, el("a", { href: `${location.origin}${location.pathname}#plan=${encodePlan()}`, target: "_blank", rel: "noopener",
           text: T("פתיחת התכנית הזו בכלי התכנון, להמשך עבודה עליה") }))),
       $(".ou-logo svg").cloneNode(true)),
-    el("div", { class: "approval" }, el("strong", { text: T("חשוב: ") }), APPROVAL()),
+    // one box (guy, 2026-11-04: "חשוב" and "טיוטה" both said the plan is not approved): the draft, with the approval
     draft,
     summary,
     ...tables,
