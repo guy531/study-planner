@@ -3068,6 +3068,8 @@ function setupControls() {
   $("#auto-fill").addEventListener("click", autoFill);
   $("#share").addEventListener("click", sharePlan);
   $("#help").addEventListener("click", showHelp);
+  $("#news").addEventListener("click", showNews);
+  markNews();
   // focus goes into the layer, but not to the search: on a phone that opens the keyboard (guy, 2026-11-01)
   $("#tree-fab").addEventListener("click", () => { setTreeOpen(true); $("#tree-close").focus({ preventScroll: true }); });
   $("#skip-tree").addEventListener("click", (e) => { e.preventDefault(); if (treeIsLayer()) setTreeOpen(true); $("#tree-search").focus(); });
@@ -3224,6 +3226,42 @@ function showAccessibility() {
     el("p", { class: "small", text: T`ההצהרה עודכנה ב-${A11Y_CHECKED.split("-").reverse().join(".")}.` })));
   $("#a11y-dialog").showModal();
   $("#a11y-body").scrollTop = 0;
+}
+
+// ---------- what's new (guy, 2026-11-04) ----------
+// the changes a user notices, by date, newest first: a new date goes at the top. A dot on the button while there is
+// a date the browser has not opened yet. Every push with such a change adds a line here, in the three languages
+const WHATS_NEW = [
+  { date: "2026-11-04", items: [
+    T("קורסים מרחיבי-דעת: רשימה אחת לכל התכניות, מהקטלוג, עם קישור \"מה זה?\". כפתור + מוסיף קורס מחוץ לתואר ל\"קורסים נוספים\"."),
+    T("אנגלית: התיבה היא עכשיו \"יש לי פטור מקורסי שפה באנגלית\", והיא לא חובה. מי שמסמן אותה רואה את הצעד \"ללמוד 2 קורסי תוכן באנגלית\" ותגית על הקורסים האלה."),
+    T("כרטיס קורס אומר במפורש את הרמה: \"4 נ\"ז רגילות\", \"6 נ\"ז: 3 פתיחה + 3 רגילות\"."),
+    T("החיפוש מוצא גם לפי תגיות ולפי רמה: \"תוכן באנגלית\", \"סמינריוני\", \"מרחיב-דעת\", \"מתקדמות\"."),
+    T("ידע קודם דרוש שחסר הוא הערה ולא צעד, כי מותר להירשם בלעדיו. הפס האדום מופיע רק כשחסרים תנאי קבלה."),
+    T("חפיפה לפני השיבוץ: קורס שחופף לקורס שכבר בתכנית אומר כמה נ\"ז ייספרו לו אם תשבצו אותו."),
+    T("מספרי קורסים בצעדים ובשורות שעל הכרטיסים לחיצים, ו\"הצגה\" על כמה קורסים מראה אחד בכל לחיצה."),
+    T("הפס הצף בתחתית: לחיצה פותחת את הצעדים שנשארו, בלי לגלול למעלה. בטלפון הוא ליד כפתור העץ."),
+    T("ההשלמה האוטומטית לא משבצת יותר קורסים שאף דרישה לא צריכה."),
+    T("מונה של \"לכל היותר\" (נ\"ז ברמת פתיחה) ירוק כל עוד לא עוברים אותו, ואדום כשעוברים."),
+    T("דף ההדפסה מסומן תמיד \"טיוטה\", ואומר אם כל הקורסים עומדים בתנאי הקבלה."),
+    T("מסמכי התכניות המומלצות (PDF) מסתיימים בדרישות הכלליות לתואר."),
+    T("\"תואר ראשון במדעי הטבע בהדגשת פיסיקה\" מופיע גם תחת התחום \"מדעי הטבע\"."),
+  ] },
+];
+const NEWS_KEY = "planner-news-seen";
+function newsSeen() { try { return localStorage.getItem(NEWS_KEY) || ""; } catch (e) { return ""; } }
+function markNews() {
+  const fresh = WHATS_NEW[0].date > newsSeen();
+  $("#news").classList.toggle("unseen", fresh);
+  $("#news").setAttribute("aria-label", fresh ? `${T("מה חדש")} (${T("יש שינויים חדשים")})` : T("מה חדש"));
+}
+function showNews() {
+  const day = (d) => d.split("-").reverse().join(".");
+  $("#news-body").replaceChildren(...WHATS_NEW.map((x) => el("section", { class: "news-day" }, el("h4", { text: day(x.date) }), el("ul", {}, x.items.map((t) => el("li", { text: t }))))));
+  try { localStorage.setItem(NEWS_KEY, WHATS_NEW[0].date); } catch (e) { /* private window: the dot stays */ }
+  markNews();
+  $("#news-dialog").showModal();
+  $("#news-body").scrollTop = 0;
 }
 
 function showHelp() {

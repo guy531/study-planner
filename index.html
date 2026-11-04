@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3ec5d237">
+<link rel="stylesheet" href="style.css?v=ab9033bd">
 <script src="i18n.js?v=e2f3071e"></script>
-<script src="lang-ar.js?v=98890181"></script>
-<script src="lang-en.js?v=6827317e"></script>
+<script src="lang-ar.js?v=ca5334b5"></script>
+<script src="lang-en.js?v=91c45157"></script>
 <script>
   // light by default; dark only when the user chose it with the button (set before paint, so no flash)
   try { if (localStorage.getItem("physics-planner-v1:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) { /* no storage */ }
@@ -33,6 +33,7 @@
   <!-- help, language and light/dark are about the whole site: in the title row, across from the logo (guy, 2026-10-31);
        the row below is left for the plan's tools -->
   <div class="site-tools">
+    <button type="button" class="news-btn" id="news" title="מה חדש באתר" data-t-title><span data-t>מה חדש</span></button>
     <button type="button" class="help-btn" id="help" title="איך משתמשים באתר" data-t-title aria-label="עזרה" data-t-aria>?</button>
     <select id="lang" class="lang-pick" aria-label="שפה" data-t-aria></select>
     <button type="button" class="theme-toggle" id="theme-toggle" role="switch" aria-label="תצוגה כהה" data-t-aria title="תצוגה כהה" data-t-title><span aria-hidden="true">☀</span><span aria-hidden="true">☾</span></button>
@@ -160,6 +161,10 @@
   <div class="dlg-head"><h3 id="a11y-title" data-t>הצהרת נגישות</h3><form method="dialog"><button class="close" aria-label="סגירה" data-t-aria>×</button></form></div>
   <div id="a11y-body"></div>
 </dialog>
+<dialog id="news-dialog" class="help-dialog" aria-labelledby="news-title">
+  <div class="dlg-head"><h3 id="news-title" data-t>מה חדש באתר</h3><form method="dialog"><button class="close" aria-label="סגירה" data-t-aria>×</button></form></div>
+  <div id="news-body"></div>
+</dialog>
 <dialog id="help-dialog" class="help-dialog" aria-labelledby="help-title">
   <div class="dlg-head"><h3 id="help-title" data-t>איך משתמשים באתר</h3><form method="dialog"><button class="close" aria-label="סגירה" data-t-aria>×</button></form></div>
   <div id="help-body"></div>
@@ -181,6 +186,6 @@
 <div class="print-holder" aria-hidden="true"><section id="print-sheet" class="print-sheet"></section></div>
 
 <script src="data/data.js?v=04cd2453"></script>
-<script src="app.js?v=4b4b99ff"></script>
+<script src="app.js?v=edb14259"></script>
 </body>
 </html>

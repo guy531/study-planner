@@ -93,6 +93,12 @@ select, input[type="search"] {
 .program-link { font-size: 0.88rem; }
 /* light/dark slider: the knob sits on the sun in light mode and slides to the moon in dark mode */
 /* the "?" button: help on how to use the site */
+/* what's new: a small pill beside "?", with a dot while there is something not opened yet (guy, 2026-11-04) */
+.news-btn { position: relative; height: 28px; padding: 0 10px; border-radius: 999px; font-size: 0.85rem; color: var(--accent); border-color: var(--accent); }
+.news-btn.unseen::after { content: ""; position: absolute; top: -3px; inset-inline-end: -3px; width: 9px; height: 9px; border-radius: 50%; background: var(--bad); border: 2px solid var(--surface); }
+.news-day h4 { margin: 14px 0 4px; }
+.news-day ul { margin: 0; padding-inline-start: 20px; }
+.news-day li { margin: 4px 0; }
 .help-btn { width: 28px; height: 28px; padding: 0; border-radius: 50%; font-weight: 700; color: var(--accent); border-color: var(--accent); }
 .help-dialog { width: min(860px, 94vw); max-height: 88vh; }
 /* help and the accessibility statement: a head row with the title and × (and a line under it), and the text scrolls
