@@ -860,9 +860,21 @@ function courseName(n) {
   return DATA.courses[n] ? DATA.courses[n].name : T("(קורס לא מוכר)");
 }
 
+// the credits of a course by level: opening, regular and advanced (guy, 2026-11-04: some programs count opening
+// credits, KS and M8). A course without a known level (no catalog page) shows its credits only
+function levelParts(c) {
+  if (!c || !c.credits || !c.level) return null;
+  const opening = c.level === "פתיחה" ? c.credits : c.opening || 0;
+  const advanced = c.level === "מתקדמת" ? c.credits : c.advanced || 0;
+  return { opening, regular: Math.max(0, c.credits - opening - advanced), advanced };
+}
 function creditsText(c) {
   if (!c || c.credits === null) return "";
-  return c.advanced ? T`${c.credits} נ"ז, ${c.advanced} מתקדמות` : T`${c.credits} נ"ז`;
+  const parts = levelParts(c);
+  if (!parts) return T`${c.credits} נ"ז`;
+  const named = [[parts.opening, T("פתיחה")], [parts.regular, T("רגילות")], [parts.advanced, T("מתקדמות")]].filter(([x]) => x);
+  // one level: "4 נ"ז רגילות"; two: "6 נ"ז: 3 פתיחה + 3 רגילות"
+  return named.length === 1 ? T`${c.credits} נ"ז ${named[0][1]}` : T`${c.credits} נ"ז: ${named.map(([x, w]) => `${x} ${w}`).join(" + ")}`;
 }
 
 function semesterLabel(id) {
@@ -1950,8 +1962,11 @@ const wordForms = (w) => [w, ...(PREFIX.includes(w[0]) ? [w.slice(1)] : []),
 function tagWords(n) {
   const c = DATA.courses[n] || {};
   // in Hebrew and in the site's language, so both find it
+  // the levels of its credits too (guy, 2026-11-04): "פתיחה", "רגילה", "מתקדמת" (and the plural, as on the card)
+  const parts = levelParts(c);
   const words = [contentCourses().has(n) && "תוכן באנגלית", c.seminar === "חובה" && "סמינריוני",
-    ((c.broadening && c.broadening !== "מדעים") || programBroadening(n)) && "מרחיב-דעת"].filter(Boolean);
+    ((c.broadening && c.broadening !== "מדעים") || programBroadening(n)) && "מרחיב-דעת",
+    parts && parts.opening && "פתיחה", parts && parts.regular && "רגילה רגילות", parts && parts.advanced && "מתקדמת מתקדמות"].filter(Boolean);
   return [...words, ...(LANG === "he" ? [] : words.map((w) => T(w)))].join(" ");
 }
 
