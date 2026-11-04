@@ -15,6 +15,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -96,6 +97,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -170,6 +172,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -275,6 +278,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -350,6 +354,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -438,6 +443,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -505,6 +511,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -618,6 +625,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -747,6 +755,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -803,6 +812,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -862,6 +872,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -930,6 +941,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1022,6 +1034,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1113,6 +1126,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1227,6 +1241,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1343,6 +1358,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -1411,6 +1427,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -1493,6 +1510,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1571,6 +1589,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1641,6 +1660,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -1722,6 +1742,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -1782,6 +1803,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -1843,6 +1865,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -1911,6 +1934,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2007,6 +2031,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2081,6 +2106,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2175,6 +2201,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -2261,6 +2288,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -2337,6 +2365,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2421,6 +2450,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2525,6 +2555,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2626,6 +2657,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2666,6 +2698,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2732,6 +2765,7 @@
    "offered": true,
    "offeredUntil": "2027א",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2806,6 +2840,7 @@
    "offered": true,
    "offeredUntil": "2027ב",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -2849,6 +2884,7 @@
    "offered": true,
    "offeredUntil": "2027א",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -2945,6 +2981,7 @@
    "offered": true,
    "offeredUntil": "2027ב",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -3030,6 +3067,7 @@
    "offered": true,
    "offeredUntil": "2027א",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -3064,6 +3102,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -3128,6 +3167,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -3226,6 +3266,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -3313,6 +3354,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -3392,6 +3434,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -3431,6 +3474,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -3511,6 +3555,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -3545,6 +3590,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -3594,6 +3640,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -3641,6 +3688,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -3712,6 +3760,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3742,6 +3791,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3774,6 +3824,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -3829,6 +3880,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3896,6 +3948,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3926,6 +3979,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3956,6 +4010,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -3989,6 +4044,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -4068,6 +4124,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4138,6 +4195,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -4234,6 +4292,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "א",
@@ -4302,6 +4361,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4368,6 +4428,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4417,6 +4478,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -4482,6 +4544,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -4535,6 +4598,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "א",
@@ -4572,6 +4636,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4661,6 +4726,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4730,6 +4796,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -4762,6 +4829,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -4847,6 +4915,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -4930,6 +4999,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -5020,6 +5090,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5088,6 +5159,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5154,6 +5226,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -5235,6 +5308,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -5298,6 +5372,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -5328,6 +5403,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -5360,6 +5436,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5449,6 +5526,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -5520,6 +5598,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5591,6 +5670,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5679,6 +5759,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -5814,6 +5895,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5903,6 +5985,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -5979,6 +6062,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -6052,6 +6136,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -6084,6 +6169,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6120,6 +6206,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6180,6 +6267,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -6212,6 +6300,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -6268,6 +6357,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -6300,6 +6390,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -6361,6 +6452,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -6393,6 +6485,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -6482,6 +6575,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6531,6 +6625,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6591,6 +6686,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6646,6 +6742,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6701,6 +6798,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6761,6 +6859,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6842,6 +6941,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6911,6 +7011,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -6960,6 +7061,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7011,6 +7113,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7041,6 +7144,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7075,6 +7179,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7126,6 +7231,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7156,6 +7262,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7186,6 +7293,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7216,6 +7324,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7248,6 +7357,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "א",
@@ -7323,6 +7433,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7405,6 +7516,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -7453,6 +7565,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7489,6 +7602,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -7585,6 +7699,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -7617,6 +7732,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7671,6 +7787,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7718,6 +7835,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -7754,6 +7872,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -7798,6 +7917,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -7833,6 +7953,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -7888,6 +8009,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -7957,6 +8079,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -8007,6 +8130,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -8084,6 +8208,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -8120,6 +8245,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8163,6 +8289,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -8202,6 +8329,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -8237,6 +8365,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -8296,6 +8425,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": true,
    "semesters": [],
    "needsEnglish": false,
@@ -8357,6 +8487,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": true,
    "semesters": [],
    "needsEnglish": false,
@@ -8403,6 +8534,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8483,6 +8615,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8560,6 +8693,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -8592,6 +8726,7 @@
    "offered": true,
    "offeredUntil": "2027ב",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8672,6 +8807,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8734,6 +8870,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8770,6 +8907,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8818,6 +8956,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -8917,6 +9056,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": true,
@@ -8952,6 +9092,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": true,
@@ -8984,6 +9125,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -9022,6 +9164,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9055,6 +9198,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -9089,6 +9233,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -9123,6 +9268,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9155,6 +9301,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -9196,6 +9343,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -9230,6 +9378,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -9276,6 +9425,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9315,6 +9465,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -9358,6 +9509,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -9393,6 +9545,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -9427,6 +9580,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -9461,6 +9615,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -9496,6 +9651,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -9528,6 +9684,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9560,6 +9717,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ג"
@@ -9595,6 +9753,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ג"
@@ -9631,6 +9790,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -9667,6 +9827,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -9703,6 +9864,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -9737,6 +9899,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -9769,6 +9932,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9806,6 +9970,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -9838,6 +10003,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ג"
@@ -9883,6 +10049,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -9918,6 +10085,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -9954,6 +10122,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -9996,6 +10165,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -10033,6 +10203,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -10067,6 +10238,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -10108,6 +10280,7 @@
    "offered": true,
    "offeredUntil": "2027א",
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -10143,6 +10316,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10178,6 +10352,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -10212,6 +10387,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -10246,6 +10422,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -10278,6 +10455,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -10312,6 +10490,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10345,6 +10524,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -10377,6 +10557,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10419,6 +10600,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10455,6 +10637,7 @@
    "offered": true,
    "offeredUntil": "2028א",
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -10492,6 +10675,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10527,6 +10711,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10571,6 +10756,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10608,6 +10794,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10648,6 +10835,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ג"
@@ -10683,6 +10871,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -10724,6 +10913,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -10760,6 +10950,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -10795,6 +10986,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10830,6 +11022,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10865,6 +11058,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -10900,6 +11094,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -10934,6 +11129,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -10968,6 +11164,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11000,6 +11197,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -11034,6 +11232,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -11075,6 +11274,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב",
@@ -11110,6 +11310,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -11144,6 +11345,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11185,6 +11387,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -11228,6 +11431,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11269,6 +11473,7 @@
    "offered": true,
    "offeredUntil": "2027א",
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11310,6 +11515,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -11346,6 +11552,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11382,6 +11589,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -11426,6 +11634,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11467,6 +11676,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -11502,6 +11712,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -11534,6 +11745,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -11566,6 +11778,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -11605,6 +11818,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ג"
@@ -11646,6 +11860,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11681,6 +11896,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ג"
@@ -11715,6 +11931,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -11749,6 +11966,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -11783,6 +12001,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11817,6 +12036,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11852,6 +12072,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11886,6 +12107,7 @@
    "offered": true,
    "offeredUntil": "2028א",
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11925,6 +12147,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -11959,6 +12182,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -11995,6 +12219,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -12044,6 +12269,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -12079,6 +12305,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -12111,6 +12338,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -12143,6 +12371,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ג"
@@ -12175,6 +12404,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -12215,6 +12445,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -12250,6 +12481,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -12284,6 +12516,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב",
@@ -12319,6 +12552,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -12354,6 +12588,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -12388,6 +12623,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -12425,6 +12661,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ג"
@@ -12459,6 +12696,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -12493,6 +12731,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -12527,6 +12766,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -12562,6 +12802,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -12594,6 +12835,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -12626,6 +12868,7 @@
    "offered": true,
    "offeredUntil": "2028ב",
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב",
@@ -12661,6 +12904,7 @@
    "offered": true,
    "offeredUntil": "2028א",
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -12700,6 +12944,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -12749,6 +12994,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -12784,6 +13030,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ב"
@@ -12818,6 +13065,7 @@
    "offered": true,
    "offeredUntil": "2027ג",
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "ג"
@@ -12850,6 +13098,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -12882,6 +13131,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א"
@@ -12916,6 +13166,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -12951,6 +13202,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -12988,6 +13240,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א"
@@ -13023,6 +13276,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "ב"
@@ -13065,6 +13319,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13101,6 +13356,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13137,6 +13393,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א"
@@ -13176,6 +13433,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א"
@@ -13210,6 +13468,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א"
@@ -13251,6 +13510,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13293,6 +13553,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13329,6 +13590,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א"
@@ -13363,6 +13625,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13399,6 +13662,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13435,6 +13699,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13471,6 +13736,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13507,6 +13773,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13547,6 +13814,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -13584,6 +13852,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13627,6 +13896,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13662,6 +13932,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א"
@@ -13697,6 +13968,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13735,6 +14007,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13775,6 +14048,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13810,6 +14084,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13845,6 +14120,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13881,6 +14157,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13916,6 +14193,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13951,6 +14229,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "א",
@@ -13992,6 +14271,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי החברה",
    "notYet": false,
    "semesters": [
     "ב",
@@ -14033,6 +14313,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14065,6 +14346,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14097,6 +14379,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14130,6 +14413,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14162,6 +14446,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14194,6 +14479,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14226,6 +14512,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14258,6 +14545,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14292,6 +14580,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14326,6 +14615,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -14362,6 +14652,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14396,6 +14687,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "באנגלית",
    "notYet": false,
    "semesters": [
     "א"
@@ -14431,6 +14723,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14463,6 +14756,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14495,6 +14789,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14528,6 +14823,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "בערבית",
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14560,6 +14856,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -14618,6 +14915,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14650,6 +14948,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "א",
@@ -14711,6 +15010,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14743,6 +15043,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "ב"
@@ -14777,6 +15078,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": "2028א",
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14848,6 +15150,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": "2028א",
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -14914,6 +15217,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -14978,6 +15282,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -15011,6 +15316,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -15090,6 +15396,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -15151,6 +15458,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -15190,6 +15498,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -15237,6 +15546,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -15277,6 +15587,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -15316,6 +15627,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -15374,6 +15686,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -15423,6 +15736,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -15468,6 +15782,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15532,6 +15847,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15583,6 +15899,7 @@
    "offered": true,
    "offeredUntil": "2027א",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -15674,6 +15991,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15714,6 +16032,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -15744,6 +16063,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -15776,6 +16096,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15812,6 +16133,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15848,6 +16170,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15884,6 +16207,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -15918,6 +16242,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -15954,6 +16279,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -15988,6 +16314,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16024,6 +16351,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16060,6 +16388,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16096,6 +16425,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16132,6 +16462,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16168,6 +16499,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16204,6 +16536,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -16238,6 +16571,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16274,6 +16608,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -16308,6 +16643,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16345,6 +16681,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16380,6 +16717,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -16416,6 +16754,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16452,6 +16791,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -16486,6 +16826,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -16520,6 +16861,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -16554,6 +16896,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16589,6 +16932,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16625,6 +16969,7 @@
    "offered": null,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -16657,6 +17002,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -16692,6 +17038,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -16726,6 +17073,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16759,6 +17107,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -16789,6 +17138,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -16819,6 +17169,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -16852,6 +17203,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -16887,6 +17239,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -16922,6 +17275,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -16958,6 +17312,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -16990,6 +17345,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -17022,6 +17378,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -17115,6 +17472,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -17185,6 +17543,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -17259,6 +17618,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -17304,6 +17664,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -17372,6 +17733,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -17431,6 +17793,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17482,6 +17845,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "א",
@@ -17539,6 +17903,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -17588,6 +17953,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17633,6 +17999,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "א"
@@ -17677,6 +18044,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17752,6 +18120,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -17792,6 +18161,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17848,6 +18218,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -17910,6 +18281,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "ג"
@@ -17944,6 +18316,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -17995,6 +18368,7 @@
    "offered": true,
    "offeredUntil": "2027ב",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18056,6 +18430,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18100,6 +18475,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18134,6 +18510,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18178,6 +18555,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18228,6 +18606,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18275,6 +18654,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -18331,6 +18711,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -18382,6 +18763,7 @@
    "offered": true,
    "offeredUntil": "2027ב",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18467,6 +18849,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": "2027ב",
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18523,6 +18906,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18570,6 +18954,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -18600,6 +18985,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -18632,6 +19018,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -18669,6 +19056,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -18748,6 +19136,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18839,6 +19228,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -18906,6 +19296,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": true,
    "semesters": [],
    "needsEnglish": false,
@@ -18938,6 +19329,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -18999,6 +19391,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -19076,6 +19469,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -19141,6 +19535,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -19196,6 +19591,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -19274,6 +19670,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -19352,6 +19749,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -19450,6 +19848,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -19501,6 +19900,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -19552,6 +19952,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -19592,6 +19993,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ג"
@@ -19648,6 +20050,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -19687,6 +20090,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -19738,6 +20142,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -19777,6 +20182,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -19816,6 +20222,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -19871,6 +20278,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -19910,6 +20318,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -19949,6 +20358,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -19998,6 +20408,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -20032,6 +20443,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "ב"
@@ -20066,6 +20478,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -20115,6 +20528,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -20170,6 +20584,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -20219,6 +20634,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -20276,6 +20692,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -20321,6 +20738,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -20386,6 +20804,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -20451,6 +20870,7 @@
    "offered": true,
    "offeredUntil": "2027א",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -20550,6 +20970,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -20594,6 +21015,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -20638,6 +21060,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -20716,6 +21139,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -20750,6 +21174,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -20801,6 +21226,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב",
@@ -20851,6 +21277,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -20896,6 +21323,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -20941,6 +21369,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -20980,6 +21409,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -21027,6 +21457,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -21090,6 +21521,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -21153,6 +21585,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -21205,6 +21638,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -21256,6 +21690,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -21313,6 +21748,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -21365,6 +21801,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -21419,6 +21856,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -21472,6 +21910,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": true,
@@ -21519,6 +21958,7 @@
    "offered": true,
    "offeredUntil": "2027ב",
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -21569,6 +22009,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -21627,6 +22068,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -21670,6 +22112,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21700,6 +22143,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21730,6 +22174,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21760,6 +22205,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21790,6 +22236,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21820,6 +22267,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21850,6 +22298,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21880,6 +22329,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21910,6 +22360,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21940,6 +22391,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -21972,6 +22424,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -22006,6 +22459,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "א",
@@ -22041,6 +22495,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א",
@@ -22098,6 +22553,7 @@
    "offered": false,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": false,
@@ -22130,6 +22586,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "ב"
@@ -22169,6 +22626,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [],
    "needsEnglish": true,
@@ -22214,6 +22672,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": null,
    "notYet": false,
    "semesters": [
     "א"
@@ -22253,6 +22712,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעי הרוח",
    "notYet": false,
    "semesters": [
     "א",
@@ -22288,6 +22748,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "ב"
@@ -22322,6 +22783,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "מדעים",
    "notYet": false,
    "semesters": [
     "א"
@@ -22356,6 +22818,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "באנגלית",
    "notYet": false,
    "semesters": [
     "ב",
@@ -22392,6 +22855,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "באנגלית",
    "notYet": false,
    "semesters": [
     "ב"
@@ -22427,6 +22891,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "באנגלית",
    "notYet": false,
    "semesters": [
     "ב"
@@ -22461,6 +22926,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "באנגלית",
    "notYet": false,
    "semesters": [
     "א"
@@ -22495,6 +22961,7 @@
    "offered": true,
    "offeredUntil": null,
    "offeredFrom": null,
+   "broadening": "באנגלית",
    "notYet": false,
    "semesters": [
     "א"
@@ -37203,664 +37670,664 @@
  },
  "broadening": [
   {
-   "n": "11402",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10814",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10403",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10880",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10821",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10755",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10856",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "11202",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10234",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10275",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10961",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "20617",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10122",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10107",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10818",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10411",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10830",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10432",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10154",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10215",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10858",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10128",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10898",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10202",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10782",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10251",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10646",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10425",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10626",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10112",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10290",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10655",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10143",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10675",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10879",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10844",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10212",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10204",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "11406",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10110",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10489",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10250",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10208",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10843",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10640",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10641",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10222",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10845",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10496",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10140",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10109",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10703",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10148",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10113",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10809",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10278",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "11400",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10888",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10292",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10678",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10859",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10423",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "11235",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10419",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10266",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10446",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10785",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "11230",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10221",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10742",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10897",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "11200",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10825",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10799",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10892",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10744",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10667",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10834",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10819",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10674",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10246",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10412",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10248",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "20202",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10768",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10483",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10889",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10817",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10896",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10762",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10710",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10436",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10473",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10784",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10647",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10738",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10719",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10732",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10733",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "20472",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10839",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "11403",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10648",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10683",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10895",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10700",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10734",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10429",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "11401",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10841",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10265",
-   "part": "מרחיבי דעת במדעי הרוח"
-  },
-  {
-   "n": "10269",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10206",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10691",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10664",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10800",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10829",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10779",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10123",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "11232",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10430",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10153",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10161",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10680",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10408",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "11206",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10611",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10131",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10126",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10134",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10660",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10136",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10205",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10711",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10682",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10777",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10139",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10728",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10485",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10659",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10765",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10493",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10104",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10125",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10781",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "10454",
-   "part": "מרחיבי דעת במדעי החברה"
-  },
-  {
-   "n": "20121",
-   "part": "מרחיבי דעת במדעים"
+   "n": "20125",
+   "part": "מדעים"
   },
   {
    "n": "04101",
-   "part": "מרחיבי דעת במדעים"
-  },
-  {
-   "n": "20468",
-   "part": "מרחיבי דעת במדעים"
-  },
-  {
-   "n": "20125",
-   "part": "מרחיבי דעת במדעים"
-  },
-  {
-   "n": "20117",
-   "part": "מרחיבי דעת במדעים"
-  },
-  {
-   "n": "20603",
-   "part": "מרחיבי דעת במדעים"
-  },
-  {
-   "n": "20291",
-   "part": "מרחיבי דעת במדעים"
-  },
-  {
-   "n": "10846",
-   "part": "מרחיבי דעת במדעים"
+   "part": "מדעים"
   },
   {
    "n": "20116",
-   "part": "מרחיבי דעת במדעים"
+   "part": "מדעים"
   },
   {
-   "n": "20262",
-   "part": "מרחיבי דעת במדעים"
+   "n": "10134",
+   "part": "מדעי החברה"
   },
   {
-   "n": "20120",
-   "part": "מרחיבי דעת במדעים"
+   "n": "10408",
+   "part": "מדעי החברה"
   },
   {
-   "n": "20122",
-   "part": "מרחיבי דעת במדעים"
+   "n": "10161",
+   "part": "מדעי החברה"
   },
   {
-   "n": "11100",
-   "part": "באנגלית כקורס מרחיב דעת"
+   "n": "10611",
+   "part": "מדעי החברה"
   },
   {
-   "n": "10823",
-   "part": "באנגלית כקורס מרחיב דעת"
+   "n": "11206",
+   "part": "מדעי החברה"
   },
   {
-   "n": "10869",
-   "part": "באנגלית כקורס מרחיב דעת"
+   "n": "10136",
+   "part": "מדעי החברה"
   },
   {
-   "n": "10833",
-   "part": "באנגלית כקורס מרחיב דעת"
+   "n": "20472",
+   "part": "מדעי הרוח"
   },
   {
-   "n": "11201",
-   "part": "בערבית כקורס מרחיב דעת"
+   "n": "11402",
+   "part": "מדעי הרוח"
   },
   {
-   "n": "10894",
-   "part": "באנגלית כקורס מרחיב דעת"
+   "n": "10814",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10403",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10880",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10821",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10755",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10856",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "11202",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10234",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10275",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10961",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "20617",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10122",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10107",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10818",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10411",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10830",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10432",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10154",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10215",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10858",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10128",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10898",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10202",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10251",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10646",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10425",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10626",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10112",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10290",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10655",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10143",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10675",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10879",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10844",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10212",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10204",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "11406",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10110",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10489",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10250",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10208",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10843",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10640",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10641",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10222",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10845",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10496",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10140",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10109",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10703",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10148",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10113",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10809",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10278",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "11400",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10888",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10292",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10678",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10859",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10423",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "11235",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10419",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10266",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10446",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10785",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "11230",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10221",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10742",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10897",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "11200",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10825",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10799",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10892",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10744",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10667",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10834",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10819",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10674",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10246",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10412",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10248",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "20202",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10768",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10483",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10889",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10817",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10896",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10762",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10710",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10436",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10473",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10784",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10647",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10738",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10719",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10732",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10733",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10839",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "11403",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10648",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10683",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10895",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10700",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10734",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10429",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "11401",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10841",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10265",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10269",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10206",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10691",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10664",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10800",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10829",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10779",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "11232",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10430",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10153",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10680",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10131",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10126",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10660",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10205",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10711",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10682",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10777",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10139",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10728",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10485",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10659",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10765",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10125",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10493",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10104",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10781",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10123",
+   "part": "מדעי החברה"
+  },
+  {
+   "n": "10454",
+   "part": "מדעי החברה"
   },
   {
    "n": "10885",
-   "part": "באנגלית כקורס מרחיב דעת"
+   "part": "באנגלית"
+  },
+  {
+   "n": "11201",
+   "part": "בערבית"
+  },
+  {
+   "n": "20121",
+   "part": "מדעים"
+  },
+  {
+   "n": "20468",
+   "part": "מדעים"
+  },
+  {
+   "n": "20117",
+   "part": "מדעים"
+  },
+  {
+   "n": "20291",
+   "part": "מדעים"
+  },
+  {
+   "n": "20603",
+   "part": "מדעים"
+  },
+  {
+   "n": "20262",
+   "part": "מדעים"
+  },
+  {
+   "n": "20120",
+   "part": "מדעים"
+  },
+  {
+   "n": "10782",
+   "part": "מדעי הרוח"
+  },
+  {
+   "n": "10846",
+   "part": "מדעים"
+  },
+  {
+   "n": "20122",
+   "part": "מדעים"
+  },
+  {
+   "n": "11100",
+   "part": "באנגלית"
+  },
+  {
+   "n": "10823",
+   "part": "באנגלית"
+  },
+  {
+   "n": "10869",
+   "part": "באנגלית"
+  },
+  {
+   "n": "10833",
+   "part": "באנגלית"
+  },
+  {
+   "n": "10894",
+   "part": "באנגלית"
   }
  ]
 }

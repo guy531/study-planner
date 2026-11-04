@@ -380,6 +380,8 @@ button.history:disabled:hover { border-color: var(--line); }
   border: none; background: none; padding: 0 2px; color: var(--muted); cursor: pointer; line-height: 1;
 }
 .chip .x:hover, .chip .i:hover { color: var(--ink); }
+.chip .add { border: none; background: none; padding: 0 3px; color: var(--accent); cursor: pointer; line-height: 1; font-size: 1.15rem; font-weight: 700; }
+.chip .add:hover { color: var(--ink); }
 /* the lock: faint while open, in the accent color when locked; a locked card gets a frame in that color */
 .chip .lock { border: none; background: none; padding: 0 2px; color: var(--muted); cursor: pointer; line-height: 1; opacity: 0.55; display: inline-flex; align-items: center; }
 .chip .lock:hover { opacity: 1; color: var(--ink); }

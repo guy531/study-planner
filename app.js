@@ -958,6 +958,11 @@ function chip(n, context) {
   }
   head.append(el("span", { class: "actions" },
     lockButton,
+    // a course outside the degree (search results, the broadening list): "+" keeps it in "קורסים נוספים" without
+    // dragging it to the tree it is already in (guy, 2026-11-04)
+    context === "outside" && !state.extra.includes(n)
+      ? el("button", { type: "button", class: "add", "data-add-show": n, title: T("הוספה ל\"קורסים נוספים\""), "aria-label": T("הוספה ל\"קורסים נוספים\""), text: "+" })
+      : null,
     el("button", { type: "button", class: "i", "data-info": n, "aria-label": T("פרטי הקורס"), text: "ⓘ" }),
     (!inTree || context === "extra") && !(lockable && isLocked(n))
       ? el("button", { type: "button", class: "x", "data-remove": n, "data-from": context === "extra" ? "extra" : "plan", "aria-label": T("הסרה"), text: "×" })
@@ -1924,12 +1929,12 @@ function filterTree() {
 // science seminars and workshops) belong to their own program and showed up here by mistake (guy)
 let listsOpen = new Set();
 // the lists shown under the tree, as [key, { name, program, courses }]
-// one broadening list, shared by all programs (guy, 2026-11-04): the catalog's, from the sheet "קורסים מרחיבי-דעת".
+// one broadening list, shared by all programs (guy, 2026-11-04): the catalog's, from the column "מרחיב-דעת" of the courses file.
 // Its part "במדעים" is left out of science programs (all of ours): a broadening course comes from outside the
 // student's field. A program's own extra courses (22006 in 15, OJ, OH) are only in its own item, with a tag
 const BROADENING_LINK = "https://www3.openu.ac.il/ouweb/owal/yed.marchiv_daat";
 const isScience = (p) => (p.fields || []).some((f) => FIELD_ORDER.includes(f));
-const broadeningCourses = (p = program) => (DATA.broadening || []).filter((b) => !(isScience(p) && /במדעים$/.test(b.part || ""))).map((b) => b.n);
+const broadeningCourses = (p = program) => (DATA.broadening || []).filter((b) => !(isScience(p) && b.part === "מדעים")).map((b) => b.n);
 const broadeningItems = (p = program) => p.sections.flatMap((sec) => sec.groups
   .filter((g) => (g.name_he || g.name).includes("מרחיב-דעת")).flatMap((g) => g.items.filter((it) => isLongList(it.courses))));
 // the courses of the program's broadening item that are not on the shared list
