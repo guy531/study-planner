@@ -1146,6 +1146,7 @@ function renderAll() {
   doneTools.querySelectorAll(".put-here").forEach((b) => b.remove());
   if (selected !== null) doneTools.prepend(putHere($("#done")));
   $("#pick-bar").hidden = selected === null;
+  armBoxes();
   // one line: the "+ שיבוץ כאן" buttons explain themselves; the how-to is left for a screen reader, which does not see them
   if (selected !== null) $("#pick-text").replaceChildren(T`נבחר: ${selected} ${courseName(selected)}`,
     el("span", { class: "sr-only", text: T(". לוחצים על \"שיבוץ כאן\" בסמסטר, או על קורס אחר כדי לבחור אותו.") }));
@@ -1229,6 +1230,146 @@ function setupMove() {
     place(n, target);
     const now = locationOf(n);
     announce(now === null ? T`${n} הוצא מהתכנית` : now === "done" ? T`${n} נמצא ב"קורסים שכבר עשיתי"` : T`${n} שובץ בסמסטר ${semesterLabel(semesterIds()[now])}`);
+  });
+}
+
+// ---------- the keyboard: placing a course among the semesters (guy, 2026-11-05, replaces the "where to?" window on Enter) ----------
+// Enter (or space) on a card picks it, as a click does, and the focus goes to the places it can go: "done" and the
+// semesters, colored by its conditions as while dragging. The arrows move between them by their position on the
+// screen (so right and left follow the page, in Hebrew and in English, and a phone's single column too), Enter puts
+// the course there, Esc or Tab gives up and the focus goes back to the card. Each place reads its state to a screen
+// reader. The "where to?" window stays for the button in the course's window (ⓘ), on a phone or as a plain list
+let kbdPlacing = null; // { n, back }: the course and the focus key of its card, while the focus is among the places
+const placeBoxes = () => [$("#done").closest(".zone-card"), ...document.querySelectorAll("#semesters .semester")];
+const boxTarget = (b) => { const z = b.querySelector("[data-zone]").dataset.zone; return z === "done" ? "done" : Number(z.slice(1)); };
+function boxState(n, t) {
+  if (locationOf(n) === t) return { cls: "here", text: T("הקורס כאן עכשיו") };
+  if (t === "done") return { cls: "ok", text: "" };
+  const reason = blockedReason(n, t);
+  if (reason) return { cls: "no", text: T("לא אפשרי"), reason, short: blockedShort(n, t) };
+  const issues = dropIssues(n, t);
+  return issues.admission ? { cls: "bad", text: T("חסר תנאי קבלה") }
+    : issues.required ? { cls: "warn", text: T("חסר ידע קודם דרוש") } : { cls: "ok", text: T("אפשר") };
+}
+// after every render while placing (the boxes are new): focusable, with a name that says the state
+function armBoxes() {
+  if (kbdPlacing && selected !== kbdPlacing.n) kbdPlacing = null; // the pick ended some other way (a click)
+  const on = !!kbdPlacing && selected === kbdPlacing.n;
+  $("#plan-start").toggleAttribute("data-placing", on);
+  // a screen reader passes the arrows to the page only inside an application; only while placing (Tab ends it)
+  if (on) $("#plan-start").setAttribute("role", "application"); else $("#plan-start").removeAttribute("role");
+  placeBoxes().forEach((b) => {
+    if (!on) { b.removeAttribute("tabindex"); b.removeAttribute("aria-label"); b.removeAttribute("aria-describedby"); b.classList.remove("kbd-place"); return; }
+    const t = boxTarget(b), s = boxState(kbdPlacing.n, t);
+    const name = t === "done" ? T("קורסים שכבר עשיתי") : T`סמסטר ${semesterLabel(semesterIds()[t])}`;
+    b.tabIndex = -1;
+    b.classList.add("kbd-place");
+    b.setAttribute("aria-label", [name, s.text, s.short].filter(Boolean).join(": "));
+    b.setAttribute("aria-describedby", "kbd-hint-place");
+  });
+}
+function startKbdPlace(card) {
+  const n = card.dataset.n;
+  if (isLocked(n)) { toast(T`${n} נעול. כדי להזיז אותו, לוחצים על המנעול שבכרטיס.`); return; }
+  // from the tree: the courses around it there, so after placing it the focus goes on to the next course in the tree,
+  // not back to the plan (guy, 2026-11-05: Tab many times to get back to the tree). Not on a phone, where the tree is
+  // a closed layer
+  const tree = treeIsLayer() ? null : card.closest(".tree");
+  const around = tree ? [...tree.querySelectorAll(".chip[tabindex]")].map((x) => x.dataset.n) : [];
+  const k = around.indexOf(n);
+  kbdPlacing = { n, back: focusKey(card),
+    nextInTree: tree && k >= 0 ? [...around.slice(k + 1), ...around.slice(0, k).reverse()].filter((x) => x !== n) : null };
+  selected = n;
+  if (card.closest(".tree")) setTreeOpen(false);
+  if (!$("#mini-panel").hidden) setMiniOpen(false);
+  moveFocus = () => {
+    // the focus starts where openMove's list did: the first semester with nothing missing, after the course's place
+    const where = locationOf(n);
+    const boxes = placeBoxes();
+    const is = (b, cls) => boxTarget(b) !== "done" && cls.includes(boxState(n, boxTarget(b)).cls);
+    const after = (b) => typeof where !== "number" || boxTarget(b) > where;
+    // else the first semester it can go to at all (with something missing), else "done"
+    const start = boxes.find((b) => is(b, ["ok"]) && after(b)) || boxes.find((b) => is(b, ["ok"]))
+      || boxes.find((b) => is(b, ["warn", "bad"]) && after(b)) || boxes.find((b) => is(b, ["warn", "bad"])) || boxes[0];
+    focusBox(start);
+  };
+  render();
+}
+function focusBox(b) {
+  b.focus({ preventScroll: true });
+  b.scrollIntoView({ block: "nearest", behavior: SMOOTH() });
+}
+function endKbdPlace() {
+  if (!kbdPlacing) return;
+  const back = kbdPlacing.back;
+  kbdPlacing = null;
+  selected = null;
+  moveFocus = () => refocus(back);
+  render();
+}
+// the nearest place in the direction of the arrow, by the boxes' positions on the screen
+function nextBox(from, key) {
+  const dx = key === "ArrowRight" ? 1 : key === "ArrowLeft" ? -1 : 0, dy = key === "ArrowDown" ? 1 : key === "ArrowUp" ? -1 : 0;
+  const boxes = placeBoxes();
+  // from "done" (the whole width) down: the first semester, not the one under its middle
+  if (boxTarget(from) === "done") return dy > 0 ? boxes[1] || null : null;
+  const r = from.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+  let best = null, score = Infinity;
+  boxes.forEach((b) => {
+    if (b === from) return;
+    const q = b.getBoundingClientRect();
+    const along = dx ? (dx > 0 ? q.left - r.right : r.left - q.right) : (dy > 0 ? q.top - r.bottom : r.top - q.bottom);
+    if (along < -4) return; // not in that direction
+    const across = dx ? Math.abs(q.top + q.height / 2 - cy) : cx < q.left ? q.left - cx : cx > q.right ? cx - q.right : 0;
+    const s = along + 3 * across;
+    if (s < score) { score = s; best = b; }
+  });
+  return best;
+}
+function setupKbdPlace() {
+  document.addEventListener("keydown", (e) => {
+    if (!kbdPlacing) return;
+    const box = e.target.closest && e.target.closest(".kbd-place");
+    if (!box) return;
+    if (e.key === "Escape" || e.key === "Tab") { e.preventDefault(); e.stopPropagation(); endKbdPlace(); return; }
+    if (e.key.startsWith("Arrow")) {
+      e.preventDefault();
+      const next = nextBox(box, e.key);
+      if (next) focusBox(next);
+      return;
+    }
+    if (e.key !== "Enter" && e.key !== " ") return;
+    e.preventDefault();
+    const n = kbdPlacing.n, t = boxTarget(box), s = boxState(n, t);
+    if (s.reason) { toast(s.reason); announce(s.reason); return; }
+    if (s.cls === "here") { endKbdPlace(); return; }
+    const nextInTree = kbdPlacing.nextInTree;
+    kbdPlacing = null;
+    selected = null;
+    keepOutside(n);
+    // the next course in the tree that is not in the plan yet (then any still there), else the course itself
+    moveFocus = !nextInTree ? n : () => {
+      // one that can be seen: not in a part of the tree that folded with the placing (20114 beside 20113)
+      const card = (x) => [...document.querySelectorAll(`.tree .chip[tabindex][data-n='${x}']`)]
+        .find((c) => !c.closest("details:not([open])") && c.getClientRects().length);
+      const next = nextInTree.map(card).find((x) => x && locationOf(x.dataset.n) === null) || nextInTree.map(card).find(Boolean);
+      if (!next) { focusMoved(n); return; }
+      next.focus({ preventScroll: true });
+      const tree = next.closest(".tree"), r = next.getBoundingClientRect(), t = tree.getBoundingClientRect();
+      if (r.top < t.top || r.bottom > t.bottom) tree.scrollBy({ top: r.top - t.top - (t.height - r.height) / 2 });
+    };
+    place(n, t);
+    const now = locationOf(n);
+    announce(now === "done" ? T`${n} נמצא ב"קורסים שכבר עשיתי"` : typeof now === "number" ? T`${n} שובץ בסמסטר ${semesterLabel(semesterIds()[now])}` : "");
+  }, true);
+  // the focus left the places some other way (the mouse): the keyboard mode ends; a pick by mouse goes on as before
+  document.addEventListener("focusout", (e) => {
+    if (!kbdPlacing || !e.target.classList || !e.target.classList.contains("kbd-place")) return;
+    const to = e.relatedTarget;
+    if (to && to.classList && to.classList.contains("kbd-place")) return;
+    if (!to) return; // a render replaced the box, or the window lost the focus
+    kbdPlacing = null;
+    armBoxes();
   });
 }
 
@@ -3000,7 +3141,7 @@ function setupClicks() {
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && selected) { selected = null; render(); } });
   document.addEventListener("keydown", (e) => {
     const card = e.target.classList && e.target.classList.contains("chip") ? e.target : null;
-    if (card && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openMove(card.dataset.n); return; }
+    if (card && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); startKbdPlace(card); return; }
     // Alt+↑ / Alt+↓ moves a card one place up or down in its semester; the focus stays on it (guy, 2026-11-01)
     if (card && e.altKey && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
       const i = locationOf(card.dataset.n);
@@ -3076,6 +3217,7 @@ function setupControls() {
   $("#skip-plan").addEventListener("click", (e) => { e.preventDefault(); $("#plan-start").focus(); });
   $("#a11y-open").addEventListener("click", showAccessibility);
   setupMove();
+  setupKbdPlace();
   // the notice on top closes until the next load (guy): nothing is saved, so it is back on every refresh
   $("#audience-close").addEventListener("click", () => {
     $("#audience-box").hidden = true;
@@ -3179,7 +3321,7 @@ const HELP_STEPS = [
   { shot: "controls", title: T("2. מתחילים מהר"),
     text: T("\"מילוי לפי התכנית המומלצת\" ממלא את הסמסטרים לפי התכנית של המחלקה (3 או 4 שנים). \"השלמה אוטומטית\" משבצת רק את קורסי החובה שעוד חסרים, סביב מה שכבר שיבצת. שניהם רק נקודת התחלה: את קורסי הבחירה בוחרים לבד, ואחרי המילוי חלון אומר מה עוד נשאר. כל פעולה אפשר לבטל ב-↶ שבראש העמוד או ב-Ctrl+Z.") },
   { shot: "drag", title: T("3. משבצים קורסים"),
-    text: T("עץ הקורסים מראה את מה שהתואר דורש. גוררים קורס לסמסטר, או ל\"קורסים שכבר עשיתי\" אם כבר למדת אותו. אפשר גם ללחוץ על קורס ואז על \"+ שיבוץ כאן\" (כך בטלפון). כשהעכבר על קורס בעץ, ובזמן הגרירה, הסמסטרים נצבעים: כחול אפשר, אדום או כתום יחסר תנאי, ובסמסטר מפוספס הקורס לא מוצע. מה שכבר שיבצת מתכווץ בעץ, כך שרואים בעיקר את מה שנשאר.") },
+    text: T("עץ הקורסים מראה את מה שהתואר דורש. גוררים קורס לסמסטר, או ל\"קורסים שכבר עשיתי\" אם כבר למדת אותו. אפשר גם ללחוץ על קורס ואז על \"+ שיבוץ כאן\" (כך בטלפון). במקלדת: Enter על הקורס, חיצים לסמסטר, ו-Enter שוב. כשהעכבר על קורס בעץ, ובזמן הגרירה, הסמסטרים נצבעים: כחול אפשר, אדום או כתום יחסר תנאי, ובסמסטר מפוספס הקורס לא מוצע. מה שכבר שיבצת מתכווץ בעץ, כך שרואים בעיקר את מה שנשאר.") },
   { shot: null, title: T("4. מסדרים ונועלים"),
     text: T("בתוך סמסטר גוררים קורס למעלה או למטה, וקו מראה איפה הוא ינחת. במקלדת: Alt וחץ. בטלפון: \"למעלה\" ו\"למטה\" בחלון הקורס (ⓘ). המנעול שעל הכרטיס משאיר קורס במקומו, גם בניקוי וגם במילוי לפי התכנית המומלצת.") },
   { shot: "warn", title: T("5. תנאים ואזהרות"),
@@ -3197,7 +3339,7 @@ const HELP_STEPS = [
 // ---------- accessibility statement ----------
 // required by the Israeli accessibility regulations (a statement in a prominent place, with a contact). It says
 // what was done and what is not accessible yet; keep it true when the site changes (accessibility, 2026-10-31)
-const A11Y_CHECKED = "2026-11-01";
+const A11Y_CHECKED = "2026-11-05";
 function showAccessibility() {
   const p = (text) => el("p", { text });
   const li = (text) => el("li", { text });
@@ -3205,7 +3347,7 @@ function showAccessibility() {
     p(T("אנחנו רוצים שכל הסטודנטים יוכלו להשתמש בכלי, גם עם מקלדת בלבד, עם קורא מסך או עם הגדלת טקסט. הכלי נבנה לפי התקן הישראלי 5568 (המבוסס על הנחיות WCAG) ברמה AA, ככל שידענו.")),
     el("h4", { text: T("מה עשינו") }),
     el("ul", {},
-      li(T("אפשר לבנות את כל התכנית במקלדת: Tab עובר בין הקורסים, ו-Enter על קורס פותח רשימה של המקומות שאפשר לשבץ בה אותו, עם מה שיחסר בכל סמסטר.")),
+      li(T("אפשר לבנות את כל התכנית במקלדת: Tab עובר בין הקורסים, Enter על קורס מעביר לסמסטרים, החיצים עוברים ביניהם (כל סמסטר מוקרא עם מה שיחסר בו), ו-Enter משבץ. Esc מבטל. בחלון הקורס (ⓘ) יש גם רשימה של כל המקומות.")),
       li(T("Alt עם חץ למעלה או למטה על קורס בסמסטר משנה את המקום שלו בסמסטר.")),
       li(T("קישורי דילוג בראש העמוד: לתכנית ולחיפוש הקורסים. המקש / עובר לחיפוש.")),
       li(T("Ctrl+F פותח חיפוש של קורס בכל העמוד: בעץ, בסמסטרים וב\"קורסים שכבר עשיתי\". Enter עובר להתאמה הבאה.")),
@@ -3232,6 +3374,9 @@ function showAccessibility() {
 // the changes a user notices, by date, newest first: a new date goes at the top. A dot on the button while there is
 // a date the browser has not opened yet. Every push with such a change adds a line here, in the three languages
 const WHATS_NEW = [
+  { date: "2026-11-05", items: [
+    T("שיבוץ במקלדת: Enter על קורס מעביר לסמסטרים, שנצבעים לפי התנאים שלו. החיצים עוברים ביניהם, Enter משבץ, ו-Esc מבטל. אחרי השיבוץ הפוקוס עובר לקורס הבא בעץ."),
+  ] },
   { date: "2026-11-04", items: [
     T("קורסים מרחיבי-דעת: רשימה אחת לכל התכניות, מהקטלוג, עם קישור \"מה זה?\". כפתור + מוסיף קורס מחוץ לתואר ל\"קורסים נוספים\"."),
     T("אנגלית: התיבה היא עכשיו \"יש לי פטור מקורסי שפה באנגלית\", והיא לא חובה. מי שמסמן אותה רואה את הצעד \"ללמוד 2 קורסי תוכן באנגלית\" ותגית על הקורסים האלה."),

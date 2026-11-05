@@ -233,6 +233,8 @@ body.picking .zone.tap-target:not(.no-drop) { cursor: copy; }
   background: var(--accent); color: var(--on-accent); font-weight: 600; cursor: copy; white-space: nowrap; box-shadow: var(--shadow);
 }
 .put-here:hover { filter: brightness(1.1); }
+/* the keyboard among the places (guy, 2026-11-05): a thick ring on the place the course would go */
+.kbd-place:focus { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 10px; }
 /* the bar that says which course is picked, with "ביטול" */
 .pick-bar {
   position: fixed; inset-inline: 16px; bottom: 16px; margin: 0 auto; width: fit-content; max-width: min(480px, calc(100vw - 32px)); z-index: 25;

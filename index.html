@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=ab9033bd">
+<link rel="stylesheet" href="style.css?v=b8f18e1c">
 <script src="i18n.js?v=e2f3071e"></script>
-<script src="lang-ar.js?v=ca5334b5"></script>
-<script src="lang-en.js?v=91c45157"></script>
+<script src="lang-ar.js?v=25788c93"></script>
+<script src="lang-en.js?v=1e9f94f7"></script>
 <script>
   // light by default; dark only when the user chose it with the button (set before paint, so no flash)
   try { if (localStorage.getItem("physics-planner-v1:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) { /* no storage */ }
@@ -172,7 +172,8 @@
 <button type="button" class="tree-fab" id="tree-fab"><span data-t>עץ הקורסים</span></button>
 <div class="pick-bar" id="pick-bar" hidden><span id="pick-text"></span><button type="button" id="pick-cancel" data-t>ביטול</button></div>
 <div class="sr-only" id="announce" aria-live="polite"></div>
-<span class="sr-only" id="kbd-hint" data-t>Enter: לבחור לאן להעביר את הקורס. Delete: הסרה מהתכנית.</span>
+<span class="sr-only" id="kbd-hint" data-t>Enter: בחירת הקורס ומעבר לסמסטרים. Delete: הסרה מהתכנית.</span>
+<span class="sr-only" id="kbd-hint-place" data-t>חיצים עוברים בין הסמסטרים, Enter משבץ כאן, Esc מבטל.</span>
 <span class="sr-only" id="kbd-hint-order" data-t>Alt וחץ למעלה או למטה: שינוי המקום של הקורס בסמסטר.</span>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <!-- Ctrl+F: find a course anywhere on the page, the tree and the plan (guy, 2026-11-01) -->
@@ -186,6 +187,6 @@
 <div class="print-holder" aria-hidden="true"><section id="print-sheet" class="print-sheet"></section></div>
 
 <script src="data/data.js?v=04cd2453"></script>
-<script src="app.js?v=edb14259"></script>
+<script src="app.js?v=25efdb71"></script>
 </body>
 </html>
