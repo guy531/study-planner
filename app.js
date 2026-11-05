@@ -364,15 +364,22 @@ function inField(c, field) {
     const sciences = c.affiliation.filter((a) => a.startsWith("מדעים"));
     return sciences.length > 0 && sciences.every((a) => /כללי$/.test(a));
   }
-  // natural sciences: physics, chemistry, life sciences, earth sciences and general natural sciences, whatever the
-  // catalog's path says (guy, 2026-11-05: 20614 and 20615 are "מדעים / מדעי החיים", without "מדעי הטבע"). Not
-  // mathematics or computer science, which are departments of their own.
-  if (field === "מדעי הטבע" || field === "מדעי הטבע והחיים")
-    return c.affiliation.some((a) => /הטבע|פיסיקה|כימיה|מדעי החיים|כדור-הארץ/.test(a));
-  // "מדעי" alone is no field: it matched every "מדעים" course, so "מדעי הטבע" counted mathematics too (M8, 2026-11-03)
-  const words = field.split(/ ו| /).filter((w) => w.length > 2 && w !== "מדעי");
-  return c.affiliation.some((a) => words.some((w) => a.includes(w)));
+  // An affiliation is a category inside a category ("מדעים / מדעי הטבע / פיסיקה"): the course counts in every level
+  // of it, matched whole (guy, 2026-11-05; a search for words counted physics under "מדעי הטבע והחיים" as life
+  // sciences). A combined field ("פיסיקה ומתמטיקה") is either of its parts.
+  const parts = field === "מדעי הטבע והחיים" ? ["מדעי הטבע"] : field.split(" ו");
+  return c.affiliation.some((a) => {
+    const levels = affiliationLevels(a);
+    return parts.some((p) => p === "מדעי הטבע" ? levels.some((l) => NATURAL.has(l)) : levels.includes(levelName(p)));
+  });
 }
+// "כדור-הארץ" and "כדור הארץ" are one name
+const levelName = (s) => s.replace(/-/g, " ").replace(/\s+/g, " ").trim();
+// "מדעי הטבע והחיים" is the old name of the department, left in some affiliations: it is "מדעי הטבע" (guy, 2026-11-05)
+const affiliationLevels = (a) => a.split(" / ").map(levelName).map((l) => l === "מדעי הטבע והחיים" ? "מדעי הטבע" : l);
+// natural sciences: physics, chemistry, life sciences and earth sciences, under whichever parent the catalog put
+// them (20614 and 20615 are "מדעים / מדעי החיים"); not mathematics or computer science, departments of their own
+const NATURAL = new Set(["מדעי הטבע", "פיסיקה", "כימיה", "מדעי החיים", "מדעי כדור הארץ"]);
 
 // a group the degree requires: every item ("כל הפריטים"), or a required choice ("חובת בחירה", guy 2026-11-03: two of
 // three courses the student picks; required like the first, but the automatic completion and the recommended plans
