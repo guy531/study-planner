@@ -364,6 +364,11 @@ function inField(c, field) {
     const sciences = c.affiliation.filter((a) => a.startsWith("מדעים"));
     return sciences.length > 0 && sciences.every((a) => /כללי$/.test(a));
   }
+  // natural sciences: physics, chemistry, life sciences, earth sciences and general natural sciences, whatever the
+  // catalog's path says (guy, 2026-11-05: 20614 and 20615 are "מדעים / מדעי החיים", without "מדעי הטבע"). Not
+  // mathematics or computer science, which are departments of their own.
+  if (field === "מדעי הטבע" || field === "מדעי הטבע והחיים")
+    return c.affiliation.some((a) => /הטבע|פיסיקה|כימיה|מדעי החיים|כדור-הארץ/.test(a));
   // "מדעי" alone is no field: it matched every "מדעים" course, so "מדעי הטבע" counted mathematics too (M8, 2026-11-03)
   const words = field.split(/ ו| /).filter((w) => w.length > 2 && w !== "מדעי");
   return c.affiliation.some((a) => words.some((w) => a.includes(w)));
