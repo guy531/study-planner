@@ -100,7 +100,7 @@ select, input[type="search"] {
 .news-day ul { margin: 0; padding-inline-start: 20px; }
 .news-day li { margin: 4px 0; }
 .help-btn { width: 28px; height: 28px; padding: 0; border-radius: 50%; font-weight: 700; color: var(--accent); border-color: var(--accent); }
-.help-dialog { width: min(860px, 94vw); max-height: 88vh; }
+.help-dialog { width: min(860px, 94vw); max-height: 88vh; max-height: 88dvh; }
 /* help and the accessibility statement: a head row with the title and × (and a line under it), and the text scrolls
    below it, so × belongs to the title and not to the scrollbar (guy, 2026-10-31: over the scrollbar it looked odd) */
 .dlg-head { flex: none; display: flex; justify-content: space-between; align-items: center; gap: 12px;
@@ -109,7 +109,7 @@ select, input[type="search"] {
 .dlg-head .dlg-title { flex: 1; min-width: 0; }
 .dlg-head .dlg-title:empty { visibility: hidden; }
 .dlg-head .close { position: static; padding: 0 4px; }
-.help-dialog #help-body, .help-dialog #a11y-body { padding-inline-end: 10px; }
+.help-dialog #help-body, .help-dialog #a11y-body, .help-dialog #news-body { padding-inline-end: 10px; }
 .help-dialog .help-intro { color: var(--muted); }
 .help-dialog .help-step { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); }
 .help-dialog .help-step h4 { margin: 0 0 4px; font-size: 1rem; }
@@ -693,10 +693,10 @@ dialog {
   width: min(560px, calc(100vw - 32px)); padding: 18px 20px;
 }
 /* the content scrolls inside the window, so × stays in its corner (guy, 2026-10-31) */
-dialog[open] { display: flex; flex-direction: column; overflow: hidden; max-height: 88vh; }
+dialog[open] { display: flex; flex-direction: column; overflow: hidden; max-height: 88vh; max-height: 88dvh; }
 /* room on every side for a focus ring (2px + 2px offset): the scrolling box cut it at the edge (guy, 2026-11-01, "לאן
    להעביר"); the negative start margin keeps the text where it was */
-#info-body, #help-body, #move-body, #a11y-body { overflow: auto; min-height: 0; padding: 4px; margin-inline-start: -4px; }
+#info-body, #help-body, #move-body, #a11y-body, #news-body { overflow: auto; overscroll-behavior: contain; min-height: 0; padding: 4px; margin-inline-start: -4px; }
 dialog::backdrop { background: rgb(0 0 0 / 35%); }
 dialog .close { position: absolute; inset-inline-end: 10px; top: 8px; border: none; font-size: 1.4rem; background: none; }
 dialog h3 { font-size: 1.15rem; margin-bottom: 8px; padding-inline-end: 24px; }
