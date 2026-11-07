@@ -2336,6 +2336,15 @@ function shortPart(e) {
 }
 
 // a short condition for a label: "20125, או 20113 + 20114"
+// the course a student starts with in each alternative: "20125 | (20113; 20114)" -> 20125, 20113
+// (the workshop comes before the first course, not before 20114; guy, 2026-11-07)
+function firstCourses(expr) {
+  if (typeof expr === "string") return [expr];
+  if (expr.and) return firstCourses(expr.and[0]);
+  if (expr.or) return expr.or.flatMap(firstCourses);
+  return [];
+}
+
 function plainCourses(expr) {
   if (typeof expr === "string") return expr;
   if (expr.and) return expr.and.map(plainCourses).join(" + ");
@@ -2818,7 +2827,7 @@ function showInfo(n) {
   if (prepFor && prepFor.prepTest) {
     const line = el("span", {},
       el("a", { href: prepFor.prepTest, target: "_blank", rel: "noopener", text: T("מבחן התאמה") }),
-      T` (כשעה) ימליץ אם כדאי לך ללמוד את הסדנה לפני ${plainCourses(prepFor.courses)}.`);
+      T` (כשעה) ימליץ אם כדאי לך ללמוד את הסדנה לפני ${firstCourses(prepFor.courses).join(T(" או "))}.`);
     linkNumsIn(line);   // the course numbers jump to the courses, like every number in the window (guy, 2026-11-06)
     add(T("מבחן התאמה"), line);
   }
