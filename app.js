@@ -2815,9 +2815,13 @@ function showInfo(n) {
   const bgOf = backgroundFor(n);
   if (bgOf && bgOf.prep && DATA.courses[bgOf.prep] && !(state.background || []).includes(bgOf.id)) add(T("הכנה"), prepLine(bgOf));
   const prepFor = prepOf(n);
-  if (prepFor && prepFor.prepTest) add(T("מבחן התאמה"), el("span", {},
-    el("a", { href: prepFor.prepTest, target: "_blank", rel: "noopener", text: T("מבחן התאמה") }),
-    T` (כשעה) ימליץ אם כדאי לך ללמוד את הסדנה לפני ${plainCourses(prepFor.courses)}.`));
+  if (prepFor && prepFor.prepTest) {
+    const line = el("span", {},
+      el("a", { href: prepFor.prepTest, target: "_blank", rel: "noopener", text: T("מבחן התאמה") }),
+      T` (כשעה) ימליץ אם כדאי לך ללמוד את הסדנה לפני ${plainCourses(prepFor.courses)}.`);
+    linkNumsIn(line);   // the course numbers jump to the courses, like every number in the window (guy, 2026-11-06)
+    add(T("מבחן התאמה"), line);
+  }
   add(T("הערות"), c.notes);
   // overlaps: one row per combination, the ones touching the student's plan first and marked
   const overlaps = c.overlaps
