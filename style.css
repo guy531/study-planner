@@ -665,8 +665,8 @@ details.group:not([open]) { margin: 4px 0 6px; padding: 4px 8px; border-radius: 
 .alt-or.small { font-size: 0.72rem; font-weight: 500; }
 
 .extra { margin-top: 18px; border-top: 1px solid var(--line); padding-top: 10px; }
-.other-lists .extra { margin-top: 12px; border-top: none; padding-top: 0; } /* under "מחוץ לתואר שלך" (guy, 2026-11-03) */
-.other-lists #lists:empty + .extra { margin-top: 0; }
+.other-lists .extra { margin-top: 0; border-top: none; padding-top: 0; } /* under "מחוץ לתואר שלך" (guy, 2026-11-03) */
+.other-lists .extra + #lists:not(:empty) { margin-top: 12px; } /* the lists after it (guy, 2026-11-07) */
 /* courses outside the degree that match the tree search: a separate block, so they are not taken for part of it */
 .outside { margin: 10px 0; padding: 8px; border: 1px dashed var(--line); border-radius: 8px; }
 .outside h3 { font-size: 0.92rem; margin: 0; }
