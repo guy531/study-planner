@@ -3404,6 +3404,7 @@ function showAccessibility() {
       li(T("ביטול וחזרה גם במקלדת: Ctrl+Z ו-Ctrl+Y.")),
       li(T("אזהרות מוצגות בטקסט ולא רק בצבע, וכל הטקסט בניגודיות מספקת, בתצוגה הבהירה ובכהה.")),
       li(T("בזמן גרירה של קורס, כל סמסטר מסומן גם בסמל ולא רק בצבע: ! בעיגול מלא – חסר תנאי קבלה, ! בעיגול ריק – חסר ידע קודם דרוש, ✓ – אפשר. בעץ, אפשרות לתנאי קבלה מסומנת ב-● ואפשרות לידע קודם ב-◆.")),
+      li(T("כפתור העין בכותרת מחליף את האדום, הכתום והירוק בצבעים שקל להבחין ביניהם גם עם עיוורון צבעים (מג'נטה, חרדל וכחול).")),
       li(T("הודעות מוקראות בקורא מסך, ולחלונות יש כותרות וכפתור סגירה.")),
       li(T("האתר מתאים את עצמו למסך צר ולהגדלת טקסט, ומכבד את הגדרת המערכת להפחתת תנועה.")),
       li(T("האתר זמין בעברית, בערבית ובאנגלית."))),
@@ -3426,6 +3427,7 @@ function showAccessibility() {
 // a date the browser has not opened yet. Every push with such a change adds a line here, in the three languages
 const WHATS_NEW = [
   { date: "2026-11-08", items: [
+    T("כפתור העין בכותרת (ליד ☀/☾) מחליף את האדום, הכתום והירוק בצבעים שקל להבחין ביניהם עם עיוורון צבעים."),
     T("לעיוורי צבעים: בזמן גרירה כל סמסטר מסומן גם בסמל (! בעיגול מלא – חסר תנאי קבלה, ! בעיגול ריק – חסר ידע קודם, ✓ – אפשר), ובעץ ● ו-◆ מבדילים בין תנאי קבלה לידע קודם."),
     T("קורסים מרחיבי-דעת: הרשימה מחולקת לפי הקטלוג (במדעי הרוח, במדעי החברה, באנגלית, בערבית), וכל חלק נפתח ונסגר."),
   ] },
@@ -3876,12 +3878,27 @@ function setupThemeToggle() {
   show();
 }
 
+// colors for color blindness (guy, 2026-11-08): a button beside light/dark, remembered in the browser
+function setupCvdToggle() {
+  const button = $("#cvd-toggle");
+  const show = () => button.setAttribute("aria-pressed", document.documentElement.dataset.cvd === "on");
+  button.addEventListener("click", () => {
+    const on = document.documentElement.dataset.cvd !== "on";
+    if (on) document.documentElement.dataset.cvd = "on"; else delete document.documentElement.dataset.cvd;
+    try { localStorage.setItem(`${STORE_KEY}:cvd`, on ? "on" : "off"); } catch (e) { /* no storage */ }
+    show();
+    announce(on ? T("צבעים לעיוורי צבעים: פועל") : T("צבעים לעיוורי צבעים: כבוי"));
+  });
+  show();
+}
+
 // a reload (refresh, or a change of language) starts at the top of the page, not where the browser left it, which
 // came out in the middle of the page (guy, 2026-10-31)
 history.scrollRestoration = "manual";
 
 async function main() {
   setupThemeToggle();
+  setupCvdToggle();
   DATA = window.PLANNER_DATA || await fetch("data/data.json").then((r) => r.json());
   localizeData(DATA);
   translatePage();

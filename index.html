@@ -7,13 +7,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=75d417e8">
+<link rel="stylesheet" href="style.css?v=605c0167">
 <script src="i18n.js?v=e2f3071e"></script>
-<script src="lang-ar.js?v=b634e0f4"></script>
-<script src="lang-en.js?v=37e92697"></script>
+<script src="lang-ar.js?v=c61695c6"></script>
+<script src="lang-en.js?v=559335ac"></script>
 <script>
   // light by default; dark only when the user chose it with the button (set before paint, so no flash)
   try { if (localStorage.getItem("physics-planner-v1:theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) { /* no storage */ }
+  // colors for color blindness, when the user chose them (guy, 2026-11-08)
+  try { if (localStorage.getItem("physics-planner-v1:cvd") === "on") document.documentElement.dataset.cvd = "on"; } catch (e) { /* no storage */ }
 </script>
 </head>
 <body>
@@ -35,6 +37,8 @@
     <button type="button" class="news-btn" id="news" title="מה חדש באתר" data-t-title><span data-t>מה חדש</span></button>
     <button type="button" class="help-btn" id="help" title="איך משתמשים באתר" data-t-title aria-label="עזרה" data-t-aria>?</button>
     <select id="lang" class="lang-pick" aria-label="שפה" data-t-aria></select>
+    <!-- colors for color blindness (guy, 2026-11-08): red, orange and green become magenta, mustard and blue -->
+    <button type="button" class="cvd-btn" id="cvd-toggle" aria-pressed="false" title="צבעים לעיוורי צבעים" data-t-title aria-label="צבעים לעיוורי צבעים" data-t-aria><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg></button>
     <button type="button" class="theme-toggle" id="theme-toggle" role="switch" aria-label="תצוגה כהה" data-t-aria title="תצוגה כהה" data-t-title><span aria-hidden="true">☀</span><span aria-hidden="true">☾</span></button>
   </div>
   </div>
@@ -186,6 +190,6 @@
 <div class="print-holder" aria-hidden="true"><section id="print-sheet" class="print-sheet"></section></div>
 
 <script src="data/data.js?v=04cd2453"></script>
-<script src="app.js?v=121a62f6"></script>
+<script src="app.js?v=12df13ae"></script>
 </body>
 </html>
