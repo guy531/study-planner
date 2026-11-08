@@ -97,7 +97,7 @@ I18N.en = {
  "לפחות {0} מתוך:": "At least {0} of:",
  "או": "or",
  "במקום בגרות (רק למי שצריך)": "Instead of matriculation (only if needed)",
- "הדרישה: {0}, או הקורסים שלמטה. מי שעומד בה בבגרות אינו צריך את הקורסים, ויכול לסמן אותה ב\"רקע ודרישות\".": "The requirement: {0}, or the courses below. Students who meet it with their matriculation do not need the courses, and can tick it in \"Background and requirements\".",
+ "הדרישה: {0} - מקנה פטור מן הקורסים המופיעים למטה. ניתן לסמן את הפטור ב\"רקע ודרישות\". מי שאינו עומד בדרישה מחויב בקורסים הבאים:": "The requirement: {0} - grants an exemption from the courses below. The exemption can be ticked in \"Background and requirements\". Students who do not meet the requirement must take the following courses:",
  "יש אפשרויות גם בפריטים אחרים": "There are options in other items too",
  "אפשר גם {0} מחוץ לתכנית": "{0} outside the program is also possible",
  "{0} ל-{1}: ": "{0} for {1}: ",

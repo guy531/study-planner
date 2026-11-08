@@ -764,9 +764,9 @@ const SKILLS = [
 // what the degree and the courses ask for is meeting the English requirements. All the courses are taken to ask for
 // that, also the 38 whose page says "פטור" (an anomaly, "ניסוח האנגלית" in the anomalies file). Without the exemption
 // the requirement stays open: the other English levels are not built yet
-{ id: "english", key: "needsEnglish", checkbox: T("יש לי פטור מקורסי שפה באנגלית"), short: T("עמידה בדרישות האנגלית"), optional: true,
+{ id: "english", key: "needsEnglish", checkbox: T("יש לי פטור מקורסי שפה באנגלית"), short: T("עמידה בדרישות האנגלית"), title: T("עמידה בדרישות האנגלית"), optional: true,
     link: "https://academic.openu.ac.il/yedion/english/pages/default.aspx" },
-  { id: "library", key: "needsLibrary", checkbox: T("עמדתי בדרישות ההדרכה הביבליוגרפית"), short: T("הדרכה ביבליוגרפית"),
+  { id: "library", key: "needsLibrary", checkbox: T("עמדתי בדרישות ההדרכה הביבליוגרפית"), short: T("הדרכה ביבליוגרפית"), title: T("הדרכה ביבליוגרפית"),
     link: "https://academic.openu.ac.il/yedion/studies/pages/default.aspx?expand=studies8" },
 ];
 
@@ -1904,6 +1904,8 @@ function renderSkills() {
   $("#skills").replaceChildren(...asked.map((s) => {
     const need = needs.find((x) => x.skill === s);
     return el("div", { class: "skill" },
+      // each requirement under a title of its own, so the background's title does not read as theirs too (guy, 2026-11-08)
+      el("p", { class: "bg-title", text: s.title }),
       el("label", { class: "check" },
         el("input", { type: "checkbox", "data-skill": s.id, checked: hasSkill(s.id) }),
         // the link inside the text, so a long text wraps beside the checkbox and not under it (guy, 2026-11-01: phone)
@@ -2103,8 +2105,8 @@ function renderTree() {
     return el("div", { class: "section basics", id: `group-${id}` },
       // a formal title, the details under it (guy, 2026-11-08; was "במקום בגרות (רק למי שצריך)")
       el("h3", { text: T(`עמידה בדרישות ה${b.name_he || b.name}`) }),
-      el("div", { class: "desc", text: T`הדרישה: ${backgroundWhat(b)}, או הקורסים שלמטה. מי שעומד בה בבגרות אינו צריך את הקורסים, ויכול לסמן אותה ב"רקע ודרישות".` }),
-      prep, body);
+      el("div", { class: "desc", text: T`הדרישה: ${backgroundWhat(b)} - מקנה פטור מן הקורסים המופיעים למטה. ניתן לסמן את הפטור ב"רקע ודרישות". מי שאינו עומד בדרישה מחויב בקורסים הבאים:` }),
+      body, prep); // the courses right after "...בקורסים הבאים:", the optional workshop under them (guy, 2026-11-08)
   });
   $("#tree").replaceChildren(...basics, ...program.sections.filter((section) => section.groups.length).map((section) => {
     const groups = section.groups.map((group) => {
