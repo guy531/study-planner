@@ -466,7 +466,7 @@ button.history:disabled:hover { border-color: var(--line); }
 .chip .why.bad { color: var(--bad); }
 .chip .why.warn { color: var(--warn); }
 .chip.prob-bad { border-color: var(--bad); border-inline-start: 4px solid var(--bad); }
-.chip.prob-warn { border-color: var(--warn); border-inline-start: 4px solid var(--warn); }
+.chip.prob-warn { border-color: var(--warn); border-inline-start: 4px dashed var(--warn); } /* dashed, not only another color (guy, 2026-11-08) */
 /* a course a placed course needs: filled like an option for a condition, not a dashed frame (guy, 2026-11-01:
    one look for both); the line under the name says what it is for */
 .chip.needed-bad, .alt .chip.needed-bad { background: var(--bad-soft); }
@@ -491,7 +491,21 @@ button.history:disabled:hover { border-color: var(--line); }
 .chip.found { background: var(--find-soft); }
 .chip.found-now { box-shadow: 0 0 0 3px var(--find); }
 .zone.cond-warn { border-color: var(--warn); background: var(--warn-soft); }
-.zone.cond-bad { border-color: var(--bad); background: var(--bad-soft); }
+.zone.cond-bad { border-color: var(--bad); background: var(--bad-soft); border-style: solid; }
+/* not by color alone (color blindness, WCAG 1.4.1; guy, 2026-11-08): a mark on the top edge of each place while
+   dragging or picking, a filled ! admission missing, an outlined ! required knowledge missing, ✓ fine. Absolute, on the edge like
+   "+ שיבוץ כאן" at the bottom, so no semester changes size; and a solid border for the red one */
+.zone.cond-ok, .zone.cond-warn, .zone.cond-bad { position: relative; }
+.zone.cond-ok::after, .zone.cond-warn::after, .zone.cond-bad::after {
+  position: absolute; top: -9px; inset-inline-start: 10px; /* the start side, away from the card's ⓘ and × (guy, 2026-11-08, trial) */ width: 18px; height: 18px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 0.72rem; font-weight: 700; line-height: 1; pointer-events: none;
+  background: var(--surface); border: 1.5px solid currentColor;
+}
+.zone.cond-ok::after { content: "✓"; color: var(--accent); }
+.zone.cond-warn::after { content: "!"; color: var(--warn); }
+/* "!" in a filled red circle, not ✗, which looked like the × of the card under it (guy, 2026-11-08); filled for
+   admission and an outline for required knowledge, so the two differ without color */
+.zone.cond-bad::after { content: "!"; color: var(--surface); background: var(--bad); border-color: var(--bad); }
 .problems {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   margin-bottom: 12px; padding: 8px 12px; border-radius: 10px; font-size: 0.92rem; /* as the status line and the counters */

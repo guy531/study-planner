@@ -389,6 +389,8 @@ I18N.en = {
  "{0} ({1})": "{0} ({1})",
  "קורסים מרחיבי-דעת: הרשימה מחולקת לפי הקטלוג (במדעי הרוח, במדעי החברה, באנגלית, בערבית), וכל חלק נפתח ונסגר.": "Broadening courses: the list is divided as in the catalog (humanities, social sciences, in English, in Arabic), and each part opens and closes.",
  "עמידה בדרישות הרקע בפיסיקה ובמתמטיקה": "Meeting the background requirements in physics and mathematics",
+ "בזמן גרירה של קורס, כל סמסטר מסומן גם בסמל ולא רק בצבע: ! בעיגול מלא – חסר תנאי קבלה, ! בעיגול ריק – חסר ידע קודם דרוש, ✓ – אפשר. בעץ, אפשרות לתנאי קבלה מסומנת ב-● ואפשרות לידע קודם ב-◆.": "While a course is dragged, each semester is marked with a symbol, not only a color: ! in a filled circle – admission requirement missing, ! in an empty circle – required prior knowledge missing, ✓ – fine. In the tree, an option for an admission requirement is marked ● and an option for prior knowledge ◆.",
+ "לעיוורי צבעים: בזמן גרירה כל סמסטר מסומן גם בסמל (! בעיגול מלא – חסר תנאי קבלה, ! בעיגול ריק – חסר ידע קודם, ✓ – אפשר), ובעץ ● ו-◆ מבדילים בין תנאי קבלה לידע קודם.": "For color blindness: while dragging, each semester also gets a symbol (! in a filled circle – admission requirement missing, ! in an empty circle – prior knowledge missing, ✓ – fine), and in the tree ● and ◆ tell admission requirements from prior knowledge.",
  "השם והלוגו של האוניברסיטה הפתוחה שייכים לאוניברסיטה הפתוחה. חלק מהאייקונים מבוססים על Tabler Icons ועל Feather/Lucide": "The Open University's name and logo belong to the Open University. Some icons are based on Tabler Icons and Feather/Lucide",
  "רישיונות": "licenses",
  "הצג מה שכבר שיבצתי": "Show what I've placed",

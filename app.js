@@ -770,6 +770,10 @@ const SKILLS = [
     link: "https://academic.openu.ac.il/yedion/studies/pages/default.aspx?expand=studies8" },
 ];
 
+// an option for a missing condition: a circle for admission, a diamond for required knowledge, so the two differ
+// by shape and not only by red and orange (color blindness; guy, 2026-11-08)
+const DOT = { bad: "●", warn: "◆" };
+
 const hasSkill = (id) => (state.skills || []).includes(id);
 
 // a requirement the degree itself asks for, course or not (guy, 2026-11-04): its general requirements link to the
@@ -988,7 +992,7 @@ function chip(n, context) {
       if (options.length) {
         const level = options.some((p) => p.level === "bad") ? "bad" : "warn";
         node.classList.add(`option-${level}`);
-        head.prepend(el("span", { class: `dot ${level}`, "aria-label": T`אפשרות לתנאי של ${options.map((p) => p.n).join(", ")}`, text: "●" }));
+        head.prepend(el("span", { class: `dot ${level}`, "aria-label": T`אפשרות לתנאי של ${options.map((p) => p.n).join(", ")}`, text: DOT[level] }));
       }
     }
   }
@@ -2123,7 +2127,7 @@ function renderTree() {
             outside.length ? T`אפשר גם ${outside.join(", ")} מחוץ לתכנית` : null].filter(Boolean).join("; ");
           return el("div", { class: `need-note ${p.level}` },
             // name the condition type instead of "נדרש", which reads like "ידע קודם נדרש"
-            T`${p.label} ל-${p.n}: `, el("span", { class: `dot ${p.level}`, text: "●" }),
+            T`${p.label} ל-${p.n}: `, el("span", { class: `dot ${p.level}`, text: DOT[p.level] }),
             k === 1 ? T(" אחת מהאפשרויות המסומנות") : T` לפחות ${k} מהאפשרויות המסומנות`,
             `, ${deadline(p.i)}`, hint ? ` · ${hint}` : "");
         });
@@ -3385,7 +3389,7 @@ const HELP_STEPS = [
 // ---------- accessibility statement ----------
 // required by the Israeli accessibility regulations (a statement in a prominent place, with a contact). It says
 // what was done and what is not accessible yet; keep it true when the site changes (accessibility, 2026-10-31)
-const A11Y_CHECKED = "2026-11-05";
+const A11Y_CHECKED = "2026-11-08";
 function showAccessibility() {
   const p = (text) => el("p", { text });
   const li = (text) => el("li", { text });
@@ -3399,6 +3403,7 @@ function showAccessibility() {
       li(T("Ctrl+F פותח חיפוש של קורס בכל העמוד: בעץ, בסמסטרים וב\"קורסים שכבר עשיתי\". Enter עובר להתאמה הבאה.")),
       li(T("ביטול וחזרה גם במקלדת: Ctrl+Z ו-Ctrl+Y.")),
       li(T("אזהרות מוצגות בטקסט ולא רק בצבע, וכל הטקסט בניגודיות מספקת, בתצוגה הבהירה ובכהה.")),
+      li(T("בזמן גרירה של קורס, כל סמסטר מסומן גם בסמל ולא רק בצבע: ! בעיגול מלא – חסר תנאי קבלה, ! בעיגול ריק – חסר ידע קודם דרוש, ✓ – אפשר. בעץ, אפשרות לתנאי קבלה מסומנת ב-● ואפשרות לידע קודם ב-◆.")),
       li(T("הודעות מוקראות בקורא מסך, ולחלונות יש כותרות וכפתור סגירה.")),
       li(T("האתר מתאים את עצמו למסך צר ולהגדלת טקסט, ומכבד את הגדרת המערכת להפחתת תנועה.")),
       li(T("האתר זמין בעברית, בערבית ובאנגלית."))),
@@ -3421,6 +3426,7 @@ function showAccessibility() {
 // a date the browser has not opened yet. Every push with such a change adds a line here, in the three languages
 const WHATS_NEW = [
   { date: "2026-11-08", items: [
+    T("לעיוורי צבעים: בזמן גרירה כל סמסטר מסומן גם בסמל (! בעיגול מלא – חסר תנאי קבלה, ! בעיגול ריק – חסר ידע קודם, ✓ – אפשר), ובעץ ● ו-◆ מבדילים בין תנאי קבלה לידע קודם."),
     T("קורסים מרחיבי-דעת: הרשימה מחולקת לפי הקטלוג (במדעי הרוח, במדעי החברה, באנגלית, בערבית), וכל חלק נפתח ונסגר."),
   ] },
   { date: "2026-11-05", items: [
