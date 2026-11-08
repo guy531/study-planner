@@ -2027,7 +2027,8 @@ function renderExpr(expr, have, inner = false) {
       el("p", { class: "alt-label" }, T`אחד מ-${expr.or.length} הקורסים ברשימה. אפשר לחפש קורס לפי שם בחיפוש שבראש העץ.`,
         ...(isBroadeningList(expr) ? [" ", whatBroadening()] : [])),
       el("details", {}, el("summary", { text: T`הצגת כל ${expr.or.length} הקורסים` }),
-        el("ul", { class: "zone chips" }, expr.or.map((n) => chip(n, "tree")))));
+        ...(isBroadeningList(expr) ? broadeningParts(expr.or, (list) => el("ul", { class: "zone chips" }, list.map((n) => chip(n, "tree"))), "tree")
+          : [el("ul", { class: "zone chips" }, expr.or.map((n) => chip(n, "tree")))])));
   }
   if (expr.and) {
     return el("div", { class: "together" }, expr.and.flatMap((e, i) => [
@@ -2267,6 +2268,7 @@ function filterTree() {
   });
   // an option of one course is a box of its own (a zone, with a minimum height): an empty one left a gap (guy, 2026-11-04)
   hideEmpty(".zone.chips");
+  hideEmpty(".broad-part");
   hideEmpty(".alt");
   hideEmpty(".choice");
   tree.querySelectorAll(".long-list details").forEach((d) => { if (d.querySelector(".chip:not(.f-hide)")) d.open = true; });
@@ -2300,6 +2302,19 @@ function programBroadening(n) {
   return ownBroadening.get(program.code).has(n);
 }
 const isBroadeningList = (expr) => broadeningItems().some((it) => it.courses === expr);
+// the broadening list in the catalog's parts, each under its own heading, in the catalog's order (guy, 2026-11-08);
+// a program's own extra course (22006) in a part of its own at the end. list(courses) builds the courses of one part
+const BROADENING_PARTS = [["מדעי הרוח", "במדעי הרוח"], ["מדעי החברה", "במדעי החברה"], ["מדעים", "במדעים"], ["באנגלית", "באנגלית"], ["בערבית", "בערבית"]];
+// each part folds and opens on its own, closed at first (guy, 2026-11-08); the parts opened are kept through renders
+const openParts = new Set();
+function broadeningParts(courses, list, where) {
+  const partOf = (n) => (DATA.courses[n] || {}).broadening;
+  const parts = BROADENING_PARTS.map(([part, title]) => [T(title), courses.filter((n) => partOf(n) === part)]);
+  parts.push([T("ייחודיים לתכנית שלך"), courses.filter((n) => !BROADENING_PARTS.some(([part]) => partOf(n) === part))]);
+  return parts.filter(([, list]) => list.length).map(([title, part]) =>
+    el("details", { class: "broad-part", "data-part": `${where}:${title}`, open: openParts.has(`${where}:${title}`) },
+      el("summary", { class: "broad-head", text: T`${title} (${part.length})` }), list(part)));
+}
 
 // the shared list under "מחוץ לתואר שלך", unless the program has a broadening item of its own (then it is in the tree)
 function otherLists() {
@@ -2312,7 +2327,7 @@ function renderLists() {
     el("details", { class: "lists-block", "data-list": key, ...(listsOpen.has(key) ? { open: "" } : {}) },
       el("summary", { text: T`קורסים מרחיבי-דעת (${l.courses.length})` }),
       el("p", { class: "hint" }, T("מותר ללמוד גם קורסים מרחיבי-דעת. זו לא דרישה של התואר שלך. גוררים קורס לסמסטר, והוא נשמר ב\"קורסים נוספים\"."), " ", whatBroadening()),
-      ...(listsOpen.has(key) ? [el("ul", { class: "outside-list" }, l.courses.map((n) => chip(n, "outside")))] : []))));
+      ...(listsOpen.has(key) ? broadeningParts(l.courses, (list) => el("ul", { class: "outside-list" }, list.map((n) => chip(n, "outside"))), "outside") : []))));
 }
 
 function renderExtra() {
@@ -2532,7 +2547,8 @@ function flashInTree(wanted, flash = true) {
     setShowPlaced(true); // the course is in a shrunk part of the tree
     chips = [...inPlan(), ...inTree()];
   }
-  chips.forEach((c) => { const d = c.closest("details"); if (d) d.open = true; });
+  // every folded box around the card (a broadening part sits inside the folded list; guy, 2026-11-08)
+  chips.forEach((c) => { for (let d = c.closest("details"); d; d = d.parentElement.closest("details")) d.open = true; });
   if (chips.length && treeIsLayer()) setTreeOpen(!!chips[0].closest(".tree"));
   if (!chips.length) {
     toast(T`${wanted.join(", ")} לא נמצאים בעץ, כי הם לא חלק מהתכנית. אפשר להוסיף אותם ל"קורסים נוספים" בכפתור שליד הקורס, או בחיפוש שבראש העץ.`);
@@ -3399,6 +3415,9 @@ function showAccessibility() {
 // the changes a user notices, by date, newest first: a new date goes at the top. A dot on the button while there is
 // a date the browser has not opened yet. Every push with such a change adds a line here, in the three languages
 const WHATS_NEW = [
+  { date: "2026-11-08", items: [
+    T("קורסים מרחיבי-דעת: הרשימה מחולקת לפי הקטלוג (במדעי הרוח, במדעי החברה, באנגלית, בערבית), וכל חלק נפתח ונסגר."),
+  ] },
   { date: "2026-11-05", items: [
     T("שיבוץ במקלדת: Enter על קורס מעביר לסמסטרים, שנצבעים לפי התנאים שלו. החיצים עוברים ביניהם, Enter משבץ, ו-Esc מבטל. אחרי השיבוץ הפוקוס עובר לקורס הבא בעץ."),
   ] },
@@ -3759,6 +3778,10 @@ function setupSearch() {
   $("#show-placed").checked = showPlaced;
   $("#show-placed").addEventListener("change", (e) => setShowPlaced(e.target.checked));
   // toggle does not bubble, so it is caught on the way down
+  document.addEventListener("toggle", (e) => {
+    const part = e.target.dataset && e.target.dataset.part;
+    if (part) { if (e.target.open) openParts.add(part); else openParts.delete(part); }
+  }, true);
   $("#tree").addEventListener("toggle", (e) => {
     const id = e.target.dataset && e.target.dataset.group;
     if (id) { if (e.target.open) openGroups.add(id); else openGroups.delete(id); }

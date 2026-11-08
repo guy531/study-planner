@@ -201,6 +201,10 @@ select, input[type="search"] {
 /* a choice from a long list (the broadening course), folded */
 .long-list .alt-label { margin: 0 0 6px; }
 .long-list summary { cursor: pointer; color: var(--accent); font-size: 0.9rem; margin-bottom: 6px; }
+/* the broadening list in the catalog's parts (guy, 2026-11-08) */
+.broad-part + .broad-part { margin-top: 8px; }
+.broad-part > .broad-head { margin: 0 0 6px; font-size: 0.9rem; font-weight: 600; color: var(--muted); cursor: pointer; }
+.broad-part:not([open]) > .broad-head { margin-bottom: 0; }
 .zone-tools h2 { margin: 0; }
 /* a regular (white) button, like the others on the page, in grey; red on hover since it removes courses */
 /* the same text color and size as the other buttons (guy, 2026-10-30: the gray was harder to read); red on hover */
