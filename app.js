@@ -3723,7 +3723,7 @@ function buildPrint() {
   ];
   const today = new Date();
   $("#print-sheet").replaceChildren(...[
-    // the title on the right, the university logo (the same vector as in the header, in black) small on the left
+    // the title (the university logo that was on the left is off while the site is not approved: guy, 2026-11-08)
     el("div", { class: "sheet-top" },
       el("div", {},
         // the degree is the big title, so it is clear at a glance which degree the plan is for (guy, 2026-10-31)
@@ -3735,8 +3735,7 @@ function buildPrint() {
         // the same link as "שיתוף": in the saved PDF a click opens this plan in the tool, to go on working on it
         // (guy, 2026-10-31). Only a link on the published site works for someone else (see "שיתוף")
         el("p", { class: "sub" }, el("a", { href: `${location.origin}${location.pathname}#plan=${encodePlan()}`, target: "_blank", rel: "noopener",
-          text: T("פתיחת התכנית הזו בכלי התכנון, להמשך עבודה עליה") }))),
-      $(".ou-logo svg").cloneNode(true)),
+          text: T("פתיחת התכנית הזו בכלי התכנון, להמשך עבודה עליה") })))),
     // one box (guy, 2026-11-04: "חשוב" and "טיוטה" both said the plan is not approved): the draft, with the approval
     draft,
     summary,

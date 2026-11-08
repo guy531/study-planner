@@ -378,6 +378,8 @@ I18N.en = {
  "נשאר לבחירתך: {0}.": "Left for you to choose: {0}.",
  "הכלי נועד לעזרה בלבד, ועשויים לחול שינויים בהיצע הקורסים ובתכניות הלימודים. המידע המעודכן ביותר על הקורסים נמצא ב": "This tool is only an aid, and course offerings and study programs may change. The most up-to-date course information is in ",
  "הכלי נועד לעזרה בלבד, ועשויים לחול שינויים בהיצע הקורסים ובתכניות הלימודים. המידע המעודכן ביותר על הקורסים נמצא בקטלוג הקורסים של האוניברסיטה הפתוחה: ": "This tool is only an aid, and course offerings and study programs may change. The most up-to-date course information is in the Open University course catalog: ",
+ "גרסת הרצה": "Trial version",
+ "לא סופית, ואינה אתר רשמי של האוניברסיטה הפתוחה": "Not final, and not an official site of the Open University",
  "השם והלוגו של האוניברסיטה הפתוחה שייכים לאוניברסיטה הפתוחה. חלק מהאייקונים מבוססים על Tabler Icons ועל Feather/Lucide": "The Open University's name and logo belong to the Open University. Some icons are based on Tabler Icons and Feather/Lucide",
  "רישיונות": "licenses",
  "הצג מה שכבר שיבצתי": "Show what I've placed",

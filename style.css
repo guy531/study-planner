@@ -79,6 +79,9 @@ select, input[type="search"] {
 .ou-logo svg { display: block; height: 42px; width: auto; } /* 40px + 5% (guy, 2026-11-01) */
 @media (max-width: 520px) { .ou-logo svg { height: 31.5px; } .brand { gap: 10px; } .ou-logo { padding-inline-end: 10px; } }
 .sub { margin: 4px 0 0; color: var(--muted); }
+/* a trial version, not official (guy, 2026-11-08) */
+.trial { margin: 4px 0 0; color: var(--muted); font-size: 0.88rem; }
+.trial-pill { display: inline-block; padding: 1px 8px; margin-inline-end: 4px; border-radius: 999px; border: 1px solid var(--warn); color: var(--warn); background: var(--warn-soft); font-weight: 600; font-size: 0.8rem; }
 .program-pick { display: flex; gap: 8px; align-items: center; font-weight: 600; max-width: 100%; min-width: 0; }
 .program-pick select { min-width: 0; max-width: 100%; } /* a long degree name does not run off a phone screen */
 .top-controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; align-self: stretch; }
