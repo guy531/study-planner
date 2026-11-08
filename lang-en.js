@@ -216,7 +216,7 @@ I18N.en = {
  "מי שפותח את הקישור מקבל עותק: שינויים שהוא עושה לא משנים את התכנית שלך. התכנית לא נשמרת בשום שרת, היא כולה בתוך הקישור.": "Whoever opens the link gets a copy: changes they make don't change your plan. The plan isn't stored on any server; it's entirely inside the link.",
  "✓ הקישור הועתק": "✓ Link copied",
  "הקישור לתכנית פגום, ולכן התכנית לא נפתחה.": "The plan link is broken, so the plan was not opened.",
- "נפתחה תכנית ששותפה איתך. היא נשמרה במקום התכנית שהייתה כאן; \"ביטול\" מחזיר את הקודמת.": "A plan shared with you was opened. It replaced the plan that was here; \"Undo\" brings back the previous one.",
+ "נפתחה תכנית ששותפה איתך. היא נשמרה במקום התכנית שהייתה כאן. \"ביטול\" מחזיר את הקודמת.": "A plan shared with you was opened. It replaced the plan that was here. \"Undo\" brings back the previous one.",
  "רקע מהתיכון": "High-school background",
  " וגם ": " and ",
  " או ": " or ",
