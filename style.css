@@ -727,6 +727,7 @@ button.link { border: none; background: none; padding: 0; color: var(--accent); 
 
 /* background requirements (checkboxes) */
 #background-card h2 { margin-bottom: 6px; }
+#background-card .bg-title { margin: 0 0 4px; font-weight: 600; }
 #background-card .bg-note { margin: 2px 26px 0 0; font-size: 0.85rem; color: var(--muted); }
 #background-card .bg-note.ok { color: var(--done); }
 /* no wrapping: a long text (the bagrut, on a phone) breaks into lines beside the checkbox, not under it */

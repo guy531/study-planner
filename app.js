@@ -2101,8 +2101,9 @@ function renderTree() {
       el("ul", { class: "zone chips" }, chip(b.prep, "tree")),
       el("p", { class: "desc" }, prepLine(b))) : null;
     return el("div", { class: "section basics", id: `group-${id}` },
-      el("h3", { text: T("במקום בגרות (רק למי שצריך)") }),
-      el("div", { class: "desc", text: T`רק למי שאין ${backgroundWhat(b)}. מי שיש לו לא צריך את הקורסים האלה, ויכול לסמן את זה ב"רקע ודרישות".` }),
+      // a formal title, the details under it (guy, 2026-11-08; was "במקום בגרות (רק למי שצריך)")
+      el("h3", { text: T(`עמידה בדרישות ה${b.name_he || b.name}`) }),
+      el("div", { class: "desc", text: T`הדרישה: ${backgroundWhat(b)}, או הקורסים שלמטה. מי שעומד בה בבגרות אינו צריך את הקורסים, ויכול לסמן אותה ב"רקע ודרישות".` }),
       prep, body);
   });
   $("#tree").replaceChildren(...basics, ...program.sections.filter((section) => section.groups.length).map((section) => {
@@ -2380,6 +2381,8 @@ function renderBackground() {
     // בתכנית שלך" looked odd). It is not ticked in the plan; a click ticks it for real, for whoever has the
     // matriculation and placed the course by mistake (then the course card says it is not needed)
     return el("div", { class: "bg-item" },
+      // a formal title, the box and details under it (guy, 2026-11-08), as at the top of the tree
+      el("p", { class: "bg-title", text: T(`עמידה בדרישות ה${b.name_he || b.name}`) }),
       el("label", { class: `check${viaCourses ? " auto" : ""}`,
         title: viaCourses ? T("יש לך בגרות כזו? לחיצה מסמנת אותה, ואז הקורסים האלה לא נדרשים ממך.") : null },
         el("input", { type: "checkbox", "data-background": b.id, checked: ticked || viaCourses, class: viaCourses ? "auto" : null }),
@@ -2387,7 +2390,7 @@ function renderBackground() {
       // ticked: nothing to explain; otherwise either the courses are already in the plan, or where to find them
       ticked ? null : el("p", { class: `bg-note${viaCourses ? " ok" : ""}` }, linkNums(viaCourses
         ? T`✓ ${plainCourses((b.courses.or || [b.courses]).find((p) => satisfied(p, planned)))} בתכנית שלך, ולכן הדרישה מתקיימת.`
-        : T`בלי בגרות כזו, יש ללמוד את ${plainCourses(b.courses).replace(", או ", ", או את ").replace(" + ", T(" ו-"))} (בראש העץ).`)),
+        : T`אפשר לעמוד בדרישה גם בקורסים: ${plainCourses(b.courses).replace(" + ", T(" ו-"))} (בראש העץ).`)),
       ticked || viaCourses || !b.prep || !DATA.courses[b.prep] ? null : el("p", { class: "bg-note" }, prepLine(b)));
   }));
 }
