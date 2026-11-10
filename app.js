@@ -3468,6 +3468,7 @@ function showAccessibility() {
 // a date the browser has not opened yet. Every push with such a change adds a line here, in the three languages
 const WHATS_NEW = [
   { date: "2026-11-10", items: [
+    T("התכניות המומלצות עודכנו: בחלק מהתארים כמה קורסים עברו לסמסטר אחר."),
     T("קורסים שהתנאים שלהם משתנים מסמסטר מסוים נבדקים לפי התנאים של הסמסטר שבו הם משובצים, וחלון הקורס מראה את שתי הגרסאות. כרגע אלה שישה קורסים שמשתנים מ-2028ב: 20483, 20497, 20522, 20523, 20557 ו-20913."),
   ] },
   { date: "2026-11-08", items: [

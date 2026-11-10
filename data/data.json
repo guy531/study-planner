@@ -24208,7 +24208,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/NQ.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-10",
    "sections": [
     {
      "id": "א",
@@ -24760,11 +24760,11 @@
     {
      "years": 3,
      "year": 2,
-     "semester": "א",
+     "semester": "ב",
      "course": "20606",
      "slot": null,
      "credits": null,
-     "notes": "הועבר משנה 1 סמסטר א, כדי שהסמסטר הראשון לא יהיה עמוס."
+     "notes": "גיא, 2026-11-10: שנה 2 סמסטר ב (היה בשנה 2 סמסטר א). הועבר משנה 1 סמסטר א, כדי שהסמסטר הראשון לא יהיה עמוס."
     },
     {
      "years": 3,
@@ -26405,7 +26405,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/C2.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-10",
    "sections": [
     {
      "id": "א",
@@ -27146,15 +27146,6 @@
      "years": 3,
      "year": 2,
      "semester": "ב",
-     "course": "20462",
-     "slot": null,
-     "credits": null,
-     "notes": "חובה בתכנית (בתכנית הקודמת: 20434, בחירה בקיץ של שנה 2). מוצע רק בסמסטר ב."
-    },
-    {
-     "years": 3,
-     "year": 2,
-     "semester": "ב",
      "course": "20418",
      "slot": null,
      "credits": null,
@@ -27213,6 +27204,15 @@
      "slot": null,
      "credits": null,
      "notes": "מוצע רק בסמסטר א. (בתכנית הקודמת: שנה 3 סמסטר ב.) צריך לפניו את 20482."
+    },
+    {
+     "years": 3,
+     "year": 3,
+     "semester": "ב",
+     "course": "20462",
+     "slot": null,
+     "credits": null,
+     "notes": "גיא, 2026-11-10: שנה 3 סמסטר ב (היה בשנה 2 סמסטר ב). חובה בתכנית (בתכנית הקודמת: 20434, בחירה בקיץ של שנה 2). מוצע רק בסמסטר ב."
     },
     {
      "years": 3,
@@ -27388,29 +27388,11 @@
     {
      "years": 4,
      "year": 2,
-     "semester": "ב",
-     "course": "20418",
-     "slot": null,
-     "credits": null,
-     "notes": "בתכנית הקודמת: קיץ של שנה 1. הקיץ של שנה 1 תפוס ב-20280 ובהסתברות."
-    },
-    {
-     "years": 4,
-     "year": 2,
      "semester": "ג",
      "course": "20409",
      "slot": null,
      "credits": null,
      "notes": null
-    },
-    {
-     "years": 4,
-     "year": 2,
-     "semester": "ג",
-     "course": "20476",
-     "slot": null,
-     "credits": null,
-     "notes": "או 20281 (מוצע רק בסמסטר א). בתכנית הקודמת: שנה 2 סמסטר א (גיא, 2026-11-01: בקיץ של שנה 2)."
     },
     {
      "years": 4,
@@ -27434,19 +27416,19 @@
      "years": 4,
      "year": 3,
      "semester": "א",
-     "course": "20394",
-     "slot": null,
-     "credits": null,
-     "notes": null
-    },
-    {
-     "years": 4,
-     "year": 3,
-     "semester": "א",
      "course": "20422",
      "slot": null,
      "credits": null,
      "notes": "מוצע רק בסמסטר א. צריך לפניו את 20250 (בתכנית הקודמת: שנה 2 סמסטר א)."
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "ב",
+     "course": "20418",
+     "slot": null,
+     "credits": null,
+     "notes": "גיא, 2026-11-10: שנה 3 סמסטר ב (היה בשנה 2 סמסטר ב). בתכנית הקודמת: קיץ של שנה 1. הקיץ של שנה 1 תפוס ב-20280 ובהסתברות."
     },
     {
      "years": 4,
@@ -27460,20 +27442,20 @@
     {
      "years": 4,
      "year": 3,
-     "semester": "ב",
-     "course": "20916",
+     "semester": "ג",
+     "course": "20476",
      "slot": null,
      "credits": null,
-     "notes": "חובה רק מעבדה אחת מבין 20916 ו-20938, ו-20916 הוא תנאי קבלה ל-20938. אחרי 20409 ו-20320 (תנאי קבלה) ו-20248 (ידע קודם דרוש). בתכנית הקודמת: שנה 4 סמסטר ב."
+     "notes": "גיא, 2026-11-10: שנה 3 קיץ (היה בשנה 2 קיץ). או 20281 (מוצע רק בסמסטר א). בתכנית הקודמת: שנה 2 סמסטר א (גיא, 2026-11-01: בקיץ של שנה 2)."
     },
     {
      "years": 4,
-     "year": 3,
-     "semester": "ב",
-     "course": "20381",
+     "year": 4,
+     "semester": "א",
+     "course": "20394",
      "slot": null,
      "credits": null,
-     "notes": "בתכנית הקודמת: שנה 4 סמסטר א (גיא, 2026-11-01: שנה 3 סמסטר ב)."
+     "notes": "גיא, 2026-11-10: שנה 4 סמסטר א (היה בשנה 3 סמסטר א)"
     },
     {
      "years": 4,
@@ -27483,6 +27465,24 @@
      "slot": null,
      "credits": null,
      "notes": "קורס שנתי (סמסטר א וסמסטר ב). משובץ בסמסטר א, שבו מתחילים אותו."
+    },
+    {
+     "years": 4,
+     "year": 4,
+     "semester": "ב",
+     "course": "20916",
+     "slot": null,
+     "credits": null,
+     "notes": "גיא, 2026-11-10: שנה 4 סמסטר ב (היה בשנה 3 סמסטר ב). חובה רק מעבדה אחת מבין 20916 ו-20938, ו-20916 הוא תנאי קבלה ל-20938. אחרי 20409 ו-20320 (תנאי קבלה) ו-20248 (ידע קודם דרוש). בתכנית הקודמת: שנה 4 סמסטר ב."
+    },
+    {
+     "years": 4,
+     "year": 4,
+     "semester": "ב",
+     "course": "20381",
+     "slot": null,
+     "credits": null,
+     "notes": "גיא, 2026-11-10: שנה 4 סמסטר ב (היה בשנה 3 סמסטר ב). בתכנית הקודמת: שנה 4 סמסטר א (גיא, 2026-11-01: שנה 3 סמסטר ב)."
     },
     {
      "years": 4,
@@ -27633,7 +27633,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/EL.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-10",
    "sections": [
     {
      "id": "א",
@@ -28672,15 +28672,6 @@
      "years": 4,
      "year": 3,
      "semester": "א",
-     "course": "20314",
-     "slot": null,
-     "credits": null,
-     "notes": "מוצע רק בסמסטר א. (בתכנית הקודמת: שנה 3 סמסטר ב.)"
-    },
-    {
-     "years": 4,
-     "year": 3,
-     "semester": "א",
      "course": "20602",
      "slot": null,
      "credits": null,
@@ -28690,10 +28681,10 @@
      "years": 4,
      "year": 3,
      "semester": "א",
-     "course": "20604",
+     "course": "20465",
      "slot": null,
      "credits": null,
-     "notes": "בתכנית הקודמת: 20440 אוטומטים ושפות פורמליות ו-20585 מבוא לתורת החישוביות, שאינם מוצעים עוד. היום 20604 במקומם."
+     "notes": "גיא, 2026-11-10: שנה 3 סמסטר א (היה בשנה 3 סמסטר ב). בתכנית הקודמת: שנה 2 סמסטר א. גיא, 2026-11-01: בשנה 3 סמסטר ב (היה בשנה 3 סמסטר א), במקביל ל-20594."
     },
     {
      "years": 4,
@@ -28717,10 +28708,10 @@
      "years": 4,
      "year": 3,
      "semester": "ב",
-     "course": "20465",
+     "course": "20466",
      "slot": null,
      "credits": null,
-     "notes": "בתכנית הקודמת: שנה 2 סמסטר א. גיא, 2026-11-01: בשנה 3 סמסטר ב (היה בשנה 3 סמסטר א), במקביל ל-20594."
+     "notes": "גיא, 2026-11-10: שנה 3 סמסטר ב (היה בשנה 4 סמסטר א)"
     },
     {
      "years": 4,
@@ -28735,10 +28726,19 @@
      "years": 4,
      "year": 4,
      "semester": "א",
-     "course": "20466",
+     "course": "20314",
      "slot": null,
      "credits": null,
-     "notes": null
+     "notes": "גיא, 2026-11-10: שנה 4 סמסטר א (היה בשנה 3 סמסטר א). מוצע רק בסמסטר א. (בתכנית הקודמת: שנה 3 סמסטר ב.)"
+    },
+    {
+     "years": 4,
+     "year": 4,
+     "semester": "א",
+     "course": "20604",
+     "slot": null,
+     "credits": null,
+     "notes": "גיא, 2026-11-10: שנה 4 סמסטר א (היה בשנה 3 סמסטר א). בתכנית הקודמת: 20440 אוטומטים ושפות פורמליות ו-20585 מבוא לתורת החישוביות, שאינם מוצעים עוד. היום 20604 במקומם."
     },
     {
      "years": 4,
@@ -28894,7 +28894,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/OE.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-10",
    "sections": [
     {
      "id": "א",
@@ -29953,15 +29953,6 @@
     {
      "years": 4,
      "year": 2,
-     "semester": "א",
-     "course": "20418",
-     "slot": null,
-     "credits": null,
-     "notes": "בתכנית הקודמת: קיץ של שנה 1."
-    },
-    {
-     "years": 4,
-     "year": 2,
      "semester": "ב",
      "course": "20248",
      "slot": null,
@@ -29976,15 +29967,6 @@
      "slot": null,
      "credits": null,
      "notes": null
-    },
-    {
-     "years": 4,
-     "year": 2,
-     "semester": "ב",
-     "course": "20613",
-     "slot": null,
-     "credits": null,
-     "notes": "חובה מ-2027א (לא היה בתכנית הקודמת). מוצע רק בסמסטר ב, אחרי 20117 (תנאי קבלה) ו-20437 (ידע קודם דרוש)."
     },
     {
      "years": 4,
@@ -30025,11 +30007,20 @@
     {
      "years": 4,
      "year": 3,
-     "semester": "א",
-     "course": "20602",
+     "semester": "ב",
+     "course": "20418",
      "slot": null,
      "credits": null,
-     "notes": "חובה היום (לא היה בתכנית הקודמת). מוצע רק בסמסטר א, ודורש לפניו את 20423, 20218, 20215 ושניים מ-20250, 20201, 20213."
+     "notes": "גיא, 2026-11-10: שנה 3 סמסטר ב (היה בשנה 2 סמסטר א). בתכנית הקודמת: קיץ של שנה 1."
+    },
+    {
+     "years": 4,
+     "year": 3,
+     "semester": "ב",
+     "course": "20613",
+     "slot": null,
+     "credits": null,
+     "notes": "גיא, 2026-11-10: שנה 3 סמסטר ב (היה בשנה 2 סמסטר ב). חובה מ-2027א (לא היה בתכנית הקודמת). מוצע רק בסמסטר ב, אחרי 20117 (תנאי קבלה) ו-20437 (ידע קודם דרוש)."
     },
     {
      "years": 4,
@@ -30048,6 +30039,15 @@
      "slot": null,
      "credits": null,
      "notes": "בתכנית הקודמת: קיץ של שנה 3 (גיא, 2026-11-01: גם כאן; היה בקיץ של שנה 2)."
+    },
+    {
+     "years": 4,
+     "year": 4,
+     "semester": "א",
+     "course": "20602",
+     "slot": null,
+     "credits": null,
+     "notes": "גיא, 2026-11-10: שנה 4 סמסטר א (היה בשנה 3 סמסטר א). חובה היום (לא היה בתכנית הקודמת). מוצע רק בסמסטר א, ודורש לפניו את 20423, 20218, 20215 ושניים מ-20250, 20201, 20213."
     },
     {
      "years": 4,
@@ -31384,15 +31384,6 @@
      "years": 4,
      "year": 2,
      "semester": "ב",
-     "course": "20404",
-     "slot": null,
-     "credits": null,
-     "notes": "מוצע רק בסמסטר ב."
-    },
-    {
-     "years": 4,
-     "year": 2,
-     "semester": "ב",
      "course": "20497",
      "slot": null,
      "credits": null,
@@ -31402,10 +31393,10 @@
      "years": 4,
      "year": 2,
      "semester": "ב",
-     "course": "20418",
+     "course": "20485",
      "slot": null,
      "credits": null,
-     "notes": null
+     "notes": "גיא, 2026-11-10: שנה 2 סמסטר ב (היה בשנה 3 סמסטר ב)"
     },
     {
      "years": 4,
@@ -31456,19 +31447,19 @@
      "years": 4,
      "year": 3,
      "semester": "ב",
-     "course": "20320",
+     "course": "20418",
      "slot": null,
      "credits": null,
-     "notes": "מוצע רק בסמסטר ב. תורת הקוואנטים: 20320 + 20955 (10 נ\"ז), ולא 20522 + 20523: 20522 דורש את יסודות הפיסיקה גם עם בגרות (נרשמה חריגה). התכנית ארוכה ב-3 נ\"ז."
+     "notes": "גיא, 2026-11-10: שנה 3 סמסטר ב (היה בשנה 2 סמסטר ב)"
     },
     {
      "years": 4,
      "year": 3,
      "semester": "ב",
-     "course": "20485",
+     "course": "20320",
      "slot": null,
      "credits": null,
-     "notes": null
+     "notes": "מוצע רק בסמסטר ב. תורת הקוואנטים: 20320 + 20955 (10 נ\"ז), ולא 20522 + 20523: 20522 דורש את יסודות הפיסיקה גם עם בגרות (נרשמה חריגה). התכנית ארוכה ב-3 נ\"ז."
     },
     {
      "years": 4,
@@ -31496,6 +31487,15 @@
      "slot": null,
      "credits": null,
      "notes": "חובה רק מעבדה אחת מבין 20916 ו-20938, ו-20916 הוא תנאי קבלה ל-20938. אחרי 40 נ\"ז בפיסיקה, 20409, 20483, 20248 ו-20606. אחרי 20320 (תנאי קבלה). שנה 4 סמסטר ב ריקה, בשביל קורסי הבחירה."
+    },
+    {
+     "years": 4,
+     "year": 4,
+     "semester": "ב",
+     "course": "20404",
+     "slot": null,
+     "credits": null,
+     "notes": "גיא, 2026-11-10: שנה 4 סמסטר ב (היה בשנה 2 סמסטר ב). מוצע רק בסמסטר ב."
     },
     {
      "years": 4,
