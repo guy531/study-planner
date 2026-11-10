@@ -184,6 +184,16 @@ const afterLastOffer = (c, id) => !!c.offeredUntil && /^\d{4}[אבג]$/.test(c.o
 // is semester id before the first semester a new course is offered in ("מוצע מ"; M8, 2026-11-03: 20980 from 2027ב)
 const beforeFirstOffer = (c, id) => !!c.offeredFrom && /^\d{4}[אבג]$/.test(c.offeredFrom) && semesterOrder(id) < semesterOrder(c.offeredFrom);
 
+// Conditions that change from a known semester (guy, 2026-11-10: six courses, "החל מסמסטר ב2028"). c.future holds only
+// the fields that change, from c.future.from on. condsFor(n, id): the course as it is in semester id, with the
+// conditions that apply there; every check goes through it (or condsAt, by the plan's semester index)
+const usesFuture = (c, id) => !!(c && c.future && id && semesterOrder(id) >= semesterOrder(c.future.from));
+const condsFor = (n, id) => { const c = DATA.courses[n]; return usesFuture(c, id) ? { ...c, ...c.future } : c; };
+const condsAt = (n, i) => (typeof i === "number" && i >= 0 ? condsFor(n, semesterIds()[i]) : DATA.courses[n]);
+// before the semester is known (choosing what the auto-fill adds): the new conditions, which is what a student who
+// starts now mostly meets; the placement itself checks the version of each semester
+const latestConds = (n) => { const c = DATA.courses[n]; return c && c.future ? { ...c, ...c.future } : c; };
+
 // why course n cannot go into semester i, or null if it can
 function blockedReason(n, i) {
   const c = DATA.courses[n];
@@ -427,7 +437,7 @@ function autoFill() {
       // then, among as many courses, the one whose admission conditions are already met or planned (83, 2026-11-03:
       // of four labs, 20459 needs 20322, outside the required courses, and 20460 needs only what is there)
       const known_ = new Set([...known(), ...need]);
-      const missingAdmission = need.filter((x) => DATA.courses[x].admission && !satisfied(DATA.courses[x].admission, known_)).length;
+      const missingAdmission = need.filter((x) => latestConds(x).admission && !satisfied(latestConds(x).admission, known_)).length;
       return [need.filter((x) => DATA.courses[x].offeredUntil).length, need.length, missingAdmission, Math.min(99, ...need.map(rank)),
         need.reduce((s, x) => s + (DATA.courses[x].credits || 0), 0)];
     };
@@ -442,8 +452,8 @@ function autoFill() {
     // the background counts for required knowledge too, as "הנחתי שיש לך": the course is placed and the card shows
     // what is missing (20482 needs the foundations, and its page says nothing about a matriculation); an admission
     // condition is a hard one, and there it counts only where the course accepts it (20418, 20434)
-    add(choose(DATA.courses[n].admission, n));
-    add(choose(DATA.courses[n].required));
+    add(choose(latestConds(n).admission, n));
+    add(choose(latestConds(n).required));
   });
   const items = program.sections.flatMap((s) => s.groups.filter((g) => g.rule === "כל הפריטים")
     .flatMap((g) => g.items.filter((it) => it.courses && !isLongList(it.courses))));
@@ -454,8 +464,8 @@ function autoFill() {
   const metWith = (set) => {
     const all = new Set([...planned, ...set, ...assumed]);
     return { items: items.filter((it) => satisfied(it.courses, all)).length,
-      conds: [...set].filter((n) => ["admission", "required"].every((k) => !DATA.courses[n][k]
-        || satisfied(DATA.courses[n][k], k === "admission" ? forCourse(n, all, new Set([...planned, ...set])) : all))) };
+      conds: [...set].filter((n) => ["admission", "required"].every((k) => !latestConds(n)[k]
+        || satisfied(latestConds(n)[k], k === "admission" ? forCourse(n, all, new Set([...planned, ...set])) : all))) };
   };
   const before = metWith(toPlace);
   const size = (n) => (DATA.courses[n] || {}).credits || 0;
@@ -470,7 +480,7 @@ function autoFill() {
   }
 
   // 2. order: a course that more of the remaining courses wait for goes first
-  const deps = (n) => [...coursesIn(DATA.courses[n].admission || ""), ...coursesIn(DATA.courses[n].required || "")].filter((x) => toPlace.has(x));
+  const deps = (n) => [...coursesIn(latestConds(n).admission || ""), ...coursesIn(latestConds(n).required || "")].filter((x) => toPlace.has(x));
   const waiting = new Map([...toPlace].map((n) => [n, []]));
   toPlace.forEach((n) => deps(n).forEach((d) => waiting.get(d).push(n)));
   const depthMemo = new Map();
@@ -501,7 +511,7 @@ function autoFill() {
   const run = (parallel) => {
     const fitsAt = (n, i, plan, same = parallel) => {
       if (isBlockedSemester(i)) return false; // a semester the student blocked
-      const c = DATA.courses[n];
+      const c = condsFor(n, idsFor(i + 1)[i]);
       if (!c) return true;
       const real = new Set(state.done);
       plan.slice(0, i).forEach((x) => x.forEach((y) => real.add(y)));
@@ -566,7 +576,7 @@ function autoFill() {
       plan.forEach((x, i) => x.forEach((n) => at.set(n, i)));
       return plan.reduce((sum, x, i) => {
         const load = x.reduce((a, n) => a + credits(n), 0);
-        const late = x.reduce((a, n) => a + [...coursesIn((DATA.courses[n] || {}).recommended || "")]
+        const late = x.reduce((a, n) => a + [...coursesIn((condsFor(n, idsFor(i + 1)[i]) || {}).recommended || "")]
           .filter((r) => at.has(r) && at.get(r) >= i).length, 0);
         const together = parallel ? x.filter((n) => toPlace.has(n) && !fitsAt(n, i, plan, false)).length : 0;
         return sum + (load - target * (isSummer(i) ? 0.5 : 1)) ** 2 + (load > cap(i) ? 1000 : 0) + 8 * late + 40 * together;
@@ -828,7 +838,7 @@ const fewCourses = (list) => (list.length > 3 ? T`${list.slice(0, 3).join(", ")}
 // courses before it give in that field, after the overlap cuts among them, and whether it is short. The background
 // courses a ticked box stands for give no credits. null when the course has no such condition (guy, 2026-11-01)
 function priorCheck(n, i) {
-  const c = DATA.courses[n];
+  const c = condsAt(n, i);
   if (!c || !c.priorCredits) return null;
   const order = new Map(state.done.map((x) => [x, -1]));
   state.semesters.slice(0, i).forEach((list, k) => list.forEach((x) => order.set(x, k)));
@@ -842,7 +852,7 @@ function findProblems() {
   const found = [];
   state.semesters.forEach((list, i) => {
     list.forEach((n) => {
-      const c = DATA.courses[n];
+      const c = condsAt(n, i);
       if (!c) return;
       const have = takenBefore(i, null, n);
       CONDITIONS.forEach((cond) => {
@@ -965,7 +975,8 @@ function chip(n, context) {
     own.forEach((p) => tags.push(el("span", { class: `tag ${p.level}`, text: p.tag })));
     // the side stripe is for real problems only, not for knowledge taken in parallel
     if (own.some((p) => p.level !== "soft")) node.classList.add(own.some((p) => p.level === "bad") ? "prob-bad" : "prob-warn");
-    if (!own.length && c && (c.admission || c.required || c.recommended || c.priorCredits)) {
+    const cv = condsAt(n, context);
+    if (!own.length && cv && (cv.admission || cv.required || cv.recommended || cv.priorCredits)) {
       tags.push(el("button", { type: "button", class: "link cond-link", "data-cond": `${n}|${context}`, text: T("תנאים") }));
     }
     // one short line per condition, naming what is missing in short (guy, 2026-10-29); the full checklist opens in a window
@@ -995,6 +1006,10 @@ function chip(n, context) {
         head.prepend(el("span", { class: `dot ${level}`, "aria-label": T`אפשרות לתנאי של ${options.map((p) => p.n).join(", ")}`, text: DOT[level] }));
       }
     }
+  }
+  // conditions that change from a known semester: said on the card in the tree, before it is placed (guy, 2026-11-10)
+  if (inTree && !placed && c && c.future && c.offered !== false) {
+    notes.push(el("div", { class: "why soft", text: T`התנאים של הקורס משתנים מ-${semName(c.future.from)}` }));
   }
   // a course whose credits an overlap cuts (in a semester or in "done"): what it counts, and with which course
   const cutLine = (typeof context === "number" || context === "done") ? overlapLine(n) : null;
@@ -2421,7 +2436,8 @@ function showBackground(id) {
   const replaced = coursesIn(b.courses);
   const mentions = (e) => [...coursesIn(e || "")].some((x) => replaced.has(x));
   const asking = Object.entries(DATA.courses)
-    .filter(([n, c]) => !replaced.has(n) && c.offered !== false && (mentions(c.admission) || mentions(c.required)))
+    .filter(([n, c]) => !replaced.has(n) && c.offered !== false && (mentions(c.admission) || mentions(c.required)
+      || (c.future && (mentions(c.future.admission) || mentions(c.future.required)))))
     .map(([n]) => n).sort();
   const ticked = (state.background || []).includes(id);
   fillInfo(
@@ -2664,7 +2680,7 @@ function setupFind() {
 // the conditions of course n in semester i as a checklist: one row per condition, ✓ or ✗, alternatives listed under it
 function showConditions(n, i) {
   reopenWindow = () => showConditions(n, i);
-  const c = DATA.courses[n];
+  const c = condsAt(n, i);
   const id = semesterIds()[i];
   const have = takenBefore(i, null, n);
   const withSame = new Set([...have, ...state.semesters[i].filter((x) => x !== n)]);
@@ -2722,6 +2738,10 @@ function showConditions(n, i) {
   fillInfo(
     el("h3", {}, el("span", { class: "num", text: n }), " ", el("bdi", { text: c.name }), T` בסמסטר ${semesterLabel(id)}`),
     el("p", { class: "cond-note", text: T`נבדק מול הקורסים שבסמסטרים שלפני ${semName(id)} וב"קורסים שכבר עשיתי". קורסים חסרים מסומנים גם בעץ.` }),
+    // which version of the conditions (guy, 2026-11-10)
+    c.future ? el("p", { class: "cond-note future-note", text: usesFuture(c, id)
+      ? T`לפי התנאים החדשים של הקורס, שחלים מ-${semName(c.future.from)}.`
+      : T`לפי התנאים הנוכחיים של הקורס. מ-${semName(c.future.from)} הם משתנים (ראו "כל פרטי הקורס").` }) : null,
     ...sections,
     el("p", {}, el("button", { type: "button", class: "link", "data-info": n, text: T("כל פרטי הקורס") })));
   if (!$("#info").open) $("#info").showModal();
@@ -2833,13 +2853,33 @@ function showInfo(n) {
   const where = locationOf(n);
   const check = (kind) => (typeof where === "number"
     ? { have: takenBefore(where, null, n), withSame: new Set([...takenBefore(where, null, n), ...state.semesters[where].filter((x) => x !== n)]), kind } : null);
-  add(T("תנאי קבלה"), c.admission && conditionList(c.admission, planned, check("admission"), n));
-  add(T("נ\"ז קודמים"), c.priorCredits ? T`לפחות ${c.priorCredits} נ"ז (${T(c.priorField)})` : null);
+  // conditions that change from a known semester: the version of the semester the course is in (today's when it is
+  // not in a semester), and the other one in a row of its own (guy, 2026-11-10)
+  const fut = c.future;
+  const usesNew = typeof where === "number" && usesFuture(c, semesterIds()[where]);
+  const cv = usesNew ? { ...c, ...fut } : c;
+  add(T("תנאי קבלה"), cv.admission && conditionList(cv.admission, planned, check("admission"), n));
+  add(T("נ\"ז קודמים"), cv.priorCredits ? T`לפחות ${cv.priorCredits} נ"ז (${T(cv.priorField)})` : null);
   const extras = SKILLS.filter((s) => c[s.key]);
   add(T("דרישות נוספות"), extras.length ? el("span", {}, extras.map((s, k) => el("span", {}, k ? " · " : "", s.short, " ",
     hasSkill(s.id) ? el("span", { class: "mark yes", text: "✓" }) : el("span", { class: "tag need", text: s.optional ? T("לא סימנת פטור") : T("עוד לא סימנת") })))) : null);
-  add(T("ידע קודם דרוש"), c.required && conditionList(c.required, planned, check("required"), n));
-  add(T("ידע קודם מומלץ"), c.recommended && conditionList(c.recommended, planned, check("recommended"), n));
+  add(T("ידע קודם דרוש"), cv.required && conditionList(cv.required, planned, check("required"), n));
+  add(T("ידע קודם מומלץ"), cv.recommended && conditionList(cv.recommended, planned, check("recommended"), n));
+  if (fut) {
+    const other = usesNew ? c : { ...c, ...fut };
+    const none = el("span", { class: "muted", text: T("אין") });
+    const sub = [];
+    const put = (label, value) => sub.push(el("dt", { text: label }), el("dd", {}, value));
+    if ("admission" in fut) put(T("תנאי קבלה"), other.admission ? conditionList(other.admission, planned, null, n) : none.cloneNode(true));
+    if ("priorCredits" in fut) put(T("נ\"ז קודמים"), other.priorCredits ? T`לפחות ${other.priorCredits} נ"ז (${T(other.priorField)})` : none.cloneNode(true));
+    if ("required" in fut) put(T("ידע קודם דרוש"), other.required ? conditionList(other.required, planned, null, n) : none.cloneNode(true));
+    if ("recommended" in fut) put(T("ידע קודם מומלץ"), other.recommended ? conditionList(other.recommended, planned, null, n) : none.cloneNode(true));
+    add(usesNew ? T`התנאים עד ${semName(prevSemester(fut.from))}` : T`התנאים מ-${semName(fut.from)}`, el("div", { class: "future-conds" },
+      el("p", { class: "cond-note", text: usesNew
+        ? T`הקורס משובץ ב-${semName(semesterIds()[where])}, ולכן למעלה מוצגים התנאים החדשים. כך היו התנאים שהשתנו לפני ${semName(fut.from)}:`
+        : T`מסמסטר ${semName(fut.from)} התנאים של הקורס משתנים. מי שילמד אותו מאז, אלה התנאים שמשתנים (השאר כמו למעלה):` }),
+      el("dl", {}, sub)));
+  }
   // a program background requirement that this course accepts (guy, 2026-11-03: not every course in its field)
   backgroundsFor(n).forEach((b) => {
     if (coursesIn(b.courses).has(n)) return;
@@ -2874,7 +2914,7 @@ function showInfo(n) {
     // a course with minimal details only: without this it would look like a course with no conditions
     c.full === false ? el("p", { class: "partial-note" }, T("התנאים, הידע הקודם והחפיפות של הקורס הזה עוד לא הוזנו לכלי. בדקו אותם ב"),
       c.link ? el("a", { href: c.link, target: "_blank", rel: "noopener", text: T("דף הקורס בקטלוג") }) : T("קטלוג הקורסים"), ".") : null,
-    typeof where === "number" && (c.admission || c.required || c.recommended)
+    typeof where === "number" && (cv.admission || cv.required || cv.recommended)
       ? el("p", { class: "cond-note", text: T`הסימונים ליד התנאים: לפי הקורסים שלפני ${semName(semesterIds()[where])} ו"קורסים שכבר עשיתי".` }) : null,
     el("dl", {}, rows),
     c.offered !== false || where !== null ? el("p", { class: "lock-row" }, el("button", { type: "button", class: "mini", "data-move-open": n, text: T("שיבוץ או העברה...") })) : null,
@@ -2909,7 +2949,7 @@ function zoneTarget(node) {
 // what course n would miss in semester i (warnings, not blocks): its admission conditions (they must come before),
 // and its required knowledge (before, or in the same semester, which is allowed)
 function dropIssues(n, i) {
-  const c = DATA.courses[n];
+  const c = condsAt(n, i);
   const have = takenBefore(i, n);
   const withSame = new Set([...have, ...(state.semesters[i] || []).filter((x) => x !== n)]);
   const prior = priorCheck(n, i);
@@ -3426,6 +3466,9 @@ function showAccessibility() {
 // the changes a user notices, by date, newest first: a new date goes at the top. A dot on the button while there is
 // a date the browser has not opened yet. Every push with such a change adds a line here, in the three languages
 const WHATS_NEW = [
+  { date: "2026-11-10", items: [
+    T("קורסים שהתנאים שלהם משתנים מ-2028ב (למשל 20497, 20913) נבדקים לפי התנאים של הסמסטר שבו הם משובצים, וחלון הקורס מראה את שתי הגרסאות."),
+  ] },
   { date: "2026-11-08", items: [
     T("כפתור העין בכותרת (ליד ☀/☾) מחליף את האדום, הכתום והירוק בצבעים שקל להבחין ביניהם עם עיוורון צבעים."),
     T("לעיוורי צבעים: בזמן גרירה כל סמסטר מסומן גם בסמל (! בעיגול מלא – חסר תנאי קבלה, ! בעיגול ריק – חסר ידע קודם, ✓ – אפשר), ובעץ ● ו-◆ מבדילים בין תנאי קבלה לידע קודם."),
@@ -3635,10 +3678,13 @@ function buildPrint() {
     if (overlapLine(n)) remarks.push(overlapLine(n).text);
     if (backgroundFor(n)) remarks.push(onlyWithoutBackground(backgroundFor(n)));
     if (prepNote(n, i)) remarks.push(prepNote(n, i));
+    const cv = typeof i === "number" ? condsAt(n, i) : c;
     const conds = [
-      c.admission && el("div", {}, el("b", { text: T("תנאי קבלה: ") }), printFormula(c.admission, true, false, n)),
-      c.required && el("div", {}, el("b", { text: T("ידע קודם: ") }), printFormula(c.required, true, false, n)),
-      c.priorCredits && el("div", { text: T`לפחות ${c.priorCredits} נ"ז קודמים (${T(c.priorField)})` }),
+      cv.admission && el("div", {}, el("b", { text: T("תנאי קבלה: ") }), printFormula(cv.admission, true, false, n)),
+      cv.required && el("div", {}, el("b", { text: T("ידע קודם: ") }), printFormula(cv.required, true, false, n)),
+      cv.priorCredits && el("div", { text: T`לפחות ${cv.priorCredits} נ"ז קודמים (${T(cv.priorField)})` }),
+      c.future && i !== "done" && el("div", { class: "who", text: cv !== c ? T`לפי התנאים החדשים, מ-${semName(c.future.from)}`
+        : T`מ-${semName(c.future.from)} התנאים משתנים` }),
     ].filter(Boolean);
     return el("tr", {},
       el("td", { class: "num", text: n }),
@@ -3668,6 +3714,7 @@ function buildPrint() {
             c.admission && el("div", {}, el("b", { text: T("תנאי קבלה: ") }), printFormula(c.admission, true, false, n)),
             c.required && el("div", {}, el("b", { text: T("ידע קודם: ") }), printFormula(c.required, true, false, n)),
             c.priorCredits && el("div", { text: T`לפחות ${c.priorCredits} נ"ז קודמים (${T(c.priorField)})` }),
+            c.future && el("div", { class: "who", text: T`מ-${semName(c.future.from)} התנאים משתנים` }),
             SKILLS.some((s) => c[s.key]) && el("div", { text: SKILLS.filter((s) => c[s.key]).map((s) => s.short).join(", ") }),
           ].filter(Boolean)),
           el("td", { class: "rem", text: c.notYet ? T("קורס חדש, עוד לא מוצע") : T`מוצע בסמסטרים ${letterList(c.semesters)}${c.offeredUntil ? T`, עד ${semName(c.offeredUntil)}` : ""}${c.offeredFrom ? T`, מ-${semName(c.offeredFrom)}` : ""}` }));

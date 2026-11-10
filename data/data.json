@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-10",
  "courses": {
   "20314": {
    "name": "פיסיקה סטטיסטית",
@@ -75,6 +75,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -113,6 +114,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -206,6 +208,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -296,6 +299,7 @@
    "admission": null,
    "required": null,
    "recommended": "04101",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -373,6 +377,7 @@
    "admission": null,
    "required": "20474",
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -467,6 +472,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -549,6 +555,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -680,6 +687,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -778,6 +786,7 @@
    "admission": null,
    "required": null,
    "recommended": "04101",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -852,6 +861,7 @@
     ]
    },
    "recommended": "20109",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -916,6 +926,7 @@
     ]
    },
    "recommended": "20229",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -966,6 +977,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -1060,6 +1072,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -1153,6 +1166,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -1269,6 +1283,7 @@
    "admission": null,
    "required": "20453",
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -1418,6 +1433,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "למי שעבר בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציונים טובים (ב-5 השנים האחרונות) מומלץ לפנות ליועץ בפיסיקה.",
    "acceptsBackground": [
@@ -1504,6 +1520,7 @@
     ]
    },
    "recommended": "20394",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -1584,6 +1601,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "במקום 20423 בידע המומלץ: 20212 + 20224 למי שלמד את 20106, או 20224 למי שלמד אינפי 1 + אינפי 2.",
    "acceptsBackground": [],
@@ -1654,6 +1672,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "למי שעבר בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציונים טובים (ב-5 השנים האחרונות) מומלץ לפנות ליועץ בפיסיקה.",
    "acceptsBackground": [
@@ -1739,6 +1758,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "דרושה גם יכולת קריאה של טקסטים מדעיים באנגלית. במקום 20423: 20212 + 20224 למי שלמד את 20106, או 20224 למי שלמד אינפי 1 + אינפי 2.",
    "acceptsBackground": [],
@@ -1801,6 +1821,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -1864,6 +1885,7 @@
     ]
    },
    "recommended": "20418",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -1932,6 +1954,7 @@
     ]
    },
    "recommended": "20201",
+   "future": null,
    "overlaps": [],
    "notes": "למי שעבר בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציונים טובים (ב-5 השנים האחרונות) מומלץ לפנות ליועץ בפיסיקה.",
    "acceptsBackground": [
@@ -2011,6 +2034,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -2095,6 +2119,7 @@
      "20201"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -2204,6 +2229,7 @@
      "20248"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -2292,6 +2318,7 @@
      "20913"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "הקורס נקרא בעבר \"מעבדה בפיסיקה ג\".",
    "acceptsBackground": [],
@@ -2370,6 +2397,7 @@
      "20913"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -2442,6 +2470,7 @@
      "20602"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -2548,6 +2577,7 @@
      "20218"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -2665,13 +2695,72 @@
      }
     ]
    },
+   "future": {
+    "from": "2028ב",
+    "admission": {
+     "and": [
+      "20215",
+      "20314"
+     ]
+    },
+    "required": {
+     "and": [
+      "20250",
+      "20213",
+      {
+       "or": [
+        {
+         "and": [
+          "20406",
+          "20423"
+         ]
+        },
+        {
+         "and": [
+          "20474",
+          "20475",
+          "20224"
+         ]
+        }
+       ]
+      },
+      {
+       "or": [
+        "20109",
+        "20430"
+       ]
+      },
+      "20602",
+      {
+       "or": [
+        "20201",
+        "20437"
+       ]
+      },
+      {
+       "or": [
+        "20320",
+        "20522"
+       ]
+      }
+     ]
+    },
+    "recommended": {
+     "and": [
+      "20248",
+      "20217"
+     ]
+    },
+    "priorCredits": 36,
+    "priorField": "פיסיקה ומתמטיקה"
+   },
    "overlaps": [],
    "notes": "מסמסטר 2028ב תנאי הקבלה ישתנו: 36 נ\"ז בפיסיקה ובמתמטיקה ובהם 20215 ו-20314; ידע קודם דרוש: 20250, 20213, חדו\"א א+ב (או אינפי 1+2+3), אלגברה לינארית, 20602, 20201 (או 20437), 20320 (או 20522); מומלץ: 20248, 20217.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20913.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-10",
    "full": true
   },
   "20326": {
@@ -2707,6 +2796,7 @@
    },
    "required": null,
    "recommended": "20422",
+   "future": null,
    "overlaps": [],
    "notes": "לפי דף התכנית: מ-2025א הרמה השתנתה ממתקדם סמינריוני למתקדם.",
    "acceptsBackground": [],
@@ -2775,6 +2865,7 @@
      "20201"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -2843,6 +2934,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -2887,6 +2979,7 @@
    "admission": null,
    "required": "20488",
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -2993,6 +3086,7 @@
      "20213"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -3081,6 +3175,7 @@
      "20213"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -3117,6 +3212,7 @@
    "admission": null,
    "required": "20489",
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "הדף לא מציין אם אפשר לכתוב בקורס עבודה סמינריונית.",
    "acceptsBackground": [],
@@ -3182,6 +3278,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -3283,6 +3380,7 @@
    },
    "required": null,
    "recommended": "20557",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -3372,6 +3470,7 @@
      "20422"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -3453,6 +3552,7 @@
      "20602"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "אפשר להירשם גם על סמך קבלה לתואר השני באסטרופיסיקה, במקום תנאי הקבלה.",
    "acceptsBackground": [],
@@ -3494,6 +3594,7 @@
     ]
    },
    "recommended": "20394",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -3576,6 +3677,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "בהיצע מופיע רק סמסטר 2028ב.",
    "acceptsBackground": [],
@@ -3612,6 +3714,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "תנאי קבלה נוסף: לפחות קורס מתקדם אחד במדעי הטבע. הקורס נלמד באנגלית, ויש בו מפגש חובה בקמפוס ברעננה.",
    "acceptsBackground": [],
@@ -3650,6 +3753,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -3701,6 +3805,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -3787,6 +3892,7 @@
     ]
    },
    "recommended": "20602",
+   "future": null,
    "overlaps": [],
    "notes": "אפשר להירשם גם על סמך קבלה לתואר שני באסטרופיסיקה, במקום תנאי הקבלה.",
    "acceptsBackground": [],
@@ -3819,6 +3925,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -3851,6 +3958,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -3889,6 +3997,7 @@
    "admission": null,
    "required": "20474",
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -3942,6 +4051,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4011,6 +4121,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -4043,6 +4154,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -4075,6 +4187,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -4150,6 +4263,43 @@
     ]
    },
    "recommended": null,
+   "future": {
+    "from": "2028ב",
+    "admission": {
+     "and": [
+      "20406",
+      "20423"
+     ]
+    },
+    "required": {
+     "and": [
+      {
+       "or": [
+        "20125",
+        {
+         "and": [
+          "20113",
+          "20114"
+         ]
+        }
+       ]
+      },
+      {
+       "or": [
+        "20437",
+        "20470",
+        "20201"
+       ]
+      },
+      {
+       "or": [
+        "20605",
+        "20606"
+       ]
+      }
+     ]
+    }
+   },
    "overlaps": [
     {
      "with": [
@@ -4163,7 +4313,7 @@
    "coordinator": "ד\"ר קובי פלומין",
    "coordinatorEmail": "kobifl@openu.ac.il",
    "link": "https://www.openu.ac.il/courses/20483.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-10",
    "full": true
   },
   "20430": {
@@ -4194,6 +4344,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4313,6 +4464,43 @@
      "20224"
     ]
    },
+   "future": {
+    "from": "2028ב",
+    "admission": {
+     "and": [
+      "20406",
+      {
+       "or": [
+        "20109",
+        "20430"
+       ]
+      },
+      "20423"
+     ]
+    },
+    "required": {
+     "and": [
+      {
+       "or": [
+        "20125",
+        {
+         "and": [
+          "20113",
+          "20114"
+         ]
+        }
+       ]
+      },
+      {
+       "or": [
+        "20497",
+        "20213"
+       ]
+      }
+     ]
+    },
+    "recommended": "20218"
+   },
    "overlaps": [
     {
      "with": [
@@ -4333,7 +4521,7 @@
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20522.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-10",
    "full": true
   },
   "20125": {
@@ -4382,6 +4570,7 @@
      "20106"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4451,6 +4640,7 @@
      "20106"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4502,6 +4692,7 @@
    "admission": null,
    "required": "20113",
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4569,6 +4760,7 @@
      "20106"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4624,6 +4816,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4676,6 +4869,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -4715,6 +4909,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4806,6 +5001,7 @@
    "admission": null,
    "required": null,
    "recommended": "04101",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4873,6 +5069,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -4910,6 +5107,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -4996,6 +5194,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5081,6 +5280,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5174,6 +5374,7 @@
    "admission": null,
    "required": null,
    "recommended": "20116",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5244,6 +5445,7 @@
    "admission": null,
    "required": null,
    "recommended": "20116",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5312,6 +5514,7 @@
    "admission": null,
    "required": "20470",
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5395,6 +5598,7 @@
    "admission": null,
    "required": "20470",
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5457,6 +5661,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -5489,6 +5694,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -5527,6 +5733,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5638,6 +5845,7 @@
     ]
    },
    "recommended": "20243",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5691,6 +5899,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5763,6 +5972,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5852,6 +6062,7 @@
    "admission": "10769",
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -5991,6 +6202,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6087,6 +6299,7 @@
    },
    "required": null,
    "recommended": "20127",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6170,6 +6383,7 @@
      "20109"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6231,6 +6445,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -6269,6 +6484,7 @@
    "admission": null,
    "required": "20109",
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -6326,6 +6542,7 @@
     ]
    },
    "recommended": "20229",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6365,6 +6582,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -6411,6 +6629,7 @@
      "20224"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6457,6 +6676,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -6522,13 +6742,52 @@
     ]
    },
    "recommended": "20483",
+   "future": {
+    "from": "2028ב",
+    "admission": "20406",
+    "required": {
+     "and": [
+      {
+       "or": [
+        "20605",
+        "20606"
+       ]
+      },
+      "20113",
+      "20114",
+      {
+       "or": [
+        "20437",
+        "20470"
+       ]
+      },
+      {
+       "or": [
+        "20406",
+        {
+         "and": [
+          "20474",
+          "20492"
+         ]
+        },
+        {
+         "and": [
+          "20474",
+          "20475"
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   },
    "overlaps": [],
-   "notes": "ידע קודם דרוש נוסף: יכולת קריאה של טקסטים מדעיים באנגלית. מסמסטר 2028ב: 20406 יתווסף לתנאי הקבלה, ובידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
+   "notes": "ידע קודם דרוש נוסף: יכולת קריאה של טקסטים מדעיים באנגלית.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20497.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-10",
    "full": true
   },
   "20241": {
@@ -6554,6 +6813,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -6643,13 +6903,56 @@
      "20523"
     ]
    },
+   "future": {
+    "from": "2028ב",
+    "admission": {
+     "and": [
+      {
+       "or": [
+        "20437",
+        {
+         "and": [
+          "20470",
+          "20490"
+         ]
+        },
+        {
+         "and": [
+          "20470",
+          "20480"
+         ]
+        }
+       ]
+      },
+      "20497",
+      {
+       "or": [
+        "20406",
+        {
+         "and": [
+          "20474",
+          "20492"
+         ]
+        },
+        {
+         "and": [
+          "20474",
+          "20475"
+         ]
+        }
+       ]
+      },
+      "20423"
+     ]
+    }
+   },
    "overlaps": [],
    "notes": "מסמסטר 2028ב יתווסף לתנאי הקבלה 20423.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20557.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-10",
    "full": true
   },
   "20575": {
@@ -6683,6 +6986,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6739,6 +7043,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6796,6 +7101,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6853,6 +7159,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6915,6 +7222,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -6986,6 +7294,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7069,6 +7378,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7126,6 +7436,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7177,6 +7488,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7226,6 +7538,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -7258,6 +7571,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -7298,6 +7612,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7347,6 +7662,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -7379,6 +7695,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -7411,6 +7728,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -7443,6 +7761,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -7481,6 +7800,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7563,6 +7883,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7647,6 +7968,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7691,6 +8013,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "הקורס אינו מקנה נקודות זכות. פטורים ממנו מי שלמדו את הגרסה הקודמת (יישומי מחשב מתקדמים) או שעמדו בבחינת פטור.",
    "acceptsBackground": [],
@@ -7792,13 +8115,79 @@
      }
     ]
    },
+   "future": {
+    "from": "2028ב",
+    "admission": {
+     "and": [
+      {
+       "or": [
+        "20522",
+        {
+         "and": [
+          "20320",
+          "20955"
+         ]
+        }
+       ]
+      },
+      {
+       "or": [
+        "20437",
+        {
+         "and": [
+          "20470",
+          "20490"
+         ]
+        },
+        {
+         "and": [
+          "20470",
+          "20480"
+         ]
+        }
+       ]
+      },
+      "20456",
+      {
+       "or": [
+        "20406",
+        {
+         "and": [
+          "20474",
+          "20492"
+         ]
+        }
+       ]
+      },
+      {
+       "or": [
+        "20109",
+        "20430"
+       ]
+      },
+      "20423"
+     ]
+    },
+    "required": {
+     "or": [
+      "20605",
+      "20606"
+     ]
+    },
+    "recommended": {
+     "and": [
+      "20404",
+      "20334"
+     ]
+    }
+   },
    "overlaps": [],
    "notes": "מסמסטר 2028ב: 20109 (או 20430) ו-20423 יעברו לתנאי הקבלה, ובידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
    "link": "https://www.openu.ac.il/courses/20523.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-10",
    "full": true
   },
   "10686": {
@@ -7824,6 +8213,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -7867,6 +8257,7 @@
    },
    "required": null,
    "recommended": "10285",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7922,6 +8313,7 @@
      "10611"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -7966,6 +8358,7 @@
    "admission": null,
    "required": null,
    "recommended": "10161",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -8004,6 +8397,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8050,6 +8444,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -8100,6 +8495,7 @@
      "30204"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8159,6 +8555,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8230,6 +8627,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש נוסף: יכולת קריאת מאמרים באנגלית.",
    "acceptsBackground": [],
@@ -8309,6 +8707,7 @@
      "20497"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "הקורס נקרא בעבר סימטריה - מתמטיקה, כימיה. מסמסטר 2028ב: בידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
    "acceptsBackground": [],
@@ -8346,6 +8745,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -8384,6 +8784,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8426,6 +8827,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8470,6 +8872,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -8512,6 +8915,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8581,6 +8985,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8628,6 +9033,7 @@
    "admission": "20611",
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8716,6 +9122,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8798,6 +9205,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8837,6 +9245,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -8900,6 +9309,7 @@
      "20204"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -8957,6 +9367,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -9021,6 +9432,7 @@
    "admission": null,
    "required": null,
    "recommended": "20118",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9071,6 +9483,7 @@
    },
    "required": null,
    "recommended": "20127",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9134,6 +9547,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -9206,6 +9620,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "מתוך 72 הנ\"ז: לפחות 62 נ\"ז בקורסים במדעי הטבע בממוצע של לפחות 85, ובהם לפחות קורס מעבדה אחד וקורס מתקדם אחד. ייתכנו תנאי קבלה נוספים לכל קורס, וההרשמה מותנית גם באישור ועדת הקבלה של המכון הבין-אוניברסיטאי. הקורסים מתקיימים במשך שבוע עד שבועיים באילת. בתואר אפשר ללמוד לכל היותר 2 קורסים בין-אוניברסיטאיים.",
    "acceptsBackground": [],
@@ -9243,6 +9658,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "מתוך 72 הנ\"ז: לפחות 62 נ\"ז בקורסים במדעי הטבע בממוצע של לפחות 85, ובהם לפחות קורס מעבדה אחד וקורס מתקדם אחד. ייתכנו תנאי קבלה נוספים לכל קורס, וההרשמה מותנית גם באישור ועדת הקבלה של המכון הבין-אוניברסיטאי. הקורסים מתקיימים במשך שבוע עד שבועיים באילת. בתואר אפשר ללמוד לכל היותר 2 קורסים בין-אוניברסיטאיים.",
    "acceptsBackground": [],
@@ -9285,6 +9701,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש נוסף: יכולת קריאה של טקסטים מדעיים באנגלית. ידע קודם מומלץ: הדרכה ביבליוגרפית בספרייה. למי שאין לו הידע הקודם הדרוש, מומלץ לפנות ליועץ למתמטיקה.",
    "acceptsBackground": [],
@@ -9317,6 +9734,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9354,6 +9772,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9390,6 +9809,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9424,6 +9844,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9460,6 +9881,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -9503,6 +9925,7 @@
    "admission": null,
    "required": null,
    "recommended": "10489",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9544,6 +9967,7 @@
      "10819"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -9585,6 +10009,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -9629,6 +10054,7 @@
    "admission": null,
    "required": null,
    "recommended": "10204",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -9673,6 +10099,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9710,6 +10137,7 @@
    "admission": null,
    "required": null,
    "recommended": "10489",
+   "future": null,
    "overlaps": [],
    "notes": "עד 2022א הקורס היה ברמה מתקדמת. למי שלמד אותו לפני 2022ב הוא נחשב קורס מתקדם.",
    "acceptsBackground": [],
@@ -9746,6 +10174,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9783,6 +10212,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9819,6 +10249,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9851,6 +10282,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9887,6 +10319,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9924,6 +10357,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -9963,6 +10397,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10001,6 +10436,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10038,6 +10474,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10074,6 +10511,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10106,6 +10544,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -10145,6 +10584,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10192,6 +10632,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10228,6 +10669,7 @@
    "admission": "10113",
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "או ידע תאורטי מקביל, באישור מרכז ההוראה (במקום 10113).",
    "acceptsBackground": [],
@@ -10266,6 +10708,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10304,6 +10747,7 @@
    "admission": null,
    "required": null,
    "recommended": "10109",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -10350,6 +10794,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "או ידע תאורטי מקביל, באישור מרכז ההוראה (במקום 10113 ו-10677).",
    "acceptsBackground": [],
@@ -10386,6 +10831,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10428,6 +10874,7 @@
      "10221"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "הקטלוג כותב שקורס זה אינו מומלץ כקורס ראשון באוניברסיטה הפתוחה.",
    "acceptsBackground": [],
@@ -10465,6 +10912,7 @@
    "admission": null,
    "required": null,
    "recommended": "10640",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10503,6 +10951,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10539,6 +10988,7 @@
    "admission": null,
    "required": null,
    "recommended": "10489",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10575,6 +11025,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10609,6 +11060,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10645,6 +11097,7 @@
    "admission": null,
    "required": null,
    "recommended": "10419",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10682,6 +11135,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10714,6 +11168,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10751,6 +11206,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -10795,6 +11251,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10832,6 +11289,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם מומלץ: דקדוק עברי ואנגלי ברמת בחינות הבגרות.",
    "acceptsBackground": [],
@@ -10872,6 +11330,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10910,6 +11369,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -10955,6 +11415,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -10999,6 +11460,7 @@
      "10134"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11035,6 +11497,7 @@
    "admission": null,
    "required": null,
    "recommended": "10110",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11072,6 +11535,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -11115,6 +11579,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11153,6 +11618,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11191,6 +11657,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11228,6 +11695,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11265,6 +11733,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11301,6 +11770,7 @@
    "admission": null,
    "required": null,
    "recommended": "10148",
+   "future": null,
    "overlaps": [],
    "notes": "נדרש ידע בקריאת שני מפתחות (סול ופה) והכרה של מרווחים וסולמות.",
    "acceptsBackground": [],
@@ -11337,6 +11807,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11373,6 +11844,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11405,6 +11877,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11443,6 +11916,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -11487,6 +11961,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "הקטלוג כותב שקורס זה אינו מומלץ כקורס ראשון באוניברסיטה הפתוחה.",
    "acceptsBackground": [],
@@ -11523,6 +11998,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11564,6 +12040,7 @@
      "10648"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11602,6 +12079,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -11647,6 +12125,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -11690,6 +12169,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -11734,6 +12214,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11771,6 +12252,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11810,6 +12292,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -11855,6 +12338,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -11898,6 +12382,7 @@
    "admission": null,
    "required": null,
    "recommended": "10107",
+   "future": null,
    "overlaps": [],
    "notes": "הקטלוג ממליץ מאוד על 10107: מי שלא למד אותו עלול להתקשות בהבנת החומר.",
    "acceptsBackground": [],
@@ -11935,6 +12420,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -11967,6 +12453,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12001,6 +12488,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -12044,6 +12532,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -12087,6 +12576,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "סדנה שנתית: 12 מפגשים לאורך שנת הלימודים. מספר המקומות מוגבל.",
    "acceptsBackground": [],
@@ -12124,6 +12614,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12160,6 +12651,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12196,6 +12688,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12232,6 +12725,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12268,6 +12762,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12305,6 +12800,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12346,6 +12842,7 @@
      "10734"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12382,6 +12879,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם מומלץ: קורסים במדעי היהדות ובפילוסופיה.",
    "acceptsBackground": [],
@@ -12419,6 +12917,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12468,6 +12967,7 @@
      "20121"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12507,6 +13007,7 @@
    "admission": null,
    "required": null,
    "recommended": "10248",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12544,6 +13045,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12576,6 +13078,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12612,6 +13115,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12644,6 +13148,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -12688,6 +13193,7 @@
    "admission": null,
    "required": null,
    "recommended": "10154",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12725,6 +13231,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12762,6 +13269,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12799,6 +13307,7 @@
    "admission": null,
    "required": null,
    "recommended": "10110",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12835,6 +13344,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12872,6 +13382,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12910,6 +13421,7 @@
    "admission": null,
    "required": null,
    "recommended": "10154",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -12946,6 +13458,7 @@
    "admission": null,
    "required": null,
    "recommended": "10113",
+   "future": null,
    "overlaps": [],
    "notes": "או ידע מוסיקלי מקביל (במקום 10113).",
    "acceptsBackground": [],
@@ -12982,6 +13495,7 @@
    "admission": "10113",
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "או ידע תאורטי מקביל, באישור מרכז ההוראה (במקום 10113).",
    "acceptsBackground": [],
@@ -13018,6 +13532,7 @@
    "admission": "10113",
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "או ידע תאורטי מקביל, באישור מרכז ההוראה (במקום 10113).",
    "acceptsBackground": [],
@@ -13055,6 +13570,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13087,6 +13603,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13124,6 +13641,7 @@
    "admission": null,
    "required": null,
    "recommended": "10640",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13165,6 +13683,7 @@
      "10648"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13203,6 +13722,7 @@
    "admission": null,
    "required": null,
    "recommended": "10640",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -13252,6 +13772,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13289,6 +13810,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם מומלץ: לפחות קורס אחד בספרות.",
    "acceptsBackground": [],
@@ -13325,6 +13847,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13357,6 +13880,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13393,6 +13917,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13430,6 +13955,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13468,6 +13994,7 @@
    "admission": "91412",
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם מומלץ: קורס כלשהו בפסיכולוגיה. למי שמתמקד בפסיכולוגיה מומלץ 10136.",
    "acceptsBackground": [],
@@ -13505,6 +14032,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13547,6 +14075,7 @@
      "10660"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13587,6 +14116,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13626,6 +14156,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13667,6 +14198,7 @@
      "10660"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13703,6 +14235,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13739,6 +14272,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -13783,6 +14317,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -13827,6 +14362,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13864,6 +14400,7 @@
    "admission": null,
    "required": null,
    "recommended": "10134",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13902,6 +14439,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "מומלץ להירשם לסדנת אימון בכישורי למידה בקורס (96291) לפני הקורס או במקביל לו.",
    "acceptsBackground": [],
@@ -13940,6 +14478,7 @@
    "admission": null,
    "required": null,
    "recommended": "10131",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -13978,6 +14517,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14016,6 +14556,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14058,6 +14599,7 @@
      "10139"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14097,6 +14639,7 @@
      "10153"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14135,6 +14678,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -14179,6 +14723,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "הקטלוג ממליץ לא ללמוד קורס זה כקורס ראשון באוניברסיטה הפתוחה.",
    "acceptsBackground": [],
@@ -14215,6 +14760,7 @@
    "admission": null,
    "required": null,
    "recommended": "10134",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14253,6 +14799,7 @@
    "admission": null,
    "required": null,
    "recommended": "10134",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14298,6 +14845,7 @@
      "10153"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14335,6 +14883,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14372,6 +14921,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14410,6 +14960,7 @@
    "admission": null,
    "required": null,
    "recommended": "10136",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14447,6 +14998,7 @@
    "admission": null,
    "required": null,
    "recommended": "10136",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14484,6 +15036,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14527,6 +15080,7 @@
      "10139"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14569,6 +15123,7 @@
      "10691"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "בעבר הקורס הקנה 3 נ\"ז.",
    "acceptsBackground": [],
@@ -14604,6 +15159,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14638,6 +15194,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14672,6 +15229,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14707,6 +15265,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14741,6 +15300,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14775,6 +15335,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14809,6 +15370,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14845,6 +15407,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14881,6 +15444,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14919,6 +15483,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14953,6 +15518,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -14991,6 +15557,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15026,6 +15593,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15060,6 +15628,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15094,6 +15663,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15129,6 +15699,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15165,6 +15736,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -15223,6 +15795,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15260,6 +15833,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -15320,6 +15894,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15356,6 +15931,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15416,6 +15992,7 @@
      "20615"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -15484,6 +16061,7 @@
    },
    "required": null,
    "recommended": "20119",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -15554,6 +16132,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -15597,6 +16176,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15679,6 +16259,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15722,6 +16303,7 @@
      "20475"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -15783,6 +16365,7 @@
     ]
    },
    "recommended": "20109",
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש נוסף: ידע בסיסי בתורת הקבוצות (מפרקי ההכנה של 20327 או של 20324, או מאחד הקורסים 20476 או 20281), ובשלות מתמטית של לפחות 40 נ\"ז במתמטיקה.",
    "acceptsBackground": [],
@@ -15832,6 +16415,7 @@
      "20324"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש נוסף: בשלות מתמטית של כ-50 נ\"ז במתמטיקה.",
    "acceptsBackground": [],
@@ -15873,6 +16457,7 @@
     ]
    },
    "recommended": "20109",
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש נוסף: בשלות מתמטית של לפחות 45 נ\"ז במתמטיקה. מי שמתחיל את הקורס בסמסטר א ורוצה לסיים אותו בסמסטר אחד יכול לפנות למרכז ההוראה.",
    "acceptsBackground": [],
@@ -15915,6 +16500,7 @@
      "20218"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -15975,6 +16561,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16019,6 +16606,7 @@
      "20230"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -16073,6 +16661,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש נוסף: בשלות מתמטית של לפחות 40 נ\"ז במתמטיקה.",
    "acceptsBackground": [],
@@ -16132,6 +16721,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -16184,6 +16774,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -16284,6 +16875,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "ליחידה 2 דרוש ידע בסיסי בסימטריה, מהקורס 20404 (יחידה 4) או מהקורס 20334 (פרק 1). מי שלא למד אחד מהם ישלים את הידע בלימוד עצמי מתוך הקורסים האלה.",
    "acceptsBackground": [],
@@ -16322,6 +16914,7 @@
    "admission": null,
    "required": "20476",
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -16361,6 +16954,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16393,6 +16987,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16431,6 +17026,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16469,6 +17065,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16507,6 +17104,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16543,6 +17141,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16581,6 +17180,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16617,6 +17217,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16655,6 +17256,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16693,6 +17295,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16731,6 +17334,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16769,6 +17373,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16807,6 +17412,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16845,6 +17451,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16881,6 +17488,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16919,6 +17527,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16955,6 +17564,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -16993,6 +17603,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17031,6 +17642,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17068,6 +17680,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17106,6 +17719,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17143,6 +17757,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17179,6 +17794,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17215,6 +17831,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17252,6 +17869,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17289,6 +17907,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17324,6 +17943,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17360,6 +17980,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17397,6 +18018,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17434,6 +18056,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17466,6 +18089,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17498,6 +18122,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17530,6 +18155,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17567,6 +18193,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17604,6 +18231,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17642,6 +18270,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17679,6 +18308,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17711,6 +18341,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -17786,6 +18417,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -17853,6 +18485,7 @@
      "20466"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -17947,6 +18580,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -18001,6 +18635,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -18058,6 +18693,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -18118,6 +18754,7 @@
     ]
    },
    "recommended": "20471",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -18185,6 +18822,7 @@
      "20364"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש נוסף: בשלות במדעי המחשב של 36 נ\"ז במדעי המחשב.",
    "acceptsBackground": [],
@@ -18222,6 +18860,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -18295,6 +18934,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש: יכולת קריאה של טקסטים מדעיים באנגלית.",
    "acceptsBackground": [],
@@ -18342,6 +18982,7 @@
      "20470"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -18388,6 +19029,7 @@
      }
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -18430,6 +19072,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -18506,6 +19149,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -18563,6 +19207,7 @@
      "20493"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "נדרשת יכולת קריאה של טקסטים מדעיים באנגלית.",
    "acceptsBackground": [],
@@ -18627,6 +19272,7 @@
     ]
    },
    "recommended": "20423",
+   "future": null,
    "overlaps": [],
    "notes": "הקורס מתבסס על קריאה עצמית באנגלית.",
    "acceptsBackground": [],
@@ -18665,6 +19311,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -18718,6 +19365,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -18759,6 +19407,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -18827,6 +19476,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -18863,6 +19513,7 @@
    "admission": "20238",
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -18909,6 +19560,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -18961,6 +19613,7 @@
      "20239"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -19008,6 +19661,7 @@
      "20291"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -19067,6 +19721,7 @@
    },
    "required": "20406",
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -19120,6 +19775,7 @@
    },
    "required": null,
    "recommended": "20493",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -19208,6 +19864,7 @@
      "20291"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "מי שלא למד את 20291 (מבוא למטאורולוגיה) יידרש ללמוד את יחידות 1 ו-3 של הקורס ולהגיש מטלה עליהן.",
    "acceptsBackground": [],
@@ -19266,6 +19923,7 @@
      "20423"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "הקורס בפיתוח.",
    "acceptsBackground": [],
@@ -19317,6 +19975,7 @@
      "20238"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -19349,6 +20008,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -19381,6 +20041,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -19419,6 +20080,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "הסדנה אינה מקנה נקודות זכות, ואין בה בחינת גמר. מיועדת למי שלא למד פיסיקה או למד לימודים חלקיים, למי שלא עסק בפיסיקה שנים רבות, ולבעלי רקע מתמטי חלש. נעשה בה שימוש באלגברה בסיסית ברמה של חטיבת ביניים (למשל פתרון משוואות).",
    "acceptsBackground": [],
@@ -19501,6 +20163,7 @@
    },
    "required": "20127",
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "מסמסטר 2028ב: בידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
    "acceptsBackground": [],
@@ -19587,6 +20250,7 @@
      "20523"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -19663,6 +20327,7 @@
     ]
    },
    "recommended": "20334",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -19697,6 +20362,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "הקורס בפיתוח: בדף הקורס עוד אין תנאים.",
    "acceptsBackground": [],
@@ -19760,6 +20426,7 @@
    },
    "required": null,
    "recommended": "20439",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -19839,6 +20506,7 @@
    },
    "required": "20127",
    "recommended": "20404",
+   "future": null,
    "overlaps": [],
    "notes": "מסמסטר 2028ב: בידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
    "acceptsBackground": [],
@@ -19906,6 +20574,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "הקורס נמשך שני סמסטרים עוקבים: בראשון פרקים מספר הקורס, ובשני עבודה סמינריונית בהדרכה.",
    "acceptsBackground": [],
@@ -19963,6 +20632,7 @@
      "20915"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "הקורס נמשך שני סמסטרים עוקבים: בראשון פרקים מספר הקורס, ובשני עבודה סמינריונית בהדרכה.",
    "acceptsBackground": [],
@@ -20036,6 +20706,7 @@
      "20404"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -20116,6 +20787,7 @@
      "20404"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -20216,6 +20888,7 @@
      "20523"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -20269,6 +20942,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -20322,6 +20996,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -20371,6 +21046,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -20428,6 +21104,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -20470,6 +21147,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "מי שלמד את 20204 צריך את הגרסה החדשה שלו, שנלמדה לראשונה ב-2017א.",
    "acceptsBackground": [],
@@ -20523,6 +21201,7 @@
      "30203"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -20564,6 +21243,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -20605,6 +21285,7 @@
     ]
    },
    "recommended": "20104",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -20662,6 +21343,7 @@
    },
    "required": null,
    "recommended": "20127",
+   "future": null,
    "overlaps": [],
    "notes": "הקורס חובה למי שרוצה להגיש מועמדות, אחרי התואר, למסלול הארבע-שנתי של לימודי רפואה.",
    "acceptsBackground": [],
@@ -20703,6 +21385,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -20744,6 +21427,7 @@
     ]
    },
    "recommended": "20104",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -20795,6 +21479,7 @@
    },
    "required": null,
    "recommended": "20924",
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש נוסף: יכולת קריאה של טקסטים מדעיים באנגלית.",
    "acceptsBackground": [],
@@ -20831,6 +21516,7 @@
    "admission": "20118",
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "הקורס כולל סיורים; היעדרות משלושה סיורים או יותר פירושה כישלון בקורס.",
    "acceptsBackground": [],
@@ -20867,6 +21553,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "הקורס מורכב משישה סיורים לימודיים, בני יום או יומיים.",
    "acceptsBackground": [],
@@ -20918,6 +21605,7 @@
      "20119"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -20967,6 +21655,7 @@
      "30203"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -21026,6 +21715,7 @@
    },
    "required": null,
    "recommended": "20924",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21078,6 +21768,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -21132,6 +21823,7 @@
    },
    "required": "20204",
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "עד 2025א (כולל) הקנה 3 נ\"ז ברמה רגילה.",
    "acceptsBackground": [],
@@ -21199,6 +21891,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21266,6 +21959,7 @@
      "20322"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21360,6 +22054,7 @@
      "20485"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -21413,6 +22108,7 @@
    },
    "required": null,
    "recommended": "20204",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21459,6 +22155,7 @@
    },
    "required": null,
    "recommended": "20104",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21539,6 +22236,7 @@
      "30203"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "\"אחד מקורסי המעבדה במדעי החיים\": נרשמו ששת קורסי המעבדה של רשימת הבחירה (הסקה).",
    "acceptsBackground": [],
@@ -21575,6 +22273,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21627,6 +22326,7 @@
      "20924"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21680,6 +22380,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21727,6 +22428,7 @@
      "20237"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21774,6 +22476,7 @@
    },
    "required": null,
    "recommended": "20495",
+   "future": null,
    "overlaps": [],
    "notes": "ידע קודם דרוש נוסף: יכולת קריאה של טקסטים מדעיים באנגלית.",
    "acceptsBackground": [],
@@ -21815,6 +22518,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -21856,6 +22560,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -21922,6 +22627,7 @@
      "20455"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -21987,6 +22693,7 @@
      "20455"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -22041,6 +22748,7 @@
    },
    "required": null,
    "recommended": "20924",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -22094,6 +22802,7 @@
    },
    "required": null,
    "recommended": "20924",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -22153,6 +22862,7 @@
      "20275"
     ]
    },
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -22207,6 +22917,7 @@
    },
    "required": null,
    "recommended": "20495",
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -22263,6 +22974,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -22318,6 +23030,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [
     {
      "with": [
@@ -22374,6 +23087,7 @@
      "20559"
     ]
    },
+   "future": null,
    "overlaps": [],
    "notes": "הוראת הקורס הופסקה זמנית.",
    "acceptsBackground": [],
@@ -22426,6 +23140,7 @@
    },
    "required": null,
    "recommended": "20924",
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22486,6 +23201,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "בדף ה\"החולייתנים\" מקושר ל-20415; נרשם 20104 (נרשמה חריגה).",
    "acceptsBackground": [],
@@ -22533,6 +23249,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22565,6 +23282,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22597,6 +23315,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22629,6 +23348,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22661,6 +23381,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22693,6 +23414,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22725,6 +23447,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22757,6 +23480,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22789,6 +23513,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22821,6 +23546,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22853,6 +23579,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22889,6 +23616,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "אין עדיין דף בקטלוג; הנ\"ז מדף החפיפה של 20556, הסמסטר מדף ההיצע, והרמה והשיוך הסקה (כמו 20556).",
    "acceptsBackground": [],
@@ -22926,6 +23654,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -22987,6 +23716,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "\"לפחות קורס אחד במעבדה במדעי החיים\": ששת קורסי המעבדה (הסקה). לנושאים מסוימים ייתכנו דרישות לקורסים נוספים.",
    "acceptsBackground": [],
@@ -23019,6 +23749,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -23060,6 +23791,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "בתנאי הקבלה גם: מתוך 60 הנ\"ז הקודמות במדעים, לפחות 40 במדעי החיים.",
    "acceptsBackground": [],
@@ -23106,6 +23838,7 @@
    },
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "קורס של המכון הבין-אוניברסיטאי באילת (עם אוניברסיטת בן-גוריון). בתנאי הקבלה גם ממוצע 82 לפחות, וההרשמה באישור מרכז ההוראה באוניברסיטה הפתוחה ומרכז הקורס בבן-גוריון.",
    "acceptsBackground": [],
@@ -23148,6 +23881,7 @@
     ]
    },
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": "קורס לתואר שני במחשבה הביולוגית. תנאי הקבלה: קבלה לתואר השני או אישור מרכזת ההוראה. בידע הקודם הדרוש גם 60 נ\"ז בקורסים קודמים. השם הקודם: מיזמי גנום האדם: גנטיקה וגנאתיקה.",
    "acceptsBackground": [],
@@ -23185,6 +23919,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -23221,6 +23956,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -23257,6 +23993,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -23294,6 +24031,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -23331,6 +24069,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -23368,6 +24107,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -23404,6 +24144,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -23440,6 +24181,7 @@
    "admission": null,
    "required": null,
    "recommended": null,
+   "future": null,
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
@@ -29479,7 +30221,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/CC.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-10",
    "sections": [
     {
      "id": "א",
@@ -30569,6 +31311,15 @@
     {
      "years": 4,
      "year": 1,
+     "semester": "ב",
+     "course": "20606",
+     "slot": null,
+     "credits": null,
+     "notes": "20606 ולא 20605: הידע הקודם הדרוש של המעבדה ג1 (20916) הוא 20606 או 20441 (נרשמה חריגה). הוא 6 נ\"ז ולא 4, ולכן התכנית ארוכה ב-2 נ\"ז. מ-2028ב גם ידע קודם דרוש של 20497 (שנה 2 סמסטר ב), ולכן בשנה 1; הסמסטר 23 נ\"ז (גיא, 2026-11-10)."
+    },
+    {
+     "years": 4,
+     "year": 1,
      "semester": "ג",
      "course": "20218",
      "slot": null,
@@ -30691,15 +31442,6 @@
      "slot": null,
      "credits": null,
      "notes": "מוצע רק בסמסטר א."
-    },
-    {
-     "years": 4,
-     "year": 3,
-     "semester": "א",
-     "course": "20606",
-     "slot": null,
-     "credits": null,
-     "notes": "20606 ולא 20605: הידע הקודם הדרוש של המעבדה ג1 (20916) הוא 20606 או 20441 (נרשמה חריגה). הוא 6 נ\"ז ולא 4, ולכן התכנית ארוכה ב-2 נ\"ז."
     },
     {
      "years": 4,
