@@ -406,7 +406,7 @@ I18N.en = {
  "מסמסטר {0} התנאים של הקורס משתנים. מי שילמד אותו מאז, אלה התנאים שמשתנים (השאר כמו למעלה):": "From semester {0} the course's conditions change. For anyone taking it from then, these are the conditions that change (the rest are as above):",
  "לפי התנאים החדשים, מ-{0}": "By the new conditions, from {0}",
  "מ-{0} התנאים משתנים": "Conditions change from {0}",
- "קורסים שהתנאים שלהם משתנים מ-2028ב (למשל 20497, 20913) נבדקים לפי התנאים של הסמסטר שבו הם משובצים, וחלון הקורס מראה את שתי הגרסאות.": "Courses whose conditions change from 2028b (for example 20497, 20913) are checked by the conditions of the semester they are placed in, and the course window shows both versions.",
+ "קורסים שהתנאים שלהם משתנים מסמסטר מסוים נבדקים לפי התנאים של הסמסטר שבו הם משובצים, וחלון הקורס מראה את שתי הגרסאות. כרגע אלה שישה קורסים שמשתנים מ-2028ב, למשל 20497 ו-20913.": "Courses whose conditions change from a given semester are checked by the conditions of the semester they are placed in, and the course window shows both versions. For now these are six courses that change from 2028b, for example 20497 and 20913.",
  "השם והלוגו של האוניברסיטה הפתוחה שייכים לאוניברסיטה הפתוחה. חלק מהאייקונים מבוססים על Tabler Icons ועל Feather/Lucide": "The Open University's name and logo belong to the Open University. Some icons are based on Tabler Icons and Feather/Lucide",
  "רישיונות": "licenses",
  "הצג מה שכבר שיבצתי": "Show what I've placed",
