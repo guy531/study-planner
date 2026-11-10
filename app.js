@@ -3397,7 +3397,8 @@ function setupControls() {
   document.addEventListener("keydown", (e) => {
     if ((e.ctrlKey || e.metaKey) && e.code === "KeyP" && !e.shiftKey && !e.altKey) { e.preventDefault(); printPlan(); }
   });
-  window.addEventListener("beforeprint", () => { buildPrint(); document.title = T`תכנית לימודים - ${program.code}`; });
+  // the program's name, not its code: "CC" says nothing to a student (guy, 2026-11-10); no characters a file name refuses
+  window.addEventListener("beforeprint", () => { buildPrint(); document.title = T`תכנית לימודים - ${(program.name || program.code).replace(/[\\/:*?"<>|]/g, "")}`; });
   window.addEventListener("afterprint", () => { document.title = title; });
 }
 
