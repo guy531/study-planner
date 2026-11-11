@@ -191,6 +191,8 @@
 
 <!-- visit counter for guy (guy531.goatcounter.com, 2026-11-11): no cookies, nothing about the visitor or the plan;
      it skips localhost and pages opened from a file -->
+<!-- ?nocount in the address: this one visit is not counted (guy, 2026-11-11), unlike #toggle-goatcounter, which stops counting in the browser -->
+<script>if (new URLSearchParams(location.search).has("nocount")) window.goatcounter = { no_onload: true };</script>
 <script data-goatcounter="https://guy531.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script src="data/data.js?v=95559ed9"></script>
 <!-- the site's code, in order (ARCHITECTURE.md, beside CLAUDE.md, explains them); main.js, last, starts the page -->
