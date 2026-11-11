@@ -402,8 +402,7 @@ function renderDone() {
   const zone = $("#done");
   zone.dataset.empty = T("גוררים לכאן קורסים שכבר סיימתם");
   zone.replaceChildren(...state.done.map((n) => chip(n, "done")));
-  const credits = state.done.reduce((s, n) => s + ((DATA.courses[n] || {}).credits || 0), 0);
-  $("#done-sum").textContent = state.done.length ? T`${credits} נ"ז` : "";
+  $("#done-sum").textContent = sumText(state.done);
   $("#clear-done").hidden = !state.done.some((n) => !isLocked(n));
   $("#clear-semesters").hidden = !state.semesters.flat().some((n) => !isLocked(n));
 }
@@ -418,7 +417,6 @@ function renderSemesters() {
     ids.length % 3 ? T("השלמת השנה האחרונה") : T`הוספת שנה (${nextYear})`);
   $("#semesters").replaceChildren(...ids.map((id, i) => {
     const list = state.semesters[i];
-    const credits = list.reduce((s, n) => s + ((DATA.courses[n] || {}).credits || 0), 0);
     const blocked = isBlockedSemester(i);
     const zone = el("ul", { class: "zone", "data-zone": `s${i}`, "data-empty": blocked ? T("חסום: לא משבצים כאן קורסים") : T("גוררים לכאן קורסים") }, list.map((n) => chip(n, i)));
     markZone(zone, i);
@@ -426,7 +424,7 @@ function renderSemesters() {
       el("div", { class: "zone-head" },
         el("h3", { text: T`סמסטר ${semesterLabel(id)}` }),
         blocked ? null : putHere(zone),
-        el("span", { class: "zone-sum", text: list.length ? T`${credits} נ"ז` : "" }),
+        el("span", { class: "zone-sum", text: sumText(list) }),
         blockButton(i, id),
         i === last && last > 0 ? trashButton(id) : null),
       zone);

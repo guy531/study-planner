@@ -90,8 +90,12 @@ function renderTree() {
     return el("div", { class: "section basics", id: `group-${id}` },
       // a formal title, the details under it (guy, 2026-11-08; was "במקום בגרות (רק למי שצריך)")
       el("h3", { text: T(`עמידה בדרישות ה${b.name_he || b.name}`) }),
-      el("div", { class: "desc", text: T`הדרישה: ${backgroundWhat(b)} - מקנה פטור מן הקורסים המופיעים למטה. ניתן לסמן את הפטור ב"רקע ודרישות". מי שאינו עומד בדרישה מחויב בקורסים הבאים:` }),
-      body, prep); // the courses right after "...בקורסים הבאים:", the optional workshop under them (guy, 2026-11-08)
+      el("div", { class: "desc", text: T`הדרישה: ${backgroundWhat(b)} - מקנה פטור מן הקורסים המופיעים למטה. ניתן לסמן את הפטור ב"רקע ודרישות".` }),
+      // the optional workshop before the courses it prepares for (guy, 2026-11-11), and the courses still right after
+      // "...בקורסים הבאים:" (guy, 2026-11-08)
+      prep,
+      el("div", { class: "desc", text: T("מי שאינו עומד בדרישה מחויב בקורסים הבאים:") }),
+      body);
   });
   $("#tree").replaceChildren(...basics, ...program.sections.filter((section) => section.groups.length).map((section) => {
     const groups = section.groups.map((group) => {

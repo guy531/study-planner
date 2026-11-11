@@ -209,7 +209,7 @@ select, input[type="search"] {
 }
 .zone-card { padding: 10px 12px; margin-bottom: 16px; }
 .zone-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 8px; }
-.zone-sum { color: var(--muted); font-size: 0.85rem; }
+.zone-sum { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
 .zone-tools { display: inline-flex; align-items: center; gap: 10px; }
 /* a choice from a long list (the broadening course), folded */
 .long-list .alt-label { margin: 0 0 6px; }
@@ -394,7 +394,7 @@ button.history:disabled:hover { border-color: var(--line); }
 .semester .zone-head .block-semester:hover, .semester .zone-head .block-semester.on { color: var(--ink); }
 .semester .zone-head h3 { white-space: nowrap; }
 /* the title at one end; the credits, block and trash together at the other (spread out, the block icon stood mid-way) */
-.semester .zone-head { justify-content: flex-start; gap: 6px; }
+.semester .zone-head { justify-content: flex-start; gap: 6px; flex-wrap: wrap; row-gap: 0; } /* a narrow semester: the sum goes below the title, whole */
 .semester .zone-head .zone-sum { margin-inline-start: auto; }
 /* like the open lock on the cards: shown on hover or keyboard focus, always on a touch screen or when blocked
    (transparent, not hidden, so the keyboard still reaches it) */

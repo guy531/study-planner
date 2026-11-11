@@ -165,6 +165,14 @@ function prepLine(b) {
       T(" ובדקו אם כדאי לכם להירשם לסדנה.")] : null);
 }
 
+// the head of a semester or of "done": how many courses and their credits, "3 קורסים · 20 נ"ז" (guy, 2026-11-11);
+// the full credits, before overlap cuts, since it shows how much there is to study. Empty for an empty list
+function sumText(list) {
+  if (!list.length) return "";
+  const credits = list.reduce((s, n) => s + ((DATA.courses[n] || {}).credits || 0), 0);
+  return `${list.length === 1 ? T("קורס 1") : T`${list.length} קורסים`} · ${T`${credits} נ"ז`}`;
+}
+
 // ---------- course numbers that jump to the course ----------
 
 // a course number in a window (conditions, overlaps...) jumps to the course where it is now, in the plan or in the
