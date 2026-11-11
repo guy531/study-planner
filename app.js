@@ -505,6 +505,9 @@ function autoFill() {
   const weightTo = (end) => idsFor(end + 1).reduce((s, id, k) => s + (isBlockedSemester(k) ? 0 : id.endsWith("ג") ? 0.5 : 1), 0);
   const capFor = (c) => (i) => (isSummer(i) ? Math.max(5, Math.ceil(c * 0.55)) : c);
   const base = new Set([...state.done, ...assumed]);
+  // can the required knowledge of n be met by courses that will really be in the plan (not the background)?
+  const eventually = new Set([...state.done, ...state.semesters.flat(), ...toPlace]);
+  const meetsForReal = (n, c) => satisfied(c.required, forCourse(n, new Set([...eventually, ...assumed]), eventually));
 
   // 4-5. one full scheduling run. parallel = false: required knowledge too must come in an earlier semester;
   // parallel = true: it may be in the same semester (as the recommended plan does with 20215 and 20406)
@@ -519,7 +522,14 @@ function autoFill() {
       if (c.semesters.length && !c.semesters.includes(idsFor(i + 1)[i].slice(4))) return false;
       if (afterLastOffer(c, idsFor(i + 1)[i]) || beforeFirstOffer(c, idsFor(i + 1)[i])) return false;
       if (c.admission && !satisfied(c.admission, forCourse(n, have, real))) return false;
-      if (c.required && !satisfied(c.required, same ? new Set([...have, ...plan[i].filter((x) => x !== n)]) : have)) return false;
+      if (c.required) {
+        const sameSem = same ? plan[i].filter((x) => x !== n) : [];
+        const h = new Set([...have, ...sameSem]);
+        // a condition the plan can meet with real courses waits for them; only one it cannot (20482: the foundations,
+        // and its page says nothing about a matriculation) leans on the background, as "הנחתי שיש לך" (2026-11-11:
+        // 20409 has 20213 + 20215 too, and was put in the first summer, before them, with a warning)
+        if (!satisfied(c.required, meetsForReal(n, c) ? forCourse(n, h, new Set([...real, ...sameSem])) : h)) return false;
+      }
       if (c.priorCredits) {
         const order = new Map([...base].map((x) => [x, -1]));
         plan.slice(0, i).forEach((list, k) => list.forEach((y) => order.set(y, k)));
