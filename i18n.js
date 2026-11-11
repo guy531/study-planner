@@ -1,5 +1,5 @@
 "use strict";
-// The site's languages: Hebrew (the source), Arabic and English. Every text in app.js is written in Hebrew and
+// The site's languages: Hebrew (the source), Arabic and English. Every text in the code (js/*.js) is written in Hebrew and
 // passed through T, which looks it up in the dictionaries in lang-ar.js / lang-en.js (by the Hebrew text itself)
 // and falls back to the Hebrew. Course names stay in Hebrew in every language, as in the catalog.
 
@@ -66,5 +66,5 @@ function translatePage() {
 
 function setLang(lang) {
   try { localStorage.setItem("physics-planner-v1:lang", lang); } catch (e) { /* no storage */ }
-  location.reload(); // and the page starts at the top, as after any reload (see app.js) // every text is built in the chosen language from the start
+  location.reload(); // and the page starts at the top, as after any reload (see js/main.js) // every text is built in the chosen language from the start
 }
