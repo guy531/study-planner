@@ -456,7 +456,8 @@ function planSteps() {
   }
   const totals = gaps.filter((g) => g.kind === "total");
   steps.push(totals.length
-    ? { done: false, text: T("להשלים נ\"ז"), subs: totals, hint: T("נ\"ז שחסרים בסך הכול אפשר להשלים גם בקורסי בחירה חופשית מכל תחום.") }
+    ? { done: false, text: T("להשלים נ\"ז"), subs: totals, hint: T("נ\"ז שחסרים בסך הכול אפשר להשלים גם בקורסי בחירה חופשית מכל תחום."),
+      hintLink: { href: FREE_CHOICE_PAGE, text: T("רשימת הקורסים ↗") } }
     : { done: true, text: T("כל הנ\"ז שהתואר דורש") });
   // a counter of "at most" (M8): its own step, done while the plan stays within it
   const caps = creditCaps();

@@ -61,6 +61,8 @@ function showInfo(n) {
   add(T("מרכז/ת ההוראה"), el("span", {},
     c.coordinator ? el("bdi", { text: c.coordinator }) : missing(T("שם")), " · ",
     c.coordinatorEmail ? el("a", { href: `mailto:${c.coordinatorEmail}`, class: "email", text: c.coordinatorEmail }) : missing(T("אימייל"))));
+  // only where it is known (guy, 2026-11-11: the physics courses, from the department's page)
+  add(T("אחראי/ת אקדמי/ת"), c.academicHead ? el("bdi", { text: c.academicHead }) : null);
   add(T("מוצע"), c.offered === false ? T("לא מוצע עוד") : c.notYet ? T("עוד לא: קורס חדש, שעוד לא נפתח באף סמסטר") : c.semesters.length ? T`בסמסטרים ${letterList(c.semesters)}` : null);
   add(T("מוצע עד"), c.offeredUntil ? semName(c.offeredUntil) : null);
   add(T("מוצע מ"), c.offeredFrom ? T`${semName(c.offeredFrom)} (קורס חדש)` : null);

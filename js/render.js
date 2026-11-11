@@ -215,7 +215,8 @@ function stepsList(steps) {
         x.subs && x.subs.length <= 4 ? el("div", { class: "step-sub" }, x.subs.flatMap((g, k) => [k ? " · " : null, gapLink(g)])) : null,
         x.subs && x.subs.length > 4 ? el("details", { class: "step-sub" }, el("summary", { text: T`הצגת ${x.subs.length} הפריטים` }),
           el("ul", {}, x.subs.map((g) => el("li", {}, gapLink(g), g.where ? el("span", { class: "where", text: ` (${g.where})` }) : null)))) : null,
-        x.hint ? el("div", { class: "step-sub hint" }, linkNums(x.hint)) : null))));
+        x.hint ? el("div", { class: "step-sub hint" }, linkNums(x.hint),
+          x.hintLink ? [" ", el("a", { href: x.hintLink.href, target: "_blank", rel: "noopener", text: x.hintLink.text })] : null) : null))));
 }
 
 // ---------- the credit counters and the floating summary ----------

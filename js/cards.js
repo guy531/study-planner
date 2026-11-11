@@ -377,6 +377,11 @@ function chip(n, context) {
   return node;
 }
 
+// ---------- links to pages of the university ----------
+
+// where to choose free electives: the catalog's list (guy, 2026-11-11)
+const FREE_CHOICE_PAGE = "https://www3.openu.ac.il/ouweb/owal/yed.marchiv_daat";
+
 // ---------- the approval note (שאילתא) ----------
 
 // above the meters: green when the plan is a whole degree, otherwise "התכנית עוד לא גמורה" and the steps

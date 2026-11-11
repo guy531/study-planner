@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "courses": {
   "20314": {
    "name": "פיסיקה סטטיסטית",
@@ -81,6 +81,7 @@
    "acceptsBackground": [],
    "coordinator": "ד\"ר גיא עמית",
    "coordinatorEmail": "guyam@openu.ac.il",
+   "academicHead": "פרופ' אלונה ואזן",
    "link": "https://www.openu.ac.il/courses/20314.htm?t=h",
    "updated": "2026-10-27",
    "full": true
@@ -158,6 +159,7 @@
    "acceptsBackground": [],
    "coordinator": "יחזקאל (חזי) ניימן",
    "coordinatorEmail": "hezino@openu.ac.il",
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20406.htm?t=h",
    "updated": "2026-10-27",
    "full": true
@@ -266,6 +268,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20423.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -344,6 +347,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20474.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -435,6 +439,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20475.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -505,6 +510,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20224.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -621,6 +627,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20425.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -753,6 +760,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20416.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -812,6 +820,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20109.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -874,6 +883,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20218.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -945,6 +955,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20280.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -1040,6 +1051,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20441.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -1134,6 +1146,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20606.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -1251,6 +1264,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20453.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -1369,6 +1383,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20454.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -1439,10 +1454,11 @@
    "acceptsBackground": [
     "physics-bagrut"
    ],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר אלון מרכוס",
+   "coordinatorEmail": "alonm@openu.ac.il",
+   "academicHead": "פרופ' יהונתן גרנות",
    "link": "https://www.openu.ac.il/courses/20201.htm?t=h",
-   "updated": "2026-11-03",
+   "updated": "2026-11-11",
    "full": true
   },
   "20248": {
@@ -1524,10 +1540,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר רינת עופר",
+   "coordinatorEmail": "rinatof@openu.ac.il",
+   "academicHead": "ד\"ר יוסף זינאתי",
    "link": "https://www.openu.ac.il/courses/20248.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20250": {
@@ -1605,10 +1622,11 @@
    "overlaps": [],
    "notes": "במקום 20423 בידע המומלץ: 20212 + 20224 למי שלמד את 20106, או 20224 למי שלמד אינפי 1 + אינפי 2.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר עידן טלשיר",
+   "coordinatorEmail": "idanta@openu.ac.il",
+   "academicHead": "ד\"ר יוסף זינאתי",
    "link": "https://www.openu.ac.il/courses/20250.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20215": {
@@ -1678,10 +1696,11 @@
    "acceptsBackground": [
     "physics-bagrut"
    ],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר מיכאל רבינוביץ",
+   "coordinatorEmail": "michaelr@openu.ac.il",
+   "academicHead": "פרופ' פז בנימיני",
    "link": "https://www.openu.ac.il/courses/20215.htm?t=h",
-   "updated": "2026-11-03",
+   "updated": "2026-11-11",
    "full": true
   },
   "20422": {
@@ -1762,10 +1781,11 @@
    "overlaps": [],
    "notes": "דרושה גם יכולת קריאה של טקסטים מדעיים באנגלית. במקום 20423: 20212 + 20224 למי שלמד את 20106, או 20224 למי שלמד אינפי 1 + אינפי 2.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר מיכאל רבינוביץ",
+   "coordinatorEmail": "michaelr@openu.ac.il",
+   "academicHead": "פרופ' סלים זארובי",
    "link": "https://www.openu.ac.il/courses/20422.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20418": {
@@ -1825,10 +1845,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר רינת עופר",
+   "coordinatorEmail": "rinatof@openu.ac.il",
+   "academicHead": "פרופ' פז בנימיני",
    "link": "https://www.openu.ac.il/courses/20418.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20409": {
@@ -1889,10 +1910,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר רינת עופר",
+   "coordinatorEmail": "rinatof@openu.ac.il",
+   "academicHead": "פרופ' סלים זארובי",
    "link": "https://www.openu.ac.il/courses/20409.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20213": {
@@ -1960,10 +1982,11 @@
    "acceptsBackground": [
     "physics-bagrut"
    ],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר רינת עופר",
+   "coordinatorEmail": "rinatof@openu.ac.il",
+   "academicHead": "פרופ' יהונתן גרנות",
    "link": "https://www.openu.ac.il/courses/20213.htm?t=h",
-   "updated": "2026-11-03",
+   "updated": "2026-11-11",
    "full": true
   },
   "20602": {
@@ -2058,10 +2081,11 @@
    ],
    "notes": "דרושה יכולת קריאה של טקסטים באנגלית; פרקי הספר באנגלית.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר מיכאל רבינוביץ",
+   "coordinatorEmail": "michaelr@openu.ac.il",
+   "academicHead": "פרופ' סלים זארובי",
    "link": "https://www.openu.ac.il/courses/20602.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20482": {
@@ -2138,6 +2162,7 @@
    "acceptsBackground": [],
    "coordinator": "ד\"ר גיא עמית",
    "coordinatorEmail": "guyam@openu.ac.il",
+   "academicHead": "פרופ' אלונה ואזן",
    "link": "https://www.openu.ac.il/courses/20482.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -2233,10 +2258,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר גיא עמית",
+   "coordinatorEmail": "guyam@openu.ac.il",
+   "academicHead": "פרופ' פז בנימיני",
    "link": "https://www.openu.ac.il/courses/20589.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20916": {
@@ -2322,10 +2348,11 @@
    "overlaps": [],
    "notes": "הקורס נקרא בעבר \"מעבדה בפיסיקה ג\".",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר רינת עופר",
+   "coordinatorEmail": "rinatof@openu.ac.il",
+   "academicHead": "פרופ' יהונתן גרנות",
    "link": "https://www.openu.ac.il/courses/20916.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20938": {
@@ -2401,10 +2428,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר רינת עופר",
+   "coordinatorEmail": "rinatof@openu.ac.il",
+   "academicHead": "פרופ' יהונתן גרנות",
    "link": "https://www.openu.ac.il/courses/20938.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20320": {
@@ -2488,10 +2516,11 @@
    ],
    "notes": "הקורס נקרא בעבר \"מכניקה קוואנטית ומבנה האטום\".",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר מיכאל רבינוביץ",
+   "coordinatorEmail": "michaelr@openu.ac.il",
+   "academicHead": "פרופ' סלים זארובי",
    "link": "https://www.openu.ac.il/courses/20320.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20955": {
@@ -2595,10 +2624,11 @@
    ],
    "notes": "הקורס נלמד באנגלית.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר גיא עמית",
+   "coordinatorEmail": "guyam@openu.ac.il",
+   "academicHead": "פרופ' סלים זארובי",
    "link": "https://www.openu.ac.il/courses/20955.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20913": {
@@ -2757,10 +2787,11 @@
    "overlaps": [],
    "notes": "מסמסטר 2028ב תנאי הקבלה ישתנו: 36 נ\"ז בפיסיקה ובמתמטיקה ובהם 20215 ו-20314; ידע קודם דרוש: 20250, 20213, חדו\"א א+ב (או אינפי 1+2+3), אלגברה לינארית, 20602, 20201 (או 20437), 20320 (או 20522); מומלץ: 20248, 20217.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר אלון מרכוס",
+   "coordinatorEmail": "alonm@openu.ac.il",
+   "academicHead": "פרופ' סלים זארובי",
    "link": "https://www.openu.ac.il/courses/20913.htm?t=h",
-   "updated": "2026-11-10",
+   "updated": "2026-11-11",
    "full": true
   },
   "20326": {
@@ -2800,10 +2831,11 @@
    "overlaps": [],
    "notes": "לפי דף התכנית: מ-2025א הרמה השתנתה ממתקדם סמינריוני למתקדם.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר אלון מרכוס",
+   "coordinatorEmail": "alonm@openu.ac.il",
+   "academicHead": "ד\"ר יוסף זינאתי",
    "link": "https://www.openu.ac.il/courses/20326.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20968": {
@@ -2869,10 +2901,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר אריק רוזנברג",
+   "coordinatorEmail": "ericro@openu.ac.il",
+   "academicHead": "פרופ' פז בנימיני",
    "link": "https://www.openu.ac.il/courses/20968.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20488": {
@@ -2946,10 +2979,11 @@
    ],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר דרור מלכה",
+   "coordinatorEmail": "drorma@openu.ac.il",
+   "academicHead": "ד\"ר דרור מלכה",
    "link": "https://www.openu.ac.il/courses/20488.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20489": {
@@ -2991,10 +3025,11 @@
    ],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר דרור מלכה",
+   "coordinatorEmail": "drorma@openu.ac.il",
+   "academicHead": "ד\"ר דרור מלכה",
    "link": "https://www.openu.ac.il/courses/20489.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20402": {
@@ -3090,10 +3125,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר דרור מלכה",
+   "coordinatorEmail": "drorma@openu.ac.il",
+   "academicHead": "ד\"ר דרור מלכה",
    "link": "https://www.openu.ac.il/courses/20402.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20403": {
@@ -3179,10 +3215,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר דרור מלכה",
+   "coordinatorEmail": "drorma@openu.ac.il",
+   "academicHead": "ד\"ר דרור מלכה",
    "link": "https://www.openu.ac.il/courses/20403.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20918": {
@@ -3216,10 +3253,11 @@
    "overlaps": [],
    "notes": "הדף לא מציין אם אפשר לכתוב בקורס עבודה סמינריונית.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר דרור מלכה",
+   "coordinatorEmail": "drorma@openu.ac.il",
+   "academicHead": "ד\"ר דרור מלכה",
    "link": "https://www.openu.ac.il/courses/20918.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20432": {
@@ -3284,6 +3322,7 @@
    "acceptsBackground": [],
    "coordinator": "ד\"ר גיא עמית",
    "coordinatorEmail": "guyam@openu.ac.il",
+   "academicHead": "פרופ' אלונה ואזן",
    "link": "https://www.openu.ac.il/courses/20432.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -3384,10 +3423,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר עידו גילרי",
+   "coordinatorEmail": "idogil@openu.ac.il",
+   "academicHead": "פרופ' איגור רכינוב",
    "link": "https://www.openu.ac.il/courses/20912.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20547": {
@@ -3474,10 +3514,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר אלון מרכוס",
+   "coordinatorEmail": "alonm@openu.ac.il",
+   "academicHead": "ד\"ר יוסף זינאתי",
    "link": "https://www.openu.ac.il/courses/20547.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20971": {
@@ -3556,10 +3597,11 @@
    "overlaps": [],
    "notes": "אפשר להירשם גם על סמך קבלה לתואר השני באסטרופיסיקה, במקום תנאי הקבלה.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר מיכאל רבינוביץ",
+   "coordinatorEmail": "michaelr@openu.ac.il",
+   "academicHead": "פרופ' פז בנימיני",
    "link": "https://www.openu.ac.il/courses/20971.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20923": {
@@ -3598,10 +3640,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר גיא עמית",
+   "coordinatorEmail": "guyam@openu.ac.il",
+   "academicHead": "ד\"ר יוסף זינאתי",
    "link": "https://www.openu.ac.il/courses/20923.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20965": {
@@ -3681,10 +3724,11 @@
    "overlaps": [],
    "notes": "בהיצע מופיע רק סמסטר 2028ב.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר מיכאל רבינוביץ",
+   "coordinatorEmail": "michaelr@openu.ac.il",
+   "academicHead": "פרופ' אלונה וזאן",
    "link": "https://www.openu.ac.il/courses/20965.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "20969": {
@@ -3720,6 +3764,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20969.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -3770,10 +3815,11 @@
    ],
    "notes": "תנאי קבלה נוספים: ממוצע 80 לפחות ב-72 הנ\"ז האלה, ומהן לפחות 6 נ\"ז מתקדמות. ייתכנו תנאים נוספים לפי נושא הפרויקט. ההרשמה רק אחרי תיאום עם איש סגל מקבוצת הפיסיקה ובאישור מרכז ההוראה.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר מירב חדד",
+   "coordinatorEmail": "meravha@openu.ac.il",
+   "academicHead": "פרופ' יהונתן גרנות",
    "link": "https://www.openu.ac.il/courses/20578.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20382": {
@@ -3820,10 +3866,11 @@
    ],
    "notes": "דרישות נוספות לפי אופי הפרויקט. ההרשמה רק אחרי תיאום עם איש סגל מקבוצת הפיסיקה ובאישור מרכז ההוראה.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר מירב חדד",
+   "coordinatorEmail": "meravha@openu.ac.il",
+   "academicHead": "פרופ' יהונתן גרנות",
    "link": "https://www.openu.ac.il/courses/20382.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20970": {
@@ -3896,10 +3943,11 @@
    "overlaps": [],
    "notes": "אפשר להירשם גם על סמך קבלה לתואר שני באסטרופיסיקה, במקום תנאי הקבלה.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר אריק רוזנברג",
+   "coordinatorEmail": "ericro@openu.ac.il",
+   "academicHead": "פרופ' אלונה וזאן",
    "link": "https://www.openu.ac.il/courses/20970.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20106": {
@@ -3931,6 +3979,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20106.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -3964,6 +4013,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20212.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -4022,6 +4072,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20492.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -4094,6 +4145,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11203.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -4127,6 +4179,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20217.htm?t=h",
    "updated": "2026-10-27",
    "full": true
@@ -4160,6 +4213,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20943.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -4193,6 +4247,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20207.htm?t=h",
    "updated": "2026-10-27",
    "full": true
@@ -4312,8 +4367,9 @@
    "acceptsBackground": [],
    "coordinator": "ד\"ר קובי פלומין",
    "coordinatorEmail": "kobifl@openu.ac.il",
+   "academicHead": "פרופ' ענבל טובי-ערד",
    "link": "https://www.openu.ac.il/courses/20483.htm?t=h",
-   "updated": "2026-11-10",
+   "updated": "2026-11-11",
    "full": true
   },
   "20430": {
@@ -4384,6 +4440,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20430.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -4518,10 +4575,11 @@
    ],
    "notes": "מסמסטר 2028ב: 20406 (או חלופותיו) ו-20109 (או 20430) יעברו מידע קודם דרוש לתנאי קבלה, 20423 יעבור מידע קודם מומלץ לתנאי קבלה, ו-20218 יתווסף כידע קודם מומלץ.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר עידו גילרי",
+   "coordinatorEmail": "idogil@openu.ac.il",
+   "academicHead": "פרופ' ענבל טובי-ערד",
    "link": "https://www.openu.ac.il/courses/20522.htm?t=h",
-   "updated": "2026-11-10",
+   "updated": "2026-11-11",
    "full": true
   },
   "20125": {
@@ -4591,6 +4649,7 @@
    "acceptsBackground": [],
    "coordinator": "ד\"ר גיא עמית",
    "coordinatorEmail": "guyam@openu.ac.il",
+   "academicHead": "פרופ' אלונה ואזן",
    "link": "https://www.openu.ac.il/courses/20125.htm?t=h",
    "updated": "2026-10-26",
    "full": true
@@ -4658,10 +4717,11 @@
    ],
    "notes": "לחלופין לחדו\"א א: ידע במתמטיקה ברמת בגרות 3 יח\"ל לפחות. מומלץ גם ידע בפיסיקה ברמת בגרות 3 יח\"ל, או סדנת הכנה בפיסיקה (91463, ללא נ\"ז). למי שעבר בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציונים טובים (ב-5 השנים האחרונות) מומלץ לפנות ליועץ בפיסיקה. מסמסטר 2023א חל שינוי בחומר הלימוד.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "אורלי קובו",
+   "coordinatorEmail": "orlyko@openu.ac.il",
+   "academicHead": "פרופ' אלונה וזאן",
    "link": "https://www.openu.ac.il/courses/20113.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20114": {
@@ -4710,10 +4770,11 @@
    ],
    "notes": "אפשר להמיר את הקורס ב-20124 לפני תום השבוע העשירי של הסמסטר (בתשלום דמי טיפול). למי שעבר בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציונים טובים (ב-5 השנים האחרונות) מומלץ לפנות ליועץ בפיסיקה. מסמסטר 2023א חל שינוי בחומר הלימוד.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "אורלי קובו",
+   "coordinatorEmail": "orlyko@openu.ac.il",
+   "academicHead": "פרופ' אלונה וזאן",
    "link": "https://www.openu.ac.il/courses/20114.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20123": {
@@ -4778,10 +4839,11 @@
    ],
    "notes": "לחלופין לחדו\"א א: ידע במתמטיקה ברמת בגרות 3 יח\"ל לפחות. מומלץ גם ידע בפיסיקה ברמת בגרות 3 יח\"ל, או סדנת הכנה בפיסיקה (91463, ללא נ\"ז). למי שעבר בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציונים טובים (ב-5 השנים האחרונות) מומלץ לפנות ליועץ בפיסיקה. מסמסטר 2023א יש שינויים בחומר הלימוד.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "אורלי קובו",
+   "coordinatorEmail": "orlyko@openu.ac.il",
+   "academicHead": "פרופ' אלונה וזאן",
    "link": "https://www.openu.ac.il/courses/20123.htm?t=h",
-   "updated": "2026-10-28",
+   "updated": "2026-11-11",
    "full": true
   },
   "20124": {
@@ -4834,10 +4896,11 @@
    ],
    "notes": "למי שעבר בגרות 5 יח\"ל בפיסיקה ובמתמטיקה בציונים טובים (ב-5 השנים האחרונות) מומלץ לפנות ליועץ בפיסיקה. מ-2023א יש שינויים בחומר הלימוד.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "אורלי קובו",
+   "coordinatorEmail": "orlyko@openu.ac.il",
+   "academicHead": "פרופ' אלונה וזאן",
    "link": "https://www.openu.ac.il/courses/20124.htm?t=h",
-   "updated": "2026-10-26",
+   "updated": "2026-11-11",
    "full": true
   },
   "04101": {
@@ -4875,6 +4938,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/04101.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -4968,6 +5032,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10444.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5042,6 +5107,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20476.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5075,6 +5141,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20478.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5163,6 +5230,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20605.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5251,6 +5319,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11238.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5342,6 +5411,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11237.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5413,6 +5483,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20437.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5482,6 +5553,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20470.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5566,6 +5638,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20490.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5634,6 +5707,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20480.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5667,6 +5741,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20245.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5700,6 +5775,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20443.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5792,6 +5868,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/30203.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5865,6 +5942,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20394.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -5942,6 +6020,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10142.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6029,6 +6108,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20616.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6169,6 +6249,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10775.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6261,6 +6342,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/30111.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6340,6 +6422,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/30112.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6418,6 +6501,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20281.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6451,6 +6535,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20283.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6490,6 +6575,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20229.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6555,6 +6641,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20293.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6588,6 +6675,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20102.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6649,6 +6737,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20243.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6682,6 +6771,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20264.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6786,6 +6876,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20497.htm?t=h",
    "updated": "2026-11-10",
    "full": true
@@ -6819,6 +6910,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20241.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -6951,6 +7043,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20557.htm?t=h",
    "updated": "2026-11-10",
    "full": true
@@ -7005,6 +7098,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20575.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7068,6 +7162,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20576.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -7126,6 +7221,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20577.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7184,6 +7280,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20957.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7247,6 +7344,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20977.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -7331,6 +7429,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20978.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -7403,6 +7502,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20966.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -7453,6 +7553,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20590.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7511,6 +7612,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20591.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7544,6 +7646,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20592.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7577,6 +7680,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20383.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7635,6 +7739,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20959.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7668,6 +7773,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20276.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7701,6 +7807,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20108.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7734,6 +7841,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20477.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7767,6 +7875,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20487.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7845,6 +7954,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20116.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7928,6 +8038,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/30204.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -7981,6 +8092,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10769.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8019,6 +8131,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20127.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8184,10 +8297,11 @@
    "overlaps": [],
    "notes": "מסמסטר 2028ב: 20109 (או 20430) ו-20423 יעברו לתנאי הקבלה, ובידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר עידו גילרי",
+   "coordinatorEmail": "idogil@openu.ac.il",
+   "academicHead": "פרופ' ענבל טובי-ערד",
    "link": "https://www.openu.ac.il/courses/20523.htm?t=h",
-   "updated": "2026-11-10",
+   "updated": "2026-11-11",
    "full": true
   },
   "10686": {
@@ -8219,6 +8333,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10686.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8276,6 +8391,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10286.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8326,6 +8442,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10165.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8364,6 +8481,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10134.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8410,6 +8528,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10408.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8450,6 +8569,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10161.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8508,6 +8628,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10285.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8580,6 +8701,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20456.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8633,6 +8755,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20404.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8713,6 +8836,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20334.htm?t=h",
    "updated": "2026-10-28",
    "full": true
@@ -8751,6 +8875,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10611.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -8797,6 +8922,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/12201.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -8840,6 +8966,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11206.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -8878,6 +9005,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10136.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -8940,6 +9068,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20282.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9004,6 +9133,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20611.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -9052,6 +9182,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20612.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -9135,6 +9266,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20485.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9218,6 +9350,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20204.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9251,6 +9384,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20214.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9334,6 +9468,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20452.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9399,6 +9534,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20118.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9438,6 +9574,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20119.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9489,6 +9626,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20601.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9588,6 +9726,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20495.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9626,6 +9765,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20991.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9664,6 +9804,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20992.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9707,6 +9848,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20472.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9740,6 +9882,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11402.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9778,6 +9921,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10814.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9815,6 +9959,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10403.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9850,6 +9995,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10880.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9894,6 +10040,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10821.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9931,6 +10078,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10755.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -9980,6 +10128,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10856.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10022,6 +10171,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11202.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10067,6 +10217,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10234.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10105,6 +10256,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10275.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10143,6 +10295,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10961.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10180,6 +10333,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20617.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10218,6 +10372,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10122.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10255,6 +10410,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10107.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10288,6 +10444,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10818.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10325,6 +10482,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10411.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10363,6 +10521,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10830.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10403,6 +10562,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10432.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10442,6 +10602,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10154.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10480,6 +10641,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10215.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10517,6 +10679,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10858.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10557,6 +10720,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10128.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10590,6 +10754,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10898.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10638,6 +10803,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10202.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10675,6 +10841,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10251.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10714,6 +10881,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10646.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10760,6 +10928,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10425.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10800,6 +10969,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10626.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10837,6 +11007,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10112.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10880,6 +11051,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10290.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10918,6 +11090,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10655.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10957,6 +11130,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10143.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -10994,6 +11168,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10675.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11031,6 +11206,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10879.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11066,6 +11242,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10844.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11103,6 +11280,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10212.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11141,6 +11319,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10204.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11174,6 +11353,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11406.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11219,6 +11399,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10110.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11257,6 +11438,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10489.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11295,6 +11477,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10250.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11336,6 +11519,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10208.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11382,6 +11566,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10843.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11421,6 +11606,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10640.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11466,6 +11652,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10641.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11503,6 +11690,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10222.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11548,6 +11736,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10845.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11585,6 +11774,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10496.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11624,6 +11814,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10140.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11663,6 +11854,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10109.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11701,6 +11893,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10703.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11739,6 +11932,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10148.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11776,6 +11970,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10113.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11813,6 +12008,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10809.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11850,6 +12046,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10278.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11883,6 +12080,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11400.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11929,6 +12127,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10888.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -11967,6 +12166,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10292.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12004,6 +12204,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10678.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12046,6 +12247,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10859.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12092,6 +12294,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10423.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12138,6 +12341,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11235.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12182,6 +12386,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10419.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12220,6 +12425,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10266.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12258,6 +12464,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10446.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12305,6 +12512,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10785.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12351,6 +12559,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11230.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12388,6 +12597,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10221.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12426,6 +12636,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10742.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12459,6 +12670,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10897.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12501,6 +12713,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11200.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12545,6 +12758,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10825.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12582,6 +12796,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": "פרופ' צחי וייס",
    "link": "https://www.openu.ac.il/courses/10799.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12620,6 +12835,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10892.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12657,6 +12873,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10744.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12694,6 +12911,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10667.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12731,6 +12949,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10834.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12768,6 +12987,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10819.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12806,6 +13026,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10674.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12848,6 +13069,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10246.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12885,6 +13107,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10412.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12923,6 +13146,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10248.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -12973,6 +13197,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20202.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13013,6 +13238,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10768.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13051,6 +13277,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10483.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13084,6 +13311,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10889.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13121,6 +13349,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10817.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13161,6 +13390,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10896.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13199,6 +13429,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10762.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13237,6 +13468,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10710.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13275,6 +13507,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10436.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13313,6 +13546,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10473.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13350,6 +13584,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10784.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13388,6 +13623,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10647.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13427,6 +13663,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10738.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13464,6 +13701,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10719.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13501,6 +13739,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10732.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13538,6 +13777,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10733.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13576,6 +13816,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10839.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13609,6 +13850,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11403.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13647,6 +13889,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10648.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13689,6 +13932,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10683.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13741,6 +13985,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10895.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13778,6 +14023,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10700.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13816,6 +14062,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10734.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13853,6 +14100,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10429.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13886,6 +14134,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11401.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13923,6 +14172,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10841.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -13961,6 +14211,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10265.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14000,6 +14251,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10269.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14038,6 +14290,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10206.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14081,6 +14334,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10691.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14122,6 +14376,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10664.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14162,6 +14417,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10800.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14204,6 +14460,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10829.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14241,6 +14498,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10779.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14285,6 +14543,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11232.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14330,6 +14589,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10430.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14368,6 +14628,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10153.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14406,6 +14667,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10680.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14445,6 +14707,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10131.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14484,6 +14747,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10126.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14523,6 +14787,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10660.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14562,6 +14827,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10205.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14605,6 +14871,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10711.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14645,6 +14912,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10682.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14691,6 +14959,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10777.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14729,6 +14998,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10139.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14766,6 +15036,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10728.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14805,6 +15076,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10485.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14851,6 +15123,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10659.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14889,6 +15162,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10765.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14927,6 +15201,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10125.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -14966,6 +15241,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10493.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -15004,6 +15280,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10104.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -15042,6 +15319,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10781.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -15086,6 +15364,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10123.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -15129,6 +15408,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10454.htm?t=h",
    "updated": "2026-10-29",
    "full": true
@@ -15165,6 +15445,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10121.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15200,6 +15481,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10124.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15235,6 +15517,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10133.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15271,6 +15554,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10201.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15306,6 +15590,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10232.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15341,6 +15626,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10256.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15376,6 +15662,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10421.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15413,6 +15700,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10677.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15450,6 +15738,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10792.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15489,6 +15778,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10807.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15524,6 +15814,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10847.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15563,6 +15854,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10885.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15599,6 +15891,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10886.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15634,6 +15927,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10925.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15669,6 +15963,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10939.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15705,6 +16000,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11201.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15768,6 +16064,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11236.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -15801,6 +16098,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11404.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15865,6 +16163,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20121.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -15900,6 +16199,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20275.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -15937,6 +16237,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20468.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -16011,6 +16312,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20614.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -16080,6 +16382,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20615.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -16146,6 +16449,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20924.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -16182,6 +16486,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/91412.htm?t=h",
    "updated": "2026-10-29",
    "full": false
@@ -16265,6 +16570,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20462.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16329,6 +16635,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20230.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16371,6 +16678,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20521.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16421,6 +16729,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20525.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16463,6 +16772,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20324.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16506,6 +16816,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20900.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16567,6 +16878,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20599.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16619,6 +16931,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20327.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16667,6 +16980,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20511.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16734,6 +17048,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20381.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16787,6 +17102,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20952.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16879,10 +17195,11 @@
    "overlaps": [],
    "notes": "ליחידה 2 דרוש ידע בסיסי בסימטריה, מהקורס 20404 (יחידה 4) או מהקורס 20334 (פרק 1). מי שלא למד אחד מהם ישלים את הידע בלימוד עצמי מתוך הקורסים האלה.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר תמר שנרב",
+   "coordinatorEmail": "tamarsh@openu.ac.il",
+   "academicHead": "פרופ' ענבל טובי-ערד",
    "link": "https://www.openu.ac.il/courses/20340.htm?t=h",
-   "updated": "2026-10-31",
+   "updated": "2026-11-11",
    "full": true
   },
   "20466": {
@@ -16927,6 +17244,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20466.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -16960,6 +17278,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20609.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -16993,6 +17312,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20972.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17032,6 +17352,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20368.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17071,6 +17392,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20369.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17110,6 +17432,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20370.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17147,6 +17470,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20371.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17186,6 +17510,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20372.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17223,6 +17548,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20373.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17262,6 +17588,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20374.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17301,6 +17628,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20375.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17340,6 +17668,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20388.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17379,6 +17708,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20389.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17418,6 +17748,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20390.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17457,6 +17788,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20552.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17494,6 +17826,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20560.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17533,6 +17866,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20583.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17570,6 +17904,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20922.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17609,6 +17944,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20927.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17648,6 +17984,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20503.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17686,6 +18023,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20563.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17725,6 +18063,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20586.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17763,6 +18102,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20587.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17800,6 +18140,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20588.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17837,6 +18178,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20931.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17875,6 +18217,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20936.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17913,6 +18256,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20995.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17949,6 +18293,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20964.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -17986,6 +18331,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20973.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -18024,6 +18370,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20975.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -18062,6 +18409,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20433.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -18095,6 +18443,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20440.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18128,6 +18477,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20585.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18161,6 +18511,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20290.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18199,6 +18550,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11231.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -18237,6 +18589,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20608.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -18276,6 +18629,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20906.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -18314,6 +18668,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20364.htm?t=h",
    "updated": "2026-10-31",
    "full": false
@@ -18347,6 +18702,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20223.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18443,6 +18799,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20407.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18516,6 +18873,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20604.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18593,6 +18951,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20417.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18641,6 +19000,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20465.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18712,6 +19072,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20471.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18773,6 +19134,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20594.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18828,6 +19190,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20905.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18888,6 +19251,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20117.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18940,6 +19304,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20434.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -18988,6 +19353,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20493.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19035,6 +19401,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20291.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19113,6 +19480,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20613.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19155,6 +19523,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20211.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19213,6 +19582,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20600.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19278,6 +19648,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20498.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19317,6 +19688,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20603.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19371,6 +19743,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20234.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19435,6 +19808,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20238.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19482,6 +19856,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20610.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19519,6 +19894,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20239.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19566,6 +19942,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20421.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19619,6 +19996,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20321.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19667,6 +20045,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20901.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19727,6 +20106,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20947.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19781,6 +20161,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20518.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19870,6 +20251,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20553.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -19929,6 +20311,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20980.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -19981,6 +20364,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20307.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -20014,6 +20398,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20548.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -20047,6 +20432,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/06101.htm?t=h",
    "updated": "2026-10-31",
    "full": true
@@ -20084,10 +20470,11 @@
    "overlaps": [],
    "notes": "הסדנה אינה מקנה נקודות זכות, ואין בה בחינת גמר. מיועדת למי שלא למד פיסיקה או למד לימודים חלקיים, למי שלא עסק בפיסיקה שנים רבות, ולבעלי רקע מתמטי חלש. נעשה בה שימוש באלגברה בסיסית ברמה של חטיבת ביניים (למשל פתרון משוואות).",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר מירב חדד",
+   "coordinatorEmail": "meravha@openu.ac.il",
+   "academicHead": "פרופ' סלים זארובי",
    "link": "https://www.openu.ac.il/courses/91463.htm?t=h",
-   "updated": "2026-11-03",
+   "updated": "2026-11-11",
    "full": true
   },
   "20289": {
@@ -20167,10 +20554,11 @@
    "overlaps": [],
    "notes": "מסמסטר 2028ב: בידע הקודם הדרוש 20127 יוחלף באחד מבין 20605 או 20606.",
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "ד\"ר פבל ליידרמן",
+   "coordinatorEmail": "pavelle@openu.ac.il",
+   "academicHead": "פרופ' איגור רכינוב",
    "link": "https://www.openu.ac.il/courses/20289.htm?t=h",
-   "updated": "2026-11-03",
+   "updated": "2026-11-11",
    "full": true
   },
   "20932": {
@@ -20263,6 +20651,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20932.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20333,6 +20722,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20926.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20368,6 +20758,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20979.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20432,6 +20823,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20915.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20512,6 +20904,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20911.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20580,6 +20973,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20555.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20638,6 +21032,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20933.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20719,6 +21114,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20917.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20800,6 +21196,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20958.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20901,6 +21298,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20910.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -20955,6 +21353,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20925.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21009,6 +21408,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20956.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21052,6 +21452,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20439.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21110,6 +21511,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20463.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21153,6 +21555,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20247.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21207,6 +21610,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20412.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21249,6 +21653,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20104.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21291,6 +21696,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20415.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21349,6 +21755,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20237.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21391,6 +21798,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20494.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21433,6 +21841,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20220.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21485,6 +21894,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20292.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21522,6 +21932,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20252.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21559,6 +21970,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20262.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21611,6 +22023,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20397.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21669,6 +22082,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20930.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21721,6 +22135,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20322.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21781,6 +22196,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20929.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21829,6 +22245,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20455.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21897,6 +22314,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20579.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -21965,6 +22383,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20319.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22067,6 +22486,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20556.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22114,6 +22534,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20536.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22161,6 +22582,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20313.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22242,6 +22664,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20308.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22279,6 +22702,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20967.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22332,6 +22756,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20457.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22386,6 +22811,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20405.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22434,6 +22860,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20460.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22482,6 +22909,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20236.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22524,6 +22952,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20459.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22574,6 +23003,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20496.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22640,6 +23070,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20515.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22706,6 +23137,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20961.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22761,6 +23193,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20544.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22815,6 +23248,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20960.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22875,6 +23309,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20920.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22930,6 +23365,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20976.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -22987,6 +23423,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20919.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23043,6 +23480,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20962.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23093,6 +23531,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20907.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23146,6 +23585,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20514.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23207,6 +23647,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20951.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23255,6 +23696,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20994.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23288,6 +23730,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20559.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23321,6 +23764,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20126.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23354,6 +23798,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20410.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23387,6 +23832,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20530.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23420,6 +23866,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20909.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23453,6 +23900,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20542.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23486,6 +23934,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20519.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23519,6 +23968,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20316.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23552,6 +24002,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20346.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23585,6 +24036,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20543.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23622,6 +24074,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20953.htm?t=h",
    "updated": "2026-11-03",
    "full": false
@@ -23658,10 +24111,11 @@
    "overlaps": [],
    "notes": null,
    "acceptsBackground": [],
-   "coordinator": null,
-   "coordinatorEmail": null,
+   "coordinator": "אורלי קובו",
+   "coordinatorEmail": "orlyko@openu.ac.il",
+   "academicHead": "פרופ' פז בנימיני",
    "link": "https://www.openu.ac.il/courses/20120.htm?t=h",
-   "updated": "2026-11-03",
+   "updated": "2026-11-11",
    "full": true
   },
   "20908": {
@@ -23722,6 +24176,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20908.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23755,6 +24210,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20328.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23797,6 +24253,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20941.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23844,6 +24301,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20993.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23887,6 +24345,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/22006.htm?t=h",
    "updated": "2026-11-03",
    "full": true
@@ -23925,6 +24384,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10782.htm?t=h",
    "updated": "2026-11-04",
    "full": false
@@ -23962,6 +24422,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10846.htm?t=h",
    "updated": "2026-11-04",
    "full": false
@@ -23999,6 +24460,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/20122.htm?t=h",
    "updated": "2026-11-04",
    "full": false
@@ -24037,6 +24499,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/11100.htm?t=h",
    "updated": "2026-11-04",
    "full": false
@@ -24075,6 +24538,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10823.htm?t=h",
    "updated": "2026-11-04",
    "full": false
@@ -24113,6 +24577,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10869.htm?t=h",
    "updated": "2026-11-04",
    "full": false
@@ -24150,6 +24615,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10833.htm?t=h",
    "updated": "2026-11-04",
    "full": false
@@ -24187,6 +24653,7 @@
    "acceptsBackground": [],
    "coordinator": null,
    "coordinatorEmail": null,
+   "academicHead": null,
    "link": "https://www.openu.ac.il/courses/10894.htm?t=h",
    "updated": "2026-11-04",
    "full": false
@@ -24208,7 +24675,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/NQ.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-10",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -24641,7 +25108,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -25212,7 +25679,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/CB.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -25911,7 +26378,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -26405,7 +26872,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/C2.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-10",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -26999,7 +27466,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -27633,7 +28100,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/EL.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-10",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -28219,7 +28686,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -28894,7 +29361,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/OE.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-10",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -29582,7 +30049,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -30221,7 +30688,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/physics/program/CC.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/physics/pages/counseling.aspx",
-   "updated": "2026-11-10",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -30949,7 +31416,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -31656,7 +32123,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/earth/program/M8.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/earth/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -32286,7 +32753,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -32402,7 +32869,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/earth/program/OD.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/earth/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -33058,7 +33525,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -33169,7 +33636,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/earth/program/OF.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/earth/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -33980,7 +34447,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -34076,7 +34543,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/chemistry/program/KS.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/chemistry/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -34632,7 +35099,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -34720,7 +35187,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/chemistry/program/83.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/chemistry/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -35479,7 +35946,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -35538,7 +36005,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/life/program/15.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/life/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "א",
@@ -36372,7 +36839,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -36445,7 +36912,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/life/program/OJ.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/life/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "ב",
@@ -37315,7 +37782,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -37388,7 +37855,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/life/program/OI.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/life/pages/counseling.aspx",
-   "updated": "2026-11-03",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "ב",
@@ -38048,7 +38515,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
@@ -38107,7 +38574,7 @@
    "planFrom": "2024א",
    "link": "https://academic.openu.ac.il/natural_sciences/life/program/OH.aspx",
    "advisors": "https://academic.openu.ac.il/natural_sciences/life/pages/counseling.aspx",
-   "updated": "2026-11-04",
+   "updated": "2026-11-11",
    "sections": [
     {
      "id": "ב",
@@ -38932,7 +39399,7 @@
     {
      "name": "לומדה למניעת הטרדה מינית",
      "details": "על הסטודנט להשלים את הלומדה למניעת הטרדה מינית.",
-     "link": null,
+     "link": "https://www.openu.ac.il/about/gender/pages/sexual_harassment.aspx",
      "name_ar": "وحدة تعليمية لمنع التحرش الجنسي",
      "name_en": "Sexual harassment prevention tutorial",
      "details_ar": "على الطالب إكمال الوحدة التعليمية لمنع التحرش الجنسي.",
