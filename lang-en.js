@@ -415,6 +415,8 @@ I18N.en = {
  "קישור לרשימת הקורסים לבחירה חופשית, בצעד \"להשלים נ\"ז\", וקישור \"הסבר\" ללומדה למניעת הטרדה מינית בדרישות הכלליות.": "A link to the list of courses for free electives, in the \"complete the credits\" step, and an \"explanation\" link for the sexual harassment prevention module in the general requirements.",
  "בעזרה (\"?\"): צילום מסך לשלב \"מסדרים ונועלים\", וכל הצילומים עודכנו.": "In the help (\"?\"): a screenshot for the \"arrange and lock\" step, and all the screenshots were updated.",
  "בכותרת של כל סמסטר, ושל \"קורסים שכבר עשיתי\", גם מספר הקורסים, ליד הנ\"ז.": "The header of every semester, and of \"Courses I've completed\", also shows the number of courses, next to the credits.",
+ "תרמודינמיקה לפיסיקאים (20482): מסמסטר 2027ב גם מכניקה (20215) עונה על הידע הקודם הדרוש בפיסיקה, במקום יסודות הפיסיקה.": "Thermodynamics for Physicists (20482): from semester 2027b, Mechanics (20215) also meets the required prior knowledge in physics, instead of Foundations of Physics.",
+ "בתואר הדו-חוגי בפיסיקה ובמדעי כדור הארץ: מבוא לגיאופיסיקה (20434) הוא עכשיו קורס בחירה, ובוחרים שניים מתוך חמשת הקורסים הרגילים במדעי כדור הארץ.": "In the double major in physics and earth sciences: Introduction to Geophysics (20434) is now an elective, and students choose two of the five regular earth sciences courses.",
  "השם והלוגו של האוניברסיטה הפתוחה שייכים לאוניברסיטה הפתוחה. חלק מהאייקונים מבוססים על Tabler Icons ועל Feather/Lucide": "The Open University's name and logo belong to the Open University. Some icons are based on Tabler Icons and Feather/Lucide",
  "רישיונות": "licenses",
  "הצג מה שכבר שיבצתי": "Show what I've placed",

@@ -46,6 +46,10 @@ function showHelp() {
 // the changes a user notices, by date, newest first: a new date goes at the top. A dot on the button while there is
 // a date the browser has not opened yet. Every push with such a change adds a line here, in the three languages
 const WHATS_NEW = [
+  { date: "2026-11-16", items: [
+    T("בתואר הדו-חוגי בפיסיקה ובמדעי כדור הארץ: מבוא לגיאופיסיקה (20434) הוא עכשיו קורס בחירה, ובוחרים שניים מתוך חמשת הקורסים הרגילים במדעי כדור הארץ."),
+    T("תרמודינמיקה לפיסיקאים (20482): מסמסטר 2027ב גם מכניקה (20215) עונה על הידע הקודם הדרוש בפיסיקה, במקום יסודות הפיסיקה."),
+  ] },
   { date: "2026-11-11", items: [
     T("בכותרת של כל סמסטר, ושל \"קורסים שכבר עשיתי\", גם מספר הקורסים, ליד הנ\"ז."),
     T("בחלון הקורס בקורסי הפיסיקה: מרכז/ת ההוראה עם האימייל, ושורה חדשה \"אחראי/ת אקדמי/ת\"."),
